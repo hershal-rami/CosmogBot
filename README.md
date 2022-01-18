@@ -27,3 +27,4 @@ Resources:
 https://realpython.com/how-to-make-a-discord-bot-python/
 https://github.com/Rapptz/discord.py/tree/v1.7.3/examples
 https://discordpy.readthedocs.io/en/stable/index.html
+https://discordpy.readthedocs.io/en/stable/faq.html
