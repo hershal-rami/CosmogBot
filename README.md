@@ -1,6 +1,7 @@
 # CosmogBot
 CosmogBot is a Discord bot for the Mt. Battle Tournament League, helping manage and organize the league's drafts
 
+Goals:
 -automatically update the draft board/rosters/point budget after each pick
 -pull team roles from spreadsheet and @ them to display schedule each week
 -pokedex data, showdown API type stuff
