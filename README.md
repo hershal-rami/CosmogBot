@@ -22,3 +22,8 @@ Goals:
 -can update differential/standings too if desired
 -make a thread for each postgame to avoid spoilers and contain conversation?
 -host bot on not my laptop
+
+Resources:
+https://realpython.com/how-to-make-a-discord-bot-python/
+https://github.com/Rapptz/discord.py/tree/v1.7.3/examples
+https://discordpy.readthedocs.io/en/stable/index.html
