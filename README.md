@@ -10,7 +10,7 @@ Then restart your shell application and type `env | grep "DISCORD_TOKEN"`. It sh
 # Running the bot
 Once you have your token variable set in your local environment, simply run `python3 bot.py` and the bot will go online!
 
-Goals:
+# Goals:
 -automatically update the draft board/rosters/point budget after each pick
 -pull team roles from spreadsheet and @ them to display schedule each week
 -pokedex data, showdown API type stuff
@@ -23,7 +23,7 @@ Goals:
 -make a thread for each postgame to avoid spoilers and contain conversation?
 -host bot on not my laptop
 
-Resources:
+# Resources:
 https://realpython.com/how-to-make-a-discord-bot-python/
 https://github.com/Rapptz/discord.py/tree/v1.7.3/examples
 https://discordpy.readthedocs.io/en/stable/index.html
