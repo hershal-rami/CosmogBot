@@ -5,7 +5,7 @@ import os
 import discord
 from discord.ext import commands
 
-from standings import updateMatchResults, getStandings
+from standings import updateMatchResults, getFormattedStandings
 
 # Basic logging info outputs to discord.log file
 logger = logging.getLogger('discord')
@@ -61,7 +61,7 @@ async def use_splash(ctx):
 
 @bot.command(name='standings', help='Gets the current league standings')
 async def print_standings(ctx):
-    await getStandings()
+    await ctx.send('```' + getFormattedStandings() + '```')
 
 # Go, Cosmog!
 bot.run(TOKEN)
