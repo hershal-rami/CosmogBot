@@ -33,6 +33,11 @@ async def on_ready():
 # Overriding on_message stops commands from running, use a listener instead
 @bot.listen('on_message')
 async def responder(message):
+    if "Result:" in message.content:
+        await message.channel.send("Working on it!")
+        updateMatchResults(message.content)
+        await message.channel.send("Standings have been updated!!")
+
     # Need this to prevent bot from responding to itself infinitely
     if message.author == bot.user:
         return
@@ -48,9 +53,6 @@ async def responder(message):
         await message.add_reaction("<:cosmug:932895668450787329>")
     elif message.content.lower().startswith(('hello', 'hi', 'hey')):
         await message.channel.send('Pepew! *(Hello!)*')
-    elif message.content.startswith(("Result:")):
-        updateMatchResults(message.content)
-        await message.channel.send("Standings have been updated!!")
 
 
 # Command name passed through decorator, command requires a context (ctx)
@@ -270,7 +272,9 @@ def getRosters():
 
 def updateMatchResults(result):
     #get rid of all the stuff before the kill info and break it up by line
+    print(result)
     result = result.split("\n")[3:]
+    print(result)
 
     #store all kill info in 2 dictionaires
     #Team1 and Team2
@@ -282,7 +286,7 @@ def updateMatchResults(result):
         #retrieve stats from message
         pokemon = pokeStat[0]
         killNum = pokeStat[2]
-        deathNum = pokeStat[5]
+        deathNum = pokeStat[-3]
 
         team1[pokemon] = (killNum, deathNum)
 
@@ -293,9 +297,12 @@ def updateMatchResults(result):
         #retrieve stats from message
         pokemon = pokeStat[0]
         killNum = pokeStat[2]
-        deathNum = pokeStat[5]
+        deathNum = pokeStat[-3]
 
         team2[pokemon] = (killNum, deathNum)
+
+    print(team1)
+    print(team2)
 
     #tally up the deaths
     deaths1 = 0
