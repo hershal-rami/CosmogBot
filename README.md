@@ -4,14 +4,13 @@ CosmogBot is a Discord bot for the Mt. Battle Tournament League, helping manage 
 # Setup
 Install Python version >= 3.5.3 and run `python3 -m pip install -U discord.py`
 
-Open ~/.bashrc and add `export DISCORD_TOKEN={your_key_here}` replacing that text with your key.
+Open ~/.bashrc and add `export DISCORD_TOKEN={your_key_here}` replacing that text with the key.
 Then restart your shell application and type `env | grep "DISCORD_TOKEN"`. It should print the key.
 
 # Running the bot
 Once you have your token variable set in your local environment, simply run `python3 bot.py` and the bot will go online!
 
 # Goals:
--automatically update the draft board/rosters/point budget after each pick
 -pull team roles from spreadsheet and @ them to display schedule each week
 -pokedex data, showdown API type stuff
 -keep track of which coaches are active in a given season
