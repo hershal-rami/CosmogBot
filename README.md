@@ -19,6 +19,8 @@ Once you have your token variable set in your local environment, simply run `pyt
     -implement command to display all time kill leaders
 -host bot on not my laptop
 -categorize commands (using cogs so that in .help the commands are labelled instead of "no category")
+-require or not require permissions for specific commands to prevent abuse
+-add error handling (upon error send a descriptive message in the channel so the user knows the issue, ex not having admin permissions)
 -pokedex data, showdown command type stuff (which API has this info?):
     -ideally would be able to have commands similar to ones in showdown
     -weak, effectiveness, coverage, learn, dex, data, dexsearch, details
