@@ -33,6 +33,7 @@ async def responder(message):
         updateMatchResults(message.content)
         await message.channel.send("Standings have been updated!!")
 
+    """
     # Need this to prevent bot from responding to itself infinitely
     if message.author == bot.user:
         return
@@ -50,8 +51,9 @@ async def responder(message):
         await message.add_reaction("<:cosmug:932895668450787329>")
     elif message.content.lower().startswith(('hello', 'hi', 'hey')):
         await message.channel.send('Pepew! *(Hello!)*')
+    """
 
-
+"""
 @bot.command(name='splash', help='Cosmog\'s best attack!')
 async def use_splash(ctx):
     await ctx.send("Cosmog used splash!")
@@ -62,6 +64,6 @@ async def use_splash(ctx):
 @bot.command(name='standings', help='Gets the current league standings')
 async def print_standings(ctx):
     await ctx.send('```' + getFormattedStandings() + '```')
-
+"""
 # Go, Cosmog!
 bot.run(TOKEN)
