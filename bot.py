@@ -28,10 +28,10 @@ async def on_ready():
 # Overriding on_message stops commands from running, use a listener instead
 @bot.listen('on_message')
 async def responder(message):
-    if "Result:" in message.content:
-        await message.channel.send("Working on it!")
-        updateMatchResults(message.content)
-        await message.channel.send("Standings have been updated!!")
+    # if "Result:" in message.content:
+    #     await message.channel.send("Working on it!")
+    #     updateMatchResults(message.content)
+    #     await message.channel.send("Standings have been updated!!")
 
     # Need this to prevent bot from responding to itself infinitely
     if message.author == bot.user:
@@ -44,6 +44,8 @@ async def responder(message):
         await message.channel.send("<:thonk:932152527061913640>")
     elif ":copium:" in message.content.lower():
         await message.channel.send("<:copium:932152187616895006>")
+    elif ":sdn:" in message.content.lower():
+        await message.channel.send("<:sdn:932156913012047922>")
     elif ":cosmug:" in message.content.lower():
         await message.channel.send("<:cosmug:932895668450787329>")
     elif "cosmog" in message.content.lower():
@@ -59,9 +61,45 @@ async def use_splash(ctx):
     await ctx.send("But nothing happened!")
 
 
+@bot.command(name='doc', help='Gets the current league spreadsheet')
+async def print_doc(ctx):
+    await ctx.send('<https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit?usp=sharing>')
+
+
 @bot.command(name='standings', help='Gets the current league standings')
 async def print_standings(ctx):
     await ctx.send('```' + getFormattedStandings() + '```')
+
+
+@bot.command(name='createteam', help='.createteam @User, Hex, Team Name')
+async def createteam(ctx, *, message):
+    # split message into individual arguments and format
+    args = message.split(',')
+
+    if len(args) != 3:
+        await ctx.send("error msg")
+        raise commands.MissingRequiredArgument
+
+    user_id = args[0].strip()
+    
+    hex_code = args[1]
+    if hex_code[0] == ' ':
+        hex_code = hex_code[1::]
+
+    team_name = args[2]
+    if team_name[0] == ' ':
+        team_name = team_name[1::]
+
+    print(message)
+    print(args)
+    print(user_id)
+    print(hex_code)
+    print(team_name)
+
+@createteam.error
+async def on_command_error(error, ctx):
+    if isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send("Incorrect/missing arguments. Format should be '.createteam @User, Hex, Team Name") 
 
 # Go, Cosmog!
 bot.run(TOKEN)
