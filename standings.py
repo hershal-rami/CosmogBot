@@ -153,6 +153,39 @@ def updateStandings(team1, team2):
                 current[i][RANK] = tempRank
 
             #if diff is even, just don't swap, we have no way to know the tiebreaker here
+
+    #re-sort the rankings
+    for i in range(len(current) - 1, 2, -1):
+
+        #if more wins, swap up
+        if(int(current[i][WINS]) > int(current[i - 1][WINS])):
+
+            #swap the position of the two teams
+            tempTeam = current[i]
+            current[i] = current[i-1]
+            current[i-1] = tempTeam
+
+            #also swap their respective ranks
+            tempRank = current[i-1][RANK]
+            current[i - 1][RANK] = current[i][RANK]
+            current[i][RANK] = tempRank
+
+        #if there's an equal number of wins, go by differential
+        if(int(current[i][WINS]) == int(current[i - 1][WINS])):
+
+            if(int(current[i][DIFF]) > int(current[i - 1][DIFF])):
+
+                #swap the position of the two teams
+                tempTeam = current[i]
+                current[i] = current[i-1]
+                current[i-1] = tempTeam
+
+                #also swap their respective ranks
+                tempRank = current[i-1][RANK]
+                current[i - 1][RANK] = current[i][RANK]
+                current[i][RANK] = tempRank
+
+            #if diff is even, just don't swap, we have no way to know the tiebreaker here
     
     sa = gspread.service_account("credentialsfile.json")
     sheet = sa.open(DOC)
@@ -264,9 +297,6 @@ def updateMatchResults(result):
 
         team2[pokemon] = (killNum, deathNum)
 
-    print(team1)
-    print(team2)
-
     #tally up the deaths
     deaths1 = 0
     for mon in team1:
@@ -302,7 +332,6 @@ def updateMatchResults(result):
     team1["DiffChange"] = deaths2 - deaths1
     team2["DiffChange"] = deaths1 - deaths2
 
-
     #get the rosters to determine which teams battled
     rosters = getRosters()
 
@@ -320,6 +349,8 @@ def updateMatchResults(result):
             team2["TeamName"] = team["TeamName"]
             team2["Coach"] = team["Coach"]
 
+    print(team1)
+    print(team2)
     updateStandings(team1, team2)
     
     print("Standings have been updated!!")
