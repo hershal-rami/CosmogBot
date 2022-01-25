@@ -30,8 +30,7 @@ async def on_ready():
 async def responder(message):
     if "Result:" in message.content:
         await message.channel.send("Working on it!")
-        updateMatchResults(message.content)
-        await message.channel.send("Standings have been updated!!")
+        await message.channel.send(updateMatchResults(message.content))
 
     """
     # Need this to prevent bot from responding to itself infinitely

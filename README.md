@@ -11,6 +11,7 @@ Then restart your shell application and type `env | grep "DISCORD_TOKEN"`. It sh
 Once you have your token variable set in your local environment, simply run `python3 bot.py` and the bot will go online!
 
 # Goals:
+-fix it so that two matches ending at the smae time don't overload the API limit
 -fix update match results code to account for spreadsheet changes
 -k/d and kill leaders:
     -keep track of each pokemon's k/d (in a spreadsheet)
