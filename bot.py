@@ -40,18 +40,18 @@ async def responder(message):
     
     # Fun responses: emoji responses, reactions, and hello message
     if ":scepthink:" in message.content.lower():
-        await message.channel.send("<:scepthink:932156902555648101>") # must use emoji id
-    elif ":thonk:" in message.content.lower():
+        await message.channel.send("<:scepthink:932156902555648101>") # must use emoji id    
+    if ":thonk:" in message.content.lower():
         await message.channel.send("<:thonk:932152527061913640>")
-    elif ":copium:" in message.content.lower():
+    if ":copium:" in message.content.lower():
         await message.channel.send("<:copium:932152187616895006>")
-    elif ":sdn:" in message.content.lower():
+    if ":sdn:" in message.content.lower():
         await message.channel.send("<:sdn:932156913012047922>")
-    elif ":cosmug:" in message.content.lower():
+    if ":cosmug:" in message.content.lower():
         await message.channel.send("<:cosmug:932895668450787329>")
-    elif "cosmog" in message.content.lower():
+    if "cosmog" in message.content.lower():
         await message.add_reaction("<:cosmug:932895668450787329>")
-    elif any(x in message.content.lower() for x in ('hello', 'hi', 'hey')):
+    if any(x in message.content.lower() for x in ('hello', 'hi', 'hey')):
         await message.channel.send(random.choice(['Pepew! *(Hello!)*', 'Pepew! *(Hi!)*', 'Pepew! *(Heya!)*']))
 
 
@@ -61,10 +61,17 @@ async def use_splash(ctx):
     await asyncio.sleep(1) # dont use time.sleep, causes blocking
     await ctx.send("But nothing happened!")
 
+@bot.command(name='teleport', help='Cosmog\'s second best attack!')
+async def use_teleport(ctx):
+    await ctx.send("Cosmog used teleport!")
+    await ctx.send(file=discord.File('teleport.gif'))
+    await asyncio.sleep(2)
+    await ctx.send("Cosmog fled from battle!")
+
 
 @bot.command(name='doc', help='Gets the current league spreadsheet for each division')
 async def print_doc(ctx):
-    await ctx.send('Solgaleo Division: <https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit#gid=253592106>\n Lunala Division: <https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
+    await ctx.send('Solgaleo Division:\n<https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit#gid=253592106>\nLunala Division:\n<https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
 
 
 @bot.command(name='standings', help='Gets the current league standings')
