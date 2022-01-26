@@ -82,36 +82,36 @@ async def print_standings(ctx):
     await ctx.send('```' + getFormattedStandings() + '```')
 
 
-@bot.command(name='createteam', help='Usage: .createteam @User, Hex, Team Name')
-async def createteam(ctx, *, message):
-    # split message into individual arguments and format
-    args = message.split(',')
+# @bot.command(name='createteam', help='Usage: .createteam @User, Hex, Team Name')
+# async def createteam(ctx, *, message):
+#     # split message into individual arguments and format
+#     args = message.split(',')
 
-    if len(args) != 3:
-        await ctx.send("error msg")
-        raise commands.MissingRequiredArgument
+#     if len(args) != 3:
+#         await ctx.send("error msg")
+#         raise commands.MissingRequiredArgument
 
-    user_id = args[0].strip()
+#     user_id = args[0].strip()
     
-    hex_code = args[1].strip()
+#     hex_code = args[1].strip()
 
-    # remove only leading space
-    team_name = args[2]
-    if team_name[0] == ' ':
-        team_name = team_name[1::]
+#     # remove only leading space
+#     team_name = args[2]
+#     if team_name[0] == ' ':
+#         team_name = team_name[1::]
 
-    print("test")
-    await bot.create_rule(ctx.)
-    duplicate = discord.utils.get(ctx.message.server.roles, name=team_name)
-    #print(duplicate)
+#     print("test")
+#     await bot.create_rule(ctx.)
+#     duplicate = discord.utils.get(ctx.message.server.roles, name=team_name)
+#     #print(duplicate)
 
-    await ctx.send('check console dumbass')
+#     await ctx.send('check console dumbass')
 
 
-@createteam.error
-async def on_command_error(error, ctx):
-    if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send("Incorrect/missing arguments. Format should be '.createteam @User, Hex, Team Name") 
+# @createteam.error
+# async def on_command_error(error, ctx):
+#     if isinstance(error, commands.MissingRequiredArgument):
+#         await ctx.send("Incorrect/missing arguments. Format should be '.createteam @User, Hex, Team Name") 
 
 # Go, Cosmog!
 bot.run(TOKEN)
