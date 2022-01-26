@@ -53,6 +53,9 @@ async def responder(message):
         await message.add_reaction("<:cosmug:932895668450787329>")
     if any(x in message.content.lower() for x in ('hello', 'hi', 'hey')):
         await message.channel.send(random.choice(['Pepew! *(Hello!)*', 'Pepew! *(Hi!)*', 'Pepew! *(Heya!)*']))
+    if any(x in message.content.lower() for x in ('gm', 'morning')):
+        await message.channel.send("Pe-pepew! *(Good morning!)*")
+        await message.channel.send(file=discord.File('gm.gif'))
 
 
 @bot.command(name='splash', help='Cosmog\'s best attack!')
@@ -79,35 +82,36 @@ async def print_standings(ctx):
     await ctx.send('```' + getFormattedStandings() + '```')
 
 
-# @bot.command(name='createteam', help='Usage: .createteam @User, Hex, Team Name')
-# async def createteam(ctx, *, message):
-#     # split message into individual arguments and format
-#     args = message.split(',')
+@bot.command(name='createteam', help='Usage: .createteam @User, Hex, Team Name')
+async def createteam(ctx, *, message):
+    # split message into individual arguments and format
+    args = message.split(',')
 
-#     if len(args) != 3:
-#         await ctx.send("error msg")
-#         raise commands.MissingRequiredArgument
+    if len(args) != 3:
+        await ctx.send("error msg")
+        raise commands.MissingRequiredArgument
 
-#     user_id = args[0].strip()
+    user_id = args[0].strip()
     
-#     hex_code = args[1]
-#     if hex_code[0] == ' ':
-#         hex_code = hex_code[1::]
+    hex_code = args[1].strip()
 
-#     team_name = args[2]
-#     if team_name[0] == ' ':
-#         team_name = team_name[1::]
+    # remove only leading space
+    team_name = args[2]
+    if team_name[0] == ' ':
+        team_name = team_name[1::]
 
-#     print(message)
-#     print(args)
-#     print(user_id)
-#     print(hex_code)
-#     print(team_name)
+    print("test")
+    await bot.create_rule(ctx.)
+    duplicate = discord.utils.get(ctx.message.server.roles, name=team_name)
+    #print(duplicate)
 
-# @createteam.error
-# async def on_command_error(error, ctx):
-#     if isinstance(error, commands.MissingRequiredArgument):
-#         await ctx.send("Incorrect/missing arguments. Format should be '.createteam @User, Hex, Team Name") 
+    await ctx.send('check console dumbass')
+
+
+@createteam.error
+async def on_command_error(error, ctx):
+    if isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send("Incorrect/missing arguments. Format should be '.createteam @User, Hex, Team Name") 
 
 # Go, Cosmog!
 bot.run(TOKEN)
