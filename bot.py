@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import random
 import os
 
 import discord
@@ -50,8 +51,8 @@ async def responder(message):
         await message.channel.send("<:cosmug:932895668450787329>")
     elif "cosmog" in message.content.lower():
         await message.add_reaction("<:cosmug:932895668450787329>")
-    elif message.content.lower().startswith(('hello', 'hi', 'hey')):
-        await message.channel.send('Pepew! *(Hello!)*')
+    elif any(x in message.content.lower() for x in ('hello', 'hi', 'hey')):
+        await message.channel.send(random.choice(['Pepew! *(Hello!)*', 'Pepew! *(Hi!)*', 'Pepew! *(Heya!)*']))
 
 
 @bot.command(name='splash', help='Cosmog\'s best attack!')
@@ -61,9 +62,9 @@ async def use_splash(ctx):
     await ctx.send("But nothing happened!")
 
 
-@bot.command(name='doc', help='Gets the current league spreadsheet')
+@bot.command(name='doc', help='Gets the current league spreadsheet for each division')
 async def print_doc(ctx):
-    await ctx.send('<https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit?usp=sharing>')
+    await ctx.send('Solgaleo Division: <https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit#gid=253592106>\n Lunala Division: <https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
 
 
 @bot.command(name='standings', help='Gets the current league standings')
@@ -71,35 +72,35 @@ async def print_standings(ctx):
     await ctx.send('```' + getFormattedStandings() + '```')
 
 
-@bot.command(name='createteam', help='.createteam @User, Hex, Team Name')
-async def createteam(ctx, *, message):
-    # split message into individual arguments and format
-    args = message.split(',')
+# @bot.command(name='createteam', help='Usage: .createteam @User, Hex, Team Name')
+# async def createteam(ctx, *, message):
+#     # split message into individual arguments and format
+#     args = message.split(',')
 
-    if len(args) != 3:
-        await ctx.send("error msg")
-        raise commands.MissingRequiredArgument
+#     if len(args) != 3:
+#         await ctx.send("error msg")
+#         raise commands.MissingRequiredArgument
 
-    user_id = args[0].strip()
+#     user_id = args[0].strip()
     
-    hex_code = args[1]
-    if hex_code[0] == ' ':
-        hex_code = hex_code[1::]
+#     hex_code = args[1]
+#     if hex_code[0] == ' ':
+#         hex_code = hex_code[1::]
 
-    team_name = args[2]
-    if team_name[0] == ' ':
-        team_name = team_name[1::]
+#     team_name = args[2]
+#     if team_name[0] == ' ':
+#         team_name = team_name[1::]
 
-    print(message)
-    print(args)
-    print(user_id)
-    print(hex_code)
-    print(team_name)
+#     print(message)
+#     print(args)
+#     print(user_id)
+#     print(hex_code)
+#     print(team_name)
 
-@createteam.error
-async def on_command_error(error, ctx):
-    if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send("Incorrect/missing arguments. Format should be '.createteam @User, Hex, Team Name") 
+# @createteam.error
+# async def on_command_error(error, ctx):
+#     if isinstance(error, commands.MissingRequiredArgument):
+#         await ctx.send("Incorrect/missing arguments. Format should be '.createteam @User, Hex, Team Name") 
 
 # Go, Cosmog!
 bot.run(TOKEN)
