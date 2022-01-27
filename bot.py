@@ -4,7 +4,7 @@ import random
 from datetime import datetime
 
 import discord
-from discord.ext import commands
+from discord.ext import tasks, commands
 
 from commands import Moveset, Spreadsheets, TeamManagement
 from standings import updateMatchResults
@@ -18,6 +18,7 @@ logger.addHandler(handler)
 
 # Discord token set locally for security
 TOKEN = os.getenv('DISCORD_TOKEN')
+GM = False
 
 # Need members intent for managing member stuff
 intents = discord.Intents.default()
@@ -35,9 +36,15 @@ bot.add_cog(TeamManagement(bot))
 async def on_ready():
     print('A wild {0.user} appeared!'.format(bot))
 
+# Resets GM variable every 12 hours
+@tasks.loop(hours=12)
+async def reset_gm(self):
+    GM = False
+
 # Overriding on_message stops commands from running, use a listener instead
 @bot.listen('on_message')
 async def responder(message):
+    global GM
     # Need this to prevent bot from responding to itself infinitely
     if message.author == bot.user:
         return
@@ -65,7 +72,8 @@ async def responder(message):
         await message.channel.send(random.choice(['Pepew! *(Hello!)*', 'Pepew! *(Hi!)*', 'Pepew! *(Heya!)*']))
 
     # only respond if gm is sent before 2pm
-    if datetime.now().hour <= 14 and any(x in message.content.lower() for x in ('gm', 'mornin')):
+    if not GM and any(x in message.content.lower() for x in ('gm', 'mornin')):
+        GM = True
         await message.channel.send("Pe-pepew! *(Good morning!)*")
         await message.channel.send(file=discord.File('gm.gif'))
 
