@@ -1,13 +1,13 @@
-import asyncio
 import logging
-import random
 import os
+import random
 from datetime import datetime
 
 import discord
 from discord.ext import commands
 
-from standings import updateMatchResults, getFormattedStandings
+from commands import Moveset, Spreadsheets, TeamManagement
+from standings import updateMatchResults
 
 # Basic logging info outputs to discord.log file
 logger = logging.getLogger('discord')
@@ -26,6 +26,10 @@ intents.members = True
 activity = discord.Activity(type=discord.ActivityType.listening, name="it's trainer! | .help")
 bot = commands.Bot(command_prefix='.', activity=activity, intents=intents)
 
+bot.add_cog(Moveset(bot))
+bot.add_cog(Spreadsheets(bot))
+bot.add_cog(TeamManagement(bot))
+
 # Runs once logged in and ready for additional actions
 @bot.event
 async def on_ready():
@@ -34,31 +38,26 @@ async def on_ready():
 # Overriding on_message stops commands from running, use a listener instead
 @bot.listen('on_message')
 async def responder(message):
+    # Need this to prevent bot from responding to itself infinitely
+    if message.author == bot.user:
+        return
+
     # if "Result:" in message.content:
     #     await message.channel.send("Working on it!")
     #     updateMatchResults(message.content)
     #     await message.channel.send("Standings have been updated!!")
 
-    # Need this to prevent bot from responding to itself infinitely
-    if message.author == bot.user:
-        return
-    
     # Fun responses: emoji responses, reactions, and hello message
     if ":scepthink:" in message.content.lower():
         await message.channel.send("<:scepthink:932156902555648101>") # must use emoji id    
-
     if ":thonk:" in message.content.lower():
         await message.channel.send("<:thonk:932152527061913640>")
-
     if ":copium:" in message.content.lower():
         await message.channel.send("<:copium:932152187616895006>")
-
     if ":sdn:" in message.content.lower():
         await message.channel.send("<:sdn:932156913012047922>")
-
     if ":cosmug:" in message.content.lower():
         await message.channel.send("<:cosmug:932895668450787329>")
-
     if "cosmog" in message.content.lower():
         await message.add_reaction("<:cosmug:932895668450787329>")
 
@@ -69,145 +68,6 @@ async def responder(message):
     if datetime.now().hour <= 14 and any(x in message.content.lower() for x in ('gm', 'mornin')):
         await message.channel.send("Pe-pepew! *(Good morning!)*")
         await message.channel.send(file=discord.File('gm.gif'))
-
-
-@bot.command(name='splash', help='Cosmog\'s best attack!')
-async def splash(ctx):
-    await ctx.send("Cosmog used splash!")
-    await asyncio.sleep(1) # dont use time.sleep, causes blocking
-    await ctx.send("But nothing happened!")
-
-
-@bot.command(name='teleport', help='Cosmog\'s second best attack!')
-async def teleport(ctx):
-    await ctx.send("Cosmog used teleport!")
-    await ctx.send(file=discord.File('teleport.gif'))
-    await asyncio.sleep(2)
-    await ctx.send("Cosmog fled from battle!")
-
-
-@bot.group(name='doc', help='Gets the current league spreadsheet for each division')
-async def doc(ctx):
-    if ctx.invoked_subcommand is not None:
-        return
-
-    await ctx.send('Solgaleo Division:\n<https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit#gid=253592106>\nLunala Division:\n<https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
-
-@doc.command(name='solgaleo', help='Gets the Solgaleo division spreadsheet')
-async def doc_solgaleo(ctx):
-    await ctx.send('Solgaleo Division:\n<https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit#gid=253592106>')
-
-@doc.command(name='lunala', help='Gets the Lunala division spreadsheet')
-async def doc_lunala(ctx):
-    await ctx.send('Lunala Division:\n<https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
-
-
-@bot.command(name='standings', help='Gets the current league standings')
-async def standings(ctx):
-    await ctx.send('```' + getFormattedStandings() + '```')
-
-@bot.command(name='support', help='Gives a user with no team the team role for the provided team')
-async def support(ctx, *, team_name):
-    # Check for illegal roles
-    if team_name in ['MBTL Bronze Medalist', 'MBTL Silver Medalist', 'MBTL Gold Medalist', 'Bot']:
-        # TODO error if team is a medalist role
-        print("error this is a medalist role")
-        return
-
-    # Check that team role exists
-    guild = ctx.message.guild
-    team_role = discord.utils.get(guild.roles, name=team_name)
-    if team_role is None:
-        # TODO error if team does not exist
-        print("this team does not exist")
-        return
-
-    # Remove No Team role
-    no_team = discord.utils.get(guild.roles, name='No Team')
-    member = ctx.message.author
-    await member.remove_roles(no_team)
-
-    # Add team role
-    await member.add_roles(team_role)
-    await ctx.send(member.name + " is now supporting " + team_name + "!")
-
-
-@bot.command(name='unsupport', help='Removes a team role from a user, wow harsh...')
-async def unsupport(ctx, *, team_name):
-    # Check for illegal roles
-    if team_name in ['MBTL Bronze Medalist', 'MBTL Silver Medalist', 'MBTL Gold Medalist', 'Bot']:
-        # TODO error if team is a medalist role
-        print("error this is a medalist role")
-        return
-
-    # Check that team role exists
-    guild = ctx.message.guild
-    team_role = discord.utils.get(guild.roles, name=team_name)
-    if team_role is None:
-        # TODO error if team does not exist
-        print("this team does not exist")
-        return
-
-    # Remove team role
-    member = ctx.message.author
-    await member.remove_roles(team_role)
-
-    # Add No Team role
-    no_team = discord.utils.get(guild.roles, name='No Team')
-    await member.add_roles(no_team)
-    await ctx.send(member.name + " is no longer supporting " + team_name + "...")
-
-
-@bot.command(name='createteam', help='Usage: .createteam @User, Hex, Team Name')
-async def createteam(ctx, *, message):
-    # TODO if not mod then throw error
-    # insufficient role/perms
-
-    # split message into individual arguments and format
-    args = message.split(',')
-
-    if len(args) < 3:
-        #TODO fix error handling
-        await ctx.send("error msg")
-        raise commands.MissingRequiredArgument
-
-    # TODO error handling on incorrect format (no commas)
-
-    user_id = int(args[0].strip()[3:-1])
-    hex_code = int(args[1].strip(), 16)
-    
-    # remove only leading space
-    team_name = args[2]
-    if team_name[0] == ' ':
-        team_name = team_name[1:]
-
-    guild = ctx.message.guild
-    duplicate = discord.utils.get(guild.roles, name=team_name)
-    if duplicate is not None:
-        # TODO throw error if role already exists
-        print("error team name already exists")
-    
-    # Create role with specified name and color
-    perms=discord.Permissions(administrator=True)
-    await guild.create_role(name=team_name, color=discord.Color(hex_code), permissions=perms)
-
-    # Remove No Team role from user using id
-    no_team = discord.utils.get(guild.roles, name='No Team')
-    member = guild.get_member(user_id)
-    await member.remove_roles(no_team)
-    
-    # Add newly created role to user using id
-    team_role = discord.utils.get(guild.roles, name=team_name)
-    await member.add_roles(team_role)
-    
-    output = "Team " + team_name + " has been created for Coach " + member.name +"!"
-    await ctx.send(output)
-
-
-@createteam.error
-async def on_command_error(error, ctx):
-    if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send("Incorrect/missing arguments. Format should be '.createteam @User, Hex, Team Name") 
 
 # Go, Cosmog!
 bot.run(TOKEN)
