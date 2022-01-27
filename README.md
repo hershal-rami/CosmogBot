@@ -1,6 +1,8 @@
 # CosmogBot
 CosmogBot is a Discord bot for the Mt. Battle Tournament League, helping manage and organize the league's drafts
 
+Before using ensure that any linked spreadsheets do not contain typo's, team names match Discord roles (no additional S's), and that Pokemon forms are stylized consistently (Grimer-A vs. Grimer-Alola)
+
 # Setup
 Install Python version >= 3.5.3
 
@@ -20,38 +22,66 @@ Then restart your shell application and type `env | grep "DISCORD_TOKEN"`. It sh
 Once you have your token variable set in your local environment, simply run `python3 bot.py` and the bot will go online!
 
 # Goals:
+-require or not require permissions for specific commands to prevent abuse
+
+-add error handling (upon error send a descriptive message in the channel so the user knows the issue, ex not having admin permissions):
+    -commandnotfound
+    
+    -missingpermissions
+
+    -missingrequiredarguments
+
+-update kill leaders script
+    -connect to new doc
+
+    -fix google sheets API handling
+
+    -upload to new doc
+
+-create kill leaders commands:
+    -keep track of each pokemon's k/d locally with JSON
+
+    -update k/d statistics when updating match results
+
+    -implement function to calculate all time kill leaders
+
+    -implement command to display all time kill leaders
+
+-merge standings branch back to main:
+    -test update standings for both divisions, multiple matches at once within the bo3
+
+    -have update standings change cell color of differential
+
+    -hook up update standings to kill leaders column
+
 -review doc carefully for typos and additional 's'
 
 -also check for pokemon name schemes: "grimer-a" vs "grimer-alola"
-
--fix update match results code to account for spreadsheet changes
-
--k/d and kill leaders:
-
-    -keep track of each pokemon's k/d (in a spreadsheet)
+**WANT TO BE HERE BY VGC LAUNCH DATE: FEB 14**
+-keep database of all replays, with the season and two coaches that battled:
+    -can use JSON or NoSQL database
     
-    -update k/d statistics when updating match results
-    
-    -implement function to calculate all time kill leaders and update spreadsheet
-    
-    -implement command to display all time kill leaders
--categorize commands (using cogs so that in .help the commands are labelled instead of "no category")
+    -parse old replays and analysis from external document into storage
 
--require or not require permissions for specific commands to prevent abuse
+    -update database after each match
 
--add error handling (upon error send a descriptive message in the channel so the user knows the issue, ex not having admin permissions)
+    -track statistics across seasons for each coach (win/loss rate, h2h with other coaches, etc)
+
+    -use head2head as a tiebreaker when updating standings?
 
 -internally manage schedule:
 
--pull schedule data from spreadsheet
+    -pull schedule data from spreadsheet
 
     -keep internal tracker (or separate spreadsheet?) for which week of the season it is and the matches for that week
     
     -could have a command to display the schedule for that week
+
+    -track when matches are scheduled and complete, and notify admin if something is late
     
     -update after match results are posted
     
-    -once all matches for the week are complete, run the kill leaders script (could cause issues if a match gets 
+    -once all matches for the week are complete, run the kill leaders commands (could cause issues if a match gets 
     an extension but another match for the next week happens before the extension match, would just mean the k/d info
     would be slightly off as it would be either missing a match or have an extra match)
 
@@ -63,12 +93,16 @@ Once you have your token variable set in your local environment, simply run `pyt
     
     -https://pokemondb.net/pokebase/252493/what-are-all-the-commands-in-pokemon-showdown
 
--keep database of all replays, with the season and two coaches that battled
+## End goal is a bot that...
+-follows match results and updates the spreadsheet data after a match
 
--track statistics across seasons for each coach (win/loss rate, h2h with other coaches, etc)
+-automatically calculates kill leaders and updates spreadsheet
 
--use head2head as a tiebreaker when updating standings
+-stores internal database of all users and replays, and can calculate user statistics
 
+-automatically pulls the schedule for each week and checks on player scheduling/match completion
+
+-allows for showdown style command usage in discord
 
 # Resources:
 https://realpython.com/how-to-make-a-discord-bot-python/
