@@ -27,17 +27,16 @@ class Spreadsheets(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
-    @commands.group(name='doc', help='Gets the current league spreadsheet for both divisions')
+    @commands.group(name='doc', help='Gets the current league spreadsheet for both divisions', pass_context=True, invoke_without_command=True)
     async def doc(self, ctx):
         if ctx.invoked_subcommand is None:
-            await ctx.send('test')
             await ctx.send('Solgaleo Division:\n<https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit#gid=253592106>\nLunala Division:\n<https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
 
-    @doc.command(name='doc solgaleo', help='Gets the Solgaleo division spreadsheet',)
+    @doc.command(pass_context=True, name='solgaleo', help='Gets the Solgaleo division spreadsheet',)
     async def doc_solgaleo(self, ctx):
         await ctx.send('Solgaleo Division:\n<https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit#gid=253592106>')
 
-    @doc.command(name='doc lunala', help='Gets the Lunala division spreadsheet')
+    @doc.command(pass_context=True, name='lunala', help='Gets the Lunala division spreadsheet')
     async def doc_lunala(self, ctx):
         await ctx.send('Lunala Division:\n<https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
 
