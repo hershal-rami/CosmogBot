@@ -72,14 +72,14 @@ async def responder(message):
 
 
 @bot.command(name='splash', help='Cosmog\'s best attack!')
-async def use_splash(ctx):
+async def splash(ctx):
     await ctx.send("Cosmog used splash!")
     await asyncio.sleep(1) # dont use time.sleep, causes blocking
     await ctx.send("But nothing happened!")
 
 
 @bot.command(name='teleport', help='Cosmog\'s second best attack!')
-async def use_teleport(ctx):
+async def teleport(ctx):
     await ctx.send("Cosmog used teleport!")
     await ctx.send(file=discord.File('teleport.gif'))
     await asyncio.sleep(2)
@@ -87,12 +87,12 @@ async def use_teleport(ctx):
 
 
 @bot.command(name='doc', help='Gets the current league spreadsheet for each division')
-async def print_doc(ctx):
+async def doc(ctx):
     await ctx.send('Solgaleo Division:\n<https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit#gid=253592106>\nLunala Division:\n<https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
 
 
 @bot.command(name='standings', help='Gets the current league standings')
-async def print_standings(ctx):
+async def standings(ctx):
     await ctx.send('```' + getFormattedStandings() + '```')
 
 
