@@ -2,6 +2,7 @@ import asyncio
 import logging
 import random
 import os
+import datetime
 
 import discord
 from discord.ext import commands
@@ -53,7 +54,7 @@ async def responder(message):
         await message.add_reaction("<:cosmug:932895668450787329>")
     if any(x in message.content.lower().split(" ") for x in ('hello', 'hi', 'hey', 'hiya')):
         await message.channel.send(random.choice(['Pepew! *(Hello!)*', 'Pepew! *(Hi!)*', 'Pepew! *(Heya!)*']))
-    if any(x in message.content.lower() for x in ('gm', 'mornin')):
+    if datetime.datetime.now().time().hour() <= 14 and any(x in message.content.lower() for x in ('gm', 'mornin')):
         await message.channel.send("Pe-pepew! *(Good morning!)*")
         await message.channel.send(file=discord.File('gm.gif'))
 
