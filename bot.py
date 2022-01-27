@@ -19,8 +19,12 @@ logger.addHandler(handler)
 # Discord token set locally for security
 TOKEN = os.getenv('DISCORD_TOKEN')
 
+# Need members intent for managing member stuff
+intents = discord.Intents.default()
+intents.members = True
+
 activity = discord.Activity(type=discord.ActivityType.listening, name="it's trainer! | .help")
-bot = commands.Bot(command_prefix='.', activity=activity)
+bot = commands.Bot(command_prefix='.', activity=activity, intents=intents)
 
 # Runs once logged in and ready for additional actions
 @bot.event
@@ -93,7 +97,6 @@ async def print_standings(ctx):
 
 
 @bot.command(name='createteam', help='Usage: .createteam @User, Hex, Team Name')
-@commands.has_permissions(manage_roles=True)
 async def createteam(ctx, *, message):
     # TODO if not mod then throw error
     # insufficient role/perms
@@ -108,29 +111,35 @@ async def createteam(ctx, *, message):
 
     # TODO error handling on incorrect format (no commas)
 
-    user_id = args[0].strip()
-    hex_code = args[1].strip()
-
+    user_id = int(args[0].strip()[3:-1])
+    hex_code = int(args[1].strip(), 16)
+    
     # remove only leading space
     team_name = args[2]
     if team_name[0] == ' ':
-        team_name = team_name[1::]
-    
-    duplicate = discord.utils.get(ctx.message.guild.roles, name=team_name)
+        team_name = team_name[1:]
+
+    guild = ctx.message.guild
+    duplicate = discord.utils.get(guild.roles, name=team_name)
     if duplicate is not None:
         # TODO throw error if role already exists
         print("error team name already exists")
-
-    # TODO fix color of role
-    perms=discord.Permissions(administrator=True)
-    await ctx.message.guild.create_role(name=team_name, permissions=perms)
     
-    # TODO remove No Team role from user using id
-    # TODO add newly created role to user using id
+    # Create role with specified name and color
+    perms=discord.Permissions(administrator=True)
+    await guild.create_role(name=team_name, color=discord.Color(hex_code), permissions=perms)
 
-    # TODO await ctx.send('Team $teamname has been created for Coach {user}!')
-
-    await ctx.send('role made')
+    # Remove No Team role from user using id
+    role = discord.utils.get(guild.roles, name='No Team')
+    member = guild.get_member(user_id)
+    await member.remove_roles(role)
+    
+    # Add newly created role to user using id
+    role = discord.utils.get(guild.roles, name=team_name)
+    await member.add_roles(role)
+    
+    output = "Team " + team_name + " has been created for Coach " + member.name +"!"
+    await ctx.send(output)
 
 
 @createteam.error
