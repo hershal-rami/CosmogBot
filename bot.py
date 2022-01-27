@@ -96,6 +96,58 @@ async def print_standings(ctx):
     await ctx.send('```' + getFormattedStandings() + '```')
 
 
+@bot.command(name='support', help='Gives a user with no team the team role for the provided team')
+async def support(ctx, *, team_name):
+    # Check for illegal roles
+    if team_name in ['MBTL Bronze Medalist', 'MBTL Silver Medalist', 'MBTL Gold Medalist', 'Bot']:
+        # TODO error if team is a medalist role
+        print("error this is a medalist role")
+        return
+
+    # Check that team role exists
+    guild = ctx.message.guild
+    team_role = discord.utils.get(guild.roles, name=team_name)
+    if team_role is None:
+        # TODO error if team does not exist
+        print("this team does not exist")
+        return
+
+    # Remove No Team role
+    no_team = discord.utils.get(guild.roles, name='No Team')
+    member = ctx.message.author
+    await member.remove_roles(no_team)
+
+    # Add team role
+    await member.add_roles(team_role)
+    await ctx.send(member.name + " is now supporting " + team_name + "!")
+
+
+@bot.command(name='unsupport', help='Removes a team role from a user, wow harsh...')
+async def unsupport(ctx, *, team_name):
+    # Check for illegal roles
+    if team_name in ['MBTL Bronze Medalist', 'MBTL Silver Medalist', 'MBTL Gold Medalist', 'Bot']:
+        # TODO error if team is a medalist role
+        print("error this is a medalist role")
+        return
+
+    # Check that team role exists
+    guild = ctx.message.guild
+    team_role = discord.utils.get(guild.roles, name=team_name)
+    if team_role is None:
+        # TODO error if team does not exist
+        print("this team does not exist")
+        return
+
+    # Remove team role
+    member = ctx.message.author
+    await member.remove_roles(team_role)
+
+    # Add No Team role
+    no_team = discord.utils.get(guild.roles, name='No Team')
+    await member.add_roles(no_team)
+    await ctx.send(member.name + " is no longer supporting " + team_name + "...")
+
+
 @bot.command(name='createteam', help='Usage: .createteam @User, Hex, Team Name')
 async def createteam(ctx, *, message):
     # TODO if not mod then throw error
@@ -130,13 +182,13 @@ async def createteam(ctx, *, message):
     await guild.create_role(name=team_name, color=discord.Color(hex_code), permissions=perms)
 
     # Remove No Team role from user using id
-    role = discord.utils.get(guild.roles, name='No Team')
+    no_team = discord.utils.get(guild.roles, name='No Team')
     member = guild.get_member(user_id)
-    await member.remove_roles(role)
+    await member.remove_roles(no_team)
     
     # Add newly created role to user using id
-    role = discord.utils.get(guild.roles, name=team_name)
-    await member.add_roles(role)
+    team_role = discord.utils.get(guild.roles, name=team_name)
+    await member.add_roles(team_role)
     
     output = "Team " + team_name + " has been created for Coach " + member.name +"!"
     await ctx.send(output)
