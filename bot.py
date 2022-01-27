@@ -86,15 +86,25 @@ async def teleport(ctx):
     await ctx.send("Cosmog fled from battle!")
 
 
-@bot.command(name='doc', help='Gets the current league spreadsheet for each division')
+@bot.group(name='doc', help='Gets the current league spreadsheet for each division')
 async def doc(ctx):
+    if ctx.invoked_subcommand is not None:
+        return
+
     await ctx.send('Solgaleo Division:\n<https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit#gid=253592106>\nLunala Division:\n<https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
+
+@doc.command(name='solgaleo', help='Gets the Solgaleo division spreadsheet')
+async def doc_solgaleo(ctx):
+    await ctx.send('Solgaleo Division:\n<https://docs.google.com/spreadsheets/d/1LYqMD8aLMLdkVL1bDrmk5QYRoaFCr0zdJq4JQvIc6TA/edit#gid=253592106>')
+
+@doc.command(name='lunala', help='Gets the Lunala division spreadsheet')
+async def doc_lunala(ctx):
+    await ctx.send('Lunala Division:\n<https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
 
 
 @bot.command(name='standings', help='Gets the current league standings')
 async def standings(ctx):
     await ctx.send('```' + getFormattedStandings() + '```')
-
 
 @bot.command(name='support', help='Gives a user with no team the team role for the provided team')
 async def support(ctx, *, team_name):
