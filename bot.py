@@ -59,6 +59,7 @@ async def use_splash(ctx):
     await asyncio.sleep(1) # dont use time.sleep, causes blocking
     await ctx.send("But nothing happened!")
 
+
 @bot.group(name='standings', help='Gets the current league standings')
 async def standings(ctx):
     if ctx.invoked_subcommand is not None:
@@ -70,12 +71,12 @@ async def standings(ctx):
     await ctx.send(div2)
 
 @standings.command(help="Gets the Solgaleo division standings")
-async def solgaleo(ctx):
+async def standings_solgaleo(ctx):
     div = '**Solgaleo Division**\n```' + getFormattedStandings(1) + '```'
     await ctx.send(div)
 
 @standings.command(help="Gets the Lunala division standings")
-async def lunala(ctx):
+async def standings_lunala(ctx):
     div = '**Lunala Division**\n```' + getFormattedStandings(0) + '```'
     await ctx.send(div)
 """
