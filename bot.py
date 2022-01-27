@@ -62,7 +62,9 @@ async def use_splash(ctx):
 
 @bot.command(name='standings', help='Gets the current league standings')
 async def print_standings(ctx):
-    await ctx.send('```' + getFormattedStandings() + '```')
+    div1 = '**Solgaleo Division**\n```' + getFormattedStandings(1) + '```'  # sol
+    div2 = '**Lunala Division**\n```' + getFormattedStandings(0) + '```'    # lun
+    await ctx.send(div1 + '\n' + div2)
 """
 # Go, Cosmog!
 bot.run(TOKEN)
