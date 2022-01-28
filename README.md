@@ -22,15 +22,6 @@ Then restart your shell application and type `env | grep "DISCORD_TOKEN"`. It sh
 Once you have your token variable set in your local environment, simply run `python3 bot.py` and the bot will go online!
 
 # Goals:
--require or not require permissions for specific commands to prevent abuse
-
--add error handling (upon error send a descriptive message in the channel so the user knows the issue, ex not having admin permissions):
-    -commandnotfound
-    
-    -missingpermissions
-
-    -missingrequiredarguments
-
 -update kill leaders script
     -connect to new doc
 

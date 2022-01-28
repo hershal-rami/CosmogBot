@@ -54,16 +54,14 @@ class TeamManagement(commands.Cog, name='Team Management'):
         # Check for illegal roles
         team_name = args
         if team_name in ['MBTL Bronze Medalist', 'MBTL Silver Medalist', 'MBTL Gold Medalist', 'Bot']:
-            # TODO error if team is a medalist role
-            print("error this is a medalist role")
+            await ctx.send("Can't do that, this is a medalist role!")
             return
 
         # Check that team role exists
         guild = ctx.message.guild
         team_role = discord.utils.get(guild.roles, name=team_name)
         if team_role is None:
-            # TODO error if team does not exist
-            print("this team does not exist")
+            await ctx.send("Could not find the specified team")
             return
 
         # Remove No Team role
@@ -80,16 +78,14 @@ class TeamManagement(commands.Cog, name='Team Management'):
         # Check for illegal roles
         team_name = args
         if team_name in ['MBTL Bronze Medalist', 'MBTL Silver Medalist', 'MBTL Gold Medalist', 'Bot']:
-            # TODO error if team is a medalist role
-            print("error this is a medalist role")
+            await ctx.send("Can't do that, this is a medalist role!")
             return
 
         # Check that team role exists
         guild = ctx.message.guild
         team_role = discord.utils.get(guild.roles, name=team_name)
         if team_role is None:
-            # TODO error if team does not exist
-            print("this team does not exist")
+            await ctx.send("Could not find the specified team")
             return
 
         # Remove team role
@@ -102,19 +98,18 @@ class TeamManagement(commands.Cog, name='Team Management'):
         await ctx.send(member.name + " is no longer supporting " + team_name + "...")
 
     @commands.command(name='createteam', help='Usage: .createteam @User, Hex, Team Name')
+    @commands.has_permissions(manage_roles=True)
     async def createteam(self, ctx, *, message):
-        # TODO if not mod then throw error
-        # insufficient role/perms
+        if not ctx.message.author.guild_permissions.administrator:
+            await ctx.send("Lacking sufficient privileges; not an Administrator")
+            return
 
         # split message into individual arguments and format
         args = message.split(',')
 
         if len(args) < 3:
-            #TODO fix error handling
-            await ctx.send("error msg")
-            raise commands.MissingRequiredArgument
-
-        # TODO error handling on incorrect format (no commas)
+            await ctx.send("Incorrect/missing arguments. Format should be '.createteam @User, Hex, Team Name") 
+            return
 
         user_id = int(args[0].strip()[3:-1])
         hex_code = int(args[1].strip(), 16)
@@ -127,8 +122,8 @@ class TeamManagement(commands.Cog, name='Team Management'):
         guild = ctx.message.guild
         duplicate = discord.utils.get(guild.roles, name=team_name)
         if duplicate is not None:
-            # TODO throw error if role already exists
-            print("error team name already exists")
+            await ctx.send("This team already exists!")
+            return
         
         # Create role with specified name and color
         perms=discord.Permissions(administrator=True)
@@ -145,8 +140,3 @@ class TeamManagement(commands.Cog, name='Team Management'):
         
         output = "Team " + team_name + " has been created for Coach " + member.name +"!"
         await ctx.send(output)
-
-    @createteam.error
-    async def on_command_error(error, ctx):
-        if isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send("Incorrect/missing arguments. Format should be '.createteam @User, Hex, Team Name") 

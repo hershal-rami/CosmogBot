@@ -47,9 +47,10 @@ async def responder(message):
     global GM
     # Need this to prevent bot from responding to itself infinitely
     if message.author == bot.user:
-        return
+        return        
 
     # if "Result:" in message.content:
+    #     # if message.author.id == 692091256477581423:
     #     await message.channel.send("Working on it!")
     #     updateMatchResults(message.content)
     #     await message.channel.send("Standings have been updated!!")
