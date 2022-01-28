@@ -18,7 +18,7 @@ class Moveset(commands.Cog):
     @commands.command(name='teleport', help='Cosmog\'s second best attack!')
     async def teleport(self, ctx):
         await ctx.send("Cosmog used teleport!")
-        await ctx.send(file=discord.File('teleport.gif'))
+        await ctx.send(file=discord.File('content/teleport.gif'))
         await asyncio.sleep(2)
         await ctx.send("Cosmog fled from battle!")
 

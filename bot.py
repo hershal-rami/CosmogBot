@@ -62,7 +62,7 @@ async def responder(message):
         await message.channel.send("<:thonk:932152527061913640>")
     if ":copium:" in message.content.lower():
         await message.channel.send("<:copium:932152187616895006>")
-    if ":sdn:" in message.content.lower():
+    if "sdn" in message.content.lower():
         await message.channel.send("<:sdn:932156913012047922>")
     if ":cosmug:" in message.content.lower():
         await message.channel.send("<:cosmug:932895668450787329>")
@@ -76,7 +76,7 @@ async def responder(message):
     if not GM and any(x in message.content.lower() for x in ('gm', 'mornin')):
         GM = True
         await message.channel.send("Pe-pepew! *(Good morning!)*")
-        await message.channel.send(file=discord.File('gm.gif'))
+        await message.channel.send(file=discord.File('content/gm.gif'))
 
 # Go, Cosmog!
 bot.run(TOKEN)
