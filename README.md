@@ -22,13 +22,6 @@ Then restart your shell application and type `env | grep "DISCORD_TOKEN"`. It sh
 Once you have your token variable set in your local environment, simply run `python3 bot.py` and the bot will go online!
 
 # Goals:
--update kill leaders script
-    -connect to new doc
-
-    -fix google sheets API handling
-
-    -upload to new doc
-
 -create kill leaders commands:
     -keep track of each pokemon's k/d locally with JSON
 
