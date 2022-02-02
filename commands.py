@@ -126,7 +126,7 @@ class TeamManagement(commands.Cog, name='Team Management'):
             return
         
         # Create role with specified name and color
-        perms=discord.Permissions(administrator=True)
+        perms=discord.Permissions(administrator=False)
         await guild.create_role(name=team_name, color=discord.Color(hex_code), permissions=perms)
 
         # Remove No Team role from user using id

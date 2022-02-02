@@ -22,9 +22,10 @@ Then restart your shell application and type `env | grep "DISCORD_TOKEN"`. It sh
 Once you have your token variable set in your local environment, simply run `python3 bot.py` and the bot will go online!
 
 # Goals:
--create kill leaders commands:
-    -keep track of each pokemon's k/d locally with JSON
+-createteam makes person administrator
+-createteam didnt actually assign the role??
 
+-create kill leaders commands:
     -update k/d statistics when updating match results
 
     -implement function to calculate all time kill leaders
