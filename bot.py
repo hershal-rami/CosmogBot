@@ -60,9 +60,26 @@ async def use_splash(ctx):
     await ctx.send("But nothing happened!")
 
 
-@bot.command(name='standings', help='Gets the current league standings')
-async def print_standings(ctx):
-    await ctx.send('```' + getFormattedStandings() + '```')
+@bot.group(name='standings', help='Gets the current league standings')
+async def standings(ctx):
+    if ctx.invoked_subcommand is not None:
+        return
+
+    div1 = '**Solgaleo Division**\n```' + getFormattedStandings(1) + '```'  # sol
+    await ctx.send(div1)
+    div2 = '**Lunala Division**\n```' + getFormattedStandings(0) + '```'    # lun
+    await ctx.send(div2)
+
+@standings.command(help="Gets the Solgaleo division standings")
+async def standings_solgaleo(ctx):
+    div = '**Solgaleo Division**\n```' + getFormattedStandings(1) + '```'
+    await ctx.send(div)
+
+@standings.command(help="Gets the Lunala division standings")
+async def standings_lunala(ctx):
+    div = '**Lunala Division**\n```' + getFormattedStandings(0) + '```'
+    await ctx.send(div)
 """
+
 # Go, Cosmog!
 bot.run(TOKEN)

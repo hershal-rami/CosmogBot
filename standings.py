@@ -58,13 +58,13 @@ def getStandings(DocNum):
     return rawData
 
 
-def getFormattedStandings():
+def getFormattedStandings(doc_num):
     """
     Takes current standings of the league and reformats them into a single
     string that can be displayed to the user by the bot upon request
     """
     # remove additional row and col on the top and left side
-    raw_data = getStandings()[1::]
+    raw_data = getStandings(doc_num)[1::]
     for i, row in enumerate(raw_data):
         raw_data[i] = row[1::]
 
