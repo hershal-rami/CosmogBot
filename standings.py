@@ -4,6 +4,7 @@ import pandas as pd
 
 import gspread
 from gspread_formatting import *
+from KillLeaders import update_json
 
 DOCS = ["MBTL LC Doc TEST VER","MBTL Monotype Draft TEST VER"]
 LUN = 0
@@ -478,6 +479,8 @@ def updateMatchResults(result):
         updateStandings(team1, team2, DocNum)
 
         message += "Standings have been updated!!"
+    
+    update_json(DocNum, team1, team2)
     return message
     
 
