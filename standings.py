@@ -239,13 +239,12 @@ def getRosters(DocNum):
     #because of how it works i have to split the list in half to access all the teams
     row1 = rawData[1 : len(rawData) // 2 - 1]
     row2 = rawData[len(rawData) // 2 + 1:-1]
-
     #create a list that will be the reutrn value
     team_list = []
 
     #loop through the data and group together the rosters in the form
     #{"Pokemon": ["Chimchar", "Snivy", ...], "TeamName": "Cool Guys", "Coach": "Me"}
-    for i in range(1, len(row1[0]) - 1):
+    for i in range(1, len(row1[0]) - 1, 2):
 
         team = {}
         team["Pokemon"] = []
@@ -253,29 +252,28 @@ def getRosters(DocNum):
         for j in range(0, len(row1)):
             
             if(j == 0):
-                team["Coach"] = row1[j][i]
+                team["Coach"] = row1[j][i].strip()
             elif(j == 1):
-                team["TeamName"] = row1[j][i]
+                team["TeamName"] = row1[j][i].strip()
             else:
-                team["Pokemon"].append(row1[j][i])
+                team["Pokemon"].append(row1[j][i].strip())
         
         team_list.append(team)
 
 
     #same thing but for the other half of the teams
-    for i in range(1, len(row2[0]) - 1):
+    for i in range(1, len(row2[0]) - 1, 2):
 
         team = {}
         team["Pokemon"] = []
 
         for j in range(0, len(row1)):
             if(j == 0):
-                team["Coach"] = row2[j][i]
+                team["Coach"] = row2[j][i].strip()
             elif(j == 1):
-                team["TeamName"] = row2[j][i]
+                team["TeamName"] = row2[j][i].strip()
             else:
-                team["Pokemon"].append(row2[j][i])
-        
+                team["Pokemon"].append(row2[j][i].strip())
         team_list.append(team)
 
     #return the list of all the teams
@@ -298,6 +296,10 @@ def updateMatchResults(result):
 
         #retrieve stats from message
         pokemon = pokeStat[0]
+        splitMon = pokemon.split("-")
+        if(len(splitMon) > 1):
+            pokemon = splitMon[0] + "-" + splitMon[1][0]
+
         killNum = pokeStat[2]
         deathNum = pokeStat[-3]
 
@@ -309,6 +311,10 @@ def updateMatchResults(result):
 
         #retrieve stats from message
         pokemon = pokeStat[0]
+        splitMon = pokemon.split("-")
+        if(len(splitMon) > 1):
+            pokemon = splitMon[0] + "-" + splitMon[1][0]
+
         killNum = pokeStat[2]
         deathNum = pokeStat[-3]
 
@@ -365,7 +371,7 @@ def updateMatchResults(result):
             if mon in team["Pokemon"]:
                 matches += 1
         
-        if(matches == 6):
+        if(matches >= 5):
             team1["TeamName"] = team["TeamName"]
             team1["Coach"] = team["Coach"]
         
@@ -374,7 +380,7 @@ def updateMatchResults(result):
             if mon in team["Pokemon"]:
                 matches += 1
         
-        if(matches == 6):
+        if(matches >= 5):
             team2["TeamName"] = team["TeamName"]
             team2["Coach"] = team["Coach"]
 
@@ -391,7 +397,7 @@ def updateMatchResults(result):
                 if mon in team["Pokemon"]:
                     matches += 1
             
-            if(matches == 6):
+            if(matches >= 5):
                 team1["TeamName"] = team["TeamName"]
                 team1["Coach"] = team["Coach"]
             
@@ -400,7 +406,7 @@ def updateMatchResults(result):
                 if mon in team["Pokemon"]:
                     matches += 1
             
-            if(matches == 6):
+            if(matches >= 5):
                 team2["TeamName"] = team["TeamName"]
                 team2["Coach"] = team["Coach"]
 
