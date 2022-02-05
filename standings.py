@@ -110,32 +110,32 @@ def updateStandings(team1, team2, DocNum):
         if(team[TEAMNAME] == name1):
 
             if(team1["Winner"]):
-                team[WINS] = str(int(team[WINS]) + 1)
+                team[WINS] = int(team[WINS]) + 1
             else:
-                team[LOSSES] = str(int(team[LOSSES]) + 1)
+                team[LOSSES] = int(team[LOSSES]) + 1
 
             if BO3:
-                team[DIFF] = str(int(team[DIFF]) + ONGOING_GAMES[name1+"Diff"])
+                team[DIFF] = int(team[DIFF]) + ONGOING_GAMES[name1+"Diff"]
                 #the game is over, it is no longer ongoing
                 ONGOING_GAMES.pop(name1)
                 ONGOING_GAMES.pop(name1+"Diff")
             else:
-                team[DIFF] = str(int(team[DIFF]) + team1["DiffChange"])
+                team[DIFF] = int(team[DIFF]) + team1["DiffChange"]
 
         #same as team1
         if(team[TEAMNAME] == name2):
 
             if(team2["Winner"]):
-                team[WINS] = str(int(team[WINS]) + 1)
+                team[WINS] = int(team[WINS]) + 1
             else:
-                team[LOSSES] = str(int(team[LOSSES]) + 1)
+                team[LOSSES] = int(team[LOSSES]) + 1
 
             if BO3:
-                team[DIFF] = str(int(team[DIFF]) + ONGOING_GAMES[name2+"Diff"])
+                team[DIFF] = int(team[DIFF]) + ONGOING_GAMES[name2+"Diff"]
                 ONGOING_GAMES.pop(name2)
                 ONGOING_GAMES.pop(name2+"Diff")
             else:
-                team[DIFF] = str(int(team[DIFF]) + team2["DiffChange"])
+                team[DIFF] = int(team[DIFF]) + team2["DiffChange"]
 
     
     #re-sort the rankings

@@ -504,36 +504,36 @@
         },
         {
             "Wingull": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
+                "Kills": 1,
+                "Deaths": 1,
+                "K/D": 1
             }
         },
         {
             "Snivy": {
                 "Kills": 0,
-                "Deaths": 0,
+                "Deaths": 1,
                 "K/D": 0
             }
         },
         {
             "Sandile": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
+                "Kills": 1,
+                "Deaths": 1,
+                "K/D": 1
             }
         },
         {
             "Voltorb": {
                 "Kills": 0,
-                "Deaths": 0,
+                "Deaths": 1,
                 "K/D": 0
             }
         },
         {
             "Pancham": {
                 "Kills": 0,
-                "Deaths": 0,
+                "Deaths": 1,
                 "K/D": 0
             }
         },
@@ -546,9 +546,9 @@
         },
         {
             "Combee": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
+                "Kills": 1,
+                "Deaths": 1,
+                "K/D": 1
             }
         },
         {
@@ -825,9 +825,9 @@
         },
         {
             "Cutiefly": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
+                "Kills": 4,
+                "Deaths": 4,
+                "K/D": 1.0
             }
         },
         {
@@ -846,9 +846,9 @@
         },
         {
             "Magnemite": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
+                "Kills": 8,
+                "Deaths": 8,
+                "K/D": 1.0
             }
         },
         {
@@ -867,9 +867,9 @@
         },
         {
             "Tyrogue": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
+                "Kills": 4,
+                "Deaths": 4,
+                "K/D": 1.0
             }
         },
         {
@@ -881,9 +881,9 @@
         },
         {
             "Barboach": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
+                "Kills": 4,
+                "Deaths": 4,
+                "K/D": 1.0
             }
         },
         {
@@ -895,9 +895,9 @@
         },
         {
             "Happiny": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
+                "Kills": 4,
+                "Deaths": 4,
+                "K/D": 1.0
             }
         }
     ],
