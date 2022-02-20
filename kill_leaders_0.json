@@ -4,35 +4,70 @@
             "Team": "Celestic Chimchars"
         },
         {
-            "Mienfoo": {
+            "Togekiss": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Abra": {
+            "Infernape": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Turtwig": {
+            "Darkrai": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Axew": {
+            "Milotic": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Elekid": {
+            "Torterra": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Haxorus": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Eelektross": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Empoleon": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Gallade": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Staraptor": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
@@ -44,49 +79,70 @@
                 "Deaths": 0,
                 "K/D": 0
             }
-        },
-        {
-            "Piplup": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Kricketot": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Magikarp": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Igglybuff": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Shinx": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
         }
     ],
-    "PurpleDolphin": [
+    "TebowTime": [
         {
-            "Team": "Hammerlocke Drednaw"
+            "Team": "Aurora Alolan Vulpix"
         },
         {
-            "Misdreavus": {
+            "Tapu Fini": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Weavile": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Mawile-M": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Pheromosa": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Kecleon": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Sableye": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Golisopod": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Typhlosion-H": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Sharpedo": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
@@ -100,684 +156,143 @@
             }
         },
         {
-            "Tirtouga": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Jangmo-o": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Cosmog": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Taillow": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Weedle": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Shieldon": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Flabebe": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Cyndaquil": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Wimpod": {
+            "Vulpix-A": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         }
     ],
-    "Tedward": [
+    "CatsRuleTheDumb": [
         {
-            "Team": "Glimwood Golurk"
+            "Team": "Flight Club"
         },
         {
-            "Porygon": {
+            "Ursaluna": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Litten": {
+            "Zapdos-G": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Wooloo": {
+            "Clefairy": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Yamask": {
+            "Stakataka": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Croagunk": {
+            "Crobat": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Morelull": {
+            "Musharna": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Wailmer": {
+            "Houndoom-M": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Grimer-Alola": {
+            "Togedemaru": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Klink": {
+            "Exeggutor": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Applin": {
+            "Simipour": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Beldum": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        }
-    ],
-    "Mmattus": [
-        {
-            "Team": "Wedgehurst Gogoat"
-        },
-        {
-            "Hippopotas": {
-                "Kills": 0,
-                "Deaths": 1,
-                "K/D": 0
-            }
-        },
-        {
-            "Ferroseed": {
-                "Kills": 1,
-                "Deaths": 1,
-                "K/D": 1
-            }
-        },
-        {
-            "Impidimp": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Shuppet": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Venipede": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Diglett-A": {
-                "Kills": 1,
-                "Deaths": 1,
-                "K/D": 1
-            }
-        },
-        {
-            "Shellos": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Skiddo": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Fennekin": {
-                "Kills": 0,
-                "Deaths": 1,
-                "K/D": 0
-            }
-        },
-        {
-            "Roggenrola": {
-                "Kills": 0,
-                "Deaths": 1,
-                "K/D": 0
-            }
-        },
-        {
-            "Drilbur": {
+            "Mienfoo": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         }
     ],
-    "TebowTime": [
+    "FistToYourDoom": [
         {
-            "Team": "Aurora Alolan Vulpixes"
+            "Team": "Cult of the Character Limit"
         },
         {
-            "Vulpix-Alola": {
+            "Melmetal": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Scorbunny": {
+            "Volcarona": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Riolu": {
+            "Necrozma": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Gible": {
+            "Kyurem": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Skrelp": {
+            "Wartortle": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Cottonee": {
+            "Regieleki": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Amaura": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Toxel": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Duskull": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Espurr": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Whismur": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        }
-    ],
-    "Blind Messiah": [
-        {
-            "Team": "Vienna Vibe Check"
-        },
-        {
-            "Gligar": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Scraggy": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Staryu": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Magby": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Bonsly": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Poliwag": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Pansage": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Grubbin": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Rattata": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Nidoran-F": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Rookidee": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        }
-    ],
-    "Pluto": [
-        {
-            "Team": "Village Bridge Volcarona"
-        },
-        {
-            "Ponyta": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Wingull": {
-                "Kills": 1,
-                "Deaths": 1,
-                "K/D": 1
-            }
-        },
-        {
-            "Snivy": {
-                "Kills": 0,
-                "Deaths": 1,
-                "K/D": 0
-            }
-        },
-        {
-            "Sandile": {
-                "Kills": 1,
-                "Deaths": 1,
-                "K/D": 1
-            }
-        },
-        {
-            "Voltorb": {
-                "Kills": 0,
-                "Deaths": 1,
-                "K/D": 0
-            }
-        },
-        {
-            "Pancham": {
-                "Kills": 0,
-                "Deaths": 1,
-                "K/D": 0
-            }
-        },
-        {
-            "Milcery": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Combee": {
-                "Kills": 1,
-                "Deaths": 1,
-                "K/D": 1
-            }
-        },
-        {
-            "Scatterbug": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Honedge": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Sentret": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        }
-    ],
-    "PastaSupper": [
-        {
-            "Team": "St. John's Sandiles"
-        },
-        {
-            "Yanma": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Ponyta-Galar": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Aron": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Wooper": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Azurill": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Vullaby": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Ralts": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Petilil": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Spheal": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Mareep": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Litwick": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        }
-    ],
-    "YungBisharp": [
-        {
-            "Team": "Driftveil Darkrai"
-        },
-        {
-            "Corsola-Galar": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Pawniard": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Meowth": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Swirlix": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Mankey": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Omanyte": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Numel": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Burmy": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Tynamo": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Wurmple": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Blipbug": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        }
-    ],
-    "RainbowDonutCat": [
-        {
-            "Team": "Palm Beach Pults"
-        },
-        {
-            "Dewpider": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Inkay": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Snom": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Onix": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Diglett": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Munchlax": {
+            "Enamorus-I": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
@@ -791,119 +306,618 @@
             }
         },
         {
-            "Cleffa": {
+            "Carbink": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Feebas": {
+            "Throh": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Skitty": {
-                "Kills": 0,
-                "Deaths": 0,
-                "K/D": 0
-            }
-        },
-        {
-            "Sunkern": {
+            "Sentret": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         }
     ],
-    "Coach Oak": [
+    "SpiderRyno": [
         {
-            "Team": "Iki Town Incineroar"
+            "Team": "Stow-on-Side Gurdurr"
         },
         {
-            "Cutiefly": {
-                "Kills": 4,
-                "Deaths": 4,
-                "K/D": 1.0
-            }
-        },
-        {
-            "Drifloon": {
+            "Zeraora": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Trubbish": {
+            "Urshifu-R": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Magnemite": {
-                "Kills": 8,
-                "Deaths": 8,
-                "K/D": 1.0
-            }
-        },
-        {
-            "Zorua": {
+            "Tapu Lele": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Gothita": {
+            "Naganadel": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Tyrogue": {
-                "Kills": 4,
-                "Deaths": 4,
-                "K/D": 1.0
-            }
-        },
-        {
-            "Vanillite": {
+            "Sylveon": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Barboach": {
-                "Kills": 4,
-                "Deaths": 4,
-                "K/D": 1.0
-            }
-        },
-        {
-            "Skwovet": {
+            "Pelipper": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Happiny": {
-                "Kills": 4,
-                "Deaths": 4,
-                "K/D": 1.0
+            "Decidueye": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Pincurchin": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Corsola-G": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Morpeko": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Charjabug": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
             }
         }
     ],
-    "Casey": [
+    "Gradual": [
         {
-            "Team": "Goldenrod Gliscors"
+            "Team": "Sunset Solrocks"
+        },
+        {
+            "Moltres-G": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Lapras": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Comfey": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Raichu": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Torracat": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Kartana": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Wyrdeer": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Runerigus": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Araquanid": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Sliggoo-H": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Makuhita": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        }
+    ],
+    "HawaiianShaymin": [
+        {
+            "Team": "The Spirit Archers"
+        },
+        {
+            "Celesteela": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Grimmsnarl": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Arcanine": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Slowking": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Rhyperior": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Mienshao": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Latios": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Togepi": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Manectric": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Ambipom": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Glaceon": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        }
+    ],
+    "Tedward": [
+        {
+            "Team": "Glimwood Golurk"
+        },
+        {
+            "Jirachi": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Whimsicott": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Sableye-M": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Kommo-o": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Toxicroak": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Corviknight": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Starmie": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Oranguru": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Rotom-Mow": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Impidimp": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Cubone": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        }
+    ],
+    "Lightning": [
+        {
+            "Team": "New England Ninetales"
+        },
+        {
+            "Salamence-M": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Persian-A": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Cobalion": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Snorlax": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Slowbro": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Magmortar": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Tapu Koko": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Hitmonlee": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Trevenant": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Marowak": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Spewpa": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        }
+    ],
+    "TangelaBoots": [
+        {
+            "Team": "Twinleaf Town Tangela"
+        },
+        {
+            "Coalossal": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Venusaur": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Clefable": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Bronzong": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Krookodile": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Ninetales": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Dragonite": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Froslass": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Dewgong": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Cradily": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Hitmonchan": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        }
+    ],
+    "Chandy": [
+        {
+            "Team": "Ok Boomer Chandelures"
+        },
+        {
+            "Rillaboom": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Thundurus-I": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Spectrier": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Gastrodon": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Lopunny-M": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Registeel": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Togetic": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Turtonator": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Cosplay Pikachu": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Vulpix": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Swirlix": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        }
+    ],
+    "Pluto": [
+        {
+            "Team": "Village Bridge Volcarona"
+        },
+        {
+            "Landorus-T": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Blastoise": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
         },
         {
             "Murkrow": {
@@ -913,70 +927,220 @@
             }
         },
         {
-            "Lickitung": {
-                "Kills": 1,
-                "Deaths": 1,
-                "K/D": 1
-            }
-        },
-        {
-            "Gastly": {
-                "Kills": 1,
-                "Deaths": 1,
-                "K/D": 1
-            }
-        },
-        {
-            "Growlithe": {
-                "Kills": 2,
-                "Deaths": 2,
-                "K/D": 1.0
-            }
-        },
-        {
-            "Nosepass": {
-                "Kills": 1,
-                "Deaths": 1,
-                "K/D": 1
-            }
-        },
-        {
-            "Cacnea": {
+            "Riolu": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Rockruff": {
+            "Lilligant-H": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Oshawott": {
-                "Kills": 1,
-                "Deaths": 1,
-                "K/D": 1
-            }
-        },
-        {
-            "Caterpie": {
+            "Marowak-A": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Meltan": {
+            "Mr. Mime": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0
             }
         },
         {
-            "Elgyem": {
+            "Ampharos-M": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Drapion": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Genesect": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Wigglytuff": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        }
+    ],
+    "AceHarm555": [
+        {
+            "Team": "Melbourne Magnezonez"
+        },
+        {
+            "Dragapult": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Incineroar": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Zapdos": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Reuniclus": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Escavalier": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Azumarill": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Persian": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Lucario-M": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Vileplume": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Rhydon": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Herdier": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        }
+    ],
+    "Blind Messiah": [
+        {
+            "Team": "Vienna Vibe Check"
+        },
+        {
+            "Greninja": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Kangaskhan-M": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Slowbro-G": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Glastrier": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Ditto": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Tornadus-T": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Hitmontop": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Golduck": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Claydol": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Tapu Bulu": {
+                "Kills": 0,
+                "Deaths": 0,
+                "K/D": 0
+            }
+        },
+        {
+            "Zorua-H": {
                 "Kills": 0,
                 "Deaths": 0,
                 "K/D": 0

@@ -1,12 +1,13 @@
 from re import L
 from webbrowser import get
+from numpy import true_divide
 import pandas as pd
 
 import gspread
 from gspread_formatting import *
 from KillLeaders import update_json
 
-DOCS = ["MBTL LC Doc TEST VER","MBTL Monotype Draft TEST VER"]
+DOCS = ["MBTL LC Doc TEST VER","Copy of MBTL VGC Doc - Solgaleo"]
 LUN = 0
 SOL = 1
 BO3 = True
@@ -212,7 +213,7 @@ def updateStandings(team1, team2, DocNum):
     standingsSheet.update(current)
 
     #reformat and color the cells
-    for i in range(3, len(current) - 1):
+    for i in range(3, len(current) + 1):
 
         teamName = standingsSheet.acell("C" + str(i)).value
 
@@ -287,6 +288,10 @@ def updateMatchResults(result):
 
     #get rid of all the stuff before the kill info and break it up by line
     result = result.split("\n")[3:]
+    messedUpNames = {"Urshifu":"Urshifu-S","Shellos-East":"Shellos","Shellos-West":"Shellos","Charizard-Mega-X":"Charizard-M-X","Charizard-Mega-Y":"Charizard-M-Y",
+                        "Rotom-Wash":"Rotom-Wash","Rotom-Mow":"Rotom-Mow","Rotom-Heat":"Rotom-Heat","Rotom-Fan":"Rotom-Fan","Rotom-Frost":"Rotom-Frost","Meowstic":"Meowstic-M",
+                        "Indeedee":"Indeedee-M","Pikachu-Belle":"Cosplay Pikachu","Pikachu-Libre":"Cosplay Pikachu","Pikachu-PhD":"Cosplay Pikachu","Pikachu-Pop-Star":"Cosplay Pikachu","Pikachu-Rock-Star":"Cosplay Pikachu",
+                        "Thundurus":"Thundurus-I","Landorus":"Landorus-I","Tornadus":"Tornadus-I"}
 
     #store all kill info in 2 dictionaires
     #Team1 and Team2
@@ -295,10 +300,16 @@ def updateMatchResults(result):
     for i in range(6):
         pokeStat = result[i].split(" ")
 
+        replaced = False
         #retrieve stats from message
-        pokemon = pokeStat[0]
+        pokemon = pokeStat[0].strip()
+        
+        if pokemon in messedUpNames:
+            replaced = True
+            pokemon = messedUpNames[pokemon]
+
         splitMon = pokemon.split("-")
-        if(len(splitMon) > 1):
+        if(len(splitMon) > 1 and not replaced):
             pokemon = splitMon[0] + "-" + splitMon[1][0]
 
         killNum = pokeStat[2]
@@ -310,8 +321,14 @@ def updateMatchResults(result):
     for i in range(8,14):
         pokeStat = result[i].split(" ")
 
+        replaced = False
         #retrieve stats from message
-        pokemon = pokeStat[0]
+        pokemon = pokeStat[0].strip()
+
+        if pokemon in messedUpNames:
+            replaced = True
+            pokemon = messedUpNames[pokemon]
+
         splitMon = pokemon.split("-")
         if(len(splitMon) > 1):
             pokemon = splitMon[0] + "-" + splitMon[1][0]

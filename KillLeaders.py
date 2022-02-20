@@ -5,7 +5,7 @@ import gspread
 import pandas as pd
 
 # Setup - Doc name and relevant ranges
-DOCS = ["MBTL LC Doc TEST VER","MBTL Monotype Draft TEST VER", "MBTL Kill Counter"]
+DOCS = ["Copy of MBTL VGC Doc - Lunala","Copy of MBTL VGC Doc - Solgaleo", "MBTL Kill Counter"]
 LUN = 0
 SOL = 1
 
@@ -85,7 +85,7 @@ def update_json(doc_num, team1, team2):
             if team2.get(pokemon):
 
                 data[team2["Coach"]][i][pokemon]["Kills"] += int(team2[pokemon][0])
-                data[team2["Coach"]][i][pokemon]["Deaths"] += int(team2[pokemon][0])
+                data[team2["Coach"]][i][pokemon]["Deaths"] += int(team2[pokemon][1])
 
                 if(data[team2["Coach"]][i][pokemon]["Deaths"] > 1):
                     data[team2["Coach"]][i][pokemon]["K/D"] = data[team2["Coach"]][i][pokemon]["Kills"] / data[team2["Coach"]][i][pokemon]["Deaths"]
