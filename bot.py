@@ -16,13 +16,6 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
-# Constants
-DOCS = ["MBTL VGC Doc - Solgaleo", "MBTL VGC Doc - Lunala", "MBTL Kill Counter"]
-FORMAT = "VGC"
-BO3 = True
-LUN = 0
-SOL = 1
-
 # Discord token set locally for security
 TOKEN = os.getenv('DISCORD_TOKEN')
 GM = False

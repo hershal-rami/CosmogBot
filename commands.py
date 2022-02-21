@@ -3,7 +3,7 @@ import asyncio
 import discord
 from discord.ext import commands
 
-from standings import getFormattedStandings, updateMatchResults
+from standings import getFormattedStandings
 
 class Moveset(commands.Cog):
     def __init__(self, bot):

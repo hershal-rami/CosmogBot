@@ -1,6 +1,6 @@
 import json
 import gspread
-from bot import DOCS
+from constants import DOCS
 
 pokeDict = {}
 

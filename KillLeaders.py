@@ -3,13 +3,12 @@ from os import kill
 
 import gspread
 import pandas as pd
-from bot import DOCS, FORMAT
+from constants import DOCS, FORMAT
 
 # Setup - Doc name and relevant ranges
 DATA_RANGE = 'A3:E158'
 LEADERS_RANGE = 'I40:L59'
 COACH_RANGE = 'I61:J72'
-
 
 # Pull rosters from spreadsheet and create JSON with empty statistics
 def convert_to_json(doc_num):

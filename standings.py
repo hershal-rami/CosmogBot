@@ -5,7 +5,7 @@ import pandas as pd
 import gspread
 from gspread_formatting import *
 from KillLeaders import update_json
-from bot import DOCS, LUN, SOL, BO3
+from constants import DOCS, LUN, SOL, BO3
 
 #ongoing games dict for bo3 formats
 ONGOING_GAMES = {}
