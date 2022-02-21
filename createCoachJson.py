@@ -13,7 +13,7 @@ coaches = [("PurpleDolphin","Hammerlocke Drednaw"), ("Galenskog","Core Enfourzer
             ("Tedward","Glimwood Golurk"),("TangelaBoots","Twinleaf Town Tangela"), ("Pluto","Village Bridge Volcarona"), ("Blind Messiah", "Vienna Vibe Check"),
             ("PastaSupper", "St. John's Sandiles"),("RainbowDonutCat","Palm Beach Pults"),("Triviess","Snowpoint Sylveons"),("Bassrman","Dewford Doublade")]
 stats = {}
-with open("coachStats.json", "r") as file:
+with open("data/coachStats.json", "r") as file:
     stats = json.load(file)
 
     for pair in coaches:
@@ -21,5 +21,5 @@ with open("coachStats.json", "r") as file:
             stats[pair[COACH]] = {"Team Name": pair[TEAM], "Wins":0, "Losses":0, "Differential":0, "Pokemon":{"Example":{"Kills": 0, "Deaths": 0, "Games Played":0, "Games Eligible":0}}, "vs":{"ExampleCoach": {"Replays":["https...."], "Wins":0, "Losses":0,"Differential":0}}}
 
 
-with open("coachStats.json", "w") as file:
+with open("data/coachStats.json", "w") as file:
     json.dump(stats,file,indent=4)

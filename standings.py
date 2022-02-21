@@ -1,16 +1,12 @@
 from re import L
 from webbrowser import get
-from numpy import true_divide
 import pandas as pd
 
 import gspread
 from gspread_formatting import *
 from KillLeaders import update_json
+from bot import DOCS, LUN, SOL, BO3
 
-DOCS = ["MBTL LC Doc TEST VER","Copy of MBTL VGC Doc - Solgaleo"]
-LUN = 0
-SOL = 1
-BO3 = True
 #ongoing games dict for bo3 formats
 ONGOING_GAMES = {}
 
@@ -22,7 +18,7 @@ def getTeamColors(DocNum):
     """
 
     #open the sheet
-    sa = gspread.service_account("credentialsfile.json")
+    sa = gspread.service_account("data/credentialsfile.json")
     sheet = sa.open(DOCS[DocNum])
     standingsSheet = sheet.worksheet("Standings")
 
@@ -52,7 +48,7 @@ def getStandings(DocNum):
     """
 
     #open the sheet and get the data from the stadnings 
-    sa = gspread.service_account("credentialsfile.json")
+    sa = gspread.service_account("data/credentialsfile.json")
     sheet = sa.open(DOCS[DocNum])
     standingsSheet = sheet.worksheet("Standings")
     rawData = standingsSheet.get_all_values()
@@ -205,7 +201,7 @@ def updateStandings(team1, team2, DocNum):
 
             #if diff is even, just don't swap, we have no way to know the tiebreaker here
     
-    sa = gspread.service_account("credentialsfile.json")
+    sa = gspread.service_account("data/credentialsfile.json")
     sheet = sa.open(DOCS[DocNum])
     standingsSheet = sheet.worksheet("Standings")
 
@@ -233,7 +229,7 @@ def getRosters(DocNum):
     """
 
     #open the sheet and get the data from the rosters tab 
-    sa = gspread.service_account("credentialsfile.json")
+    sa = gspread.service_account("data/credentialsfile.json")
     sheet = sa.open(DOCS[DocNum])
     rosterSheet = sheet.worksheet("Rosters")
     rawData = rosterSheet.get_all_values()
@@ -241,7 +237,7 @@ def getRosters(DocNum):
     #because of how it works i have to split the list in half to access all the teams
     row1 = rawData[1 : len(rawData) // 2 - 1]
     row2 = rawData[len(rawData) // 2 + 1:-1]
-    #create a list that will be the reutrn value
+    #create a list that will be the return value
     team_list = []
 
     #loop through the data and group together the rosters in the form
@@ -283,7 +279,6 @@ def getRosters(DocNum):
 
 
 def updateMatchResults(result):
-
     message = ""
 
     #get rid of all the stuff before the kill info and break it up by line

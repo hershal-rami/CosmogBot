@@ -40,9 +40,25 @@ class Spreadsheets(commands.Cog):
     async def doc_lunala(self, ctx):
         await ctx.send('Lunala Division:\n<https://docs.google.com/spreadsheets/d/1L7_Vr7LMjmIC-zMY6YPTc31wVhjG_a1CkmzVONrvXdM/edit#gid=253592106>')
 
-    @commands.command(name='standings', help='Gets the current league standings')
-    async def standings(self, ctx):
-        await ctx.send('```' + getFormattedStandings() + '```')
+    @commands.group(name='standings', help='Gets the current league standings')
+    async def standings(ctx):
+        if ctx.invoked_subcommand is not None:
+            return
+
+        div1 = '**Solgaleo Division**\n```' + getFormattedStandings(1) + '```'  # sol
+        await ctx.send(div1)
+        div2 = '**Lunala Division**\n```' + getFormattedStandings(0) + '```'    # lun
+        await ctx.send(div2)
+
+    @standings.command(help="Gets the Solgaleo division standings")
+    async def standings_solgaleo(ctx):
+        div = '**Solgaleo Division**\n```' + getFormattedStandings(1) + '```'
+        await ctx.send(div)
+
+    @standings.command(help="Gets the Lunala division standings")
+    async def standings_lunala(ctx):
+        div = '**Lunala Division**\n```' + getFormattedStandings(0) + '```'
+        await ctx.send(div)
 
 
 class TeamManagement(commands.Cog, name='Team Management'):

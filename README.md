@@ -22,12 +22,6 @@ Then restart your shell application and type `env | grep "DISCORD_TOKEN"`. It sh
 Once you have your token variable set in your local environment, simply run `python3 bot.py` and the bot will go online!
 
 # Goals:
-
--fix it so that two matches ending at the smae time don't overload the API limit
--fix update match results code to account for spreadsheet changes
--k/d and kill leaders:
-    -keep track of each pokemon's k/d (in a spreadsheet)
-=======
 -createteam makes person administrator
 -createteam didnt actually assign the role??
 
@@ -39,17 +33,8 @@ Once you have your token variable set in your local environment, simply run `pyt
 
     -implement command to display all time kill leaders
 
--merge standings branch back to main:
-    -test update standings for both divisions, multiple matches at once within the bo3
+-automatically update coachStats and pokeStats after a match
 
-    -have update standings change cell color of differential
-
-    -hook up update standings to kill leaders column
-
--review doc carefully for typos and additional 's'
-
--also check for pokemon name schemes: "grimer-a" vs "grimer-alola"
-**WANT TO BE HERE BY VGC LAUNCH DATE: FEB 14**
 -keep database of all replays, with the season and two coaches that battled:
     -can use JSON or NoSQL database
     
@@ -76,6 +61,10 @@ Once you have your token variable set in your local environment, simply run `pyt
     -once all matches for the week are complete, run the kill leaders commands (could cause issues if a match gets 
     an extension but another match for the next week happens before the extension match, would just mean the k/d info
     would be slightly off as it would be either missing a match or have an extra match)
+
+- fix it so that two matches ending at the same time doesn't overload the API limit
+
+    - create a queue of matches so that while one is being processed there is a 60 wait before processing the next
 
 -pokedex data, showdown command type stuff (which API has this info?):
     

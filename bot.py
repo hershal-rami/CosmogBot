@@ -16,6 +16,13 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
+# Constants
+DOCS = ["MBTL VGC Doc - Solgaleo", "MBTL VGC Doc - Lunala", "MBTL Kill Counter"]
+FORMAT = "VGC"
+BO3 = True
+LUN = 0
+SOL = 1
+
 # Discord token set locally for security
 TOKEN = os.getenv('DISCORD_TOKEN')
 GM = False
@@ -44,23 +51,15 @@ async def reset_gm(self):
 # Overriding on_message stops commands from running, use a listener instead
 @bot.listen('on_message')
 async def responder(message):
+    global GM
 
     if "Result:" in message.content:
         await message.channel.send("Working on it!")
         await message.channel.send(updateMatchResults(message.content))
 
-    
-=======
-    global GM
     # Need this to prevent bot from responding to itself infinitely
     if message.author == bot.user:
         return        
-
-    # if "Result:" in message.content:
-    #     # if message.author.id == 692091256477581423:
-    #     await message.channel.send("Working on it!")
-    #     updateMatchResults(message.content)
-    #     await message.channel.send("Standings have been updated!!")
 
     # Fun responses: emoji responses, reactions, and hello message
     if ":scepthink:" in message.content.lower():
@@ -74,44 +73,10 @@ async def responder(message):
     if ":cosmug:" in message.content.lower():
         await message.channel.send("<:cosmug:932895668450787329>")
     if "cosmog" in message.content.lower():
-        await message.add_reaction("<:cosmug:932895668450787329>")
-
-    elif message.content.lower().startswith(('hello', 'hi', 'hey')):
-        await message.channel.send('Pepew! *(Hello!)*')
-    
-
-
-@bot.command(name='splash', help='Cosmog\'s best attack!')
-async def use_splash(ctx):
-    await ctx.send("Cosmog used splash!")
-    await asyncio.sleep(1) # dont use time.sleep, causes blocking
-    await ctx.send("But nothing happened!")
-=======
-
+        await message.add_reaction("<:cosmug:932895668450787329>")    
     if any(x in message.content.lower().split(" ") for x in ('hello', 'hi', 'hey', 'hiya')):
         await message.channel.send(random.choice(['Pepew! *(Hello!)*', 'Pepew! *(Hi!)*', 'Pepew! *(Heya!)*']))
 
-@bot.group(name='standings', help='Gets the current league standings')
-async def standings(ctx):
-    if ctx.invoked_subcommand is not None:
-        return
-
-    div1 = '**Solgaleo Division**\n```' + getFormattedStandings(1) + '```'  # sol
-    await ctx.send(div1)
-    div2 = '**Lunala Division**\n```' + getFormattedStandings(0) + '```'    # lun
-    await ctx.send(div2)
-
-@standings.command(help="Gets the Solgaleo division standings")
-async def standings_solgaleo(ctx):
-    div = '**Solgaleo Division**\n```' + getFormattedStandings(1) + '```'
-    await ctx.send(div)
-
-@standings.command(help="Gets the Lunala division standings")
-async def standings_lunala(ctx):
-    div = '**Lunala Division**\n```' + getFormattedStandings(0) + '```'
-    await ctx.send(div)
-
-=======
     # only respond if gm is sent before 2pm
     if not GM and any(x in message.content.lower() for x in ('gm', 'mornin')):
         GM = True
