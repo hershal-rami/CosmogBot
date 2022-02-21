@@ -5,7 +5,7 @@ import pandas as pd
 import gspread
 from gspread_formatting import *
 from KillLeaders import update_json
-from constants import DOCS, LUN, SOL, BO3
+from constants import DOCS, LUN, SOL, BO3, TEAM_SIZE
 
 #ongoing games dict for bo3 formats
 ONGOING_GAMES = {}
@@ -288,7 +288,7 @@ def updateMatchResults(result):
                         "Indeedee":"Indeedee-M","Pikachu-Belle":"Cosplay Pikachu","Pikachu-Libre":"Cosplay Pikachu","Pikachu-PhD":"Cosplay Pikachu","Pikachu-Pop-Star":"Cosplay Pikachu","Pikachu-Rock-Star":"Cosplay Pikachu",
                         "Thundurus":"Thundurus-I","Landorus":"Landorus-I","Tornadus":"Tornadus-I"}
 
-    #store all kill info in 2 dictionaires
+    #store all kill info in 2 dictionaries
     #Team1 and Team2
     #where team 1 is of the format {pokemon: (killNum, DeathNum), pokemon2: (killNum, DeathNum) ...}
     team1 = {}
@@ -352,11 +352,11 @@ def updateMatchResults(result):
     #Seems redundant at first but I think we have to do this
     #because some showdown names are inconsistant with team or coach names
     #so instead of dealing with that it's easier to recalculate
-    if(deaths1 >= 6):
+    if(deaths1 >= TEAM_SIZE):
         team1["Winner"] = False
         team2["Winner"] = True
 
-    elif(deaths2 >= 6):
+    elif(deaths2 >= TEAM_SIZE):
         team1["Winner"] = True
         team2["Winner"] = False
 
