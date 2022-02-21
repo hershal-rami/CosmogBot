@@ -1,6 +1,6 @@
 # Constants
-#DOCS = ["MBTL VGC Doc - Lunala", "MBTL VGC Doc - Solgaleo", "MBTL Kill Counter"]
-DOCS = ["Copy of MBTL VGC Doc - Lunala", "Copy of MBTL VGC Doc - Solgaleo"]
+DOCS = ["MBTL VGC Doc - Lunala", "MBTL VGC Doc - Solgaleo", "MBTL Kill Counter"]
+# DOCS = ["Copy of MBTL VGC Doc - Lunala", "Copy of MBTL VGC Doc - Solgaleo", "MBTL Kill Counter"] # for testing only
 FORMAT = "VGC"
 BO3 = True
 TEAM_SIZE = 4

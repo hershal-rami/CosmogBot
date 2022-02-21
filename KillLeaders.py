@@ -66,8 +66,8 @@ def update_json(doc_num, team1, team2):
 
             if team1.get(pokemon):
 
-                data[team1["Coach"]][i][pokemon]["Kills"] = int(team1[pokemon][0])
-                data[team1["Coach"]][i][pokemon]["Deaths"] = int(team1[pokemon][1])
+                data[team1["Coach"]][i][pokemon]["Kills"] += int(team1[pokemon][0])
+                data[team1["Coach"]][i][pokemon]["Deaths"] += int(team1[pokemon][1])
 
                 if(data[team1["Coach"]][i][pokemon]["Deaths"] >  1):
                     data[team1["Coach"]][i][pokemon]["K/D"] = data[team1["Coach"]][i][pokemon]["Kills"] / data[team1["Coach"]][i][pokemon]["Deaths"]
