@@ -44,6 +44,13 @@ async def reset_gm(self):
 # Overriding on_message stops commands from running, use a listener instead
 @bot.listen('on_message')
 async def responder(message):
+
+    if "Result:" in message.content:
+        await message.channel.send("Working on it!")
+        await message.channel.send(updateMatchResults(message.content))
+
+    
+=======
     global GM
     # Need this to prevent bot from responding to itself infinitely
     if message.author == bot.user:
@@ -69,9 +76,42 @@ async def responder(message):
     if "cosmog" in message.content.lower():
         await message.add_reaction("<:cosmug:932895668450787329>")
 
+    elif message.content.lower().startswith(('hello', 'hi', 'hey')):
+        await message.channel.send('Pepew! *(Hello!)*')
+    
+
+
+@bot.command(name='splash', help='Cosmog\'s best attack!')
+async def use_splash(ctx):
+    await ctx.send("Cosmog used splash!")
+    await asyncio.sleep(1) # dont use time.sleep, causes blocking
+    await ctx.send("But nothing happened!")
+=======
+
     if any(x in message.content.lower().split(" ") for x in ('hello', 'hi', 'hey', 'hiya')):
         await message.channel.send(random.choice(['Pepew! *(Hello!)*', 'Pepew! *(Hi!)*', 'Pepew! *(Heya!)*']))
 
+@bot.group(name='standings', help='Gets the current league standings')
+async def standings(ctx):
+    if ctx.invoked_subcommand is not None:
+        return
+
+    div1 = '**Solgaleo Division**\n```' + getFormattedStandings(1) + '```'  # sol
+    await ctx.send(div1)
+    div2 = '**Lunala Division**\n```' + getFormattedStandings(0) + '```'    # lun
+    await ctx.send(div2)
+
+@standings.command(help="Gets the Solgaleo division standings")
+async def standings_solgaleo(ctx):
+    div = '**Solgaleo Division**\n```' + getFormattedStandings(1) + '```'
+    await ctx.send(div)
+
+@standings.command(help="Gets the Lunala division standings")
+async def standings_lunala(ctx):
+    div = '**Lunala Division**\n```' + getFormattedStandings(0) + '```'
+    await ctx.send(div)
+
+=======
     # only respond if gm is sent before 2pm
     if not GM and any(x in message.content.lower() for x in ('gm', 'mornin')):
         GM = True

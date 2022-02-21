@@ -1,13 +1,20 @@
 from re import L
 from webbrowser import get
+from numpy import true_divide
 import pandas as pd
 
 import gspread
 from gspread_formatting import *
+from KillLeaders import update_json
 
-DOC = "MBTL LC Doc TEST VER"
+DOCS = ["MBTL LC Doc TEST VER","Copy of MBTL VGC Doc - Solgaleo"]
+LUN = 0
+SOL = 1
+BO3 = True
+#ongoing games dict for bo3 formats
+ONGOING_GAMES = {}
 
-def getTeamColors():
+def getTeamColors(DocNum):
     """
     This function gets formatting objects for each team.
     :RETURN: a dictionary where the keys are each team name and the values
@@ -16,7 +23,7 @@ def getTeamColors():
 
     #open the sheet
     sa = gspread.service_account("credentialsfile.json")
-    sheet = sa.open(DOC)
+    sheet = sa.open(DOCS[DocNum])
     standingsSheet = sheet.worksheet("Standings")
 
     #see how many teams there are
@@ -37,7 +44,7 @@ def getTeamColors():
     return teamColors
 
 
-def getStandings():
+def getStandings(DocNum):
     """
     This function gets the current standings of the league.
     :RETURN: a list that is just the excel sheet.
@@ -46,20 +53,20 @@ def getStandings():
 
     #open the sheet and get the data from the stadnings 
     sa = gspread.service_account("credentialsfile.json")
-    sheet = sa.open(DOC)
+    sheet = sa.open(DOCS[DocNum])
     standingsSheet = sheet.worksheet("Standings")
     rawData = standingsSheet.get_all_values()
 
     return rawData
 
 
-def getFormattedStandings():
+def getFormattedStandings(doc_num):
     """
     Takes current standings of the league and reformats them into a single
     string that can be displayed to the user by the bot upon request
     """
     # remove additional row and col on the top and left side
-    raw_data = getStandings()[1::]
+    raw_data = getStandings(doc_num)[1::]
     for i, row in enumerate(raw_data):
         raw_data[i] = row[1::]
 
@@ -72,7 +79,7 @@ def getFormattedStandings():
     return df.to_string(index=False)
 
 
-def updateStandings(team1, team2):
+def updateStandings(team1, team2, DocNum):
     """
     This function changes the standings on the sheet.
 
@@ -92,8 +99,8 @@ def updateStandings(team1, team2):
     LOSSES = 4
     DIFF = 5
 
-    teamColors = getTeamColors()
-    current = getStandings()
+    teamColors = getTeamColors(DocNum)
+    current = getStandings(DocNum)
 
     name1 = team1["TeamName"]
     name2 = team2["TeamName"]
@@ -104,21 +111,32 @@ def updateStandings(team1, team2):
         if(team[TEAMNAME] == name1):
 
             if(team1["Winner"]):
-                team[WINS] = str(int(team[WINS]) + 1)
+                team[WINS] = int(team[WINS]) + 1
             else:
-                team[LOSSES] = str(int(team[LOSSES]) + 1)
+                team[LOSSES] = int(team[LOSSES]) + 1
 
-            team[DIFF] = str(int(team[DIFF]) + team1["DiffChange"])
+            if BO3:
+                team[DIFF] = int(team[DIFF]) + ONGOING_GAMES[name1+"Diff"]
+                #the game is over, it is no longer ongoing
+                ONGOING_GAMES.pop(name1)
+                ONGOING_GAMES.pop(name1+"Diff")
+            else:
+                team[DIFF] = int(team[DIFF]) + team1["DiffChange"]
 
         #same as team1
         if(team[TEAMNAME] == name2):
 
             if(team2["Winner"]):
-                team[WINS] = str(int(team[WINS]) + 1)
+                team[WINS] = int(team[WINS]) + 1
             else:
-                team[LOSSES] = str(int(team[LOSSES]) + 1)
+                team[LOSSES] = int(team[LOSSES]) + 1
 
-            team[DIFF] = str(int(team[DIFF]) + team2["DiffChange"])
+            if BO3:
+                team[DIFF] = int(team[DIFF]) + ONGOING_GAMES[name2+"Diff"]
+                ONGOING_GAMES.pop(name2)
+                ONGOING_GAMES.pop(name2+"Diff")
+            else:
+                team[DIFF] = int(team[DIFF]) + team2["DiffChange"]
 
     
     #re-sort the rankings
@@ -153,16 +171,49 @@ def updateStandings(team1, team2):
                 current[i][RANK] = tempRank
 
             #if diff is even, just don't swap, we have no way to know the tiebreaker here
+
+    #re-sort the rankings
+    for i in range(len(current) - 1, 2, -1):
+
+        #if more wins, swap up
+        if(int(current[i][WINS]) > int(current[i - 1][WINS])):
+
+            #swap the position of the two teams
+            tempTeam = current[i]
+            current[i] = current[i-1]
+            current[i-1] = tempTeam
+
+            #also swap their respective ranks
+            tempRank = current[i-1][RANK]
+            current[i - 1][RANK] = current[i][RANK]
+            current[i][RANK] = tempRank
+
+        #if there's an equal number of wins, go by differential
+        if(int(current[i][WINS]) == int(current[i - 1][WINS])):
+
+            if(int(current[i][DIFF]) > int(current[i - 1][DIFF])):
+
+                #swap the position of the two teams
+                tempTeam = current[i]
+                current[i] = current[i-1]
+                current[i-1] = tempTeam
+
+                #also swap their respective ranks
+                tempRank = current[i-1][RANK]
+                current[i - 1][RANK] = current[i][RANK]
+                current[i][RANK] = tempRank
+
+            #if diff is even, just don't swap, we have no way to know the tiebreaker here
     
     sa = gspread.service_account("credentialsfile.json")
-    sheet = sa.open(DOC)
+    sheet = sa.open(DOCS[DocNum])
     standingsSheet = sheet.worksheet("Standings")
 
     #throw in the new results
     standingsSheet.update(current)
 
     #reformat and color the cells
-    for i in range(3, len(current) - 1):
+    for i in range(3, len(current) + 1):
 
         teamName = standingsSheet.acell("C" + str(i)).value
 
@@ -174,7 +225,7 @@ def updateStandings(team1, team2):
         format_cell_range(standingsSheet, "G" + str(i), teamColors[teamName])
 
 
-def getRosters():
+def getRosters(DocNum):
     """
     This function gets all of the pokemon drafted by each team.
     :RETURN: a list of dictionaries, where each dictionary is a team,
@@ -183,20 +234,19 @@ def getRosters():
 
     #open the sheet and get the data from the rosters tab 
     sa = gspread.service_account("credentialsfile.json")
-    sheet = sa.open(DOC)
+    sheet = sa.open(DOCS[DocNum])
     rosterSheet = sheet.worksheet("Rosters")
     rawData = rosterSheet.get_all_values()
 
     #because of how it works i have to split the list in half to access all the teams
     row1 = rawData[1 : len(rawData) // 2 - 1]
     row2 = rawData[len(rawData) // 2 + 1:-1]
-
     #create a list that will be the reutrn value
     team_list = []
 
     #loop through the data and group together the rosters in the form
     #{"Pokemon": ["Chimchar", "Snivy", ...], "TeamName": "Cool Guys", "Coach": "Me"}
-    for i in range(1, len(row1[0]) - 1):
+    for i in range(1, len(row1[0]) - 1, 2):
 
         team = {}
         team["Pokemon"] = []
@@ -204,29 +254,28 @@ def getRosters():
         for j in range(0, len(row1)):
             
             if(j == 0):
-                team["Coach"] = row1[j][i]
+                team["Coach"] = row1[j][i].strip()
             elif(j == 1):
-                team["TeamName"] = row1[j][i]
+                team["TeamName"] = row1[j][i].strip()
             else:
-                team["Pokemon"].append(row1[j][i])
+                team["Pokemon"].append(row1[j][i].strip())
         
         team_list.append(team)
 
 
     #same thing but for the other half of the teams
-    for i in range(1, len(row2[0]) - 1):
+    for i in range(1, len(row2[0]) - 1, 2):
 
         team = {}
         team["Pokemon"] = []
 
         for j in range(0, len(row1)):
             if(j == 0):
-                team["Coach"] = row2[j][i]
+                team["Coach"] = row2[j][i].strip()
             elif(j == 1):
-                team["TeamName"] = row2[j][i]
+                team["TeamName"] = row2[j][i].strip()
             else:
-                team["Pokemon"].append(row2[j][i])
-        
+                team["Pokemon"].append(row2[j][i].strip())
         team_list.append(team)
 
     #return the list of all the teams
@@ -234,10 +283,15 @@ def getRosters():
 
 
 def updateMatchResults(result):
+
+    message = ""
+
     #get rid of all the stuff before the kill info and break it up by line
-    print(result)
     result = result.split("\n")[3:]
-    print(result)
+    messedUpNames = {"Urshifu":"Urshifu-S","Shellos-East":"Shellos","Shellos-West":"Shellos","Charizard-Mega-X":"Charizard-M-X","Charizard-Mega-Y":"Charizard-M-Y",
+                        "Rotom-Wash":"Rotom-Wash","Rotom-Mow":"Rotom-Mow","Rotom-Heat":"Rotom-Heat","Rotom-Fan":"Rotom-Fan","Rotom-Frost":"Rotom-Frost","Meowstic":"Meowstic-M",
+                        "Indeedee":"Indeedee-M","Pikachu-Belle":"Cosplay Pikachu","Pikachu-Libre":"Cosplay Pikachu","Pikachu-PhD":"Cosplay Pikachu","Pikachu-Pop-Star":"Cosplay Pikachu","Pikachu-Rock-Star":"Cosplay Pikachu",
+                        "Thundurus":"Thundurus-I","Landorus":"Landorus-I","Tornadus":"Tornadus-I"}
 
     #store all kill info in 2 dictionaires
     #Team1 and Team2
@@ -246,8 +300,18 @@ def updateMatchResults(result):
     for i in range(6):
         pokeStat = result[i].split(" ")
 
+        replaced = False
         #retrieve stats from message
-        pokemon = pokeStat[0]
+        pokemon = pokeStat[0].strip()
+        
+        if pokemon in messedUpNames:
+            replaced = True
+            pokemon = messedUpNames[pokemon]
+
+        splitMon = pokemon.split("-")
+        if(len(splitMon) > 1 and not replaced):
+            pokemon = splitMon[0] + "-" + splitMon[1][0]
+
         killNum = pokeStat[2]
         deathNum = pokeStat[-3]
 
@@ -257,15 +321,22 @@ def updateMatchResults(result):
     for i in range(8,14):
         pokeStat = result[i].split(" ")
 
+        replaced = False
         #retrieve stats from message
-        pokemon = pokeStat[0]
+        pokemon = pokeStat[0].strip()
+
+        if pokemon in messedUpNames:
+            replaced = True
+            pokemon = messedUpNames[pokemon]
+
+        splitMon = pokemon.split("-")
+        if(len(splitMon) > 1):
+            pokemon = splitMon[0] + "-" + splitMon[1][0]
+
         killNum = pokeStat[2]
         deathNum = pokeStat[-3]
 
         team2[pokemon] = (killNum, deathNum)
-
-    print(team1)
-    print(team2)
 
     #tally up the deaths
     deaths1 = 0
@@ -302,25 +373,131 @@ def updateMatchResults(result):
     team1["DiffChange"] = deaths2 - deaths1
     team2["DiffChange"] = deaths1 - deaths2
 
-
     #get the rosters to determine which teams battled
-    rosters = getRosters()
+    rosterLun = getRosters(LUN)
+    rosterSol = getRosters(SOL)
 
     #look for a roster that has the pokemon in it, that's the team that battled
-    team1Mon = list(team1.keys())[0]
-    team2Mon = list(team2.keys())[0]
+    team1Mons = list(team1.keys())
+    team2Mons = list(team2.keys())
 
-    for team in rosters:
+    #check to see if both teams exist in lunala division
+    for team in rosterLun:
 
-        if team1Mon in team["Pokemon"]:
+        matches = 0
+        for mon in team1Mons:
+            if mon in team["Pokemon"]:
+                matches += 1
+        
+        if(matches >= 5):
             team1["TeamName"] = team["TeamName"]
             team1["Coach"] = team["Coach"]
         
-        elif team2Mon in team["Pokemon"]:
+        matches = 0
+        for mon in team2Mons:
+            if mon in team["Pokemon"]:
+                matches += 1
+        
+        if(matches >= 5):
             team2["TeamName"] = team["TeamName"]
             team2["Coach"] = team["Coach"]
 
-    updateStandings(team1, team2)
+    if(team2.get("TeamName",0) and team1.get("TeamName", 0)):
+        DocNum = LUN
+        message += "This game happened in the Lunala Division\n"
     
-    print("Standings have been updated!!")
+    #if they don't check Sol division
+    else:
+        for team in rosterSol:
+
+            matches = 0
+            for mon in team1Mons:
+                if mon in team["Pokemon"]:
+                    matches += 1
+            
+            if(matches >= 5):
+                team1["TeamName"] = team["TeamName"]
+                team1["Coach"] = team["Coach"]
+            
+            matches = 0
+            for mon in team2Mons:
+                if mon in team["Pokemon"]:
+                    matches += 1
+            
+            if(matches >= 5):
+                team2["TeamName"] = team["TeamName"]
+                team2["Coach"] = team["Coach"]
+
+        if(team2.get("TeamName",0) and team1.get("TeamName", 0)):
+            DocNum = SOL
+            message += "This game happened in the Solgaleo Division\n"
+
+        #this is in the even that the teams are in neither, which should not happen
+        else:
+            message += "uh oh, that didn't work\n"
+
+    #if the format is best of three
+    if BO3:
+        
+        #if the game is ongoing
+        if ONGOING_GAMES and ONGOING_GAMES.get(team1["TeamName"],"Nothing") != "Nothing" and ONGOING_GAMES.get(team2["TeamName"],"Nothing") != "Nothing":
+
+            #if team one won this game see if they won the match, if they did, update standings
+            if team1["Winner"]:
+                ONGOING_GAMES[team1["TeamName"]] += 1
+                ONGOING_GAMES[team1["TeamName"]+"Diff"] += team1["DiffChange"]
+                ONGOING_GAMES[team2["TeamName"]+"Diff"] += team2["DiffChange"]
+
+                if(ONGOING_GAMES[team1["TeamName"]] == 2):
+                    message += team1["TeamName"] + " wins the match " + str(ONGOING_GAMES[team1["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team2["TeamName"]]) + " over the " + team2["TeamName"] + "\n"
+                    message += "Standings have been updated!!"
+                    updateStandings(team1, team2, DocNum)
+
+                else:
+                    message += "The match " + team1["TeamName"] + " vs " + team2["TeamName"] + " is currently " + str(ONGOING_GAMES[team1["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team2["TeamName"]])+ "\n"
+
+            elif team2["Winner"]:
+                ONGOING_GAMES[team2["TeamName"]] += 1
+                ONGOING_GAMES[team1["TeamName"]+"Diff"] += team1["DiffChange"]
+                ONGOING_GAMES[team2["TeamName"]+"Diff"] += team2["DiffChange"]
+
+                if(ONGOING_GAMES[team2["TeamName"]] == 2):
+                    message += team2["TeamName"] + " wins the match " + str(ONGOING_GAMES[team2["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team1["TeamName"]]) + " over the " + team1["TeamName"] + "\n"
+                    message += "Standings have been updated!!"
+                    updateStandings(team1, team2, DocNum)
+                    
+                else:
+                    message += "The match " + team2["TeamName"] + " vs " + team1["TeamName"] + " is currently " + str(ONGOING_GAMES[team2["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team1["TeamName"]])+ "\n"
+
+        else:
+            #create an ongoing game
+            if(team1["Winner"]):
+                ONGOING_GAMES[team1["TeamName"]] = 1
+                ONGOING_GAMES[team1["TeamName"]+"Diff"] = team1["DiffChange"]
+                ONGOING_GAMES[team2["TeamName"]+"Diff"] = team2["DiffChange"]
+                ONGOING_GAMES[team2["TeamName"]] = 0
+                message += "The match " + team1["TeamName"] + " vs " + team2["TeamName"] + " is currently " + str(ONGOING_GAMES[team1["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team2["TeamName"]]) + " in favor of " + team1["TeamName"] + "\n"
+            
+            else:
+                ONGOING_GAMES[team2["TeamName"]] = 1
+                ONGOING_GAMES[team2["TeamName"]+"Diff"] = team2["DiffChange"]
+                ONGOING_GAMES[team1["TeamName"]] = 0
+                ONGOING_GAMES[team1["TeamName"]+"Diff"] = team1["DiffChange"]
+                message += "The match " + team2["TeamName"] + " vs " + team1["TeamName"] + " is currently " + str(ONGOING_GAMES[team2["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team1["TeamName"]])+ " in favor of " + team2["TeamName"] + "\n"
+
+
+    else:
+        updateStandings(team1, team2, DocNum)
+
+        message += "Standings have been updated!!"
+    
+    update_json(DocNum, team1, team2)
+    return message
+    
 

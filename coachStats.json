@@ -1,0 +1,770 @@
+{
+    "Galenskog": {
+        "Team Name": "Core Enfourzer",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Casey": {
+        "Team Name": "Goldenrod Gliscor",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "LittleBigs672": {
+        "Team Name": "Rain City Rillaboom",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "HGC": {
+        "Team Name": "Caracas Carracostas",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Sand Castle": {
+        "Team Name": "Azalea Galvantula",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Mmattus": {
+        "Team Name": "Wedgehurst Gogoat",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Coach Oak": {
+        "Team Name": "Iki Town Incineroar",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "PotatoZ": {
+        "Team Name": "Rotom Washington Wizards",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Froski 101": {
+        "Team Name": "Hearthome Honchkrow",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Yueku": {
+        "Team Name": "Possessed Pumpkaboos",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "YungBisharp": {
+        "Team Name": "Driftveil Darkrai",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "I Miss Dad": {
+        "Team Name": "Vice City Voltage",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "AliceSabrina": {
+        "Team Name": "Canberran Charmanders",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "CousinZinny": {
+        "Team Name": "Celestic Chimchars",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "CatsRuleTheDumb": {
+        "Team Name": "Flight Club",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "SpiderRyno": {
+        "Team Name": "Stow-on-Side Gurdurr",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "HawaiianShaymin": {
+        "Team Name": "The Spirit Archers",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Lightning": {
+        "Team Name": "New England Ninetales",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Chandy": {
+        "Team Name": "Ok Boomer Chandelures",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "AceHarm555": {
+        "Team Name": "Melbourne Magnezonez",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "TebowTime": {
+        "Team Name": "Aurora Alolan Vulpix",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "FistToYourDoom": {
+        "Team Name": "Cult of Character Limit",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Gradual": {
+        "Team Name": "Sunset Solrocks",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Tedward": {
+        "Team Name": "Glimwood Golurk",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "TangelaBoots": {
+        "Team Name": "Twinleaf Town Tangela",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Pluto": {
+        "Team Name": "Village Bridge Volcarona",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Blind Messiah": {
+        "Team Name": "Vienna Vibe Check",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "PastaSupper": {
+        "Team Name": "St. John's Sandiles",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "RainbowDonutCat": {
+        "Team Name": "Palm Beach Pults",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Triviess": {
+        "Team Name": "Snowpoint Sylveons",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "Bassrman": {
+        "Team Name": "Dewford Doublade",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    },
+    "PurpleDolphin": {
+        "Team Name": "Hammerlocke Drednaw",
+        "Wins": 0,
+        "Losses": 0,
+        "Differential": 0,
+        "Pokemon": {
+            "Example": {
+                "Kills": 0,
+                "Deaths": 0,
+                "Games Played": 0,
+                "Games Eligible": 0
+            }
+        },
+        "vs": {
+            "ExampleCoach": {
+                "Replays": [
+                    "https...."
+                ],
+                "Wins": 0,
+                "Losses": 0,
+                "Differential": 0
+            }
+        }
+    }
+}
