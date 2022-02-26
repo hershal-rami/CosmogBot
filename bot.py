@@ -46,13 +46,14 @@ async def reset_gm(self):
 async def responder(message):
     global GM
 
-    if "Result:" in message.content:
-        await message.channel.send("Working on it!")
-        await message.channel.send(updateMatchResults(message.content))
-
     # Need this to prevent bot from responding to itself infinitely
     if message.author == bot.user:
         return        
+
+    # Updating standings after Porygon posts match results
+    if "Result:" in message.content:
+        await message.channel.send("Working on it!")
+        await message.channel.send(updateMatchResults(message.content))
 
     # Fun responses: emoji responses, reactions, and hello message
     if ":scepthink:" in message.content.lower():
@@ -67,8 +68,11 @@ async def responder(message):
         await message.channel.send("<:cosmug:932895668450787329>")
     if "cosmog" in message.content.lower():
         await message.add_reaction("<:cosmug:932895668450787329>")    
-    if any(x in message.content.lower().split(" ") for x in ('hello', 'hi', 'hey', 'hiya')):
-        await message.channel.send(random.choice(['Pepew! *(Hello!)*', 'Pepew! *(Hi!)*', 'Pepew! *(Heya!)*']))
+
+    # Only say hi in the general channel
+    if message.channel.name == "general":
+        if any(x in message.content.lower().split(" ") for x in ('hello', 'hi', 'hey', 'hiya')):
+            await message.channel.send(random.choice(['Pepew! *(Hello!)*', 'Pepew! *(Hi!)*', 'Pepew! *(Heya!)*']))
 
     # only respond if gm is sent before 2pm
     if not GM and any(x in message.content.lower() for x in ('gm', 'mornin')):
