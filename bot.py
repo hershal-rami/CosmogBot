@@ -51,9 +51,9 @@ async def responder(message):
         return        
 
     # Updating standings after Porygon posts match results
-    if "Result:" in message.content:
-        await message.channel.send("Working on it!")
-        await message.channel.send(updateMatchResults(message.content))
+    # if "Result:" in message.content:
+    #     await message.channel.send("Working on it!")
+    #     await message.channel.send(updateMatchResults(message.content))
 
     # Fun responses: emoji responses, reactions, and hello message
     if ":scepthink:" in message.content.lower():
