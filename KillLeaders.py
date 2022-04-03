@@ -158,6 +158,3 @@ def update_spreadsheet(doc_num, range_num):
     # sheet_instance.update(COACH_RANGE[range_num], values)
 
     print("Processing complete. Please check the Google Sheet for accuracy.")
-
-for i in range(3):
-    update_spreadsheet(2,i)
