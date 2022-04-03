@@ -24,6 +24,8 @@ Once you have your token variable set in your local environment, simply run `pyt
 # Goals:
 -createteam makes person administrator
 -createteam didnt actually assign the role??
+-notify supporters of a team when a teams match is happening
+-admin command to run kill leaders script
 
 -create kill leaders commands:
 

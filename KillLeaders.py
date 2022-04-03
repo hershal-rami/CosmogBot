@@ -6,9 +6,9 @@ import pandas as pd
 from constants import DOCS, FORMAT
 
 # Setup - Doc name and relevant ranges
-DATA_RANGE = 'A3:E158'
-LEADERS_RANGE = 'I40:L59'
-COACH_RANGE = 'I61:J72'
+DATA_RANGE = ['A3:F353', 'A3:F173', 'A175:F353'] # overall, lun, sol
+LEADERS_RANGE = ['J3:M22', 'J26:M45', 'J49:M68']
+COACH_RANGE = ['P3:Q16', 'P26:Q39', 'P49:Q62']
 
 # Pull rosters from spreadsheet and create JSON with empty statistics
 def convert_to_json(doc_num):
@@ -107,15 +107,15 @@ def calculate_kill_leaders(doc_num):
     return
 
 # Code for update of kill leaders spreadsheet
-def update_spreadsheet(doc_num):
+def update_spreadsheet(doc_num, range_num):
     # Connect to spreadsheet doc
     sa = gspread.service_account("data/credentialsfile.json")
     sheet = sa.open(DOCS[doc_num])
-    sheet_instance = sheet.worksheet(FORMAT)
+    sheet_instance = sheet.worksheet(FORMAT) # gets correct sheet for the current format
     # raw_data = sheet_instance.get_all_values()
 
     # Get relevant trainer data
-    values = [x for x in sheet_instance.get(DATA_RANGE) if x != []] # accounting for the blank lines between coaches
+    values = [x for x in sheet_instance.get(DATA_RANGE[range_num]) if x != []] # accounting for the blank lines between coaches
 
     # Properly assign coach names to each pokemon
     for i in range(len(values)):
@@ -125,11 +125,11 @@ def update_spreadsheet(doc_num):
             values[i][0] = curr_coach
 
     # Sort based on overall kills, then K/D, then alphabetical order
-    df = pd.DataFrame(values, columns=["Coach", "Pokemon", "Kills", "Deaths", "K/D"])
+    df = pd.DataFrame(values, columns=["Coach", "Pokemon", "Games Played", "Kills", "Deaths", "K/D"])
     df = df.astype({"Kills": int, "Deaths": int, "K/D": int})
     df = df.sort_values(["Kills", "K/D", "Pokemon"], ascending=(False, False, True))
     kill_leaders = df.head(20)
-
+    
     # Organize data and print to the Google Sheet
     values = []
     coach_stats = {}
@@ -144,17 +144,20 @@ def update_spreadsheet(doc_num):
             coach_stats[row[0]] = 1
         
         # Reorder as Pokemon, Kills, Deaths, Coach
-        output = [row[1], int(row[2]), int(row[3]), row[0]]
+        output = [row[1], int(row[3]), int(row[4]), row[0]]
         values.append(output)
 
-    sheet_instance.update(LEADERS_RANGE, values)
+    sheet_instance.update(LEADERS_RANGE[range_num], values)
 
-    # Sort coach stats and print to Google Sheet
-    coach_stats = sorted(coach_stats.items(), key=lambda x:x[1], reverse=True)
-    values = []
-    for i in range(len(coach_stats)):
-        coach, num = coach_stats[i]
-        values.append([coach, num])
-    sheet_instance.update(COACH_RANGE, values)
+    # # Sort coach stats and print to Google Sheet
+    # coach_stats = sorted(coach_stats.items(), key=lambda x:x[1], reverse=True)
+    # values = []
+    # for i in range(len(coach_stats)):
+    #     coach, num = coach_stats[i]
+    #     values.append([coach, num])
+    # sheet_instance.update(COACH_RANGE[range_num], values)
 
     print("Processing complete. Please check the Google Sheet for accuracy.")
+
+for i in range(3):
+    update_spreadsheet(2,i)

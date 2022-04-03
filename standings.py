@@ -444,14 +444,14 @@ def updateMatchResults(result):
                 ONGOING_GAMES[team2["TeamName"]+"Diff"] += team2["DiffChange"]
 
                 if(ONGOING_GAMES[team1["TeamName"]] == 2):
-                    message += team1["TeamName"] + " wins the match " + str(ONGOING_GAMES[team1["TeamName"]]) + \
-                                        " to " + str(ONGOING_GAMES[team2["TeamName"]]) + " over the " + team2["TeamName"] + "\n"
+                    message += "||" + team1["TeamName"] + "|| wins the match ||" + str(ONGOING_GAMES[team1["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team2["TeamName"]]) + " over the " + team2["TeamName"] + "||\n"
                     message += "Standings have been updated!!"
                     updateStandings(team1, team2, DocNum)
 
                 else:
-                    message += "The match " + team1["TeamName"] + " vs " + team2["TeamName"] + " is currently " + str(ONGOING_GAMES[team1["TeamName"]]) + \
-                                        " to " + str(ONGOING_GAMES[team2["TeamName"]])+ "\n"
+                    message += "The match " + team1["TeamName"] + " vs " + team2["TeamName"] + " is currently ||" + str(ONGOING_GAMES[team1["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team2["TeamName"]])+ "||\n"
 
             elif team2["Winner"]:
                 ONGOING_GAMES[team2["TeamName"]] += 1
@@ -459,14 +459,14 @@ def updateMatchResults(result):
                 ONGOING_GAMES[team2["TeamName"]+"Diff"] += team2["DiffChange"]
 
                 if(ONGOING_GAMES[team2["TeamName"]] == 2):
-                    message += team2["TeamName"] + " wins the match " + str(ONGOING_GAMES[team2["TeamName"]]) + \
-                                        " to " + str(ONGOING_GAMES[team1["TeamName"]]) + " over the " + team1["TeamName"] + "\n"
+                    message += "||" + team2["TeamName"] + "|| wins the match ||" + str(ONGOING_GAMES[team2["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team1["TeamName"]]) + " over the " + team1["TeamName"] + "||\n"
                     message += "Standings have been updated!!"
                     updateStandings(team1, team2, DocNum)
                     
                 else:
-                    message += "The match " + team2["TeamName"] + " vs " + team1["TeamName"] + " is currently " + str(ONGOING_GAMES[team2["TeamName"]]) + \
-                                        " to " + str(ONGOING_GAMES[team1["TeamName"]])+ "\n"
+                    message += "The match " + team2["TeamName"] + " vs " + team1["TeamName"] + " is currently ||" + str(ONGOING_GAMES[team2["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team1["TeamName"]])+ "||\n"
 
         else:
             #create an ongoing game
@@ -475,16 +475,16 @@ def updateMatchResults(result):
                 ONGOING_GAMES[team1["TeamName"]+"Diff"] = team1["DiffChange"]
                 ONGOING_GAMES[team2["TeamName"]+"Diff"] = team2["DiffChange"]
                 ONGOING_GAMES[team2["TeamName"]] = 0
-                message += "The match " + team1["TeamName"] + " vs " + team2["TeamName"] + " is currently " + str(ONGOING_GAMES[team1["TeamName"]]) + \
-                                        " to " + str(ONGOING_GAMES[team2["TeamName"]]) + " in favor of " + team1["TeamName"] + "\n"
+                message += "The match " + team1["TeamName"] + " vs " + team2["TeamName"] + " is currently ||" + str(ONGOING_GAMES[team1["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team2["TeamName"]]) + " in favor of " + team1["TeamName"] + "||\n"
             
             else:
                 ONGOING_GAMES[team2["TeamName"]] = 1
                 ONGOING_GAMES[team2["TeamName"]+"Diff"] = team2["DiffChange"]
                 ONGOING_GAMES[team1["TeamName"]] = 0
                 ONGOING_GAMES[team1["TeamName"]+"Diff"] = team1["DiffChange"]
-                message += "The match " + team2["TeamName"] + " vs " + team1["TeamName"] + " is currently " + str(ONGOING_GAMES[team2["TeamName"]]) + \
-                                        " to " + str(ONGOING_GAMES[team1["TeamName"]])+ " in favor of " + team2["TeamName"] + "\n"
+                message += "The match " + team2["TeamName"] + " vs " + team1["TeamName"] + " is currently ||" + str(ONGOING_GAMES[team2["TeamName"]]) + \
+                                        " to " + str(ONGOING_GAMES[team1["TeamName"]])+ " in favor of " + team2["TeamName"] + "||\n"
 
 
     else:
