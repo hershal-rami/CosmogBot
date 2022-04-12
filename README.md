@@ -22,10 +22,12 @@ Then restart your shell application and type `env | grep "DISCORD_TOKEN"`. It sh
 Once you have your token variable set in your local environment, simply run `python3 bot.py` and the bot will go online!
 
 # Goals:
+-time zone conversion bot
 -createteam makes person administrator
 -createteam didnt actually assign the role??
 -notify supporters of a team when a teams match is happening
 -admin command to run kill leaders script
+-spreadsheet updater doesnt swap colors correctly
 
 -create kill leaders commands:
 

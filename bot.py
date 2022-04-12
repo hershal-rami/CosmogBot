@@ -24,7 +24,7 @@ GM = False
 intents = discord.Intents.default()
 intents.members = True
 
-activity = discord.Activity(type=discord.ActivityType.listening, name="it's trainer! | .help")
+activity = discord.Activity(type=discord.ActivityType.listening, name="its trainer! | .help")
 bot = commands.Bot(command_prefix='.', activity=activity, intents=intents)
 
 bot.add_cog(Moveset(bot))
@@ -39,6 +39,7 @@ async def on_ready():
 # Resets GM variable every 12 hours
 @tasks.loop(hours=12)
 async def reset_gm(self):
+    global GM
     GM = False
 
 # Overriding on_message stops commands from running, use a listener instead

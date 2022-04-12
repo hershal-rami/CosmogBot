@@ -6,7 +6,7 @@ import pandas as pd
 from constants import DOCS, FORMAT
 
 # Setup - Doc name and relevant ranges
-DATA_RANGE = ['A3:F353', 'A3:F173', 'A175:F353'] # overall, lun, sol
+DATA_RANGE = ['A3:F357', 'A3:F176', 'A178:F357'] # overall, lun, sol
 LEADERS_RANGE = ['J3:M22', 'J26:M45', 'J49:M68']
 COACH_RANGE = ['P3:Q16', 'P26:Q39', 'P49:Q62']
 
@@ -158,3 +158,6 @@ def update_spreadsheet(doc_num, range_num):
     # sheet_instance.update(COACH_RANGE[range_num], values)
 
     print("Processing complete. Please check the Google Sheet for accuracy.")
+
+# for i in range(3):
+#     update_spreadsheet(2,i)
