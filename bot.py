@@ -6,8 +6,8 @@ from datetime import datetime
 import discord
 from discord.ext import tasks, commands
 
+import replay_analyze
 from commands import Moveset, Spreadsheets, TeamManagement
-from standings import updateMatchResults
 
 # Basic logging info outputs to discord.log file
 logger = logging.getLogger('discord')
@@ -80,6 +80,13 @@ async def responder(message):
         GM = True
         await message.channel.send("Pe-pepew! *(Good morning!)*")
         await message.channel.send(file=discord.File('content/gm.gif'))
+
+    # look out for replays and send a message that is the K/D result of that game
+    if "replay.pokemonshowdown.com" in message.content.lower():
+        try:
+             await message.channel.send(replay_analyze.get_match_result(message.content))
+        except:
+             await message.channel.send("Uh Oh")
 
 # Go, Cosmog!
 bot.run(TOKEN)
