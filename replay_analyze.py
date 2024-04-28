@@ -51,10 +51,10 @@ def get_teams(log):
                 p2_mons.append(line.split("p2|")[1].split("|")[0])
 
     for mon in p1_mons:
-        game_state[p1][mon] = {"Kills":0, "Deaths":0}
+        game_state[p1][mon] = {"Kills":0, "Deaths":0, "HP":100}
 
     for mon in p2_mons:
-        game_state[p2][mon] = {"Kills":0, "Deaths":0}
+        game_state[p2][mon] = {"Kills":0, "Deaths":0,"HP":100}
 
     return game_state, p1, p2, p1_mons, p2_mons
 
@@ -87,9 +87,12 @@ def get_leads(log, game_state):
 
 
 
-def switch(game_state, p1, p2, p1_mons, p2_mons, game_actions, i):
+def switch(stats_dict,game_state, p1, p2, p1_mons, p2_mons, game_actions, i,turn_num):
     
     if("|switch|p2a" in game_actions[i]):
+
+        if turn_num != 1:
+            stats_dict[p2]["Pokemon"][game_state["p2_active"]]["Switched_out"] += 1
 
         p2_active = game_actions[i].split("|switch|p2a:")[1].split("|")[1]
 
@@ -112,12 +115,118 @@ def switch(game_state, p1, p2, p1_mons, p2_mons, game_actions, i):
                     remove_mon = mon
 
             if remove_mon:
+                new_stat_dict = {}
+                for stat in stats_dict[p2]["Pokemon"][remove_mon]:
+                    new_stat_dict[stat] = stats_dict[p2]["Pokemon"][remove_mon][stat]
+
+                del stats_dict[p2]["Pokemon"][remove_mon]
+
+                stats_dict[p2]["Pokemon"][p2_active] = new_stat_dict
+
                 game_state[p2][p2_active] = {"Deaths": game_state[p2][remove_mon]["Deaths"], "Kills" : game_state[p2][remove_mon]["Kills"]}
                 game_state[p2].pop(remove_mon)
                 p2_mons.remove(remove_mon)
                 p2_mons.append(p2_active)
+        
+        if "from" not in (game_actions[i].split("|")[-1].split("/")[0]):
+            game_state[p2][game_state["p2_active"]]["HP"] = int(game_actions[i].split("|")[-1].split("/")[0])
+        else:
+            game_state[p2][game_state["p2_active"]]["HP"] = int(game_actions[i].split("|")[-2].split("/")[0])
+
+    if "|drag|p2a" in game_actions[i]:
+
+        if turn_num != 1:
+            stats_dict[p2]["Pokemon"][game_state["p2_active"]]["Switched_out"] += 1
+
+        p2_active = game_actions[i].split("|drag|p2a:")[1].split("|")[1]
+
+        if "," in p2_active:
+            p2_active = p2_active.split(",")[0]
+
+        p2_active_nick = game_actions[i].split("|drag|p2a: ")[1].split("|")[0]
+
+        game_state["p2_active"] = p2_active
+        game_state["p2_active_nick"] = p2_active_nick
+        game_state["Nicknames"][p2_active_nick] = p2_active
+
+        #for pokemon with special forms, cahnge it in the state on switch in
+        if p2_active not in game_state[p2]:
+
+            remove_mon = ""
+            for mon in game_state[p2]:
+
+                if mon[0:3] == p2_active[0:3]:
+                    remove_mon = mon
+
+            if remove_mon:
+                new_stat_dict = {}
+                for stat in stats_dict[p2]["Pokemon"][remove_mon]:
+                    new_stat_dict[stat] = stats_dict[p2]["Pokemon"][remove_mon][stat]
+
+                del stats_dict[p2]["Pokemon"][remove_mon]
+
+                stats_dict[p2]["Pokemon"][p2_active] = new_stat_dict
+
+                game_state[p2][p2_active] = {"Deaths": game_state[p2][remove_mon]["Deaths"], "Kills" : game_state[p2][remove_mon]["Kills"]}
+                game_state[p2].pop(remove_mon)
+                p2_mons.remove(remove_mon)
+                p2_mons.append(p2_active)
+        
+        if "from" not in (game_actions[i].split("|")[-1].split("/")[0]):
+            game_state[p2][game_state["p2_active"]]["HP"] = int(game_actions[i].split("|")[-1].split("/")[0])
+        else:
+            game_state[p2][game_state["p2_active"]]["HP"] = int(game_actions[i].split("|")[-2].split("/")[0])
+
+        
+    if"|drag|p1a" in game_actions[i]:
+
+        if turn_num != 1:
+            stats_dict[p1]["Pokemon"][game_state["p1_active"]]["Switched_out"] += 1
+
+        p1_active = game_actions[i].split("|drag|p1a:")[1].split("|")[1]
+
+        if "," in p1_active:
+            p1_active = p1_active.split(",")[0]
+
+        p1_active_nick = game_actions[i].split("|drag|p1a: ")[1].split("|")[0]
+
+        game_state["p1_active"] = p1_active
+        game_state["p1_active_nick"] = p1_active_nick
+        game_state["Nicknames"][p1_active_nick] = p1_active
+
+        #for pokemon with special forms, cahnge it in the state on switch in
+        if p1_active not in game_state[p1]:
+
+            remove_mon = ""
+            for mon in game_state[p1]:
+
+                if mon[0:3] == p1_active[0:3]:
+                    remove_mon = mon
+
+            if remove_mon:
+                new_stat_dict = {}
+                for stat in stats_dict[p1]["Pokemon"][remove_mon]:
+                    new_stat_dict[stat] = stats_dict[p1]["Pokemon"][remove_mon][stat]
+
+                del stats_dict[p1]["Pokemon"][remove_mon]
+
+                stats_dict[p1]["Pokemon"][p1_active] = new_stat_dict
+
+                game_state[p1][p1_active] = {"Deaths": game_state[p1][remove_mon]["Deaths"], "Kills" : game_state[p1][remove_mon]["Kills"]}
+                game_state[p1].pop(remove_mon)
+                p1_mons.remove(remove_mon)
+                p1_mons.append(p1_active)
+        
+        if "from" not in (game_actions[i].split("|")[-1].split("/")[0]):
+            game_state[p1][game_state["p1_active"]]["HP"] = int(game_actions[i].split("|")[-1].split("/")[0])
+        else:
+            game_state[p1][game_state["p1_active"]]["HP"] = int(game_actions[i].split("|")[-2].split("/")[0])
+
 
     if("|switch|p1a" in game_actions[i]):
+
+        if turn_num != 1:
+            stats_dict[p1]["Pokemon"][game_state["p1_active"]]["Switched_out"] += 1
 
         p1_active = game_actions[i].split("|switch|p1a:")[1].split("|")[1]
 
@@ -140,10 +249,25 @@ def switch(game_state, p1, p2, p1_mons, p2_mons, game_actions, i):
                     remove_mon = mon
                     
             if remove_mon:
+                new_stat_dict = {}
+                for stat in stats_dict[p1]["Pokemon"][remove_mon]:
+                    new_stat_dict[stat] = stats_dict[p1]["Pokemon"][remove_mon][stat]
+
+                del stats_dict[p1]["Pokemon"][remove_mon]
+
+                stats_dict[p1]["Pokemon"][p1_active] = new_stat_dict
+
                 game_state[p1][p1_active] = {"Deaths": game_state[p1][remove_mon]["Deaths"], "Kills" : game_state[p1][remove_mon]["Kills"]}
                 game_state[p1].pop(remove_mon)
                 p1_mons.remove(remove_mon)
                 p1_mons.append(p1_active)
+
+        if "from" not in (game_actions[i].split("|")[-1].split("/")[0]):
+            game_state[p1][game_state["p1_active"]]["HP"] = int(game_actions[i].split("|")[-1].split("/")[0])
+        else:
+            game_state[p1][game_state["p1_active"]]["HP"] = int(game_actions[i].split("|")[-2].split("/")[0])
+        
+        
 
 
 
@@ -193,6 +317,10 @@ def kd_attribution(game_state, p1, p2, game_actions, i):
         if "-damage|p1a" in game_actions[i-1]:
             game_state[p1][game_state["p1_active"]]["Deaths"] = 1
 
+            if "Zoroark" in game_state["p1_active"] or "Zorua" in game_state["p1_active"]:
+                game_state[p2][game_state["p2_active"]]["Kills"] += 1
+                return
+
             if game_state[p2][game_state["Toxic"]["On_p1"][game_state["p1_active"]]["Set_by"]] == "Toxic Orb":
                 game_state[p2][game_state["p2_active"]]["Kills"] += 1
             else:
@@ -200,6 +328,10 @@ def kd_attribution(game_state, p1, p2, game_actions, i):
 
         elif "-damage|p2a" in game_actions[i-1]:
             game_state[p2][game_state["p2_active"]]["Deaths"] = 1
+
+            if "Zoroark" in game_state["p2_active"] or "Zorua" in game_state["p2_active"]:
+                game_state[p1][game_state["p1_active"]]["Kills"] += 1
+                return
 
             if game_state[p1][game_state["Toxic"]["On_p2"][game_state["p2_active"]]["Set_by"]] == "Toxic Orb":
                 game_state[p1][game_state["p1_active"]]["Kills"] += 1
@@ -244,12 +376,12 @@ def get_string_output(game_state, p1, p2, p1_mons, p2_mons, log):
 
     p1_survivors = len(p1_mons)
     for pokemon in game_state[p1]:
-        if game_state[p1][pokemon]["Deaths"] == 1:
+        if game_state[p1][pokemon]["Deaths"] >= 1:
             p1_survivors -= 1
 
     p2_survivors = len(p2_mons)
     for pokemon in game_state[p2]:
-        if game_state[p2][pokemon]["Deaths"] == 1:
+        if game_state[p2][pokemon]["Deaths"] >= 1:
             p2_survivors -= 1
 
     if p1_survivors > p2_survivors:
@@ -351,53 +483,61 @@ def del_storm(game_state, p1, p2, game_actions, i):
         game_state["Sandstorm"]["Is_active"] = False
         game_state["Sandstorm"]["Set_by"] = None
 
-def side_start(game_state, p1, p2, game_actions, i):
+def side_start(stats_dict,game_state, p1, p2, game_actions, i):
 
     if "Stealth Rock" in game_actions[i]:
         if "p2a" in game_actions[i]:
             game_state["Rocks"]["p1_side_is_active"] = True
             game_state["Rocks"]["p1_side_set_by"] = game_state["Nicknames"][game_actions[i-1].split("p2a: ")[1].split("|")[0]]
+            stats_dict[p2]["Pokemon"][game_state["Nicknames"][game_actions[i-1].split("p2a: ")[1].split("|")[0]]]["Rocks/Spikes_Set"] += 1
 
         elif "p1a" in game_actions[i]:
             game_state["Rocks"]["p2_side_is_active"] = True
             game_state["Rocks"]["p2_side_set_by"] = game_state["Nicknames"][game_actions[i-1].split("p1a: ")[1].split("|")[0]]
+            stats_dict[p1]["Pokemon"][game_state["Nicknames"][game_actions[i-1].split("p1a: ")[1].split("|")[0]]]["Rocks/Spikes_Set"] += 1
 
         else:
             if "p1" in game_actions[i]:
                 game_state["Rocks"]["p1_side_is_active"] = True
                 game_state["Rocks"]["p1_side_set_by"] = game_state["p2_active"]
+                stats_dict[p2]["Pokemon"][game_state["p2_active"]]["Rocks/Spikes_Set"] += 1
+
             else:
                 game_state["Rocks"]["p2_side_is_active"] = True
                 game_state["Rocks"]["p2_side_set_by"] = game_state["p1_active"]
+                stats_dict[p1]["Pokemon"][game_state["p1_active"]]["Rocks/Spikes_Set"] += 1
 
     elif "Toxic Spikes" in game_actions[i]:
         if "p1" in game_actions[i]:
             game_state["Toxic_Spikes"]["p1_side_is_active"] = True
-            game_state["Toxic_Spikes"]["p1_side_set_by"] = game_state["Nicknames"][game_actions[i-1].split("p2a: ")[1].split("|")[0]]
+            game_state["Toxic_Spikes"]["p1_side_set_by"] = game_state["p2_active"]
+            stats_dict[p2]["Pokemon"][game_state["p2_active"]]["Rocks/Spikes_Set"] += 1
 
         elif "p2" in game_actions[i]:
             game_state["Toxic_Spikes"]["p2_side_is_active"] = True
-            game_state["Toxic_Spikes"]["p2_side_set_by"] = game_state["Nicknames"][game_actions[i-1].split("p1a: ")[1].split("|")[0]]
+            game_state["Toxic_Spikes"]["p2_side_set_by"] = game_state["p1_active"]
+            stats_dict[p1]["Pokemon"][game_state["p1_active"]]["Rocks/Spikes_Set"] += 1
 
     elif "Spikes" in game_actions[i]:
         if "p1" in game_actions[i]:
             game_state["Spikes"]["p1_side_is_active"] = True
-            game_state["Spikes"]["p1_side_set_by"] = game_state["Nicknames"][game_actions[i-1].split("p2a: ")[1].split("|")[0]]
+            game_state["Spikes"]["p1_side_set_by"] = game_state["p2_active"]
+            stats_dict[p2]["Pokemon"][game_state["p2_active"]]["Rocks/Spikes_Set"] += 1
 
         elif "p2" in game_actions[i]:
             game_state["Spikes"]["p2_side_is_active"] = True
-            game_state["Spikes"]["p2_side_set_by"] = game_state["Nicknames"][game_actions[i-1].split("p1a: ")[1].split("|")[0]]
+            game_state["Spikes"]["p2_side_set_by"] = game_state["p1_active"]
+            stats_dict[p1]["Pokemon"][game_state["p1_active"]]["Rocks/Spikes_Set"] += 1
 
-
-def start_status(game_state, p1, p2, game_actions, i):
+def start_status(stats_dict,game_state, p1, p2, game_actions, i):
 
     if("tox" in game_actions[i] or "psn" in game_actions[i]):
-        poison_attribution(game_state, p1, p2, game_actions, i)
+        poison_attribution(stats_dict,game_state, p1, p2, game_actions, i)
 
     if("brn" in game_actions[i]):
         burn_attribution(game_state, p1, p2, game_actions, i)
 
-def poison_attribution(game_state, p1, p2, game_actions, i):
+def poison_attribution(stats_dict,game_state, p1, p2, game_actions, i):
 
     if "Toxic Orb" in game_actions[i]:
         
@@ -410,26 +550,38 @@ def poison_attribution(game_state, p1, p2, game_actions, i):
         if "p1" in game_actions[i]:
 
             if("p2a" in game_actions[i-1]):
+                stats_dict[p2]["Pokemon"][game_state["Nicknames"][game_actions[i-1].split("p2a: ")[1].split("|")[0]]]["Pkmn_Poisoned"] += 1
                 game_state["Toxic"]["On_p1"][game_state["Nicknames"][game_actions[i].split("p1a: ")[1].split("|")[0]]] = {"Set_by": game_state["Nicknames"][game_actions[i-1].split("p2a: ")[1].split("|")[0]]}
+            
             elif game_state["Toxic_Spikes"]["p1_side_is_active"]:
+                stats_dict[p2]["Pokemon"][game_state["Toxic_Spikes"]["p1_side_set_by"]]["Pkmn_Poisoned"] += 1
                 game_state["Toxic"]["On_p1"][game_state["Nicknames"][game_actions[i].split("p1a: ")[1].split("|")[0]]] = {"Set_by": game_state["Toxic_Spikes"]["p1_side_set_by"]}
+            
             else:
+                stats_dict[p2]["Pokemon"][game_state["p2_active"]]["Pkmn_Poisoned"] += 1
                 game_state["Toxic"]["On_p1"][game_state["Nicknames"][game_actions[i].split("p1a: ")[1].split("|")[0]]] = {"Set_by": game_state["p2_active"]}
             
         
         if "p2" in game_actions[i]:
 
             if("p1a" in game_actions[i-1]):
+                stats_dict[p1]["Pokemon"][game_state["Nicknames"][game_actions[i-1].split("p1a: ")[1].split("|")[0]]]["Pkmn_Poisoned"] += 1
                 game_state["Toxic"]["On_p2"][game_state["Nicknames"][game_actions[i].split("p2a: ")[1].split("|")[0]]] = {"Set_by": game_state["Nicknames"][game_actions[i-1].split("p1a: ")[1].split("|")[0]]}
+            
             elif game_state["Toxic_Spikes"]["p2_side_is_active"]:
+                stats_dict[p1]["Pokemon"][game_state["Toxic_Spikes"]["p2_side_set_by"]]["Pkmn_Poisoned"] += 1
                 game_state["Toxic"]["On_p2"][game_state["Nicknames"][game_actions[i].split("p2a: ")[1].split("|")[0]]] = {"Set_by": game_state["Toxic_Spikes"]["p2_side_set_by"]}
+            
             else:
+                stats_dict[p1]["Pokemon"][game_state["p1_active"]]["Pkmn_Poisoned"] += 1
                 game_state["Toxic"]["On_p2"][game_state["Nicknames"][game_actions[i].split("p2a: ")[1].split("|")[0]]] = {"Set_by": game_state["p1_active"]}
     else:
         if "|-status|p2a" in game_actions[i]:
+            stats_dict[p1]["Pokemon"][game_state["Nicknames"][game_actions[i].split("p1a: ")[1]]]["Pkmn_Poisoned"] += 1
             game_state["Toxic"]["On_p2"][game_state["Nicknames"][game_actions[i].split("p2a: ")[1].split("|")[0]]] = {"Set_by": game_state["Nicknames"][game_actions[i].split("p1a: ")[1]]}
 
         if "|-status|p1a" in game_actions[i]:
+            stats_dict[p2]["Pokemon"][game_state["Nicknames"][game_actions[i].split("p2a: ")[1]]]["Pkmn_Poisoned"] += 1
             game_state["Toxic"]["On_p1"][game_state["Nicknames"][game_actions[i].split("p1a: ")[1].split("|")[0]]] = {"Set_by": game_state["Nicknames"][game_actions[i].split("p2a: ")[1]]}
 
 def burn_attribution(game_state, p1, p2, game_actions, i):
@@ -495,7 +647,7 @@ def end_status(game_state, p1, p2, game_actions, i):
             del game_state["Burn"]["On_p2"][game_state["Nicknames"][game_actions[i].split("p2: ")[1].split("|")[0]]]
 
 
-def mega(game_state, p1, p2, p1_mons, p2_mons, game_actions, i):
+def mega(stats_dict, game_state, p1, p2, p1_mons, p2_mons, game_actions, i):
 
     if("|detailschange|p2a" in game_actions[i]):
 
@@ -508,16 +660,44 @@ def mega(game_state, p1, p2, p1_mons, p2_mons, game_actions, i):
 
         k = game_state[p2][game_state["p2_active"]]["Kills"]
         d = game_state[p2][game_state["p2_active"]]["Deaths"]
-        del game_state[p2][game_state["p2_active"]]
+        hp = game_state[p2][game_state["p2_active"]]["HP"]
+        
 
         p2_mons.remove(game_state["p2_active"])
         p2_mons.append(p2_active)
+
+        tox = False
+        for instance in game_state["Toxic"]["On_p2"]:
+            if instance == game_state["p2_active"]:
+                tox = True
+
+        if tox:
+            game_state["Toxic"]["On_p2"][p2_active] = game_state["Toxic"]["On_p2"][game_state["p2_active"]]
+            game_state["Toxic"]["On_p2"][game_state["p2_active"]]
+
+        brn = False
+        for instance in game_state["Burn"]["On_p2"]:
+            if instance == game_state["p2_active"]:
+                brn = True
+
+        if brn:
+            game_state["Burn"]["On_p2"][p2_active] = game_state["Burn"]["On_p2"][game_state["p2_active"]]
+            game_state["Burn"]["On_p2"][game_state["p2_active"]]
+
+        new_stat_dict = {}
+        for stat in stats_dict[p2]["Pokemon"][game_state["p2_active"]]:
+            new_stat_dict[stat] = stats_dict[p2]["Pokemon"][game_state["p2_active"]][stat]
+
+        del game_state[p2][game_state["p2_active"]]
+        del stats_dict[p2]["Pokemon"][game_state["p2_active"]]
+
+        stats_dict[p2]["Pokemon"][p2_active] = new_stat_dict
 
         game_state["p2_active"] = p2_active
         game_state["p2_active_nick"] = p2_active_nick
         game_state["Nicknames"][p2_active_nick] = p2_active
 
-        game_state[p2][game_state["p2_active"]] = {"Kills":k,"Deaths":d}
+        game_state[p2][game_state["p2_active"]] = {"Kills":k,"Deaths":d,"HP":hp}
 
         
 
@@ -532,16 +712,43 @@ def mega(game_state, p1, p2, p1_mons, p2_mons, game_actions, i):
 
         k = game_state[p1][game_state["p1_active"]]["Kills"]
         d = game_state[p1][game_state["p1_active"]]["Deaths"]
-        del game_state[p1][game_state["p1_active"]]
+        hp = game_state[p1][game_state["p1_active"]]["HP"]
 
         p1_mons.remove(game_state["p1_active"])
         p1_mons.append(p1_active)
+
+    
+        tox = False
+        for instance in game_state["Toxic"]["On_p1"]:
+            if instance == game_state["p1_active"]:
+                tox = True
+        if tox:
+            game_state["Toxic"]["On_p1"][p1_active] = game_state["Toxic"]["On_p1"][game_state["p1_active"]]
+            game_state["Toxic"]["On_p1"][game_state["p1_active"]]
+
+        brn = False
+        for instance in game_state["Burn"]["On_p1"]:
+            if instance == game_state["p1_active"]:
+                brn = True
+
+        if brn:
+            game_state["Burn"]["On_p1"][p1_active] = game_state["Burn"]["On_p1"][game_state["p1_active"]]
+            del game_state["Burn"]["On_p1"][game_state["p1_active"]]
+
+        new_stat_dict = {}
+        for stat in stats_dict[p1]["Pokemon"][game_state["p1_active"]]:
+            new_stat_dict[stat] = stats_dict[p1]["Pokemon"][game_state["p1_active"]][stat]
+
+        del game_state[p1][game_state["p1_active"]]
+        del stats_dict[p1]["Pokemon"][game_state["p1_active"]]
+
+        stats_dict[p1]["Pokemon"][p1_active] = new_stat_dict
 
         game_state["p1_active"] = p1_active
         game_state["p1_active_nick"] = p1_active_nick
         game_state["Nicknames"][p1_active_nick] = p1_active
 
-        game_state[p1][game_state["p1_active"]] = {"Kills":k,"Deaths":d}
+        game_state[p1][game_state["p1_active"]] = {"Kills":k,"Deaths":d,"HP":hp}
 
 def handle_forfeit(game_state, p1, p2, p1_mons, p2_mons, game_actions, i):
 
@@ -587,31 +794,165 @@ def remove_non_alpha(input_str):
 
 def check_movepool_p1(game_state, p1, p2, game_actions, i, learnsets):
 
-    mon = remove_non_alpha(game_actions[i].split("|move|p1a: ")[1].split("|")[0])
+    mon = remove_non_alpha(game_state["p1_active"])
+
+    if mon[-4:] == "mega":
+        mon=mon[:-4]
 
     if mon not in RESTRICT_MOVE_CHECKING:
         move = remove_non_alpha(game_actions[i].split("|")[3])
         #print(mon, "||", move, "||", move in learnsets[mon])
 
-        if move in learnsets[mon]:
-            return True
-        else:
-            return False
+        if mon in learnsets:
+            if move in learnsets[mon]:
+                return True
+            else:
+                return False
     
 def check_movepool_p2(game_state, p1, p2, game_actions, i, learnsets):
 
-    mon = remove_non_alpha(game_actions[i].split("|move|p2a: ")[1].split("|")[0])
+    mon = remove_non_alpha(game_state["p2_active"])
+
+    if mon[-4:] == "mega":
+        mon=mon[:-4]
 
     if mon not in RESTRICT_MOVE_CHECKING:
         move = remove_non_alpha(game_actions[i].split("|")[3])
         #print(mon, "||", move, "||", move in learnsets[mon])
 
-        if move in learnsets[mon]:
-            return True
-        else:
-            return False
+        if mon in learnsets:
+            if move in learnsets[mon]:
+                return True
+            else:
+                return False
         
+def set_stats_dict(game_state, p1, p2, p1_mons, p2_mons, log):
+    stats_dict = {p1:{"Win":0, "Pokemon":{}},p2:{"Win":0, "Pokemon":{}}}
+
+    for pokemon in p1_mons:
+        stats_dict[p1]["Pokemon"][pokemon] = {"Dmg_Dealt":0,"Dmg_Taken":0,"Switched_out":0,"Pkmn_Poisoned":0,"Crits":0,"Rocks/Spikes_Set":0,"Moves_Used":{}}
+
+    for pokemon in p2_mons:
+        stats_dict[p2]["Pokemon"][pokemon] = {"Dmg_Dealt":0,"Dmg_Taken":0,"Switched_out":0,"Pkmn_Poisoned":0,"Crits":0,"Rocks/Spikes_Set":0,"Moves_Used":{}}
+
+    return stats_dict
+
+def add_move_p1(stats_dict,game_state, p1, p2, game_actions, i):
+    mon = game_state["p1_active"]
+    move = game_actions[i].split("|")[3]
+
+    if (stats_dict[p1]["Pokemon"][mon]["Moves_Used"].get(move)):
+        stats_dict[p1]["Pokemon"][mon]["Moves_Used"][move] += 1
+    else:
+        stats_dict[p1]["Pokemon"][mon]["Moves_Used"][move] = 1
+
+def add_move_p2(stats_dict,game_state, p1, p2, game_actions, i):
+    mon = game_state["p2_active"]
+    move = game_actions[i].split("|")[3]
+
+    if (stats_dict[p2]["Pokemon"][mon]["Moves_Used"].get(move)):
+        stats_dict[p2]["Pokemon"][mon]["Moves_Used"][move] += 1
+    else:
+        stats_dict[p2]["Pokemon"][mon]["Moves_Used"][move] = 1
+
+def track_damage(stats_dict,game_state, p1, p2, game_actions, i):
+    acceptable_pre_move_states = ["-hint","|-enditem","|-sideend","-activate","|-crit","-damage|p1a","-damage|p2a", "move|p2a","Focus Sash", "move|p1a", "-supereffective", "|-anim","-resisted"]
+    if "-damage|p1a" in game_actions[i] and any(state in game_actions[i-1] for state in acceptable_pre_move_states):
+        
+        hp = game_actions[i].split("/100")[0][-3:]
+        if hp[0] == "|":
+            hp = hp[1:]
+        if hp[1] == "|":
+            hp = hp[2:]
+        if "0 fnt" in game_actions[i]:
+                hp = 0
+        hp = int(hp)
+
+        damage_taken = game_state[p1][game_state["p1_active"]]["HP"] - hp
+        game_state[p1][game_state["p1_active"]]["HP"] = hp
+
+        stats_dict[p1]["Pokemon"][game_state["p1_active"]]["Dmg_Taken"] += damage_taken
+        stats_dict[p2]["Pokemon"][game_state["p2_active"]]["Dmg_Dealt"] += damage_taken
+
+        #print(game_state["p2_active"], "Dealt", damage_taken, "to", game_state["p1_active"])
+
+    elif "-damage|p2a" in game_actions[i] and any(state in game_actions[i-1] for state in acceptable_pre_move_states):
+        
+        hp = game_actions[i].split("/100")[0][-3:]
+        if hp[0] == "|":
+            hp = hp[1:]
+        if hp[1] == "|":
+            hp = hp[2:]
+        if "0 fnt" in game_actions[i]:
+                hp = 0
+        hp = int(hp)
+
+        damage_taken = game_state[p2][game_state["p2_active"]]["HP"] - hp
+        game_state[p2][game_state["p2_active"]]["HP"] = hp
+
+        stats_dict[p2]["Pokemon"][game_state["p2_active"]]["Dmg_Taken"] += damage_taken
+        stats_dict[p1]["Pokemon"][game_state["p1_active"]]["Dmg_Dealt"] += damage_taken
+
+        #print(game_state["p1_active"], "Dealt", damage_taken, "to", game_state["p2_active"])
+
+    else:
+
+        if "-damage|p2a" in game_actions[i]:
+            #print(game_actions[i])
+            hp = game_actions[i].split("/100")[0][-3:]
+            if hp[0] == "|":
+                hp = hp[1:]
+            if hp[1] == "|":
+                hp = hp[2:]
+            if "fnt" in game_actions[i] and "[from]" in game_actions[i]:
+                hp = 0
+            hp = int(hp)
+
+            game_state[p2][game_state["p2_active"]]["HP"] = hp
+
+        elif "-damage|p1a" in game_actions[i]:
+            #print(game_actions[i])
+            hp = game_actions[i].split("/100")[0][-3:]
+            if hp[0] == "|":
+                hp = hp[1:]
+            if hp[1] == "|":
+                hp = hp[2:]
+
+            if "fnt" in game_actions[i] and "[from]" in game_actions[i]:
+                hp = 0
+            hp = int(hp)
+
+            game_state[p1][game_state["p1_active"]]["HP"] = hp
+
+def track_heal(stats_dict,game_state, p1, p2, game_actions, i):
+    if "|-heal|p1a" in game_actions[i]:
+        hp = game_actions[i].split("/100")[0][-3:]
+        if hp[0] == "|":
+            hp = hp[1:]
+        if hp[1] == "|":
+            hp = hp[2:]
+
+        game_state[p1][game_state["p1_active"]]["HP"] = int(hp)
+
+    elif "|-heal|p2a" in game_actions[i]:
+        hp = game_actions[i].split("/100")[0][-3:]
+        if hp[0] == "|":
+            hp = hp[1:]
+        if hp[1] == "|":
+            hp = hp[2:]
+
+        game_state[p2][game_state["p2_active"]]["HP"] = int(hp)
+
+def track_crit(stats_dict,game_state, p1, p2, game_actions, i):
+    if "|-crit|p1a" in game_actions[i]:
+        stats_dict[p2]["Pokemon"][game_state["p2_active"]]["Crits"] += 1
+
+    elif "|-crit|p2a" in game_actions[i]:
+        stats_dict[p1]["Pokemon"][game_state["p1_active"]]["Crits"] += 1
+
 def get_stats(game_state, p1, p2, p1_mons, p2_mons, log):
+
+    stats_dict = set_stats_dict(game_state, p1, p2, p1_mons, p2_mons, log)
 
     #check for zoroark and if it's there take measures to avoid errors
     p1_illusion, p2_illusion, learnsets = check_illusion(game_state, p1, p2, p1_mons, p2_mons, log)
@@ -631,9 +972,9 @@ def get_stats(game_state, p1, p2, p1_mons, p2_mons, log):
             if "forfeited" in game_actions[i]:
                 handle_forfeit(game_state, p1, p2, p1_mons, p2_mons, game_actions, i)
 
-            if "|switch|" in game_actions[i]:
+            if "|switch|" in game_actions[i] or "|drag|p" in game_actions[i]:
                 #print(game_actions[i])
-                switch(game_state, p1, p2, p1_mons, p2_mons, game_actions, i)
+                switch(stats_dict,game_state, p1, p2, p1_mons, p2_mons, game_actions, i,turn_num)
 
             if "|faint|" in game_actions[i]:
                 #print(game_actions[i])
@@ -646,7 +987,7 @@ def get_stats(game_state, p1, p2, p1_mons, p2_mons, log):
 
             if "|detailschange|" in game_actions[i]:
                 #print(game_actions[i])
-                mega(game_state, p1, p2, p1_mons, p2_mons, game_actions, i)
+                mega(stats_dict, game_state, p1, p2, p1_mons, p2_mons, game_actions, i)
 
             if "|-weather|Sandstorm|[from]" in game_actions[i]:
                 #print(game_actions[i])
@@ -661,14 +1002,30 @@ def get_stats(game_state, p1, p2, p1_mons, p2_mons, log):
 
             if "|-sidestart" in game_actions[i]:
                 #print(game_actions[i])
-                side_start(game_state, p1, p2, game_actions, i)
+                side_start(stats_dict,game_state, p1, p2, game_actions, i)
 
             if "|-status|" in game_actions[i]:
                 #print(game_actions[i])
-                start_status(game_state, p1, p2, game_actions, i)
+                start_status(stats_dict,game_state, p1, p2, game_actions, i)
 
             if "|-curestatus|" in game_actions[i]:
                 end_status(game_state, p1, p2, game_actions, i)
+
+            if "|move|p1a:" in game_actions[i]:
+                add_move_p1(stats_dict,game_state, p1, p2, game_actions, i)
+
+            if "|move|p2a:" in game_actions[i]:
+                add_move_p2(stats_dict,game_state, p1, p2, game_actions, i)
+
+            if "|-damage|" in game_actions[i]:
+                track_damage(stats_dict,game_state, p1, p2, game_actions, i)
+            
+            if "|-heal|" in game_actions[i]:
+                track_heal(stats_dict,game_state, p1, p2, game_actions, i)
+
+            if "|-crit" in game_actions[i]:
+                print
+                track_crit(stats_dict,game_state, p1, p2, game_actions, i)
 
             #check movepools of pokemon every turn to see if a zoroark is out
             if p1_illusion:
@@ -688,6 +1045,8 @@ def get_stats(game_state, p1, p2, p1_mons, p2_mons, log):
 
         turn_num+=1
 
+    return stats_dict
+
 def get_match_result(message):
     
     replay = ""
@@ -702,3 +1061,80 @@ def get_match_result(message):
     get_stats(game_state, p1, p2, p1_mons, p2_mons, log)
 
     return get_string_output(game_state, p1, p2, p1_mons, p2_mons, log)
+
+def get_match_stats(message):
+
+    replay = ""
+    for word in message.split(" "):
+        if "replay.pokemonshowdown.com" in word:
+            replay = word
+
+    log = get_battle_log(replay)
+    game_state, p1, p2, p1_mons, p2_mons = get_teams(log)
+    set_state(game_state)
+    get_leads(log, game_state)
+    stats_dict = get_stats(game_state, p1, p2, p1_mons, p2_mons, log)
+
+    for pokemon in game_state[p1]:
+        if pokemon != game_state["p1_active"]:
+            stats_dict[p1]["Pokemon"][pokemon]["Switched_out"] -= game_state[p1][pokemon]["Deaths"]
+
+    for pokemon in game_state[p2]:
+        if pokemon != game_state["p2_active"]:
+            stats_dict[p2]["Pokemon"][pokemon]["Switched_out"] -= game_state[p2][pokemon]["Deaths"]
+
+    for coach in [p1,p2]:
+        for mon in game_state[coach]:
+            stats_dict[coach]["Pokemon"][mon]["Kills"] = game_state[coach][mon]["Kills"]
+            stats_dict[coach]["Pokemon"][mon]["Deaths"] = game_state[coach][mon]["Deaths"]
+
+    p1_survivors = len(p1_mons)
+    for pokemon in game_state[p1]:
+        if game_state[p1][pokemon]["Deaths"] >= 1:
+            p1_survivors -= 1
+
+    p2_survivors = len(p2_mons)
+    for pokemon in game_state[p2]:
+        if game_state[p2][pokemon]["Deaths"] >= 1:
+            p2_survivors -= 1
+
+    if p1_survivors > p2_survivors:
+        stats_dict[p1]["Wins"] = 1
+        stats_dict[p1]["Losses"] = 0
+        stats_dict[p1]["Diff"] = p1_survivors
+        stats_dict[p2]["Wins"] = 0
+        stats_dict[p2]["Losses"] = 1
+        stats_dict[p2]["Diff"] = (-1) * p1_survivors
+
+        for mon in p1_mons:
+            stats_dict[p1]["Pokemon"][mon]["Wins"] = 1
+            stats_dict[p1]["Pokemon"][mon]["Losses"] = 0
+            stats_dict[p1]["Pokemon"][mon]["Diff"] = p1_survivors
+
+        for mon in p2_mons:
+            stats_dict[p2]["Pokemon"][mon]["Wins"] = 0
+            stats_dict[p2]["Pokemon"][mon]["Losses"] = 1
+            stats_dict[p2]["Pokemon"][mon]["Diff"] = (-1) * p1_survivors
+
+    elif p1_survivors < p2_survivors:
+        stats_dict[p1]["Win"] = 0
+        stats_dict[p1]["Losses"] = 1
+        stats_dict[p1]["Diff"] = (-1) * p2_survivors
+        stats_dict[p2]["Win"] = 1
+        stats_dict[p2]["Losses"] = 0
+        stats_dict[p2]["Diff"] = p2_survivors
+
+        for mon in p1_mons:
+            stats_dict[p1]["Pokemon"][mon]["Wins"] = 0
+            stats_dict[p1]["Pokemon"][mon]["Losses"] = 1
+            stats_dict[p1]["Pokemon"][mon]["Diff"] = (-1) * p2_survivors
+
+        for mon in p2_mons:
+            stats_dict[p2]["Pokemon"][mon]["Wins"] = 1
+            stats_dict[p2]["Pokemon"][mon]["Losses"] = 0
+            stats_dict[p2]["Pokemon"][mon]["Diff"] = p2_survivors
+
+    return game_state, stats_dict, log
+
+game_state, stats_dict, log = get_match_stats("https://replay.pokemonshowdown.com/gen9terapreviewnatdexdraft-2049647042")
+print(json.dumps(stats_dict,indent=4))

@@ -7,6 +7,7 @@ import discord
 from discord.ext import tasks, commands
 
 import replay_analyze
+import database
 from commands import Moveset, Spreadsheets, TeamManagement
 
 # Basic logging info outputs to discord.log file
@@ -68,7 +69,10 @@ async def responder(message):
     if ":cosmug:" in message.content.lower():
         await message.channel.send("<:cosmug:932895668450787329>")
     if "cosmog" in message.content.lower():
-        await message.add_reaction("<:cosmug:932895668450787329>")    
+        await message.add_reaction("<:cosmug:932895668450787329>")
+
+    if "!cosmogdb" in message.content.lower():
+        await message.channel.send(database.user_input(message.content))
 
     # Only say hi in the general channel
     if message.channel.name == "general":

@@ -69,8 +69,8 @@ def combine_prevo_moves():
 
 if __name__ == "__main__":
 
-    #convert_learnsets()
-    #convert_evos()
+    convert_learnsets()
+    convert_evos()
     combine_prevo_moves()
 
         
