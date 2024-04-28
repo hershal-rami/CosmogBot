@@ -452,7 +452,7 @@ def mass_entry(file_path, season):
 
             
 def user_input(user_i):
-    
+
     in_list = user_i.split(" ")
 
     if in_list[0].lower() == "!cosmogdb":
@@ -728,6 +728,11 @@ def user_input(user_i):
                    """)
         return("Command Not Recognized")
         
+
+if __name__ == "__main__":
+    while(1):
+        x = input()
+        user_input(x)
 
 
 
