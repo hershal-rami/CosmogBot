@@ -552,7 +552,7 @@ def user_input(user_i):
                         
                         query_stat = in_list[3].split("stat=")[1]
                         season = int(in_list[4].split("season=")[1])
-                        result = connection.execute( text(f"""SELECT p_name,pkmn_name,pps_{query_stat} from Poke_Player_Stats natural join Player_Stats,PKMN_stats where Poke_Player_Stats.pps_season = {season} and Poke_Player_Stats.pps_coach_id = Player_Stats.p_id and Poke_Player_Stats.pps_pkmn_id = PKMN_Stats.pkmn_id ORDER BY pps_{query_stat} DESC""") )
+                        result = connection.execute( text(f"""SELECT p_name,pkmn_name,pps_{query_stat} from Poke_Player_Stats natural join Player_Stats,PKMN_Stats where Poke_Player_Stats.pps_season = {season} and Poke_Player_Stats.pps_coach_id = Player_Stats.p_id and Poke_Player_Stats.pps_pkmn_id = PKMN_Stats.pkmn_id ORDER BY pps_{query_stat} DESC""") )
                         
                         return_string = "```"
                         i = 1
@@ -577,7 +577,7 @@ def user_input(user_i):
                             query_stat = in_list[3].split("stat=")[1]
                             season = int(in_list[4].split("season=")[1])
                             player = in_list[5].split("player=")[1]
-                            result = connection.execute( text(f"""SELECT p_name,pkmn_name,pps_kills,pps_deaths,pps_dmg_dealt,pps_dmg_taken,pps_times_switched,pps_pkmn_poisoned,pps_crits,pps_rocks_spikes_set,pps_wins,pps_losses,pps_diff from Poke_Player_Stats natural join Player_Stats,PKMN_stats where Poke_Player_Stats.pps_season = {season} and Poke_Player_Stats.pps_coach_id = Player_Stats.p_id and Poke_Player_Stats.pps_pkmn_id = PKMN_Stats.pkmn_id and Player_Stats.p_name = \"{player}\" ORDER BY pps_{query_stat} DESC""") )
+                            result = connection.execute( text(f"""SELECT p_name,pkmn_name,pps_kills,pps_deaths,pps_dmg_dealt,pps_dmg_taken,pps_times_switched,pps_pkmn_poisoned,pps_crits,pps_rocks_spikes_set,pps_wins,pps_losses,pps_diff from Poke_Player_Stats natural join Player_Stats,PKMN_Stats where Poke_Player_Stats.pps_season = {season} and Poke_Player_Stats.pps_coach_id = Player_Stats.p_id and Poke_Player_Stats.pps_pkmn_id = PKMN_Stats.pkmn_id and Player_Stats.p_name = \"{player}\" ORDER BY pps_{query_stat} DESC""") )
                             return_string = "```"
 
                             
@@ -693,7 +693,7 @@ def user_input(user_i):
                         query_stat = in_list[3].split("stat=")[1]
                         season = int(in_list[4].split("season=")[1])
                         mon_type = in_list[5].split("type=")[1]
-                        result = connection.execute( text(f"""SELECT pkmn_name,sum(pps_{query_stat}) as sum_stat from Poke_Player_Stats natural join PKMN_stats where Poke_Player_Stats.pps_season = {season} and Poke_Player_Stats.pps_pkmn_id = PKMN_Stats.pkmn_id and (PKMN_Stats.type1 = \"{mon_type}\" or PKMN_Stats.type2 = \"{mon_type}\") GROUP BY pps_pkmn_id ORDER BY sum_stat DESC""") )
+                        result = connection.execute( text(f"""SELECT pkmn_name,sum(pps_{query_stat}) as sum_stat from Poke_Player_Stats natural join PKMN_Stats where Poke_Player_Stats.pps_season = {season} and Poke_Player_Stats.pps_pkmn_id = PKMN_Stats.pkmn_id and (PKMN_Stats.type1 = \"{mon_type}\" or PKMN_Stats.type2 = \"{mon_type}\") GROUP BY pps_pkmn_id ORDER BY sum_stat DESC""") )
                         
                         return_string = "```"
                         i = 1
