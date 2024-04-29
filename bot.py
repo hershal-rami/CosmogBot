@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import os
 import random
@@ -27,10 +28,6 @@ intents.members = True
 
 activity = discord.Activity(type=discord.ActivityType.listening, name="its trainer! | .help")
 bot = commands.Bot(command_prefix='.', activity=activity, intents=intents)
-
-bot.add_cog(Moveset(bot))
-bot.add_cog(Spreadsheets(bot))
-bot.add_cog(TeamManagement(bot))
 
 # Runs once logged in and ready for additional actions
 @bot.event
@@ -99,5 +96,12 @@ async def responder(message):
         except:
              await message.channel.send("Uh Oh")
 
+async def main():
+    async with bot:
+        await bot.add_cog(Moveset(bot))
+        await bot.add_cog(Spreadsheets(bot))
+        await bot.add_cog(TeamManagement(bot))
+        await bot.start(TOKEN)
+
 # Go, Cosmog!
-bot.run(TOKEN)
+asyncio.run(main())
