@@ -72,6 +72,8 @@ async def responder(message):
         await message.add_reaction("<:cosmug:932895668450787329>")
 
     if "!cosmogdb" in message.content.lower():
+        print("testing")
+        await message.channel.send("testing")
         msg = ""
         try:
             msg = database.user_input(message.content)

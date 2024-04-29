@@ -6,7 +6,7 @@ from replay_analyze import get_match_stats
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:password@localhost/MBTL_STATS_DB'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/MBTL_STATS_DB'
 
 from sqlalchemy import event
 from sqlalchemy import text
@@ -217,18 +217,18 @@ def db_insert_game(stats_dict, div,season, post_season=False,championship=False)
                 ))
                     
                 for move in m["Moves_Used"]:
-                    result = connection.execute( text(f"SELECT pps_pkmn_id from Poke_Move_Stats where pms_pkmn_id = {mon_id} and pms_move={move}") )
+                    result = connection.execute( text(f"SELECT pms_pkmn_id from Poke_Move_Stats where pms_pkmn_id = {mon_id} and pms_move=\"{move}\"") )
                     num_results = result.rowcount
 
                     if num_results == 0:
             
                         connection.execute(text(
-                                f"""INSERT into Poke_Move_Stats values({mon_id},{move}, {m["Moves_Used"][move]})"""
+                                f"""INSERT into Poke_Move_Stats values({mon_id},\"{move}\", {m["Moves_Used"][move]})"""
                                 ))
 
                     else:
                         connection.execute(text(
-                        f"""UPDATE Poke_Move_Stats SET pms_times_used=pms_times_used+{m["Moves_Used"][move]} WHERE pms_mon_id={mon_id} and pms_move={move}
+                        f"""UPDATE Poke_Move_Stats SET pms_times_used=pms_times_used+{m["Moves_Used"][move]} WHERE pms_pkmn_id={mon_id} and pms_move={move}
                         """
                     ))
                 
@@ -353,7 +353,8 @@ def mass_entry(file_path, season):
                             with open("replays_in_db.json", "w") as f:
                                 json.dump(replays_in_db,f,indent=4)
 
-                        except:
+                        except Exception as e:
+                            print(e)
                             print("Error when collecting stats")
 
                             replays_error = {}
@@ -395,7 +396,8 @@ def mass_entry(file_path, season):
                             with open("replays_in_db.json", "w") as f:
                                 json.dump(replays_in_db,f,indent=4)
 
-                        except:
+                        except Exception as e:
+                            print(e)
                             print("Error when collecting stats")
 
                             replays_error = {}
@@ -437,7 +439,8 @@ def mass_entry(file_path, season):
                             with open("replays_in_db.json", "w") as f:
                                 json.dump(replays_in_db,f,indent=4)
 
-                        except:
+                        except Exception as e:
+                            print(e)
                             print("Error when collecting stats")
 
                             replays_error = {}
