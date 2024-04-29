@@ -72,7 +72,12 @@ async def responder(message):
         await message.add_reaction("<:cosmug:932895668450787329>")
 
     if "!cosmogdb" in message.content.lower():
-        await message.channel.send(database.user_input(message.content))
+        msg = ""
+        try:
+            msg = database.user_input(message.content)
+            await message.channel.send(msg)
+        except:
+            await message.channel.send("Something went wrong")
 
     # Only say hi in the general channel
     if message.channel.name == "general":
