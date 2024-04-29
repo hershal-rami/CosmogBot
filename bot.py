@@ -24,6 +24,7 @@ GM = False
 
 # Need members intent for managing member stuff
 intents = discord.Intents.default()
+intents.message_content = True
 intents.members = True
 
 activity = discord.Activity(type=discord.ActivityType.listening, name="its trainer! | .help")
@@ -49,11 +50,6 @@ async def responder(message):
     if message.author == bot.user:
         return        
 
-    # Updating standings after Porygon posts match results
-    # if "Result:" in message.content:
-    #     await message.channel.send("Working on it!")
-    #     await message.channel.send(updateMatchResults(message.content))
-
     # Fun responses: emoji responses, reactions, and hello message
     if ":scepthink:" in message.content.lower():
         await message.channel.send("<:scepthink:932156902555648101>") # must use emoji id    
@@ -69,14 +65,13 @@ async def responder(message):
         await message.add_reaction("<:cosmug:932895668450787329>")
 
     if "!cosmogdb" in message.content.lower():
-        print("testing")
-        await message.channel.send("testing")
         msg = ""
         try:
             msg = database.user_input(message.content)
             await message.channel.send(msg)
-        except:
+        except Exception as e:
             await message.channel.send("Something went wrong")
+            await message.channel.send(e)
 
     # Only say hi in the general channel
     if message.channel.name == "general":
