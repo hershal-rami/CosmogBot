@@ -13,7 +13,7 @@ def get_battle_log(link):
     json_ver = json.loads(source)
     json_ver["log"] = json_ver["log"].split("\n")
 
-    battle_log = (("\n").join(json_ver["log"])).split("|turn")
+    battle_log = (("\n").join(json_ver["log"])).split("|turn|")
     #for line in battle_log:
     #    print("----------------------------------------------------")
     #    print(line)
@@ -1048,6 +1048,9 @@ def get_stats(game_state, p1, p2, p1_mons, p2_mons, log):
     return stats_dict
 
 def get_match_result(message):
+    """
+    Get just K/D info here
+    """
     
     replay = ""
     for word in message.split(" "):
@@ -1058,11 +1061,97 @@ def get_match_result(message):
     game_state, p1, p2, p1_mons, p2_mons = get_teams(log)
     set_state(game_state)
     get_leads(log, game_state)
-    get_stats(game_state, p1, p2, p1_mons, p2_mons, log)
+    get_KD_stats(game_state, p1, p2, p1_mons, p2_mons, log)
 
     return get_string_output(game_state, p1, p2, p1_mons, p2_mons, log)
 
+
+def get_KD_stats(game_state, p1, p2, p1_mons, p2_mons, log):
+    stats_dict = set_stats_dict(game_state, p1, p2, p1_mons, p2_mons, log)
+
+    #check for zoroark and if it's there take measures to avoid errors
+    p1_illusion, p2_illusion, learnsets = check_illusion(game_state, p1, p2, p1_mons, p2_mons, log)
+    
+    
+    turn_num = 1
+    for turn in log:
+        #print("Beginning of Turn", turn_num)
+        #print(p1, "Active Mon", game_state["p1_active"])
+        #print(p2, "Active Mon", game_state["p2_active"])
+
+        game_actions = turn.split("\n")
+        #print("Turn:", turn_num)
+
+        for i in range(0, len(game_actions)):
+
+            if "forfeited" in game_actions[i]:
+                handle_forfeit(game_state, p1, p2, p1_mons, p2_mons, game_actions, i)
+
+            if "|switch|" in game_actions[i] or "|drag|p" in game_actions[i]:
+                #print(game_actions[i])
+                switch(stats_dict,game_state, p1, p2, p1_mons, p2_mons, game_actions, i,turn_num)
+
+            if "|faint|" in game_actions[i]:
+                #print(game_actions[i])
+                kd_attribution(game_state, p1, p2, game_actions, i)
+
+            if "|replace|" in game_actions[i]:
+                #this is for zoruark and stuff
+                #print(game_actions[i])
+                replace_pokemon(game_state, p1, p2, game_actions, i)
+
+            if "|detailschange|" in game_actions[i]:
+                #print(game_actions[i])
+                mega(stats_dict, game_state, p1, p2, p1_mons, p2_mons, game_actions, i)
+
+            if "|-weather|Sandstorm|[from]" in game_actions[i]:
+                #print(game_actions[i])
+                set_storm(game_state, p1, p2, game_actions, i)
+
+            if "|-weather|none" in game_actions[i]:
+                del_storm(game_state, p1, p2, game_actions, i)
+
+            if "|-weather|Sandstorm|[from]" in game_actions[i]:
+                #print(game_actions[i])
+                set_storm(game_state, p1, p2, game_actions, i)
+
+            if "|-sidestart" in game_actions[i]:
+                #print(game_actions[i])
+                side_start(stats_dict,game_state, p1, p2, game_actions, i)
+
+            if "|-status|" in game_actions[i]:
+                #print(game_actions[i])
+                start_status(stats_dict,game_state, p1, p2, game_actions, i)
+
+            if "|-curestatus|" in game_actions[i]:
+                end_status(game_state, p1, p2, game_actions, i)
+
+            #check movepools of pokemon every turn to see if a zoroark is out
+            if p1_illusion:
+                
+                if "|move|p1a:" in game_actions[i]:
+                    check_movepool_p1(game_state, p1, p2, game_actions, i,learnsets)
+
+            if p2_illusion:
+                
+                if "|move|p2a:" in game_actions[i]:
+                    check_movepool_p2(game_state, p1, p2, game_actions, i,learnsets)
+
+        #print(p1, "Active Mon", game_state["p1_active"])
+        #print(p2, "Active Mon", game_state["p2_active"])
+        #print("End of Turn", turn_num)
+
+
+        turn_num+=1
+
+    return stats_dict
+
+
 def get_match_stats(message):
+
+    """
+    Get all of the info like damage and everything
+    """
 
     replay = ""
     for word in message.split(" "):
@@ -1136,5 +1225,4 @@ def get_match_stats(message):
 
     return game_state, stats_dict, log
 
-game_state, stats_dict, log = get_match_stats("https://replay.pokemonshowdown.com/gen9terapreviewnatdexdraft-2049647042")
-print(json.dumps(stats_dict,indent=4))
+print(get_match_result("https://replay.pokemonshowdown.com/gen9natdexdraft-2138775618"))
