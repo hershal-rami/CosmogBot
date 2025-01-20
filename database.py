@@ -6,12 +6,85 @@ from replay_analyze import get_match_stats
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/MBTL_STATS_DB'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/MBTL_STATS_DB'
 
 from sqlalchemy import event
 from sqlalchemy import text
 db = SQLAlchemy(app)
 
+import numpy as np
+
+#horizontal direction same indecies as horizontal
+WEAKNESS = {
+    "Normal" :   [1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1],
+    "Fire" :     [1,1,2,1,1,1,1,1,2,1,1,1,2,1,1,1,1,1],
+    "Water" :    [1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    "Electric" : [1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1],
+    "Grass" :    [1,2,1,1,1,2,1,2,1,2,1,2,1,1,1,1,1,1],
+    "Ice" :      [1,2,1,1,1,1,2,1,1,1,1,1,2,1,1,1,2,1],
+    "Fighting" : [1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,2],
+    "Poison" :   [1,1,1,1,1,1,1,1,2,1,2,1,1,1,1,1,1,1],
+    "Ground" :   [1,1,2,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1],
+    "Flying" :   [1,1,1,2,1,2,1,1,1,1,1,1,2,1,1,1,1,1],
+    "Psychic" :  [1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,2,1,2],
+    "Bug" :      [1,2,1,1,1,1,1,1,1,2,1,1,2,1,1,1,1,1],
+    "Rock" :     [1,1,2,1,2,1,2,1,2,1,1,1,1,1,1,1,2,1],
+    "Ghost" :    [1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,1],
+    "Dragon" :   [1,1,1,1,1,2,1,1,1,1,1,1,1,1,2,1,1,2],
+    "Dark" :     [1,1,1,1,1,1,2,1,1,1,1,2,1,1,1,1,1,2],
+    "Steel" :    [1,2,1,1,1,1,2,1,2,1,1,1,1,1,1,1,1,1],
+    "Fairy" :    [1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,2,1],
+}
+
+RESISTANCE = {
+    "Normal" :   [1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1],
+    "Fire" :     [1,0.5,1,1,0.5,0.5,1,1,1,1,1,0.5,1,1,1,1,0.5,0.5],
+    "Water" :    [1,0.5,0.5,1,1,0.5,1,1,1,1,1,1,1,1,1,1,0.5,1],
+    "Electric" : [1,1,1,0.5,1,1,1,1,1,0.5,1,1,1,1,1,1,0.5,1],
+    "Grass" :    [1,1,0.5,0.5,0.5,1,1,1,0.5,1,1,1,1,1,1,1,1,1],
+    "Ice" :      [1,1,1,1,1,1,0.5,1,1,1,1,1,1,1,1,1,1,1],
+    "Fighting" : [1,1,1,1,1,1,1,1,1,1,1,0.5,0.5,1,1,0.5,1,1],
+    "Poison" :   [1,1,1,1,0.5,1,0.5,0.5,1,1,1,0.5,1,1,1,1,1,0.5],
+    "Ground" :   [1,1,1,0,1,1,1,0.5,1,1,1,1,0.5,1,1,1,1,1],
+    "Flying" :   [1,1,1,1,0.5,1,0.5,1,0,1,1,0.5,1,1,1,1,1,1],
+    "Psychic" :  [1,1,1,1,1,1,0.5,1,1,1,0.5,1,1,1,1,1,1,1],
+    "Bug" :      [1,1,1,1,0.5,1,0.5,1,0.5,1,1,1,1,1,1,1,1,1],
+    "Rock" :     [0.5,0.5,1,1,1,1,1,0.5,1,0.5,1,1,1,1,1,1,1,1],
+    "Ghost" :    [0,1,1,1,1,1,0,0.5,1,1,1,0.5,1,1,1,1,1,1],
+    "Dragon" :   [1,0.5,0.5,0.5,0.5,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    "Dark" :     [1,1,1,1,1,1,1,1,1,1,0,1,1,0.5,1,0.5,1,1],
+    "Steel" :    [0.5,1,1,1,0.5,0.5,1,0,1,0.5,0.5,0.5,0.5,1,0.5,1,0.5,0.5],
+    "Fairy" :    [1,1,1,1,1,1,0.5,1,1,1,1,0.5,1,1,0,0.5,1,1],
+}
+
+#list of banned pokemon
+BANNED = ["Pokestar Black Belt", "Pokestar White Door", "Pokestar Black Door", "Pokestar Spirit", "Pokestar F-002", "Pokestar F-00", "Pokestar Monster", "Pokestar Giant",
+          "Pokestar Transport", "Pokestar MT2", "Pokestar MT", "Pokestar Brycen-Man", "Pokestar UFO", "Pokestar Smeargle", "Cresceidon", "Hemogoblin", "Scattervein", 
+          "Ababo", "Saharaja", "Saharascal", "Venomicon", "Protowatt", "Dorsoil", "Duohm", "Monohm", "Nohface", "Chromera", "Miasmaw", "Miasmite", "Astrolotl", "Solotl",
+          "Equilibra", "Justyke", "Snaelstrom", "Coribalis", "Swirlpool", "Smokomodo", "Smoguana", "Smogecko", "Caribolt", "Electrelk", "Fawnifer", "Jumbao", "Mumbao",
+          "Pajantom", "Kerfluffle", "Pluffle", "Crucibelle", "Naviathan", "Caimanoe", "Floatoy", "Plasmanta", "Snugglow", "Volkraken", "Volkritter", "Cawmodore", "Cawdet",
+          "Malaconda", "Brattler", "Aurumoth", "Argalis", "Cupra", "Mollux", "Necturna", "Necturine", "Tomohawk", "Scratchet", "Voodoom", "Voodoll", "Krilowatt", "Colossoil",
+          "Cyclohm", "Kitsunoh", "Arghonaut", "Privatyke", "Stratagem", "Tactite", "Rebble", "Fidgit", "Breezil", "Pyroak", "Flarelm", "Embirch", "Revenankh", "Syclant", "Syclar",
+          "MissingNo.", "Mewtwo", "Lugia", "Ho-Oh","Kyogre", "Groudon", "Rayquaza", "Deoxys","Dialga", "Palkia", "Giratina", "Arceus", "Reshiram", "Zekrom","Genesect", "Xerneas",
+          "Yveltal", "Solgaleo", "Lunala", "Pheramosa", "Magearna","Marshadow","Naganadel", "Zacian", "Zamazenta", "Eternatus", "Flutter Mane", "Koraidon", "Miraidon",
+          "Pokestar UFO-2", "Venomicon-Epilogue", "Crucibelle-Mega", "Butterfree-Gmax", "Alakazam-Mega", "Machamp-Gmax", "Gengar-Mega", "Kingler-Gmax", "Lapras-Gmax", "Eevee-Starter",
+          "Snorlax-Gmax", "Mewtwo-Mega-X", "Blaziken-Mega", "Salamence-Mega", "Metagross-Mega", "Latias-Mega", "Latios-Mega", "Kyogre-Primal", "Groudon-Primal", "Rayquaza-Mega",
+          "Deoxys-Attack", "Lucario-Mega", "Dialga-Origin", "Palkia-Origin", "Giratina-Origin", "Shaymin-Sky", "Arceus-Bug", "Garbodor-Gmax", "Kyurem-Black", "Genesect-Douse",
+          "Greninja-Bond", "Xerneas-Neutral", "Gumshoos-Totem", "Vikavolt-Totem", "Ribombee-Totem", "Araquanid-Totem", "Lurantis-Totem", "Salazzle-Totem", "Togedemaru-Totem",
+          "Kommo-o-Totem", "Necrozma-Dusk-Mane", "Magearna-Original", "Melmetal-Gmax", "Rillaboom-Gmax", "Cinderace-Gmax","Inteleon-Gmax", "Corviknight-Gmax", "Orbeetle-Gmax",
+          "Drednaw-Gmax", "Coalossal-Gmax", "Flapple-Gmax", "Appletun-Gmax", "Sandaconda-Gmax", "Centiskorch-Gmax","Hatterene-Gmax", "Grimmsnarl-Gmax", "Alcremie-Gmax", "Copperajah-Gmax",
+          "Duraludon-Gmax", "Zacian-Crowned", "Zamazenta-Crowned", "Eternatus-Eternamax", "Zarude-Dada", "Calyrex-Ice", "Venusaur-Gmax", "Blastoise-Gmax", "Raticate-Alola-Totem",
+          "Gengar-Gmax", "Marowak-Alola-Totem", "Eevee-Gmax", "Mewtwo-Mega-Y", "Arceus-Dark", "Kyurem-White","Genesect-Shock", "Genesect-Ash", "Zygarde-Complete", "Mimikyu-Totem",
+          "Necrozma-Dawn-Wings","Toxtricity-Gmax","Urshifu-Gmax","Calyrex-Shadow", "Terapagos-Stellar","Charizard-Gmax","Meowth-Gmax","Arceus-Dragon","Genesect-Burn","Mimikyu-Busted-Totem",
+          "Necrozma-Ultra","Toxtricity-Low-Key-Gmax","Urshifu-Rapid-Strike-Gmax","Arceus-Electric","Genesect-Chill","Ogerpon-Teal-Tera","Arceus-Fairy","Ogerpon-Wellspring-Tera",
+          "Arceus-Fighting","Ogerpon-Hearthflame-Tera","Arceus-Fire", "Ogerpon-Cornerstone-Tera","Arceus-Flying","Arceus-Ghost","Arceus-Grass","Arceus-Ground", "Arceus-Ice", 
+          "Arceus-Poison", "Arceus-Psychic","Pikachu-Gmax","Arceus-Rock", "Arceus-Steel", "Arceus-Water", "Pokestar Humanoid"]
+
+
+DONT_MOVE_CHECK = ["farfetchu2019d"]
+def remove_non_alpha(input_str):
+    output_str = (''.join([i for i in input_str if i.isalnum()])).lower()
+    return output_str
 
 def setup():
 
@@ -228,8 +301,7 @@ def db_insert_game(stats_dict, div,season, post_season=False,championship=False)
 
                     else:
                         connection.execute(text(
-                        f"""UPDATE Poke_Move_Stats SET pms_times_used=pms_times_used+{m["Moves_Used"][move]} WHERE pms_pkmn_id={mon_id} and pms_move={move}
-                        """
+                        f"""UPDATE Poke_Move_Stats SET pms_times_used=pms_times_used+{m["Moves_Used"][move]} WHERE pms_pkmn_id={mon_id} and pms_move=\"{move}\""""
                     ))
                 
 
@@ -290,33 +362,36 @@ def mass_entry_moves(file_path):
     with open(file_path, "r") as f:
         replays = json.load(f)
 
-        for replay in replays["Regular_Season"]:
+        for div in replays["Regular_Season"]:
+            for replay in replays["Regular_Season"][div]:
 
-            print(replay)
+                print(replay)
 
-            game_state, stats_dict, log = get_match_stats(replay)
+                game_state, stats_dict, log = get_match_stats(replay)
 
-            insert_moves(stats_dict)
+                insert_moves(stats_dict)
 
 
         
 
 
-        for replay in replays["Playoffs"]:
+        for div in replays["Playoffs"]:
+            for replay in replays["Playoffs"][div]:
 
-            print(replay)
+                print(replay)
 
-            game_state, stats_dict, log = get_match_stats(replay)
+                game_state, stats_dict, log = get_match_stats(replay)
 
-            insert_moves(stats_dict)
+                insert_moves(stats_dict)
 
-        for replay in replays["Championships"]:
+        for div in replays["Championships"]:
+            for replay in replays["Championships"][div]:
 
-            print(replay)
+                print(replay)
 
-            game_state, stats_dict, log = get_match_stats(replay)
+                game_state, stats_dict, log = get_match_stats(replay)
 
-            insert_moves(stats_dict)
+                insert_moves(stats_dict)
 
             
 def mass_entry(file_path, season):
@@ -337,7 +412,9 @@ def mass_entry(file_path, season):
 
                     if not in_db:
                         print(replay)
+
                         try:
+                        
                             game_state, stats_dict, log = get_match_stats(replay)
 
                             db_insert_game(stats_dict,div,season)
@@ -359,12 +436,12 @@ def mass_entry(file_path, season):
 
                             replays_error = {}
                             with open("error_replays_db.json", "r") as f:
-                                replays_error= json.load(f)
+                                    replays_error= json.load(f)
 
                             replays_error["Regular_Season"].append(replay)
 
                             with open("error_replays_db.json", "w") as f:
-                                json.dump(replays_error,f,indent=4)
+                                    json.dump(replays_error,f,indent=4)
 
 
         for div in replays["Playoffs"]:
@@ -730,12 +807,452 @@ def user_input(user_i):
                    try !cosmogdb *command* help for more detailed information
                    """)
         return("Command Not Recognized")
+    
+    elif in_list[0].lower() == "!cosmogdraft":
+
+        with app.app_context():
+            connection = db.session.connection()
+
+            if in_list[1].lower() == "teamhelp":
+
+                filter_stat = None
+                filter_value = None
+                filter_greater = False
+                filter_less = False
+
+                filter_move=False
+                filter_move_list = []
+                filter_and = False
+                filter_or = True
+                
+                with open("Pokemon_Info/learnsets.json") as moves:
+                        learnsets = json.load(moves)
+
+                filter_type = None
+                filter_type_multiple = []
+                filter_type_and = True
+                filter_type_or = False
+
+                low_tier_mode = False
+
+                if "filter_stat" in user_i:
+                    for arg in in_list:
+                        if "filter_stat" in arg:
+
+                            if "<" in arg:
+                                filter_less =True
+                                filter_value = int(arg.split("<")[1].strip())
+                            else:
+                                filter_greater = True
+                                filter_value = int(arg.split(">")[1].strip())
+                            
+                            if "hp" in arg:
+                                filter_stat="hp"
+                            if "atk" in arg:
+                                filter_stat="atk"
+                            if "def" in arg:
+                                filter_stat="def"
+                            if "spatk" in arg:
+                                filter_stat="spatk"
+                            if "spdef" in arg:
+                                filter_stat="spdef"
+                            if "spe" in arg:
+                                filter_stat="spe"
+
+                if "filter_move" in user_i:
+
+                    filter_move=True
+                    if "filter_move_mode=and" in user_i:
+                        filter_and=True
+                        filter_or = False
+                    
+                    for move in user_i.split("filter_move=[")[1].split("]")[0].split(","):
+                        filter_move_list.append(move.strip())
+
+                if "filter_type" in user_i:
+
+                    if "filter_type_mode=or" in user_i:
+                        filter_type_and = False
+                        filter_type_or = True
+
+                    if "filter_type=[" in user_i:
+                        for p_type in user_i.split("filter_type=[")[1].split("]")[0].split(","):
+                            filter_type_multiple.append(p_type.strip().lower())
+
+                    else:
+                        filter_type = user_i.split("filter_type=")[1].split(" ")[0].strip().lower()
+
+
+                if "low_tier_mode=True" in user_i:
+                    low_tier_mode=True
+                
+                if "team=[" in user_i:
+                    team = user_i.split("team=[")[1].split("]")[0].split(",")
+
+                    hp = []
+                    atk = []
+                    defen = []
+                    spatk = []
+                    spdef = []
+                    spe = []
+
+                    weak = []
+                    res = []
+                    
+                    rocks = False
+                    removal = False
+                    utility_score_0 = 0
+                    for mon in team:
+                        result = connection.execute( text(f"""SELECT type1,type2,HP,ATK,DEF,SPATK,SPDEF,SPE from PKMN_Stats where pkmn_name=\"{mon.strip()}\"""") )
+                        for row in result:
+
+                            hp.append(int(row[2]))
+                            atk.append(int(row[3]))
+                            defen.append(int(row[4]))
+                            spatk.append(int(row[5]))
+                            spdef.append(int(row[6]))
+                            spe.append(int(row[7]))
+
+                            if row[1] == None:
+                                type_effective = np.array(WEAKNESS[row[0]]) * np.array(RESISTANCE[row[0]])
+                            else:
+                                type_effective = np.array(WEAKNESS[row[0]]) * np.array(RESISTANCE[row[0]]) * np.array(WEAKNESS[row[1]]) * np.array(RESISTANCE[row[1]])
+
+                            #set everything this mon is not weak to to 0
+                            w = np.maximum(type_effective,1).astype(int)
+                            w[w == 1] = 0
+                            weak.append(w)
+
+                            #boolean vector 1 if resists that type 0 if not
+                            res.append((type_effective < 1).astype(int))
+
+
+                            #try to look for utility in the pokemon's moveset
+                            utility_moves = ["Spikes", "Toxic Spikes", "Sticky Webs", "Wish", "Haze", "Clear Smog", "Will-o-Wisp", "Tailwind", "Reflect", "Light Screen"]
+                            
+                            mon = remove_non_alpha(mon.strip().lower())
+
+                            if mon[-4:] == "mega":
+                                mon = mon[:-4]
+
+                            if mon in learnsets:
+                                
+                                if not rocks and remove_non_alpha("Stealth Rock").lower() in learnsets[mon]:
+                                    utility_score_0 += 5
+                                    rocks= True
+                                elif rocks and remove_non_alpha("Stealth Rock").lower() in learnsets[mon]:
+                                    utility_score_0 += 1
+
+                                if not removal and (remove_non_alpha("Defog").lower() in learnsets[mon] or remove_non_alpha("Rapid Spin").lower() in learnsets[mon]):
+                                    utility_score_0 += 5
+                                    rocks= True
+                                elif removal and (remove_non_alpha("Defog").lower() in learnsets[mon] or remove_non_alpha("Rapid Spin").lower() in learnsets[mon]):
+                                    utility_score_0 += 1
+
+                                for move in utility_moves:
+
+                                    if remove_non_alpha(move).lower() in learnsets[mon]:
+                                        utility_score_0 +=1
+
+
+                    total_res = np.sum(np.array(res),axis = 0)
+
+                    #find the sum of the weakenesses, subtract the resistances turn anything not weak to overall to 0
+                    total_weak = (np.sum(np.array(weak), axis=0) - 2 * total_res)
+                    total_weak[total_weak <=0] = 0
+                    
+                    #weak score is the squared loss of the total weakness vector (want to minimize)
+                    weak_score_0 = np.sum(total_weak**2)
+                    
+                    #res score is the number of types we have less than 2 resistances to (want to minimize)
+                    res_score_0 = np.sum(total_res < 2)
+
+                    stat_score_0 = 0
+
+                    #based on average stats of the OU tier in 2022 about equal to 90, 100, 95, 95, 90, 90
+                    #takes how far away you are from meeting the bar in each stat and adds it together (want to minimize)
+                    if np.mean(hp) < 90:
+                        stat_score_0 += (90 - np.mean(hp))**3
+                    if np.mean(atk) < 100:
+                        stat_score_0 += (100 - np.mean(atk))**3
+                    if np.mean(defen) < 95:
+                        stat_score_0 += (95 - np.mean(defen))**3
+                    if np.mean(spatk) < 95:
+                        stat_score_0 += (95 - np.mean(spatk))**3
+                    if np.mean(spdef) < 90:
+                        stat_score_0 += (90 - np.mean(spdef))**3
+                    if np.mean(spe) < 90:
+                        stat_score_0 += (90 - np.mean(spe))**3
+
+                    #print(stat_score_0)
+                    #print(weak_score_0)
+                    #print(res_score_0)
+
+                    team_strength_score_0 = 0.3 * weak_score_0 + 0.2*(stat_score_0)**(1/3) + 0.6*res_score_0 + 0.5*utility_score_0
+
+                    #print(team_strength_score_0)
+
+                    pkmn_res = []
+
+                    #go through each pokemon and calculate the strength score as if the pokemon was added
+                    result = connection.execute( text(f"""SELECT type1,type2,HP,ATK,DEF,SPATK,SPDEF,SPE, pkmn_name from PKMN_Stats""") )
+                    for row in result:
+
+                        include = True
+                        if row[8] in BANNED:
+                            include = False
+
+                        if filter_stat and include:
+
+                            if filter_less:
+
+                                if filter_stat == "hp":
+                                    if int(row[2]) >= filter_value:
+                                        include = False
+                                if filter_stat == "atk":
+                                    if int(row[3]) >= filter_value:
+                                        include = False
+                                if filter_stat == "def":
+                                    if int(row[4]) >= filter_value:
+                                        include = False
+                                if filter_stat == "spatk":
+                                    if int(row[5]) >= filter_value:
+                                        include = False
+                                if filter_stat == "spdef":
+                                    if int(row[6]) >= filter_value:
+                                        include = False
+                                if filter_stat == "spe":
+                                    if int(row[7]) >= filter_value:
+                                        include = False
+
+                            elif filter_greater:
+
+                                if filter_stat == "hp":
+                                    if int(row[2]) <= filter_value:
+                                        include = False
+                                if filter_stat == "atk":
+                                    if int(row[3]) <= filter_value:
+                                        include = False
+                                if filter_stat == "def":
+                                    if int(row[4]) <= filter_value:
+                                        include = False
+                                if filter_stat == "spatk":
+                                    if int(row[5]) <= filter_value:
+                                        include = False
+                                if filter_stat == "spdef":
+                                    if int(row[6]) <= filter_value:
+                                        include = False
+                                if filter_stat == "spe":
+                                    if int(row[7]) <= filter_value:
+                                        include = False
+
+                        if filter_move and include:
+
+                            try:
+
+                                if filter_and:
+                                    for move in filter_move_list:
+                                        mon = remove_non_alpha(row[8])
+
+                                        if mon[-4:] == "mega":
+                                            mon = mon[:-4]
+
+                                        if mon not in learnsets:
+                                            include=False
+                                        if remove_non_alpha(move).lower() not in learnsets[mon]:
+                                            include=False
+
+                                if filter_or:
+
+                                    include=False
+                                    for move in filter_move_list:
+                                        mon = remove_non_alpha(row[8])
+
+                                        if mon[-4:] == "mega":
+                                            mon = mon[:-4]
+
+                                    
+                                        if mon not in learnsets:
+                                            
+                                        
+                                            include=False
+                                        
+                                        if remove_non_alpha(move).lower() in learnsets[mon]:
+                                        
+                                            include=True
+
+                            except:
+                                include=False
+
+                        if (filter_type or filter_type_multiple) and include:
+
+                            if filter_type_and:
+                                if not filter_type_multiple:
+                                    if row[1] == None:
+                                        if row[0].lower() != filter_type:
+                                            include = False
+
+                                    else:
+                                        if row[0].lower() != filter_type and row[1] != filter_type:
+                                            include = False
+                                else:
+                                    
+                                    if row[1] == None and len(filter_type_multiple) == 2:
+                                        include=False
+                                    else:
+                                        if (row[1].lower() not in filter_type_multiple) or (row[0].lower() not in filter_type_multiple):
+                                            include=False
+
+                            elif filter_type_or:
+                                
+                                if not filter_type_multiple:
+                                    if row[1] == None:
+                                        if row[0].lower() != filter_type:
+                                            include = False
+
+                                    else:
+                                        if row[0].lower() != filter_type and row[1] != filter_type:
+                                            include = False
+
+                                else:
+                                    if row[1] == None:
+                                        if row[0].lower() not in filter_type_multiple:
+                                            include = False
+
+                                    else:
+                                        if row[0].lower() not in filter_type_multiple and row[1] not in filter_type_multiple:
+                                            include = False
+
+
+                        require_increase = True
+                        if low_tier_mode:
+                            if int(row[2]) + int(row[3]) + int(row[4]) + int(row[5]) + int(row[6]) + int(row[7]) > 525:
+                                include=False
+                            require_increase = False
+
+                        
+                        if include:
+
+                            hp_temp = hp + [int(row[2])]
+                            atk_temp = atk + [int(row[3])]
+                            defen_temp = defen + [int(row[4])]
+                            spatk_temp = spatk + [int(row[5])]
+                            spdef_temp = spdef + [int(row[6])]
+                            spe_temp = spe + [int(row[7])]
+
+                            if row[1] == None:
+                                type_effective = np.array(WEAKNESS[row[0]]) * np.array(RESISTANCE[row[0]])
+                            else:
+                                type_effective = np.array(WEAKNESS[row[0]]) * np.array(RESISTANCE[row[0]]) * np.array(WEAKNESS[row[1]]) * np.array(RESISTANCE[row[1]])
+
+
+                            #set everything this mon is not weak to to 0
+                            w = np.maximum(type_effective,1).astype(int)
+                            w[w == 1] = 0
+                            weak_temp = weak + [w]
+
+                            #boolean vector 1 if resists that type 0 if not
+                            res_temp = res + [(type_effective < 1).astype(int)]
+
+                            #try to look for utility in the pokemon's moveset
+                            utility_moves = ["Spikes", "Toxic Spikes", "Sticky Webs", "Wish", "Haze", "Clear Smog", "Will-o-Wisp", "Tailwind", "Reflect", "Light Screen"]
+                            
+                            utility_score_temp = utility_score_0
+                            mon = remove_non_alpha(row[8].strip().lower())
+
+                            if mon[-4:] == "mega":
+                                mon = mon[:-4]
+
+
+                            if mon in learnsets:
+                                
+                                if not rocks and remove_non_alpha("Stealth Rock").lower() in learnsets[mon]:
+                                    utility_score_temp += 5
+                                elif rocks and remove_non_alpha("Stealth Rock").lower() in learnsets[mon]:
+                                    utility_score_temp += 1
+
+                                if not removal and (remove_non_alpha("Defog").lower() in learnsets[mon] or remove_non_alpha("Rapid Spin").lower() in learnsets[mon]):
+                                    utility_score_temp += 5
+                                elif removal and (remove_non_alpha("Defog").lower() in learnsets[mon] or remove_non_alpha("Rapid Spin").lower() in learnsets[mon]):
+                                    utility_score_temp += 1
+
+                                for move in utility_moves:
+
+                                    if remove_non_alpha(move).lower() in learnsets[mon]:
+                                        utility_score_temp +=1
+
+                            total_res = np.sum(np.array(res_temp),axis = 0)
+
+                            #find the sum of the weakenesses, subtract the resistances turn anything not weak to overall to 0
+                            total_weak = (np.sum(np.array(weak_temp), axis=0) - 2 * total_res)
+                            total_weak[total_weak <=0] = 0
+                            
+                            #weak score is the squared loss of the total weakness vector (want to minimize)
+                            weak_score_new = np.sum(total_weak**2)
+                            
+                            #res score is the number of types we have less than 2 resistances to (want to minimize)
+                            res_score_new = np.sum(total_res < 2)
+
+                            stat_score_new = 0
+
+                            #based on average stats of the OU tier in 2022 about equal to 90, 100, 95, 95, 90, 90
+                            #takes how far away you are from meeting the bar in each stat and adds it together (want to minimize)
+                            if np.mean(hp_temp) < 90:
+                                stat_score_new += (90 - np.mean(hp_temp))**3
+                            if np.mean(atk_temp) < 100:
+                                stat_score_new += (100 - np.mean(atk_temp))**3
+                            if np.mean(defen_temp) < 95:
+                                stat_score_new += (95 - np.mean(defen_temp))**3
+                            if np.mean(spatk_temp) < 95:
+                                stat_score_new += (95 - np.mean(spatk_temp))**3
+                            if np.mean(spdef_temp) < 90:
+                                stat_score_new += (90 - np.mean(spdef_temp))**3
+                            if np.mean(spe_temp) < 90:
+                                stat_score_new += (90 - np.mean(spe_temp))**3
+
+                            team_strength_score_new = 0.3 * weak_score_new + 0.2*(stat_score_new)**(1/3) + 0.6*res_score_new + 0.5*utility_score_temp
+
+                            #only if the pokemon makes an improvement keep it or we are in low tier mode
+                            if team_strength_score_new < team_strength_score_0 or not require_increase:
+                                #append the name of the pokemon and how much it improves on the strength score (want to maximize this)
+                                pkmn_res.append((row[8], team_strength_score_0 - team_strength_score_new))
+
+                    sorted_res = sorted(pkmn_res, key=lambda x:x[1],reverse=True)
+
+                    if(len(sorted_res) >= 15):
+                        print("===================================================")
+                        print("| " + "Pokemon".ljust(20) + "|| " + "Increase in Team Score".ljust(25) + "|")
+                        print("===================================================")
+                        for i in range(15):
+                            print("| " + sorted_res[i][0].ljust(20) + "|| " + str(sorted_res[i][1]).ljust(25) + "|")
+                        print("===================================================")
+                    else:
+                        print("===================================================")
+                        print("| " + "Pokemon".ljust(20) + "|| " + "Increase in Team Score".ljust(25) + "|")
+                        print("===================================================")
+                        for i in range(len(sorted_res)):
+                            print("| " + sorted_res[i][0].ljust(20) + "|| " + str(sorted_res[i][1]).ljust(25) + "|")
+                        print("===================================================")
+
+                        
+
+        return("Command Not Recognized")
         
 
 if __name__ == "__main__":
+
+    """
+    setup()
+    mass_entry_moves("mass_entry.json")
+    mass_entry("mass_entry.json", 8)
+    """
+    
+
+    
     while(1):
         x = input()
-        user_input(x)
+        print(user_input(x))
+        
 
 
 

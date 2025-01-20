@@ -1,0 +1,10 @@
+open up mysql command line
+CREATE DATABASE MBTL_STATS_DB;
+use MBTL_STATS_DB;
+source C:\Users\Casey\Casey\VSCWorkspace\CosmogBot\database.sql  #the path to the database sql file
+show tables;  #to check if it worked
+Run setup function from python file database.py
+mass entry for all seasons and moves available
+enter moves first
+
+--changed the password to password see if that works idk

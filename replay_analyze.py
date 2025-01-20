@@ -1225,4 +1225,6 @@ def get_match_stats(message):
 
     return game_state, stats_dict, log
 
-print(get_match_result("https://replay.pokemonshowdown.com/gen9natdexdraft-2138775618"))
+
+if __name__ == "__main__":
+    print(get_match_result("https://replay.pokemonshowdown.com/gen9natdexdraft-2217122826"))
