@@ -78,7 +78,7 @@ BANNED = ["Pokestar Black Belt", "Pokestar White Door", "Pokestar Black Door", "
           "Necrozma-Dawn-Wings","Toxtricity-Gmax","Urshifu-Gmax","Calyrex-Shadow", "Terapagos-Stellar","Charizard-Gmax","Meowth-Gmax","Arceus-Dragon","Genesect-Burn","Mimikyu-Busted-Totem",
           "Necrozma-Ultra","Toxtricity-Low-Key-Gmax","Urshifu-Rapid-Strike-Gmax","Arceus-Electric","Genesect-Chill","Ogerpon-Teal-Tera","Arceus-Fairy","Ogerpon-Wellspring-Tera",
           "Arceus-Fighting","Ogerpon-Hearthflame-Tera","Arceus-Fire", "Ogerpon-Cornerstone-Tera","Arceus-Flying","Arceus-Ghost","Arceus-Grass","Arceus-Ground", "Arceus-Ice", 
-          "Arceus-Poison", "Arceus-Psychic","Pikachu-Gmax","Arceus-Rock", "Arceus-Steel", "Arceus-Water", "Pokestar Humanoid"]
+          "Arceus-Poison", "Arceus-Psychic","Pikachu-Gmax","Arceus-Rock", "Arceus-Steel", "Arceus-Water", "Pokestar Humanoid", "Breezi"]
 
 
 DONT_MOVE_CHECK = ["farfetchu2019d"]
@@ -967,8 +967,9 @@ def user_input(user_i):
                     #res score is the number of types we have less than 2 resistances to (want to minimize)
                     res_score_0 = np.sum(total_res < 2)
 
-                    stat_score_0 = 0
+                    #stat_score_0 = 0
 
+                    """
                     #based on average stats of the OU tier in 2022 about equal to 90, 100, 95, 95, 90, 90
                     #takes how far away you are from meeting the bar in each stat and adds it together (want to minimize)
                     if np.mean(hp) < 90:
@@ -983,12 +984,19 @@ def user_input(user_i):
                         stat_score_0 += (90 - np.mean(spdef))**3
                     if np.mean(spe) < 90:
                         stat_score_0 += (90 - np.mean(spe))**3
+                    """
+                    #instead of doing that which is dumb, lets try to make a balanced team by traying to minimize the squared difference between ATK and SPATK and DEF and SPDEF
+                    #and maximize speed
+
+                    def_score_0 = (np.mean(defen) - np.mean(spdef)) ** 2
+                    atk_score_0 = (np.mean(atk) - np.mean(spatk)) ** 2
+                    spe_score = np.mean(spe)
 
                     #print(stat_score_0)
                     #print(weak_score_0)
                     #print(res_score_0)
 
-                    team_strength_score_0 = 0.3 * weak_score_0 + 0.2*(stat_score_0)**(1/3) + 0.6*res_score_0 + 0.5*utility_score_0
+                    team_strength_score_0 = -0.3 * weak_score_0 - 0.6*res_score_0 + 0.5*utility_score_0 - 0.5 * def_score_0 - 0.5 * atk_score_0 + spe_score
 
                     #print(team_strength_score_0)
 
@@ -1195,6 +1203,7 @@ def user_input(user_i):
 
                             stat_score_new = 0
 
+                            """
                             #based on average stats of the OU tier in 2022 about equal to 90, 100, 95, 95, 90, 90
                             #takes how far away you are from meeting the bar in each stat and adds it together (want to minimize)
                             if np.mean(hp_temp) < 90:
@@ -1210,7 +1219,21 @@ def user_input(user_i):
                             if np.mean(spe_temp) < 90:
                                 stat_score_new += (90 - np.mean(spe_temp))**3
 
-                            team_strength_score_new = 0.3 * weak_score_new + 0.2*(stat_score_new)**(1/3) + 0.6*res_score_new + 0.5*utility_score_temp
+                            """
+
+                            #instead of doing that which is dumb, lets try to make a balanced team by traying to minimize the squared difference between ATK and SPATK and DEF and SPDEF
+                            #and maximize speed
+
+                            def_score_new = (np.mean(defen_temp) - np.mean(spdef_temp)) ** 2
+                            atk_score_new = (np.mean(atk_temp) - np.mean(spatk_temp)) ** 2
+                            spe_score_new = np.mean(spe)
+
+                            #print(stat_score_0)
+                            #print(weak_score_0)
+                            #print(res_score_0)
+
+                            team_strength_score_new = -0.3 * weak_score_new - 0.6*res_score_new + 0.5*utility_score_temp- 0.5 * def_score_new - 0.5 * atk_score_new + spe_score_new
+
 
                             #only if the pokemon makes an improvement keep it or we are in low tier mode
                             if team_strength_score_new < team_strength_score_0 or not require_increase:
@@ -1237,7 +1260,74 @@ def user_input(user_i):
                         
 
         return("Command Not Recognized")
-        
+    
+
+def json_pkmn_characteristics():
+
+    with open("./data/Pokemon_Feature_Data.json", "w") as wfile:
+
+        json_write = {}
+
+        with app.app_context():
+                connection = db.session.connection()
+
+            
+                #go through each pokemon and calculate the strength score as if the pokemon was added
+                result = connection.execute( text(f"""SELECT type1,type2,HP,ATK,DEF,SPATK,SPDEF,SPE, pkmn_name from PKMN_Stats""") )
+                for row in result:
+
+                    include = True
+                    if row[8] in BANNED:
+                        include = False
+                    
+                    if include:
+
+                        hp = int(row[2])
+                        atk= int(row[3])
+                        defen = int(row[4])
+                        spatk = int(row[5])
+                        spdef = int(row[6])
+                        spe = int(row[7])
+
+                        type1 = row[0]
+                        type2 = row[1]
+
+                        type_effective = []
+                        if row[1] == None:
+                            type_effective = np.array(WEAKNESS[row[0]]) * np.array(RESISTANCE[row[0]])
+                        else:
+                            type_effective = np.array(WEAKNESS[row[0]]) * np.array(RESISTANCE[row[0]]) * np.array(WEAKNESS[row[1]]) * np.array(RESISTANCE[row[1]])
+
+                        #try to look for utility in the pokemon's moveset
+                        utility_moves = ["Stealth Rock", "Defog", "Rapid Spin", "Spikes", "Toxic Spikes", "Sticky Webs", "Wish", "Haze", "Clear Smog", "Will-o-Wisp", "Tailwind", "Reflect", "Light Screen"]
+                        
+                        utility_score_temp = 0
+                        mon = remove_non_alpha(row[8].strip().lower())
+
+                        if mon[-4:] == "mega":
+                            mon = mon[:-4]
+
+                        learnsets = {}
+                        with open("Pokemon_Info/learnsets.json") as moves:
+                            learnsets = json.load(moves)
+
+                        mon_u_moves = []
+
+
+                        if mon in learnsets:
+
+                            for move in utility_moves:
+
+                                if remove_non_alpha(move).lower() in learnsets[mon]:
+                                    mon_u_moves.append(move)
+
+                        name = row[8]
+
+                        json_write[name] = {"STATS":[hp,atk,defen,spatk,spdef,spe], "TYPE":[type1,type2], "TYPE_EFFECTIVE":list(type_effective.astype(float)), "UTILITY":mon_u_moves}
+
+                    
+
+        json.dump(json_write,wfile,indent=4)
 
 if __name__ == "__main__":
 
@@ -1248,10 +1338,12 @@ if __name__ == "__main__":
     """
     
 
-    
+    """
     while(1):
         x = input()
         print(user_input(x))
+    """
+    json_pkmn_characteristics()
         
 
 

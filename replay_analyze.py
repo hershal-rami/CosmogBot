@@ -763,7 +763,7 @@ def handle_forfeit(game_state, p1, p2, p1_mons, p2_mons, game_actions, i):
     if p1 == forefeit_name:
         game_state[p1][game_state["p1_active"]]["Kills"] += remaining_mons
     else:
-        game_state[p1][game_state["p1_active"]]["Kills"] += remaining_mons
+        game_state[p2][game_state["p2_active"]]["Kills"] += remaining_mons
 
 def check_illusion(game_state, p1, p2, p1_mons, p2_mons, log):
     p1_illusion = False
@@ -1053,7 +1053,7 @@ def get_match_result(message):
     """
     
     replay = ""
-    for word in message.split(" "):
+    for word in message.replace("\n"," ").split(" "):
         if "replay.pokemonshowdown.com" in word:
             replay = word
 
