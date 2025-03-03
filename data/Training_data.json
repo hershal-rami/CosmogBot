@@ -172,5 +172,274 @@
                 1
             ]
         }
+    },
+    "5": {
+        "STARTING_TEAM": [
+            "Jellicent",
+            "Terapagos",
+            "Dudunsparce-Three-Segment",
+            "Brambleghast"
+        ],
+        "POKEMON_0": "Obstagoon",
+        "POKEMON_1": {
+            "STATS": [
+                93,
+                90,
+                91,
+                70,
+                81,
+                95
+            ],
+            "TYPE": [
+                "Dark",
+                "Normal"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                4,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.0,
+                1,
+                0.5,
+                1,
+                2
+            ]
+        }
+    },
+    "6": {
+        "STARTING_TEAM": [
+            "Keldeo-Resolute",
+            "Shuckle"
+        ],
+        "POKEMON_0": "Primeape",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                135,
+                60,
+                30,
+                70,
+                95
+            ],
+            "TYPE": [
+                "Fighting",
+                "Normal"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                0,
+                1,
+                0.5,
+                1,
+                2
+            ]
+        }
+    },
+    "7": {
+        "STARTING_TEAM": [
+            "Vikavolt",
+            "Kartana",
+            "Dusknoir",
+            "Barraskewda"
+        ],
+        "POKEMON_0": "Flareon",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                130,
+                60,
+                95,
+                110,
+                65
+            ],
+            "TYPE": [
+                "Electric",
+                null
+            ],
+            "UTILITY": [
+                "Reflect",
+                "Will-o-Wisp",
+                "Tailwind"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ]
+        }
+    },
+    "8": {
+        "STARTING_TEAM": [
+            "Celesteela",
+            "Furfrou",
+            "Golem-Alola"
+        ],
+        "POKEMON_0": "Silvally-Dragon",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                105,
+                85,
+                95,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ]
+        }
+    },
+    "9": {
+        "STARTING_TEAM": [
+            "Camerupt-Mega",
+            "Lilligant",
+            "Palafin-Hero"
+        ],
+        "POKEMON_0": "Golurk",
+        "POKEMON_1": {
+            "STATS": [
+                89,
+                114,
+                80,
+                55,
+                90,
+                55
+            ],
+            "TYPE": [
+                "Fairy",
+                "Ghost"
+            ],
+            "UTILITY": [
+                "Spikes"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.0,
+                1.0,
+                1,
+                1,
+                1,
+                0.25,
+                1,
+                2,
+                0,
+                1.0,
+                2,
+                1
+            ]
+        }
+    },
+    "10": {
+        "STARTING_TEAM": [
+            "Barraskewda",
+            "Iron Thorns",
+            "Magnezone",
+            "Ogerpon-Wellspring",
+            "Lilligant-Hisui"
+        ],
+        "POKEMON_0": "Spectrier",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                65,
+                60,
+                145,
+                80,
+                130
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "UTILITY": [
+                "Haze"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ]
+        }
     }
 }

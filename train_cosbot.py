@@ -153,7 +153,7 @@ while user_input != "done":
 
     total_repeat = 0
     for i in types:
-        if types[i] >= 3:
+        if types[i] >= 3 and i != None and i != "None":
             total_repeat += types[i] - 2
         
     total_res = 0
@@ -266,7 +266,7 @@ while user_input != "done":
                 types[pkmn[new_mon]["TYPE"][t]] += 1
             else:
                 types[pkmn[new_mon]["TYPE"][t]] = 1
-                
+
     for r in range(len(pkmn[new_mon]["TYPE_EFFECTIVE"])):
         if pkmn[new_mon]["TYPE_EFFECTIVE"][r] < 1:
             res[r] += 1
@@ -294,7 +294,7 @@ while user_input != "done":
 
     total_repeat = 0
     for i in types:
-        if types[i] >= 3:
+        if types[i] >= 3 and i != None and i != "None":
             total_repeat += types[i] - 2
         
     total_res = 0
@@ -381,7 +381,7 @@ while user_input != "done":
 
     total_repeat = 0
     for i in types:
-        if types[i] >= 3:
+        if types[i] >= 3 and i != None and i != "None":
             total_repeat += types[i] - 2
         
     total_res = 0
