@@ -101,7 +101,9 @@ while user_input != "done":
     spdef = []
     spe = []
     weak = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    num_weak = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     res =  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    types = {}
     utility = []
     for mon in starting_team:
         print("-------------------------------------------------------------------------------------")
@@ -118,10 +120,16 @@ while user_input != "done":
         for w in range(len(pkmn[mon]["TYPE_EFFECTIVE"])):
             if pkmn[mon]["TYPE_EFFECTIVE"][w] > 1:
                 weak[w] += pkmn[mon]["TYPE_EFFECTIVE"][w]
+                num_weak[w] += 1
         
         for r in range(len(pkmn[mon]["TYPE_EFFECTIVE"])):
             if pkmn[mon]["TYPE_EFFECTIVE"][r] < 1:
                 res[r] += 1
+        for t in range(len(pkmn[mon]["TYPE"])):
+            if types.get(pkmn[mon]["TYPE"][t]):
+                types[pkmn[mon]["TYPE"][t]] += 1
+            else:
+                types[pkmn[mon]["TYPE"][t]] = 1
 
         for move in pkmn[mon]["UTILITY"]:
             if move not in utility:
@@ -134,6 +142,19 @@ while user_input != "done":
         if temp <= 0:
             temp = 0
         total_weak += temp
+
+    total_unres = 0
+    for i in range(len(weak)):
+        temp = num_weak[i] - res[i]
+
+        if temp <= 1:
+            temp = 0
+        total_unres += temp
+
+    total_repeat = 0
+    for i in types:
+        if types[i] >= 3:
+            total_repeat += types[i] - 2
         
     total_res = 0
     for i in range(len(weak)):
@@ -152,6 +173,8 @@ while user_input != "done":
     print("Average Speed Stat:", str((sum(spe) /len(spe))))
     print("Severity of weaknesses:", total_weak)
     print("Number of Types you don't have at least 2 resistances for:", total_res)
+    print("Number of Types you have at least 2 unresisted weaknesses for:", total_unres)
+    print("Number of repeated types (over 2):", total_repeat)
     print("Utility moves:", utility)
 
 
@@ -173,22 +196,29 @@ while user_input != "done":
 
     stats2 = list(pkmn[new_mon]["STATS"])
 
-    for stat in range(1, len(stats2)):
-        stats2[stat] += random.choice([0,0,0,0,0,0,0,0,0,0,0, 10, 30, 30, 30, 50, -10, -30, -30, -30, -50])
+    stat_change = random.choice([0, 10, 10, 20, 20, 30, 30, 30, 40, 50])
 
-    types = list(WEAKNESS.keys())
+    stat_to_change = random.choice([1,1,2,2,3,3,4,4,5])
+    stat_to_change_2 = stat_to_change
+    while stat_to_change_2 == stat_to_change:
+        stat_to_change_2 = random.choice([1,1,2,2,3,3,4,4,5])
+
+    stats2[stat_to_change] += stat_change
+    stats2[stat_to_change_2] -= stat_change
+
+    type_list = list(WEAKNESS.keys())
     type2 = list(pkmn[new_mon]["TYPE"])
 
-    if random.random() < 0.3:
+    if random.random() < 0.5:
         if type2[1] != None:
-            types.remove(type2[1])
-            type2[0] = random.choice(types)
+            type_list.remove(type2[1])
+            type2[0] = random.choice(type_list)
         else:
-            type2[0] = random.choice(types)
-    elif random.random() < 0.3:
-        types.remove(type2[0])
-        types.append(None)
-        type2[1] = random.choice(types)
+            type2[0] = random.choice(type_list)
+    elif random.random() < 0.5:
+        type_list.remove(type2[0])
+        type_list.append(None)
+        type2[1] = random.choice(type_list)
 
     
     type_effective2 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
@@ -230,7 +260,13 @@ while user_input != "done":
     for w in range(len(pkmn[new_mon]["TYPE_EFFECTIVE"])):
         if pkmn[new_mon]["TYPE_EFFECTIVE"][w] > 1:
             weak[w] += pkmn[new_mon]["TYPE_EFFECTIVE"][w]
-    
+
+    for t in range(len(pkmn[new_mon]["TYPE"])):
+            if types.get(pkmn[new_mon]["TYPE"][t]):
+                types[pkmn[new_mon]["TYPE"][t]] += 1
+            else:
+                types[pkmn[new_mon]["TYPE"][t]] = 1
+                
     for r in range(len(pkmn[new_mon]["TYPE_EFFECTIVE"])):
         if pkmn[new_mon]["TYPE_EFFECTIVE"][r] < 1:
             res[r] += 1
@@ -247,6 +283,19 @@ while user_input != "done":
         if temp <= 0:
             temp = 0
         total_weak += temp
+
+    total_unres = 0
+    for i in range(len(weak)):
+        temp = num_weak[i] - res[i]
+
+        if temp <= 1:
+            temp = 0
+        total_unres += temp
+
+    total_repeat = 0
+    for i in types:
+        if types[i] >= 3:
+            total_repeat += types[i] - 2
         
     total_res = 0
     for i in range(len(weak)):
@@ -265,6 +314,8 @@ while user_input != "done":
     print("Average Speed Stat:", str((sum(spe) /len(spe))))
     print("Severity of weaknesses:", total_weak)
     print("Number of Types you don't have at least 2 resistances for:", total_res)
+    print("Number of Types you have at least 2 unresisted weaknesses for:", total_unres)
+    print("Number of repeated types (over 2):", total_repeat)
     print("Utility moves:", new_utility)
 
     atk.remove(pkmn[new_mon]["STATS"][1])
@@ -276,6 +327,11 @@ while user_input != "done":
     for w in range(len(pkmn[new_mon]["TYPE_EFFECTIVE"])):
         if pkmn[new_mon]["TYPE_EFFECTIVE"][w] > 1:
             weak[w] -= pkmn[new_mon]["TYPE_EFFECTIVE"][w]
+            num_weak[w] -= 1
+
+    for t in range(len(pkmn[new_mon]["TYPE"])):
+            if types.get(pkmn[new_mon]["TYPE"][t]):
+                types[pkmn[new_mon]["TYPE"][t]] -= 1
     
     for r in range(len(pkmn[new_mon]["TYPE_EFFECTIVE"])):
         if pkmn[new_mon]["TYPE_EFFECTIVE"][r] < 1:
@@ -291,6 +347,12 @@ while user_input != "done":
     for w in range(len(type_effective2)):
         if type_effective2[w] > 1:
             weak[w] += type_effective2[w]
+
+    for t in type2:
+        if types.get(t):
+            types[t] += 1
+        else:
+            types[t] = 1
     
     for r in range(len(type_effective2)):
         if type_effective2[r] < 1:
@@ -308,6 +370,19 @@ while user_input != "done":
         if temp <= 0:
             temp = 0
         total_weak += temp
+
+    total_unres = 0
+    for i in range(len(weak)):
+        temp = num_weak[i] - res[i]
+
+        if temp <= 1:
+            temp = 0
+        total_unres += temp
+
+    total_repeat = 0
+    for i in types:
+        if types[i] >= 3:
+            total_repeat += types[i] - 2
         
     total_res = 0
     for i in range(len(weak)):
@@ -326,6 +401,8 @@ while user_input != "done":
     print("Average Speed Stat:", str((sum(spe) /len(spe))))
     print("Severity of weaknesses:", total_weak)
     print("Number of Types you don't have at least 2 resistances for:", total_res)
+    print("Number of Types you have at least 2 unresisted weaknesses for:", total_unres)
+    print("Number of repeated types (over 2):", total_repeat)
     print("Utility moves:", new_utility)
 
     print("\n")
