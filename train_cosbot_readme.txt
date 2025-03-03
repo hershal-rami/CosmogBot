@@ -20,6 +20,7 @@ That's where this program comes in! To help a machine learning model understand 
 
 2: How does this training process work?
 After reading this document you can run train_cosbot.py to begin generating training data.
+If you do not know how to run a python program reach out to Casey and he can help. Or there should be a number of youtube tutorials that will be helpful.
 The code will give you a randonmly generated team that you are to assume is what you have drafted so far. In the form of:
 
 -------------------------------------------------------------------------------------
