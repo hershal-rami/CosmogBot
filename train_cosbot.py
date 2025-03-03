@@ -196,7 +196,7 @@ while user_input != "done":
 
     stats2 = list(pkmn[new_mon]["STATS"])
 
-    stat_change = random.choice([0, 10, 10, 20, 20, 30, 30, 30, 30, 40, 40, 50])
+    stat_change = random.choice([0, 20, 20, 30, 30, 30, 30, 40, 40, 50])
 
     stat_to_change = random.choice([1,1,2,2,3,3,4,4,5])
     stat_to_change_2 = stat_to_change
