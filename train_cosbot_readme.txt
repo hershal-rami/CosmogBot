@@ -116,3 +116,38 @@ You can then press enter to continue generating data or type done then press ent
 You can safely do a couple then resume at any time, the program saves after every example.
 
 After you have completed training please send Casey your Training_data.json file either over discord or email at casey.hanks.2020@gmail.com and please let him know your thoughts on the whole thing.
+
+
+Appendix Features:
+
+Difference between average ATK and SPATK:
+Take the average of ATK for the team and subtract the average SPATK of the team.
+This is meant to capture the need for a balance between ATK and SPATK so you are not easily walled
+
+Difference between average DEF and SPDEF:
+The same as above but for DEF and SPDEF
+
+Average Speed Stat:
+The average speed stat of the team.
+Meant to capture how fast the team is. Considering splitting this into a number of pokemon per speed tier if that is more informative
+
+Severity of weaknesses:
+This is calculated as the sum of weaknesses (2x weak is 2 4x weak is 4) minus the number of resistances (4x resist counts the same as 2x resist), over all types.
+So a team with only two 2x weakness and a 4x weakness to fire, along with 1 resistance to fire would have a weakness score of 7.
+Attempting to show a one number calculation for how weakness prone the team is.
+
+Number of Types you don't have at least 2 resistances for:
+The number of types that you have less than two resistances for.
+Shows a strong capability for switching if you have two resistances to many different types.
+
+Number of Types you have at least 2 unresisted weaknesses for:
+Number of types that you have at least 2 more weaknesses than resistances.
+Shows repeated weaknesses that could form "problem types" for a team
+
+Number of repeated types (over 2):
+The number of types that you have more than 2 pokemon that have that type.
+Meant to penalize repeating the same type over and over again.
+
+Utility moves:
+What utility moves are known by the team. The full list is ["Stealth Rock", "Defog", "Rapid Spin", "Spikes", "Toxic Spikes", "Sticky Webs", "Wish", "Haze", "Clear Smog", "Will-o-Wisp", "Tailwind", "Reflect", "Light Screen"]
+The model will view rocks and removal as a separate category.
