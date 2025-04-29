@@ -1,0 +1,97 @@
+{
+    "0": {
+        "POKEMON_0": "Seaking",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                92,
+                65,
+                35,
+                110,
+                68
+            ],
+            "TYPE": [
+                "Ghost",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Azelf",
+            "Victini",
+            "Swellow"
+        ],
+        "Better": 0
+    },
+    "1": {
+        "POKEMON_0": "Crustle",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                105,
+                95,
+                95,
+                75,
+                45
+            ],
+            "TYPE": [
+                "Poison",
+                "Rock"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                1,
+                1.0,
+                1,
+                1.0,
+                0.25,
+                4,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Spikes",
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Seismitoad",
+            "Jellicent",
+            "Phione",
+            "Bellossom"
+        ],
+        "Better": 1
+    }
+}

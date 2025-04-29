@@ -1,0 +1,138 @@
+{
+    "4": {
+        "POKEMON_0": "Urshifu",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                130,
+                100,
+                63,
+                60,
+                97
+            ],
+            "TYPE": [
+                "Fighting",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                2,
+                0.25,
+                0.5,
+                1,
+                0,
+                0.25,
+                2,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Gliscor",
+            "Kabutops"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Rabsca",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                30,
+                85,
+                115,
+                100,
+                65
+            ],
+            "TYPE": [
+                "Bug",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Will-o-Wisp",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Eiscue-Noice",
+            "Ampharos-Mega",
+            "Barbaracle"
+        ],
+        "Better": 1
+    },
+    "13": {
+        "POKEMON_0": "Zeraora",
+        "POKEMON_1": {
+            "STATS": [
+                88,
+                72,
+                75,
+                142,
+                80,
+                143
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Diancie-Mega",
+            "Pangoro",
+            "Maractus"
+        ],
+        "Better": 1
+    }
+}

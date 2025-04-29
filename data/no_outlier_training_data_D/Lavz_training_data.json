@@ -1,0 +1,50 @@
+{
+    "1": {
+        "POKEMON_0": "Mew",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                150,
+                50,
+                100,
+                100,
+                100
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Light Screen",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Brambleghast",
+            "Bastiodon",
+            "Hawlucha",
+            "Volcanion"
+        ],
+        "Better": 0
+    }
+}

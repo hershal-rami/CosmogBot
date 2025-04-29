@@ -1,0 +1,45 @@
+{
+    "1": {
+        "POKEMON_0": "Ursaring",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                130,
+                25,
+                125,
+                75,
+                55
+            ],
+            "TYPE": [
+                "Normal",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Sneasler",
+            "Gholdengo"
+        ],
+        "Better": 1
+    }
+}

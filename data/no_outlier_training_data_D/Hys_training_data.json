@@ -1,0 +1,49 @@
+{
+    "1": {
+        "POKEMON_0": "Latias",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                80,
+                120,
+                110,
+                100,
+                110
+            ],
+            "TYPE": [
+                "Dragon",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                2,
+                2,
+                1,
+                4
+            ],
+            "UTILITY": [
+                "Defog",
+                "Rapid Spin"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Excadrill",
+            "Sandy Shocks",
+            "Lilligant"
+        ],
+        "Better": 0
+    }
+}

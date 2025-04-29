@@ -1,0 +1,139 @@
+{
+    "4": {
+        "POKEMON_0": "Scizor",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                130,
+                100,
+                55,
+                80,
+                65
+            ],
+            "TYPE": [
+                "Ghost",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.0,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                0,
+                0.0,
+                2,
+                0.5,
+                0.5,
+                0.25,
+                0.5,
+                2,
+                0.5,
+                2,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Dodrio",
+            "Sceptile"
+        ],
+        "Better": 1
+    },
+    "7": {
+        "POKEMON_0": "Muk-Alola",
+        "POKEMON_1": {
+            "STATS": [
+                105,
+                125,
+                75,
+                65,
+                100,
+                30
+            ],
+            "TYPE": [
+                "Fighting",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                2,
+                0,
+                1.0,
+                0.5,
+                0.5,
+                1,
+                0.25,
+                1,
+                4
+            ],
+            "UTILITY": [
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Vikavolt",
+            "Drampa",
+            "Lycanroc-Dusk"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Thundurus",
+        "POKEMON_1": {
+            "STATS": [
+                79,
+                115,
+                70,
+                125,
+                80,
+                111
+            ],
+            "TYPE": [
+                "Electric",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0,
+                4,
+                0.25,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5
+            ],
+            "UTILITY": [
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Toxicroak",
+            "Eldegoss"
+        ],
+        "Better": 0
+    }
+}

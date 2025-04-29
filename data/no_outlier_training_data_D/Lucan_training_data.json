@@ -1,0 +1,191 @@
+{
+    "9": {
+        "POKEMON_0": "Munkidori",
+        "POKEMON_1": {
+            "STATS": [
+                88,
+                115,
+                26,
+                130,
+                90,
+                106
+            ],
+            "TYPE": [
+                "Water",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                2
+            ],
+            "UTILITY": [
+                "Reflect",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Kyurem",
+            "Salazzle",
+            "Ambipom",
+            "Cobalion",
+            "Samurott"
+        ],
+        "Better": 0
+    },
+    "12": {
+        "POKEMON_0": "Iron Thorns",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                134,
+                70,
+                110,
+                84,
+                72
+            ],
+            "TYPE": [
+                "Rock",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.25,
+                1.0,
+                2,
+                1,
+                1.0,
+                0.5,
+                4,
+                0.0,
+                4,
+                0.25,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                1.0,
+                0.5
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Forretress",
+            "Simisear"
+        ],
+        "Better": 0
+    },
+    "18": {
+        "POKEMON_0": "Medicham-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                100,
+                115,
+                80,
+                85,
+                70
+            ],
+            "TYPE": [
+                "Ground",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Light Screen",
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tauros",
+            "Ninjask",
+            "Goodra-Hisui",
+            "Barbaracle"
+        ],
+        "Better": 0
+    },
+    "20": {
+        "POKEMON_0": "Cofagrigus",
+        "POKEMON_1": {
+            "STATS": [
+                58,
+                50,
+                145,
+                95,
+                125,
+                10
+            ],
+            "TYPE": [
+                "Flying",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Kabutops",
+            "Rotom",
+            "Glalie-Mega"
+        ],
+        "Better": 0
+    }
+}

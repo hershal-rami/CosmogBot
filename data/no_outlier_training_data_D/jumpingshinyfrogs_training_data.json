@@ -1,0 +1,237 @@
+{
+    "3": {
+        "STARTING_TEAM": [
+            "Eiscue",
+            "Diancie-Mega",
+            "Ogerpon-Cornerstone",
+            "Vileplume"
+        ],
+        "POKEMON_0": "Iron Crown",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                72,
+                100,
+                122,
+                68,
+                138
+            ],
+            "TYPE": [
+                "Steel",
+                "Psychic"
+            ],
+            "UTILITY": [
+                "Sticky Webs"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                1.0,
+                0,
+                2,
+                0.5,
+                0.25,
+                1.0,
+                0.5,
+                2,
+                0.5,
+                2,
+                0.5,
+                1.0
+            ]
+        },
+        "Better": 1
+    },
+    "5": {
+        "POKEMON_0": "Abomasnow-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                132,
+                105,
+                82,
+                155,
+                30
+            ],
+            "TYPE": [
+                "Dragon",
+                "Ice"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                0.5,
+                0.5,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                2,
+                1,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Silvally-Psychic",
+            "Durant"
+        ],
+        "Better": 0
+    },
+    "8": {
+        "POKEMON_0": "Seaking",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                132,
+                65,
+                65,
+                80,
+                28
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Absol",
+            "Magneton",
+            "Cramorant",
+            "Cinccino",
+            "Cetitan"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Weezing",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                120,
+                90,
+                85,
+                70,
+                60
+            ],
+            "TYPE": [
+                "Ice",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Toxic Spikes",
+                "Clear Smog",
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Floatzel",
+            "Stantler",
+            "Barbaracle"
+        ],
+        "Better": 0
+    },
+    "10": {
+        "POKEMON_0": "Silvally-Bug",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                95,
+                95,
+                95,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Flying",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Clear Smog",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Dudunsparce-Three-Segment",
+            "Terapagos-Terastal"
+        ],
+        "Better": 1
+    }
+}

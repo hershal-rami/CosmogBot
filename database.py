@@ -1331,11 +1331,11 @@ def json_pkmn_characteristics():
 
 if __name__ == "__main__":
 
-    """
+    
     setup()
     mass_entry_moves("mass_entry.json")
     mass_entry("mass_entry.json", 8)
-    """
+    
     
 
     """
@@ -1343,7 +1343,7 @@ if __name__ == "__main__":
         x = input()
         print(user_input(x))
     """
-    json_pkmn_characteristics()
+    #json_pkmn_characteristics()
         
 
 

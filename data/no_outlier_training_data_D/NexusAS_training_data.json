@@ -1,0 +1,232 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Golurk",
+            "Gholdengo",
+            "Klawf",
+            "Charizard",
+            "Silvally-Dark"
+        ],
+        "POKEMON_0": "Drampa",
+        "POKEMON_1": {
+            "STATS": [
+                78,
+                60,
+                85,
+                135,
+                121,
+                6
+            ],
+            "TYPE": [
+                "Flying",
+                "Dragon"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                1.0,
+                0.25,
+                4,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                2
+            ]
+        },
+        "Better": 1
+    },
+    "2": {
+        "STARTING_TEAM": [
+            "Electabuzz",
+            "Pangoro",
+            "Venomoth"
+        ],
+        "POKEMON_0": "Flareon",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                130,
+                60,
+                135,
+                70,
+                65
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "UTILITY": [
+                "Haze"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "4": {
+        "STARTING_TEAM": [
+            "Farigiraf",
+            "Empoleon",
+            "Hydrapple"
+        ],
+        "POKEMON_0": "Basculegion",
+        "POKEMON_1": {
+            "STATS": [
+                120,
+                112,
+                65,
+                100,
+                75,
+                58
+            ],
+            "TYPE": [
+                "Water",
+                "Ghost"
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Tailwind"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "6": {
+        "STARTING_TEAM": [
+            "Cryogonal",
+            "Slither Wing"
+        ],
+        "POKEMON_0": "Raikou",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                85,
+                75,
+                115,
+                60,
+                155
+            ],
+            "TYPE": [
+                "Poison",
+                null
+            ],
+            "UTILITY": [
+                "Tailwind",
+                "Reflect"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5
+            ]
+        },
+        "Better": 1
+    },
+    "7": {
+        "STARTING_TEAM": [
+            "Ludicolo",
+            "Eiscue"
+        ],
+        "POKEMON_0": "Stonjourner",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                95,
+                135,
+                20,
+                50,
+                70
+            ],
+            "TYPE": [
+                "Rock",
+                "Ghost"
+            ],
+            "UTILITY": [
+                "Spikes"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.0,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                0,
+                0.25,
+                2,
+                0.5,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                2,
+                2,
+                1
+            ]
+        },
+        "Better": 0
+    }
+}

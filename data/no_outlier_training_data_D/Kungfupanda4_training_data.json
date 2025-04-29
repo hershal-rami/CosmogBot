@@ -1,0 +1,47 @@
+{
+    "3": {
+        "POKEMON_0": "Slowbro",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                75,
+                130,
+                100,
+                60,
+                30
+            ],
+            "TYPE": [
+                "Steel",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                1.0,
+                0,
+                2,
+                0.5,
+                0.25,
+                1.0,
+                0.5,
+                2,
+                0.5,
+                2,
+                0.5,
+                1.0
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Sceptile-Mega",
+            "Slurpuff",
+            "Torkoal",
+            "Roaring Moon"
+        ],
+        "Better": 1
+    }
+}

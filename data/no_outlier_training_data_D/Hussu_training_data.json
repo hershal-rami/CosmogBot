@@ -1,0 +1,96 @@
+{
+    "0": {
+        "POKEMON_0": "Landorus-Therian",
+        "POKEMON_1": {
+            "STATS": [
+                89,
+                145,
+                70,
+                105,
+                80,
+                111
+            ],
+            "TYPE": [
+                "Steel",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                2,
+                0.25,
+                1.0,
+                1.0,
+                0,
+                0,
+                0.5,
+                0.5,
+                0.25,
+                1.0,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Lokix",
+            "Heliolisk",
+            "Bellibolt"
+        ],
+        "Better": 1
+    },
+    "2": {
+        "POKEMON_0": "Weezing-Galar",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                90,
+                120,
+                45,
+                70,
+                100
+            ],
+            "TYPE": [
+                "Steel",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                1.0,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.25,
+                0.5,
+                1,
+                0.0,
+                0.5,
+                1.0,
+                0.5
+            ],
+            "UTILITY": [
+                "Defog",
+                "Toxic Spikes",
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Sinistcha-Masterpiece",
+            "Galvantula",
+            "Keldeo"
+        ],
+        "Better": 0
+    }
+}

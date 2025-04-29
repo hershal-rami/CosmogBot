@@ -1,4 +1,6 @@
 open up mysql command line
+\sql
+\connect root@localhost
 CREATE DATABASE MBTL_STATS_DB;
 use MBTL_STATS_DB;
 source C:\Users\Casey\Casey\VSCWorkspace\CosmogBot\database.sql  #the path to the database sql file

@@ -1,0 +1,93 @@
+{
+    "2": {
+        "POKEMON_0": "Gholdengo",
+        "POKEMON_1": {
+            "STATS": [
+                87,
+                90,
+                95,
+                133,
+                61,
+                84
+            ],
+            "TYPE": [
+                "Steel",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.0,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                0,
+                0.0,
+                2,
+                0.5,
+                0.5,
+                0.25,
+                0.5,
+                2,
+                0.5,
+                2,
+                0.5,
+                0.5
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Gourgeist-Large",
+            "Tornadus",
+            "Toxicroak"
+        ],
+        "Better": 0
+    },
+    "3": {
+        "POKEMON_0": "Dragonite",
+        "POKEMON_1": {
+            "STATS": [
+                91,
+                134,
+                95,
+                100,
+                100,
+                80
+            ],
+            "TYPE": [
+                "Grass",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                1.0,
+                0.25,
+                4,
+                0.5,
+                2,
+                0.0,
+                2,
+                1,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Haze",
+                "Tailwind",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Entei",
+            "Ludicolo"
+        ],
+        "Better": 0
+    }
+}

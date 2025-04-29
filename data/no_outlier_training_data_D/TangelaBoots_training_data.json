@@ -1,0 +1,138 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Florges",
+            "Jirachi",
+            "Necrozma"
+        ],
+        "POKEMON_0": "Duraludon",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                95,
+                115,
+                150,
+                50,
+                55
+            ],
+            "TYPE": [
+                "Steel",
+                "Fairy"
+            ],
+            "UTILITY": [
+                "Light Screen"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                1.0,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.25,
+                0.5,
+                1,
+                0.0,
+                0.5,
+                1.0,
+                0.5
+            ]
+        },
+        "Better": 1
+    },
+    "1": {
+        "POKEMON_0": "Electivire",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                123,
+                67,
+                95,
+                85,
+                95
+            ],
+            "TYPE": [
+                "Dragon",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Garganacl",
+            "Araquanid"
+        ],
+        "Better": 0
+    },
+    "8": {
+        "POKEMON_0": "Crawdaunt",
+        "POKEMON_1": {
+            "STATS": [
+                63,
+                150,
+                85,
+                90,
+                25,
+                55
+            ],
+            "TYPE": [
+                "Water",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2
+            ],
+            "UTILITY": [
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Flapple",
+            "Mismagius"
+        ],
+        "Better": 0
+    }
+}

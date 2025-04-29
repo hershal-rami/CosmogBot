@@ -1,0 +1,100 @@
+{
+    "3": {
+        "STARTING_TEAM": [
+            "Umbreon",
+            "Shaymin",
+            "Aggron",
+            "Alomomola",
+            "Simisear"
+        ],
+        "POKEMON_0": "Registeel",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                115,
+                110,
+                75,
+                150,
+                50
+            ],
+            "TYPE": [
+                "Fairy",
+                null
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Toxic Spikes"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "4": {
+        "STARTING_TEAM": [
+            "Ampharos",
+            "Seismitoad",
+            "Dewgong",
+            "Volcanion"
+        ],
+        "POKEMON_0": "Pinsir",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                125,
+                100,
+                105,
+                70,
+                35
+            ],
+            "TYPE": [
+                "Bug",
+                "Fairy"
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Wish",
+                "Reflect"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.25,
+                2,
+                0.5,
+                2,
+                1,
+                0.5,
+                2,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ]
+        },
+        "Better": 1
+    }
+}

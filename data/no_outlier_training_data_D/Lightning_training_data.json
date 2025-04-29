@@ -1,0 +1,188 @@
+{
+    "1": {
+        "POKEMON_0": "Minior-Meteor",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                60,
+                100,
+                10,
+                150,
+                60
+            ],
+            "TYPE": [
+                "Rock",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                2,
+                1.0,
+                2,
+                1.0,
+                0.5,
+                0,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Maractus",
+            "Lycanroc-Midnight",
+            "Shuckle"
+        ],
+        "Better": 1
+    },
+    "4": {
+        "POKEMON_0": "Orbeetle",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                15,
+                110,
+                80,
+                150,
+                90
+            ],
+            "TYPE": [
+                "Bug",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                4,
+                0.5,
+                0.5,
+                0.25,
+                2,
+                0.5,
+                2,
+                0.25,
+                4,
+                1,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Basculegion-F",
+            "Lanturn",
+            "Great Tusk",
+            "Leavanny"
+        ],
+        "Better": 0
+    },
+    "6": {
+        "POKEMON_0": "Darmanitan-Galar-Zen",
+        "POKEMON_1": {
+            "STATS": [
+                105,
+                160,
+                105,
+                -20,
+                55,
+                135
+            ],
+            "TYPE": [
+                "Electric",
+                "Fire"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                1,
+                4,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.25,
+                0.5
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Ting-Lu",
+            "Trevenant",
+            "Stonjourner"
+        ],
+        "Better": 1
+    },
+    "8": {
+        "POKEMON_0": "Perrserker",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                90,
+                120,
+                50,
+                60,
+                50
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Zapdos-Galar",
+            "Seadra",
+            "Whiscash",
+            "Lumineon"
+        ],
+        "Better": 1
+    }
+}

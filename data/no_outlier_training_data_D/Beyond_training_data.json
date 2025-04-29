@@ -1,0 +1,49 @@
+{
+    "1": {
+        "POKEMON_0": "Cramorant-Gulping",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                135,
+                55,
+                85,
+                45,
+                85
+            ],
+            "TYPE": [
+                "Flying",
+                "Water"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                4,
+                1.0,
+                1.0,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Stealth Rock"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Dragonite",
+            "Silvally-Dark",
+            "Garchomp",
+            "Fearow"
+        ],
+        "Better": 0
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Lycanroc-Midnight",
+            "Magneton"
+        ],
+        "POKEMON_0": "Cinderace",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                116,
+                75,
+                65,
+                75,
+                119
+            ],
+            "TYPE": [
+                "Fire",
+                "Electric"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                1,
+                4,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.25,
+                0.5
+            ]
+        },
+        "Better": 1
+    },
+    "3": {
+        "STARTING_TEAM": [
+            "Jolteon",
+            "Typhlosion-Hisui",
+            "Oricorio",
+            "Fezandipiti",
+            "Dipplin"
+        ],
+        "POKEMON_0": "Electivire",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                83,
+                67,
+                135,
+                85,
+                95
+            ],
+            "TYPE": [
+                "Electric",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ]
+        },
+        "Better": 0
+    },
+    "4": {
+        "STARTING_TEAM": [
+            "Latias",
+            "Seviper",
+            "Cinccino"
+        ],
+        "POKEMON_0": "Iron Crown",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                32,
+                100,
+                122,
+                148,
+                98
+            ],
+            "TYPE": [
+                "Steel",
+                "Electric"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0,
+                4,
+                0.25,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5
+            ]
+        },
+        "Better": 0
+    }
+}

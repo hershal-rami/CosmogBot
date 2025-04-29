@@ -1,0 +1,53 @@
+{
+    "3": {
+        "POKEMON_0": "Decidueye",
+        "POKEMON_1": {
+            "STATS": [
+                78,
+                57,
+                125,
+                100,
+                100,
+                70
+            ],
+            "TYPE": [
+                "Ground",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0,
+                0.25,
+                1,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Haze",
+                "Light Screen",
+                "U-turn",
+                "Baton Pass",
+                "Sticky Webs",
+                "Tailwind",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Darmanitan-Galar-Zen",
+            "Toxtricity"
+        ],
+        "Better": 1
+    }
+}

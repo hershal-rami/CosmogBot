@@ -1,0 +1,231 @@
+{
+    "2": {
+        "POKEMON_0": "Meowscarada",
+        "POKEMON_1": {
+            "STATS": [
+                76,
+                110,
+                100,
+                81,
+                70,
+                93
+            ],
+            "TYPE": [
+                "Grass",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                2,
+                0.5,
+                2,
+                0,
+                4,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Toxic Spikes",
+                "U-turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Rhydon",
+            "Polteageist"
+        ],
+        "Better": 0
+    },
+    "5": {
+        "POKEMON_0": "Tornadus",
+        "POKEMON_1": {
+            "STATS": [
+                79,
+                85,
+                70,
+                155,
+                80,
+                111
+            ],
+            "TYPE": [
+                "Flying",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "U-turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Cherrim",
+            "Stunfisk-Galar"
+        ],
+        "Better": 1
+    },
+    "11": {
+        "POKEMON_0": "Silvally-Ice",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                95,
+                45,
+                95,
+                95,
+                145
+            ],
+            "TYPE": [
+                "Ice",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Jellicent",
+            "Accelgor",
+            "Banette",
+            "Venusaur",
+            "Empoleon"
+        ],
+        "Better": 0
+    },
+    "13": {
+        "POKEMON_0": "Guzzlord",
+        "POKEMON_1": {
+            "STATS": [
+                223,
+                101,
+                13,
+                97,
+                93,
+                43
+            ],
+            "TYPE": [
+                "Dark",
+                "Normal"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                4,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.0,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Silvally-Fairy",
+            "Leavanny"
+        ],
+        "Better": 0
+    },
+    "19": {
+        "POKEMON_0": "Charizard",
+        "POKEMON_1": {
+            "STATS": [
+                78,
+                84,
+                48,
+                139,
+                85,
+                100
+            ],
+            "TYPE": [
+                "Fire",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                2,
+                0.25,
+                1.0,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.25,
+                4,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Clear Smog",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Comfey",
+            "Thundurus-Therian",
+            "Landorus-Therian"
+        ],
+        "Better": 1
+    }
+}
