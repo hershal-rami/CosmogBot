@@ -1,0 +1,94 @@
+{
+    "1": {
+        "POKEMON_0": "Greedent",
+        "POKEMON_1": {
+            "STATS": [
+                120,
+                95,
+                55,
+                55,
+                115,
+                20
+            ],
+            "TYPE": [
+                "Ice",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Typhlosion",
+            "Registeel"
+        ],
+        "Better": 0
+    },
+    "3": {
+        "POKEMON_0": "Eiscue-Noice",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                80,
+                70,
+                115,
+                0,
+                130
+            ],
+            "TYPE": [
+                "Ice",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Crobat",
+            "Nidoqueen",
+            "Incineroar",
+            "Empoleon"
+        ],
+        "Better": 1
+    }
+}

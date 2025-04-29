@@ -1,0 +1,334 @@
+{
+    "3": {
+        "POKEMON_0": "Snorlax",
+        "POKEMON_1": {
+            "STATS": [
+                160,
+                70,
+                65,
+                105,
+                110,
+                30
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Jynx",
+            "Drednaw",
+            "Registeel",
+            "Mr. Mime"
+        ],
+        "Better": 0
+    },
+    "6": {
+        "POKEMON_0": "Tyrantrum",
+        "POKEMON_1": {
+            "STATS": [
+                82,
+                121,
+                149,
+                39,
+                59,
+                71
+            ],
+            "TYPE": [
+                "Rock",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.25,
+                1.0,
+                0.5,
+                1.0,
+                2,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Electabuzz",
+            "Chandelure",
+            "Chi-Yu"
+        ],
+        "Better": 1
+    },
+    "7": {
+        "POKEMON_0": "Primarina",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                74,
+                34,
+                166,
+                116,
+                60
+            ],
+            "TYPE": [
+                "Bug",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.25,
+                2,
+                0.5,
+                2,
+                1,
+                0.5,
+                2,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Haze",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Araquanid",
+            "Mr. Mime",
+            "Oricorio-Pom-Pom"
+        ],
+        "Better": 1
+    },
+    "10": {
+        "POKEMON_0": "Stunfisk",
+        "POKEMON_1": {
+            "STATS": [
+                109,
+                66,
+                104,
+                61,
+                99,
+                32
+            ],
+            "TYPE": [
+                "Bug",
+                "Electric"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                1.0,
+                1.0,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tapu Lele",
+            "Seviper",
+            "Ninetales-Alola"
+        ],
+        "Better": 0
+    },
+    "15": {
+        "POKEMON_0": "Mabosstiff",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                120,
+                90,
+                100,
+                30,
+                85
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Diancie",
+            "Heatmor",
+            "Lumineon",
+            "Electrode",
+            "Infernape"
+        ],
+        "Better": 0
+    },
+    "16": {
+        "POKEMON_0": "Stunfisk-Galar",
+        "POKEMON_1": {
+            "STATS": [
+                109,
+                81,
+                99,
+                16,
+                134,
+                32
+            ],
+            "TYPE": [
+                "Ground",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Palafin-Hero",
+            "Tapu Bulu",
+            "Altaria-Mega",
+            "Klefki"
+        ],
+        "Better": 1
+    },
+    "22": {
+        "POKEMON_0": "Regirock",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                100,
+                200,
+                30,
+                100,
+                70
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Spikes",
+                "Toxic Spikes",
+                "Haze",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Accelgor",
+            "Lokix",
+            "Silvally-Flying"
+        ],
+        "Better": 0
+    }
+}

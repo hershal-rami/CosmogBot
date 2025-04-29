@@ -1,0 +1,95 @@
+{
+    "0": {
+        "POKEMON_0": "Ursaluna",
+        "POKEMON_1": {
+            "STATS": [
+                130,
+                140,
+                105,
+                45,
+                80,
+                50
+            ],
+            "TYPE": [
+                "Bug",
+                "Normal"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                1.0,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Defog",
+                "Spikes",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Sliggoo-Hisui",
+            "Runerigus",
+            "Ursaluna-Bloodmoon",
+            "Houndoom"
+        ],
+        "Better": 1
+    },
+    "1": {
+        "POKEMON_0": "Ursaring",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                130,
+                25,
+                125,
+                75,
+                55
+            ],
+            "TYPE": [
+                "Normal",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Sneasler",
+            "Gholdengo"
+        ],
+        "Better": 1
+    }
+}

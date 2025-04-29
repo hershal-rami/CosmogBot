@@ -1,0 +1,142 @@
+{
+    "1": {
+        "POKEMON_0": "Mimikyu",
+        "POKEMON_1": {
+            "STATS": [
+                55,
+                90,
+                100,
+                50,
+                85,
+                96
+            ],
+            "TYPE": [
+                "Ground",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                0.5,
+                0.5,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Maractus",
+            "Braviary",
+            "Eelektross",
+            "Bisharp"
+        ],
+        "Better": 1
+    },
+    "3": {
+        "POKEMON_0": "Pyroar",
+        "POKEMON_1": {
+            "STATS": [
+                86,
+                68,
+                42,
+                109,
+                96,
+                106
+            ],
+            "TYPE": [
+                "Ice",
+                "Normal"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                4,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Sirfetchu2019d",
+            "Gigalith",
+            "Bombirdier"
+        ],
+        "Better": 1
+    },
+    "11": {
+        "POKEMON_0": "Falinks",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                70,
+                100,
+                100,
+                60,
+                75
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Wish",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Blastoise-Mega",
+            "Bellibolt"
+        ],
+        "Better": 0
+    }
+}

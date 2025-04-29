@@ -1,0 +1,51 @@
+{
+    "5": {
+        "POKEMON_0": "Uxie",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                75,
+                110,
+                95,
+                130,
+                95
+            ],
+            "TYPE": [
+                "Psychic",
+                "Poison"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5,
+                2,
+                1,
+                1.0,
+                1.0,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1.0
+            ],
+            "UTILITY": [
+                "Light Screen",
+                "Baton Pass",
+                "Will-o-Wisp",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Weezing-Galar",
+            "Tyrantrum",
+            "Oinkologne"
+        ],
+        "Better": 0
+    }
+}

@@ -1,0 +1,279 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Wishiwashi-School",
+            "Mr. Mime-Galar",
+            "Eiscue-Noice"
+        ],
+        "POKEMON_0": "Regigigas",
+        "POKEMON_1": {
+            "STATS": [
+                110,
+                160,
+                130,
+                60,
+                110,
+                100
+            ],
+            "TYPE": [
+                "Flying",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        "Better": 0
+    },
+    "1": {
+        "STARTING_TEAM": [
+            "Bellibolt",
+            "Gengar"
+        ],
+        "POKEMON_0": "Meowstic-F",
+        "POKEMON_1": {
+            "STATS": [
+                74,
+                78,
+                76,
+                53,
+                81,
+                104
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "UTILITY": [
+                "Toxic Spikes",
+                "Will-o-Wisp"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ]
+        },
+        "Better": 1
+    },
+    "2": {
+        "STARTING_TEAM": [
+            "Terapagos",
+            "Gourgeist",
+            "Politoed"
+        ],
+        "POKEMON_0": "Klang",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                50,
+                125,
+                70,
+                85,
+                50
+            ],
+            "TYPE": [
+                "Steel",
+                "Normal"
+            ],
+            "UTILITY": [
+                "Wish"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                4,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ]
+        },
+        "Better": 1
+    },
+    "3": {
+        "STARTING_TEAM": [
+            "Ninetales-Alola",
+            "Gouging Fire",
+            "Persian-Alola",
+            "Ceruledge",
+            "Ting-Lu"
+        ],
+        "POKEMON_0": "Lycanroc",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                85,
+                65,
+                55,
+                65,
+                142
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "UTILITY": [
+                "Haze"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ]
+        },
+        "Better": 0
+    },
+    "4": {
+        "STARTING_TEAM": [
+            "Darmanitan-Galar",
+            "Ogerpon-Hearthflame"
+        ],
+        "POKEMON_0": "Silvally-Poison",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                95,
+                145,
+                95,
+                95,
+                45
+            ],
+            "TYPE": [
+                "Flying",
+                null
+            ],
+            "UTILITY": [
+                "Sticky Webs",
+                "Haze"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "5": {
+        "STARTING_TEAM": [
+            "Cyclizar",
+            "Silvally-Fairy",
+            "Flapple"
+        ],
+        "POKEMON_0": "Ampharos",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                75,
+                55,
+                115,
+                90,
+                85
+            ],
+            "TYPE": [
+                "Electric",
+                "Steel"
+            ],
+            "UTILITY": [
+                "Reflect",
+                "Light Screen"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0,
+                4,
+                0.25,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5
+            ]
+        },
+        "Better": 1
+    }
+}

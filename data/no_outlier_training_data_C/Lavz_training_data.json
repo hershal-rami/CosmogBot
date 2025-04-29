@@ -1,0 +1,48 @@
+{
+    "2": {
+        "POKEMON_0": "Incineroar",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                115,
+                90,
+                40,
+                90,
+                100
+            ],
+            "TYPE": [
+                "Fairy",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1.0,
+                2,
+                1,
+                1,
+                0,
+                1.0,
+                1,
+                0.5,
+                0,
+                0.25,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Iron Jugulis",
+            "Goodra",
+            "Eldegoss"
+        ],
+        "Better": 1
+    }
+}

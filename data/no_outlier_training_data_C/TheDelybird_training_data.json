@@ -1,0 +1,50 @@
+{
+    "0": {
+        "POKEMON_0": "Houndoom-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                90,
+                60,
+                140,
+                120,
+                115
+            ],
+            "TYPE": [
+                "Dark",
+                "Fire"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                0,
+                1.0,
+                2,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                1.0
+            ],
+            "UTILITY": [
+                "Sticky Webs",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Dragonite",
+            "Gouging Fire",
+            "Talonflame",
+            "Exeggutor"
+        ],
+        "Better": 1
+    }
+}

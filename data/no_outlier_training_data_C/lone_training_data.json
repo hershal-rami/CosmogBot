@@ -1,0 +1,46 @@
+{
+    "0": {
+        "POKEMON_0": "Silvally-Electric",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                125,
+                65,
+                95,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Electric",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Volcanion",
+            "Lanturn",
+            "Hypno"
+        ],
+        "Better": 1
+    }
+}

@@ -1,0 +1,143 @@
+{
+    "3": {
+        "POKEMON_0": "Lurantis",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                105,
+                110,
+                80,
+                90,
+                25
+            ],
+            "TYPE": [
+                "Grass",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Goodra",
+            "Braviary-Hisui",
+            "Carbink",
+            "Infernape"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Rabsca",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                30,
+                85,
+                115,
+                100,
+                65
+            ],
+            "TYPE": [
+                "Bug",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Will-o-Wisp",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Eiscue-Noice",
+            "Ampharos-Mega",
+            "Barbaracle"
+        ],
+        "Better": 1
+    },
+    "12": {
+        "POKEMON_0": "Stonjourner",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                105,
+                135,
+                40,
+                20,
+                70
+            ],
+            "TYPE": [
+                "Bug",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Rapid Spin",
+                "Spikes",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Crawdaunt",
+            "Greedent",
+            "Arctovish"
+        ],
+        "Better": 1
+    }
+}

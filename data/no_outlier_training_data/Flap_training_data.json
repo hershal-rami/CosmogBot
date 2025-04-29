@@ -1,0 +1,190 @@
+{
+    "2": {
+        "POKEMON_0": "Glaceon",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                60,
+                80,
+                130,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Poison",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5
+            ],
+            "UTILITY": [
+                "Reflect",
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Probopass",
+            "Qwilfish"
+        ],
+        "Better": 0
+    },
+    "6": {
+        "POKEMON_0": "Swampert",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                110,
+                70,
+                105,
+                90,
+                60
+            ],
+            "TYPE": [
+                "Ice",
+                "Ground"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                2,
+                0,
+                2,
+                1.0,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1.0,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Vanilluxe",
+            "Audino",
+            "Centiskorch",
+            "Persian-Alola",
+            "Gourgeist"
+        ],
+        "Better": 0
+    },
+    "8": {
+        "POKEMON_0": "Excadrill",
+        "POKEMON_1": {
+            "STATS": [
+                110,
+                105,
+                60,
+                80,
+                65,
+                88
+            ],
+            "TYPE": [
+                "Ground",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                2,
+                0,
+                1.0,
+                1.0,
+                2,
+                0.0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.25,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Wish",
+                "Haze",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Iron Boulder",
+            "Lopunny-Mega",
+            "Alcremie",
+            "Delphox",
+            "Chien-Pao"
+        ],
+        "Better": 0
+    },
+    "11": {
+        "POKEMON_0": "Klinklang",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                130,
+                115,
+                70,
+                55,
+                90
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Iron Boulder",
+            "Dodrio"
+        ],
+        "Better": 1
+    }
+}

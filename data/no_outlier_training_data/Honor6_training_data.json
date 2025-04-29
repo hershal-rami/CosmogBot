@@ -1,0 +1,140 @@
+{
+    "0": {
+        "POKEMON_0": "Maushold",
+        "POKEMON_1": {
+            "STATS": [
+                74,
+                75,
+                70,
+                65,
+                105,
+                81
+            ],
+            "TYPE": [
+                "Ground",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Xatu",
+            "Glimmora",
+            "Milotic"
+        ],
+        "Better": 0
+    },
+    "5": {
+        "POKEMON_0": "Decidueye",
+        "POKEMON_1": {
+            "STATS": [
+                78,
+                107,
+                115,
+                100,
+                60,
+                70
+            ],
+            "TYPE": [
+                "Poison",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.0,
+                0.25,
+                2,
+                1,
+                2,
+                0.25,
+                1,
+                2,
+                1,
+                2,
+                1,
+                0.5
+            ],
+            "UTILITY": [
+                "Defog",
+                "Tailwind",
+                "U-turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Polteageist",
+            "Magmar"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Indeedee-F",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                55,
+                65,
+                65,
+                135,
+                85
+            ],
+            "TYPE": [
+                "Flying",
+                "Normal"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Seaking",
+            "Golem-Alola"
+        ],
+        "Better": 0
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "0": {
+        "POKEMON_0": "Slowking-Galar",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                95,
+                80,
+                80,
+                110,
+                30
+            ],
+            "TYPE": [
+                "Poison",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5,
+                2,
+                1,
+                1.0,
+                1.0,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1.0
+            ],
+            "UTILITY": [
+                "Toxic Spikes",
+                "Rapid Spin",
+                "Sticky Webs",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gourgeist",
+            "Ursaluna-Bloodmoon",
+            "Clawitzer"
+        ],
+        "Better": 1
+    },
+    "1": {
+        "POKEMON_0": "Crustle",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                125,
+                125,
+                65,
+                55,
+                45
+            ],
+            "TYPE": [
+                "Bug",
+                "Poison"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.25,
+                1,
+                0.25,
+                0.5,
+                1.0,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                0.5
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Cobalion",
+            "Basculegion",
+            "Amoonguss"
+        ],
+        "Better": 0
+    }
+}

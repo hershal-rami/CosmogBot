@@ -1,0 +1,99 @@
+{
+    "0": {
+        "POKEMON_0": "Dachsbun",
+        "POKEMON_1": {
+            "STATS": [
+                57,
+                50,
+                115,
+                80,
+                80,
+                95
+            ],
+            "TYPE": [
+                "Fairy",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Wish",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Ninetales",
+            "Simisage",
+            "Chien-Pao",
+            "Overqwil"
+        ],
+        "Better": 1
+    },
+    "1": {
+        "POKEMON_0": "Meganium",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                122,
+                100,
+                83,
+                100,
+                40
+            ],
+            "TYPE": [
+                "Grass",
+                "Fire"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                1.0,
+                0.5,
+                0.25,
+                1.0,
+                1,
+                2,
+                1.0,
+                2,
+                1,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Helping Hand",
+                "U-turn",
+                "Rage Powder"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Scolipede",
+            "Hoopa",
+            "Rotom-Frost",
+            "Kingambit"
+        ],
+        "Better": 1
+    }
+}

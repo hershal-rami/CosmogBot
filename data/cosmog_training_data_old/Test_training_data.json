@@ -1,0 +1,47 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Diancie-Mega",
+            "Kingambit"
+        ],
+        "POKEMON_0": "Silvally-Bug",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                95,
+                95,
+                95,
+                65,
+                125
+            ],
+            "TYPE": [
+                "Bug",
+                "Fighting"
+            ],
+            "UTILITY": [
+                "Toxic Spikes"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                4,
+                2,
+                0.5,
+                1.0,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ]
+        },
+        "Better": 1
+    }
+}

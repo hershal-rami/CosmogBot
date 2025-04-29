@@ -1,0 +1,189 @@
+{
+    "0": {
+        "POKEMON_0": "Houndoom-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                90,
+                60,
+                140,
+                120,
+                115
+            ],
+            "TYPE": [
+                "Dark",
+                "Fire"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                0,
+                1.0,
+                2,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                1.0
+            ],
+            "UTILITY": [
+                "Sticky Webs",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Dragonite",
+            "Gouging Fire",
+            "Talonflame",
+            "Exeggutor"
+        ],
+        "Better": 1
+    },
+    "1": {
+        "POKEMON_0": "Blacephalon",
+        "POKEMON_1": {
+            "STATS": [
+                53,
+                127,
+                53,
+                151,
+                79,
+                107
+            ],
+            "TYPE": [
+                "Fire",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.25,
+                1.0,
+                0.5,
+                0.25,
+                1.0,
+                1,
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                0.5,
+                1.0
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Pawmot",
+            "Claydol",
+            "Hawlucha"
+        ],
+        "Better": 0
+    },
+    "2": {
+        "POKEMON_0": "Slowbro-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                75,
+                180,
+                160,
+                50,
+                30
+            ],
+            "TYPE": [
+                "Water",
+                "Bug"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                2,
+                1.0,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Malamar",
+            "Landorus",
+            "Ludicolo",
+            "Garchomp",
+            "Arcanine-Hisui"
+        ],
+        "Better": 0
+    },
+    "3": {
+        "POKEMON_0": "Silvally-Ghost",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                95,
+                135,
+                95,
+                55,
+                95
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Golem",
+            "Stunfisk",
+            "Bronzong"
+        ],
+        "Better": 0
+    }
+}

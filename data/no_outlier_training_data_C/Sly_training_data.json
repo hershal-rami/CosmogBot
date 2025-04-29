@@ -1,0 +1,191 @@
+{
+    "0": {
+        "POKEMON_0": "Absol-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                150,
+                40,
+                115,
+                80,
+                115
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Slither Wing",
+            "Lapras",
+            "Polteageist",
+            "Abomasnow"
+        ],
+        "Better": 0
+    },
+    "5": {
+        "POKEMON_0": "Shiftry",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                80,
+                80,
+                90,
+                60,
+                80
+            ],
+            "TYPE": [
+                "Bug",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                1.0,
+                1,
+                0.5,
+                2,
+                0,
+                2,
+                2,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Will-o-Wisp",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tyrantrum",
+            "Toedscruel",
+            "Slaking",
+            "Sharpedo"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Thundurus",
+        "POKEMON_1": {
+            "STATS": [
+                79,
+                115,
+                70,
+                125,
+                80,
+                111
+            ],
+            "TYPE": [
+                "Electric",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0,
+                4,
+                0.25,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5
+            ],
+            "UTILITY": [
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Toxicroak",
+            "Eldegoss"
+        ],
+        "Better": 0
+    },
+    "11": {
+        "POKEMON_0": "Urshifu-Rapid-Strike",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                130,
+                100,
+                33,
+                90,
+                97
+            ],
+            "TYPE": [
+                "Steel",
+                "Water"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                1.0,
+                0.5,
+                2,
+                1.0,
+                0.25,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Wish",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Blastoise",
+            "Steelix-Mega",
+            "Sinistcha",
+            "Oranguru"
+        ],
+        "Better": 1
+    }
+}

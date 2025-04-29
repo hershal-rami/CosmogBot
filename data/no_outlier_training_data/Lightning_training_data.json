@@ -1,0 +1,238 @@
+{
+    "1": {
+        "POKEMON_0": "Minior-Meteor",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                60,
+                100,
+                10,
+                150,
+                60
+            ],
+            "TYPE": [
+                "Rock",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                2,
+                1.0,
+                2,
+                1.0,
+                0.5,
+                0,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Maractus",
+            "Lycanroc-Midnight",
+            "Shuckle"
+        ],
+        "Better": 1
+    },
+    "2": {
+        "POKEMON_0": "Ambipom",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                100,
+                66,
+                60,
+                96,
+                85
+            ],
+            "TYPE": [
+                "Ghost",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Baton Pass",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Corviknight",
+            "Spectrier",
+            "Baxcalibur",
+            "Hoopa-Unbound"
+        ],
+        "Better": 0
+    },
+    "8": {
+        "POKEMON_0": "Perrserker",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                90,
+                120,
+                50,
+                60,
+                50
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Zapdos-Galar",
+            "Seadra",
+            "Whiscash",
+            "Lumineon"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Pinsir-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                175,
+                120,
+                65,
+                70,
+                105
+            ],
+            "TYPE": [
+                "Bug",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.0,
+                0.5,
+                0.5,
+                2,
+                1,
+                0.5,
+                2,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tyrantrum",
+            "Scizor-Mega",
+            "Cloyster",
+            "Zapdos-Galar",
+            "Darkrai"
+        ],
+        "Better": 1
+    },
+    "11": {
+        "POKEMON_0": "Chien-Pao",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                120,
+                50,
+                90,
+                95,
+                135
+            ],
+            "TYPE": [
+                "Dark",
+                "Electric"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2
+            ],
+            "UTILITY": [
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Umbreon",
+            "Landorus-Therian",
+            "Basculin-White-Striped"
+        ],
+        "Better": 1
+    }
+}

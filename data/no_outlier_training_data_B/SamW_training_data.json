@@ -1,0 +1,240 @@
+{
+    "1": {
+        "POKEMON_0": "Purugly",
+        "POKEMON_1": {
+            "STATS": [
+                71,
+                82,
+                64,
+                64,
+                59,
+                112
+            ],
+            "TYPE": [
+                "Normal",
+                "Water"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Rapid Spin"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Electivire",
+            "Arcanine",
+            "Milotic",
+            "Slowking",
+            "Eiscue"
+        ],
+        "Better": 0
+    },
+    "7": {
+        "POKEMON_0": "Aegislash-Blade",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                140,
+                80,
+                110,
+                50,
+                60
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Haze",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tyranitar-Mega",
+            "Meloetta"
+        ],
+        "Better": 0
+    },
+    "8": {
+        "POKEMON_0": "Perrserker",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                90,
+                100,
+                50,
+                80,
+                50
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Glimmora",
+            "Pecharunt",
+            "Bombirdier",
+            "Reuniclus",
+            "Roaring Moon"
+        ],
+        "Better": 1
+    },
+    "19": {
+        "POKEMON_0": "Gorebyss",
+        "POKEMON_1": {
+            "STATS": [
+                55,
+                84,
+                105,
+                114,
+                95,
+                32
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Baton Pass",
+                "Rapid Spin"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Chandelure",
+            "Rotom-Wash",
+            "Gallade",
+            "Braviary-Hisui",
+            "Gyarados"
+        ],
+        "Better": 1
+    },
+    "20": {
+        "POKEMON_0": "Banette",
+        "POKEMON_1": {
+            "STATS": [
+                64,
+                115,
+                65,
+                123,
+                63,
+                25
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Sharpedo-Mega",
+            "Silvally-Fighting",
+            "Darmanitan-Zen",
+            "Decidueye-Hisui",
+            "Pinsir-Mega"
+        ],
+        "Better": 0
+    }
+}

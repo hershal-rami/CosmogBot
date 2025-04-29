@@ -1,0 +1,48 @@
+{
+    "3": {
+        "STARTING_TEAM": [
+            "Jolteon",
+            "Typhlosion-Hisui",
+            "Oricorio",
+            "Fezandipiti",
+            "Dipplin"
+        ],
+        "POKEMON_0": "Electivire",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                83,
+                67,
+                135,
+                85,
+                95
+            ],
+            "TYPE": [
+                "Electric",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ]
+        },
+        "Better": 0
+    }
+}

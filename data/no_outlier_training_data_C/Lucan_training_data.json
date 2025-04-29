@@ -1,0 +1,384 @@
+{
+    "1": {
+        "POKEMON_0": "Slither Wing",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                135,
+                79,
+                85,
+                105,
+                81
+            ],
+            "TYPE": [
+                "Poison",
+                "Fighting"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                4,
+                0.25,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                1.0
+            ],
+            "UTILITY": [
+                "Wish",
+                "Light Screen",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Dragonite",
+            "Hypno",
+            "Gallade",
+            "Crobat",
+            "Huntail"
+        ],
+        "Better": 0
+    },
+    "4": {
+        "POKEMON_0": "Tapu Fini",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                35,
+                115,
+                95,
+                170,
+                85
+            ],
+            "TYPE": [
+                "Bug",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.25,
+                2,
+                0.5,
+                2,
+                1,
+                0.5,
+                2,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Articuno",
+            "Silvally",
+            "Victini",
+            "Regice"
+        ],
+        "Better": 0
+    },
+    "9": {
+        "POKEMON_0": "Munkidori",
+        "POKEMON_1": {
+            "STATS": [
+                88,
+                115,
+                26,
+                130,
+                90,
+                106
+            ],
+            "TYPE": [
+                "Water",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                2
+            ],
+            "UTILITY": [
+                "Reflect",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Kyurem",
+            "Salazzle",
+            "Ambipom",
+            "Cobalion",
+            "Samurott"
+        ],
+        "Better": 0
+    },
+    "13": {
+        "POKEMON_0": "Fearow",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                70,
+                65,
+                61,
+                61,
+                120
+            ],
+            "TYPE": [
+                "Normal",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Klawf",
+            "Mew"
+        ],
+        "Better": 0
+    },
+    "15": {
+        "POKEMON_0": "Aromatisse",
+        "POKEMON_1": {
+            "STATS": [
+                101,
+                72,
+                72,
+                99,
+                139,
+                -21
+            ],
+            "TYPE": [
+                "Fairy",
+                "Ground"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                0.5,
+                0.5,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Keldeo",
+            "Meowscarada",
+            "Braviary-Hisui",
+            "Gouging Fire",
+            "Delphox"
+        ],
+        "Better": 0
+    },
+    "18": {
+        "POKEMON_0": "Medicham-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                100,
+                115,
+                80,
+                85,
+                70
+            ],
+            "TYPE": [
+                "Ground",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Light Screen",
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tauros",
+            "Ninjask",
+            "Goodra-Hisui",
+            "Barbaracle"
+        ],
+        "Better": 0
+    },
+    "22": {
+        "POKEMON_0": "Leavanny",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                103,
+                110,
+                40,
+                80,
+                92
+            ],
+            "TYPE": [
+                "Bug",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                4,
+                0.5,
+                0.5,
+                0.25,
+                2,
+                0.5,
+                2,
+                0.25,
+                4,
+                1,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Baton Pass",
+                "Haze",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Rotom-Mow",
+            "Sceptile-Mega",
+            "Golurk",
+            "Magneton"
+        ],
+        "Better": 0
+    },
+    "24": {
+        "POKEMON_0": "Sneasler",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                90,
+                60,
+                80,
+                80,
+                120
+            ],
+            "TYPE": [
+                "Fighting",
+                "Poison"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                4,
+                0.25,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                1.0
+            ],
+            "UTILITY": [
+                "Toxic Spikes",
+                "Will-o-Wisp",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Corviknight",
+            "Abomasnow-Mega",
+            "Druddigon",
+            "Cradily",
+            "Veluza"
+        ],
+        "Better": 0
+    }
+}

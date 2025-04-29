@@ -1,0 +1,46 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Wishiwashi-School",
+            "Mr. Mime-Galar",
+            "Eiscue-Noice"
+        ],
+        "POKEMON_0": "Regigigas",
+        "POKEMON_1": {
+            "STATS": [
+                110,
+                160,
+                130,
+                60,
+                110,
+                100
+            ],
+            "TYPE": [
+                "Flying",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        "Better": 0
+    }
+}

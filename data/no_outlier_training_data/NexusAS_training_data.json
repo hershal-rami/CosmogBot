@@ -1,0 +1,192 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Golurk",
+            "Gholdengo",
+            "Klawf",
+            "Charizard",
+            "Silvally-Dark"
+        ],
+        "POKEMON_0": "Drampa",
+        "POKEMON_1": {
+            "STATS": [
+                78,
+                60,
+                85,
+                135,
+                121,
+                6
+            ],
+            "TYPE": [
+                "Flying",
+                "Dragon"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                1.0,
+                0.25,
+                4,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                2
+            ]
+        },
+        "Better": 1
+    },
+    "2": {
+        "STARTING_TEAM": [
+            "Electabuzz",
+            "Pangoro",
+            "Venomoth"
+        ],
+        "POKEMON_0": "Flareon",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                130,
+                60,
+                135,
+                70,
+                65
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "UTILITY": [
+                "Haze"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "3": {
+        "STARTING_TEAM": [
+            "Chandelure",
+            "Samurott",
+            "Klawf",
+            "Polteageist",
+            "Zangoose"
+        ],
+        "POKEMON_0": "Toucannon",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                120,
+                115,
+                35,
+                75,
+                60
+            ],
+            "TYPE": [
+                "Fire",
+                "Flying"
+            ],
+            "UTILITY": [
+                "Tailwind",
+                "Spikes",
+                "Will-o-Wisp"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                2,
+                0.25,
+                1.0,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.25,
+                4,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ]
+        },
+        "Better": 1
+    },
+    "5": {
+        "STARTING_TEAM": [
+            "Dragonite",
+            "Articuno-Galar",
+            "Seismitoad",
+            "Scovillain",
+            "Exeggutor"
+        ],
+        "POKEMON_0": "Magnezone",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                70,
+                115,
+                130,
+                90,
+                60
+            ],
+            "TYPE": [
+                "Electric",
+                "Poison"
+            ],
+            "UTILITY": [
+                "Sticky Webs"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                4,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ]
+        },
+        "Better": 1
+    }
+}

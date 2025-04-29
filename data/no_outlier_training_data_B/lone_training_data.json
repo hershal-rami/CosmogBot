@@ -1,0 +1,93 @@
+{
+    "0": {
+        "POKEMON_0": "Silvally-Electric",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                125,
+                65,
+                95,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Electric",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Volcanion",
+            "Lanturn",
+            "Hypno"
+        ],
+        "Better": 1
+    },
+    "3": {
+        "POKEMON_0": "Alomomola",
+        "POKEMON_1": {
+            "STATS": [
+                165,
+                125,
+                30,
+                40,
+                45,
+                65
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Runerigus",
+            "Arcanine-Hisui",
+            "Mr. Mime-Galar",
+            "Basculin"
+        ],
+        "Better": 1
+    }
+}

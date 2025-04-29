@@ -1,0 +1,143 @@
+{
+    "0": {
+        "POKEMON_0": "Floatzel",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                105,
+                35,
+                105,
+                50,
+                115
+            ],
+            "TYPE": [
+                "Water",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.25,
+                1.0,
+                1.0,
+                1.0,
+                1,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gorebyss",
+            "Volcarona",
+            "Gourgeist-Super",
+            "Tauros-Paldea-Combat",
+            "Xurkitree"
+        ],
+        "Better": 0
+    },
+    "1": {
+        "POKEMON_0": "Appletun",
+        "POKEMON_1": {
+            "STATS": [
+                110,
+                115,
+                80,
+                70,
+                80,
+                30
+            ],
+            "TYPE": [
+                "Ground",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                1.0,
+                0.0,
+                1.0,
+                4,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Rapid Spin"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gyarados",
+            "Lanturn",
+            "Slaking",
+            "Aerodactyl"
+        ],
+        "Better": 0
+    },
+    "2": {
+        "POKEMON_0": "Jumpluff",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                55,
+                90,
+                55,
+                75,
+                110
+            ],
+            "TYPE": [
+                "Grass",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0,
+                1.0,
+                0.5,
+                2,
+                1,
+                1.0,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Tailwind",
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Bellossom",
+            "Absol"
+        ],
+        "Better": 1
+    }
+}

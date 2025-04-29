@@ -1,0 +1,49 @@
+{
+    "1": {
+        "STARTING_TEAM": [
+            "Oinkologne",
+            "Aromatisse",
+            "Landorus-Therian",
+            "Ludicolo"
+        ],
+        "POKEMON_0": "Annihilape",
+        "POKEMON_1": {
+            "STATS": [
+                110,
+                65,
+                80,
+                50,
+                90,
+                140
+            ],
+            "TYPE": [
+                "Fighting",
+                "Ghost"
+            ],
+            "UTILITY": [
+                "Clear Smog"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0.5,
+                1,
+                2,
+                2,
+                0.25,
+                0.5,
+                2,
+                1,
+                1.0,
+                1,
+                2
+            ]
+        },
+        "Better": 1
+    }
+}

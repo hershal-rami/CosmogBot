@@ -1,0 +1,96 @@
+{
+    "0": {
+        "POKEMON_0": "Seaking",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                92,
+                65,
+                35,
+                110,
+                68
+            ],
+            "TYPE": [
+                "Ghost",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Azelf",
+            "Victini",
+            "Swellow"
+        ],
+        "Better": 0
+    },
+    "2": {
+        "POKEMON_0": "Mimikyu",
+        "POKEMON_1": {
+            "STATS": [
+                55,
+                120,
+                80,
+                50,
+                105,
+                66
+            ],
+            "TYPE": [
+                "Ghost",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.0,
+                1.0,
+                1,
+                1,
+                1,
+                0.25,
+                1,
+                2,
+                0,
+                1.0,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Light Screen",
+                "Stealth Rock",
+                "Wish",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Aggron-Mega",
+            "Boltund"
+        ],
+        "Better": 1
+    }
+}

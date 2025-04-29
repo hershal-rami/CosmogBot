@@ -1,0 +1,94 @@
+{
+    "1": {
+        "STARTING_TEAM": [
+            "Aggron-Mega",
+            "Kingler"
+        ],
+        "POKEMON_0": "Swellow",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                85,
+                60,
+                95,
+                50,
+                105
+            ],
+            "TYPE": [
+                "Normal",
+                "Flying"
+            ],
+            "UTILITY": [
+                "Tailwind",
+                "Wish",
+                "Will-o-Wisp"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "5": {
+        "POKEMON_0": "Abomasnow-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                132,
+                105,
+                82,
+                155,
+                30
+            ],
+            "TYPE": [
+                "Dragon",
+                "Ice"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                0.5,
+                0.5,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                2,
+                1,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Silvally-Psychic",
+            "Durant"
+        ],
+        "Better": 0
+    }
+}

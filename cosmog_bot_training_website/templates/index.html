@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmog Training Website</title>
+    <link href="{{url_for('static', filename='styles/style.css')}}" rel="stylesheet"/>
+</head>
+<body>
+    <h1>COSMOG BOT TRAINING HELPER</h1>
+    <h2>Please read before continuing</h2>
+    <p>
+Hello and welcome to the training process for Cosmog Bot Draft Helper! 
+
+This homepage will explain two major things in this order: 
+What are the goals for Cosmog Your Drafting Friend? 
+And how does this whole training process work? 
+
+
+1: What are the goals for Cosmog Draft?
+Have you ever found yourself in this situation? You've drafted a nice core with a couple of mons and then you look at the draft board and say "Oh no!"
+I dont know what else to draft to round this out!
+Or you're trying to get your friend into draft and you know they can battle but they draft the most horrendous abomination you've ever seen? (show my earlier drafts here)
+Well, hopefully Cosmog can help you with that.
+My vision for this bot is that you can supply it with the current pokemon on your team and it will analyze every pokemon available and rank them, so you can see which pokemon best fit in your team.
+You can even supply it with filters, so it will only look over pokemon that know stealth rock, or electric types, or pokemon below a certain point value in case you're looking for something specific.
+It can also help when you get sniped!
+Hopefully this will take some of the stress out of drafting for many players!
+
+The only problem is we need to get a machine learning model to actually understand what pokemon are better in what situations....
+That's where this (poorly designed) website comes in! To help a machine learning model understand which pokemon are better for a specific team.
+
+2: How does this training process work?
+After reading this page you can enter your username at the bottom and press the "Enter" button to continue.
+It does not have to be identifiable but please use a consistent username as that is how the data will be stored and so Casey can track the training data separated by user.
+
+The code will give you a randomly generated team that you are to assume is what you have drafted so far. In the form of:
+
+**********************
+     CURRENT TEAM     
+**********************
+-------------------------------------------------------------------------------------
+| Name               | HP  | ATK | DEF | SPA | SPD | SPE | TYPE1      | TYPE2       |
+-------------------------------------------------------------------------------------
+| Lucario            | 70  | 110 | 70  | 115 | 70  | 90  | Fighting   | Steel       |
+-------------------------------------------------------------------------------------
+| Typhlosion-Hisui   | 73  | 84  | 78  | 119 | 85  | 95  | Fire       | Ghost       |
+-------------------------------------------------------------------------------------
+| Houndstone         | 72  | 101 | 100 | 50  | 97  | 68  | Ghost      | None        |
+-------------------------------------------------------------------------------------
+| Simisear           | 75  | 98  | 63  | 98  | 63  | 101 | Fire       | None        |
+-------------------------------------------------------------------------------------
+=====================================================================================
+                                      FEATURES
+=====================================================================================
+Difference between average ATK and SPATK: 2.75
+Difference between average DEF and SPDEF: 1.0
+Average Speed Stat: 88.5
+Severity of weaknesses: 18.0
+Number of Types you don't have at least 2 resistances for: 9
+Number of Types you have at least 2 unresisted weaknesses for: 7
+Number of repeated types (over 2): 0
+Utility moves: ['Will-o-Wisp']
+         |Norm|Fire|Wate|Elec|Gras|Ice |Figh|Pois|Grou|Flyi|Psyc|Bug |Rock|Ghos|Drag|Dark|Stee|Fair|
+Num Weak |0   |1   |2   |0   |0   |0   |1   |0   |3   |0   |0   |0   |2   |2   |0   |2   |0   |0   |
+Num Res  |3   |2   |0   |0   |3   |3   |2   |3   |0   |0   |0   |4   |1   |0   |1   |1   |3   |2   |
+Speed Tiers|0-30  |30-60 |60-90 |90-120|120+  |
+           |0     |0     |1     |3     |0     |
+
+These features are what the model will actually see when it is trying to differentiate which pokemon is better.
+A detailed description of these features is listed below.
+This is supposed to be a set of things that a human would consider when thinking about adding a pokemon to a team.
+This is not an exhaustive list so if you are going through some examples and think of something that you usually think about when teambuilding, please let us know!
+Reach out to Casey over discord and tell him your ideas. All are welcome! Another part of the training process is finding better ways to characterize teams.
+
+But back to the problem at hand now that you have seen your given draft team, them model wil present you with two candidate pokemon.
+These pokemon are slightly randomly changed versions of each other to get to the center of what makes a pokemon better.
+You will then be asked to state which pokemon is better to add to the team.
+It is important that you think of which is better to add to the specific given team and not which is better in general.
+The better pokemon may be better to add to the team but the better pokemon may also make some of the teams weaknesses more pronounced.
+You should also think of this pokemon as the last pokemon you will add to the team, even if the team would only have 3 mons you want to maximize the potential team with just this pokemon only.
+
+The output of the two candidate pokemon will look like this:
+
+---------------
+| Pokemon 0   |
+---------------
+| HP    | 85  | 
+| ATK   | 105 | 
+| DEF   | 55  | 
+| SPATK | 85  | 
+| SPDEF | 50  | 
+| SPE   | 115 | 
+---------------
+| Water       |
+| None        |
+---------------
+===================================================
+FEATURES AFTER ADDING POKEMON 0
+===================================================
+Difference between ATK and SPATK: 6
+Difference between DEF and SPDEF: 0
+Average Speed Stat: 93.8
+Severity of weaknesses: 18.0
+Types you don't have at least 2 resistances for: 9
+Number of unresisted weaknesses (over 2): 5
+Number of repeated types (over 2): 0
+Utility moves: []
+Weak to: Elec, Gras, 
+Resists: Fire, Wate, Ice, Stee, 
+
+This shows the features being output as though each pokemon was added to the team.
+So FEATURES AFTER ADDING POKEMON 0 show the model features with the first 5 pokemon plus pokemon 0 taken into account.
+The same is true for Pokemon 1.
+You will them be asked to click the button to determine which pokemon is better 0 or 1.
+
+You may also click the button "Disregard this example" if there is no real difference or the pokemon is nonsensical (negative values in a stat or similar) or the example is not fun.
+However this will discard the example entirely and it will not be counted.
+
+You can safely do a couple then resume at any time, the program saves after every example.
+
+If you have any thoughts get in touch with Casey either over discord or email at casey.hanks.2020@gmail.com and please let him know your thoughts on the whole thing.
+    </p>
+    <h2>Confirm you've read the above before continuing</h2>
+    <div class= center_only>
+    <form action="/training">
+    <input type="text" name="username" id="username" placeholder="Enter your name"/>
+    <button type="submit">Enter</button>
+    </form>
+
+    <div>Appendix of Features:
+
+        Difference between average ATK and SPATK:
+        Take the average of ATK for the team and subtract the average SPATK of the team.
+        This is meant to capture the need for a balance between ATK and SPATK so you are not easily walled
+        
+        Difference between average DEF and SPDEF:
+        The same as above but for DEF and SPDEF
+        
+        Average Speed Stat:
+        The average speed stat of the team.
+        Meant to capture how fast the team is. Speed Tiers are also supplied
+        
+        Severity of weaknesses:
+        This is calculated as the sum of weaknesses (2x weak is 2 4x weak is 4) minus the number of resistances (4x resist counts the same as 2x resist), over all types.
+        So a team with only two 2x weakness and a 4x weakness to fire, along with 1 resistance to fire would have a weakness score of 7.
+        Attempting to show a one number calculation for how weakness prone the team is. A breakdown of this is available for the user.
+        
+        Number of Types you don't have at least 2 resistances for:
+        The number of types that you have less than two resistances for.
+        Shows a strong capability for switching if you have two resistances to many different types.
+        
+        Number of Types you have at least 2 unresisted weaknesses for:
+        Number of types that you have at least 2 more weaknesses than resistances.
+        Shows repeated weaknesses that could form "problem types" for a team
+        
+        Number of repeated types (over 2):
+        The number of types that you have more than 2 pokemon that have that type.
+        Meant to penalize repeating the same type over and over again.
+        
+        Utility moves:
+        What utility moves are known by the team. The full list is ["Stealth Rock", "Defog", "Rapid Spin", "Spikes", "Toxic Spikes", "Sticky Webs", "Wish", "Haze", "Clear Smog", "Will-o-Wisp", "Tailwind", "Reflect", "Light Screen"]
+        The model will view rocks and removal as a separate category.</div>
+</form>
+</body>
+</html>

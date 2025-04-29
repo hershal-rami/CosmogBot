@@ -1,0 +1,46 @@
+{
+    "1": {
+        "STARTING_TEAM": [
+            "Altaria",
+            "Lilligant-Hisui",
+            "Toxtricity-Low-Key"
+        ],
+        "POKEMON_0": "Furfrou",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                80,
+                60,
+                35,
+                120,
+                102
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        "Better": 1
+    }
+}

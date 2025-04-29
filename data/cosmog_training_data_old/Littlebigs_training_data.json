@@ -1,0 +1,178 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Lycanroc-Midnight",
+            "Ogerpon-Wellspring"
+        ],
+        "POKEMON_0": "Sylveon",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                45,
+                85,
+                110,
+                130,
+                60
+            ],
+            "TYPE": [
+                "Fairy",
+                "Ground"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                0.5,
+                0.5,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ]
+        },
+        "Better": 0
+    },
+    "1": {
+        "STARTING_TEAM": [
+            "Altaria",
+            "Lilligant-Hisui",
+            "Toxtricity-Low-Key"
+        ],
+        "POKEMON_0": "Furfrou",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                80,
+                60,
+                35,
+                120,
+                102
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "2": {
+        "STARTING_TEAM": [
+            "Banette",
+            "Garchomp-Mega",
+            "Darkrai"
+        ],
+        "POKEMON_0": "Grapploct",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                118,
+                50,
+                70,
+                120,
+                42
+            ],
+            "TYPE": [
+                "Rock",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "3": {
+        "STARTING_TEAM": [
+            "Lycanroc-Dusk",
+            "Golem-Alola",
+            "Dragonite",
+            "Thundurus-Therian"
+        ],
+        "POKEMON_0": "Silvally-Rock",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                95,
+                45,
+                145,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ]
+        },
+        "Better": 1
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "1": {
+        "POKEMON_0": "Sinistcha-Masterpiece",
+        "POKEMON_1": {
+            "STATS": [
+                71,
+                30,
+                106,
+                151,
+                80,
+                70
+            ],
+            "TYPE": [
+                "Dark",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0.5,
+                1,
+                1,
+                0,
+                1.0,
+                1,
+                1.0,
+                1,
+                1.0,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Deoxys-Speed",
+            "Charizard-Mega-Y",
+            "Silvally-Flying"
+        ],
+        "Better": 1
+    }
+}

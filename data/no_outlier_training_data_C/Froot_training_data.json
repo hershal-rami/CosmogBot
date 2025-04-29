@@ -1,0 +1,50 @@
+{
+    "0": {
+        "POKEMON_0": "Barraskewda",
+        "POKEMON_1": {
+            "STATS": [
+                61,
+                153,
+                60,
+                60,
+                20,
+                136
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gorebyss",
+            "Nidoking",
+            "Chesnaught",
+            "Avalugg-Hisui",
+            "Carracosta"
+        ],
+        "Better": 1
+    }
+}

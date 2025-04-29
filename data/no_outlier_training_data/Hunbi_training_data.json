@@ -1,0 +1,46 @@
+{
+    "1": {
+        "POKEMON_0": "Crustle",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                125,
+                125,
+                65,
+                55,
+                45
+            ],
+            "TYPE": [
+                "Bug",
+                "Poison"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.25,
+                1,
+                0.25,
+                0.5,
+                1.0,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                0.5
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Cobalion",
+            "Basculegion",
+            "Amoonguss"
+        ],
+        "Better": 0
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "0": {
+        "POKEMON_0": "Terrakion",
+        "POKEMON_1": {
+            "STATS": [
+                91,
+                129,
+                70,
+                92,
+                90,
+                108
+            ],
+            "TYPE": [
+                "Rock",
+                "Fighting"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Stealth Rock"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Raging Bolt",
+            "Silvally-Grass",
+            "Charizard"
+        ],
+        "Better": 0
+    }
+}

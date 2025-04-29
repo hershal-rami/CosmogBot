@@ -1,0 +1,274 @@
+{
+    "1": {
+        "POKEMON_0": "Barbaracle",
+        "POKEMON_1": {
+            "STATS": [
+                72,
+                135,
+                85,
+                54,
+                86,
+                68
+            ],
+            "TYPE": [
+                "Rock",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Toxic Spikes",
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Registeel",
+            "Palafin-Hero"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Ninetales-Alola",
+        "POKEMON_1": {
+            "STATS": [
+                73,
+                67,
+                55,
+                101,
+                100,
+                109
+            ],
+            "TYPE": [
+                "Ice",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                2,
+                1,
+                2,
+                2,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Lycanroc-Midnight",
+            "Scyther"
+        ],
+        "Better": 1
+    },
+    "13": {
+        "POKEMON_0": "Pidgeot-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                83,
+                130,
+                80,
+                135,
+                30,
+                121
+            ],
+            "TYPE": [
+                "Normal",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Coalossal",
+            "Primarina",
+            "Fearow"
+        ],
+        "Better": 1
+    },
+    "20": {
+        "POKEMON_0": "Leafeon",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                110,
+                180,
+                60,
+                65,
+                45
+            ],
+            "TYPE": [
+                "Ice",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Wish",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Ninjask",
+            "Golbat"
+        ],
+        "Better": 0
+    },
+    "23": {
+        "POKEMON_0": "Throh",
+        "POKEMON_1": {
+            "STATS": [
+                120,
+                100,
+                85,
+                30,
+                85,
+                45
+            ],
+            "TYPE": [
+                "Ghost",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Zoroark-Hisui",
+            "Oricorio-Sensu",
+            "Persian-Alola"
+        ],
+        "Better": 0
+    },
+    "24": {
+        "POKEMON_0": "Enamorus",
+        "POKEMON_1": {
+            "STATS": [
+                74,
+                115,
+                70,
+                175,
+                40,
+                106
+            ],
+            "TYPE": [
+                "Normal",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Lycanroc-Dusk",
+            "Noctowl",
+            "Ampharos-Mega",
+            "Basculegion-F"
+        ],
+        "Better": 0
+    }
+}

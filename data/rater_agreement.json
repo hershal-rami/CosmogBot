@@ -1,0 +1,382 @@
+{
+    "Chosen": {
+        "./data/cosmog_training_data/logmonster_training_data.json": [
+            "1"
+        ],
+        "./data/cosmog_training_data/SamW_training_data.json": [
+            "18",
+            "15",
+            "10",
+            "11"
+        ],
+        "./data/cosmog_training_data/Yoshi_training_data.json": [
+            "0",
+            "5"
+        ],
+        "./data/cosmog_training_data/Kiksss_training_data.json": [
+            "2"
+        ],
+        "./data/cosmog_training_data/TangelaBoots_training_data.json": [
+            "6",
+            "0"
+        ],
+        "./data/cosmog_training_data/CoachOak_training_data.json": [
+            "2",
+            "3"
+        ],
+        "./data/cosmog_training_data/frezemn_training_data.json": [
+            "0"
+        ],
+        "./data/cosmog_training_data/Hunky_training_data.json": [
+            "0"
+        ],
+        "./data/cosmog_training_data/Hys_training_data.json": [
+            "0"
+        ],
+        "./data/cosmog_training_data/Stryfe_training_data.json": [
+            "27"
+        ],
+        "./data/cosmog_training_data/Snippetybark_training_data.json": [
+            "1"
+        ],
+        "./data/cosmog_training_data/TRNM_training_data.json": [
+            "73"
+        ],
+        "./data/cosmog_training_data/TRowe_training_data.json": [
+            "0"
+        ],
+        "./data/cosmog_training_data/cro0kid_training_data.json": [
+            "4"
+        ],
+        "./data/cosmog_training_data/Ben_training_data.json": [
+            "1",
+            "2"
+        ],
+        "./data/cosmog_training_data/Epic_training_data.json": [
+            "2"
+        ],
+        "./data/cosmog_training_data/Mewizard_training_data.json": [
+            "7"
+        ],
+        "./data/cosmog_training_data/Honor6_training_data.json": [
+            "10"
+        ],
+        "./data/cosmog_training_data/hypherz_training_data.json": [
+            "5"
+        ],
+        "./data/cosmog_training_data/lone_training_data.json": [
+            "0",
+            "3"
+        ],
+        "./data/cosmog_training_data/Vegeta_training_data.json": [
+            "0"
+        ],
+        "./data/cosmog_training_data/TheDelybird_training_data.json": [
+            "3"
+        ],
+        "./data/cosmog_training_data/shhmobby_training_data.json": [
+            "3"
+        ],
+        "./data/cosmog_training_data/Chandy_training_data.json": [
+            "0"
+        ],
+        "./data/cosmog_training_data/PotatoZ_training_data.json": [
+            "12",
+            "16"
+        ],
+        "./data/cosmog_training_data/boogah_training_data.json": [
+            "2",
+            "0"
+        ],
+        "./data/cosmog_training_data/Kizaco_training_data.json": [
+            "10",
+            "20",
+            "5"
+        ],
+        "./data/cosmog_training_data/Hussu_training_data.json": [
+            "0"
+        ],
+        "./data/cosmog_training_data/Lavz_training_data.json": [
+            "1"
+        ],
+        "./data/cosmog_training_data/Sizzle&Snom_training_data.json": [
+            "1"
+        ],
+        "./data/cosmog_training_data/jumpingshinyfrogs_training_data.json": [
+            "9"
+        ],
+        "./data/cosmog_training_data/Froot_training_data.json": [
+            "3"
+        ],
+        "./data/cosmog_training_data/Kungfupanda4_training_data.json": [
+            "2"
+        ],
+        "./data/cosmog_training_data/Doge_training_data.json": [
+            "9"
+        ],
+        "./data/cosmog_training_data/Lemurro_training_data.json": [
+            "1"
+        ],
+        "./data/cosmog_training_data/FreetleforWiiU_training_data.json": [
+            "3"
+        ],
+        "./data/cosmog_training_data/IronHands_training_data.json": [
+            "0"
+        ],
+        "./data/cosmog_training_data/Littlebigs_training_data.json": [
+            "3"
+        ]
+    },
+    "Rated": [
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/logmonster_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/SamW_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/Yoshi_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/Kiksss_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/TangelaBoots_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/CoachOak_training_data.json"
+        ],
+        [
+            "0",
+            "0",
+            "./data/cosmog_training_data/frezemn_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/SamW_training_data.json"
+        ],
+        [
+            "0",
+            "0",
+            "./data/cosmog_training_data/Hunky_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/SamW_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/Hys_training_data.json"
+        ],
+        [
+            "0",
+            "0",
+            "./data/cosmog_training_data/Stryfe_training_data.json"
+        ],
+        [
+            "0",
+            "0",
+            "./data/cosmog_training_data/Snippetybark_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/TRNM_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/TRowe_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/CoachOak_training_data.json"
+        ],
+        [
+            "0",
+            "0",
+            "./data/cosmog_training_data/cro0kid_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/Ben_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/Epic_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/Mewizard_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/Honor6_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/hypherz_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/lone_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/Yoshi_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/Ben_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/Vegeta_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/TheDelybird_training_data.json"
+        ],
+        [
+            "0",
+            "0",
+            "./data/cosmog_training_data/shhmobby_training_data.json"
+        ],
+        [
+            "0",
+            "0",
+            "./data/cosmog_training_data/Chandy_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/PotatoZ_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/boogah_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/Kizaco_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/Hussu_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/PotatoZ_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/Lavz_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/Sizzle&Snom_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/TangelaBoots_training_data.json"
+        ],
+        [
+            "0",
+            "0",
+            "./data/cosmog_training_data/jumpingshinyfrogs_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/Froot_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/boogah_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/Kungfupanda4_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/Doge_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/lone_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/Lemurro_training_data.json"
+        ],
+        [
+            "0",
+            "1",
+            "./data/cosmog_training_data/FreetleforWiiU_training_data.json"
+        ],
+        [
+            "0",
+            "0",
+            "./data/cosmog_training_data/Kizaco_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/Kizaco_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/SamW_training_data.json"
+        ],
+        [
+            "1",
+            "0",
+            "./data/cosmog_training_data/IronHands_training_data.json"
+        ],
+        [
+            "1",
+            "1",
+            "./data/cosmog_training_data/Littlebigs_training_data.json"
+        ]
+    ]
+}

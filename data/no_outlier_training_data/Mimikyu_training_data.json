@@ -1,0 +1,145 @@
+{
+    "2": {
+        "POKEMON_0": "Carnivine",
+        "POKEMON_1": {
+            "STATS": [
+                74,
+                100,
+                72,
+                50,
+                72,
+                86
+            ],
+            "TYPE": [
+                "Fire",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                1,
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Maushold-Four",
+            "Duraludon",
+            "Sceptile-Mega"
+        ],
+        "Better": 1
+    },
+    "5": {
+        "POKEMON_0": "Qwilfish-Hisui",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                95,
+                85,
+                55,
+                55,
+                85
+            ],
+            "TYPE": [
+                "Grass",
+                "Poison"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.25,
+                2,
+                0.5,
+                1.0,
+                1.0,
+                2,
+                2,
+                1.0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Defog",
+                "Tailwind",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Type: Null",
+            "Florges",
+            "Chandelure",
+            "Hitmonchan",
+            "Politoed"
+        ],
+        "Better": 1
+    },
+    "7": {
+        "POKEMON_0": "Tsareena",
+        "POKEMON_1": {
+            "STATS": [
+                72,
+                120,
+                98,
+                80,
+                98,
+                42
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "U-turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Grumpig",
+            "Exeggutor-Alola"
+        ],
+        "Better": 0
+    }
+}

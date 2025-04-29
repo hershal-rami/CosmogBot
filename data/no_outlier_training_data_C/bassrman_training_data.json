@@ -1,0 +1,94 @@
+{
+    "6": {
+        "STARTING_TEAM": [
+            "Flapple",
+            "Stunfisk"
+        ],
+        "POKEMON_0": "Lickilicky",
+        "POKEMON_1": {
+            "STATS": [
+                110,
+                85,
+                95,
+                40,
+                135,
+                50
+            ],
+            "TYPE": [
+                "Fairy",
+                null
+            ],
+            "UTILITY": [
+                "Reflect"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "8": {
+        "POKEMON_0": "Slowbro-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                75,
+                180,
+                130,
+                80,
+                30
+            ],
+            "TYPE": [
+                "Water",
+                "Normal"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Haze",
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Palafin-Hero",
+            "Thievul",
+            "Tangrowth"
+        ],
+        "Better": 1
+    }
+}

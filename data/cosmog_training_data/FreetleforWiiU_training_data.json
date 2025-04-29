@@ -1,0 +1,193 @@
+{
+    "0": {
+        "POKEMON_0": "Ambipom",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                80,
+                86,
+                60,
+                66,
+                115
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Baton Pass",
+                "Rapid Spin",
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Dudunsparce-Three-Segment",
+            "Cacturne",
+            "Electrode",
+            "Dragalge"
+        ],
+        "Better": 0
+    },
+    "1": {
+        "POKEMON_0": "Ludicolo",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                40,
+                100,
+                90,
+                100,
+                70
+            ],
+            "TYPE": [
+                "Flying",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                1.0,
+                0.25,
+                4,
+                0.5,
+                2,
+                0.0,
+                2,
+                1,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Aggron-Mega",
+            "Celebi",
+            "Iron Thorns"
+        ],
+        "Better": 0
+    },
+    "2": {
+        "POKEMON_0": "Mr. Mime-Galar",
+        "POKEMON_1": {
+            "STATS": [
+                50,
+                65,
+                65,
+                50,
+                90,
+                140
+            ],
+            "TYPE": [
+                "Ice",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                4,
+                1,
+                1,
+                1,
+                0,
+                2,
+                2,
+                0.5,
+                1,
+                0.5,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Rapid Spin",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Roserade",
+            "Golurk",
+            "Silvally-Rock"
+        ],
+        "Better": 0
+    },
+    "3": {
+        "POKEMON_0": "Muk",
+        "POKEMON_1": {
+            "STATS": [
+                105,
+                135,
+                75,
+                65,
+                70,
+                50
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Wish",
+                "Haze",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Golduck",
+            "Nihilego",
+            "Silvally-Poison",
+            "Kleavor",
+            "Tauros-Paldea-Combat"
+        ],
+        "Better": 0
+    }
+}

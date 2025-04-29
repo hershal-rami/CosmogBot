@@ -1,0 +1,51 @@
+{
+    "0": {
+        "POKEMON_0": "Zapdos",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                90,
+                105,
+                125,
+                70,
+                100
+            ],
+            "TYPE": [
+                "Electric",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1.0,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Defog",
+                "Tailwind",
+                "Baton Pass",
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Wo-Chien",
+            "Relicanth",
+            "Gardevoir"
+        ],
+        "Better": 1
+    }
+}

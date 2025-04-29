@@ -1,0 +1,141 @@
+{
+    "16": {
+        "POKEMON_0": "Typhlosion-Hisui",
+        "POKEMON_1": {
+            "STATS": [
+                73,
+                84,
+                78,
+                119,
+                85,
+                95
+            ],
+            "TYPE": [
+                "Fire",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                0,
+                0.5,
+                2,
+                1,
+                1,
+                0.25,
+                2,
+                2,
+                1,
+                2,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Polteageist-Antique",
+            "Carbink"
+        ],
+        "Better": 0
+    },
+    "17": {
+        "POKEMON_0": "Absol",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                130,
+                60,
+                105,
+                30,
+                75
+            ],
+            "TYPE": [
+                "Electric",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Wish",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Toxtricity-Low-Key",
+            "Palafin"
+        ],
+        "Better": 0
+    },
+    "18": {
+        "POKEMON_0": "Zapdos-Galar",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                125,
+                90,
+                125,
+                90,
+                60
+            ],
+            "TYPE": [
+                "Fighting",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                2,
+                2,
+                0.25,
+                1.0,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Rapid Spin",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Doublade",
+            "Indeedee-F",
+            "Crustle"
+        ],
+        "Better": 1
+    }
+}

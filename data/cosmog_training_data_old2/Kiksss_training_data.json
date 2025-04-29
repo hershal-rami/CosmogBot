@@ -1,0 +1,233 @@
+{
+    "0": {
+        "POKEMON_0": "Froslass",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                50,
+                70,
+                110,
+                70,
+                110
+            ],
+            "TYPE": [
+                "Poison",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.0,
+                0.25,
+                2,
+                1,
+                2,
+                0.25,
+                1,
+                2,
+                1,
+                2,
+                1,
+                0.5
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Ursaluna",
+            "Cetitan"
+        ],
+        "Better": 1
+    },
+    "1": {
+        "POKEMON_0": "Persian-Alola",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                60,
+                30,
+                105,
+                65,
+                115
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Zeraora",
+            "Cryogonal",
+            "Darkrai",
+            "Bruxish",
+            "Latias"
+        ],
+        "Better": 1
+    },
+    "2": {
+        "POKEMON_0": "Persian-Alola",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                60,
+                60,
+                105,
+                35,
+                115
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Meowstic-F",
+            "Eldegoss"
+        ],
+        "Better": 1
+    },
+    "3": {
+        "POKEMON_0": "Komala",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                145,
+                65,
+                45,
+                95,
+                65
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Sharpedo",
+            "Tauros-Paldea-Combat"
+        ],
+        "Better": 0
+    },
+    "4": {
+        "POKEMON_0": "Iron Thorns",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                134,
+                110,
+                70,
+                134,
+                22
+            ],
+            "TYPE": [
+                "Rock",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Silvally-Fairy",
+            "Sneasler",
+            "Appletun"
+        ],
+        "Better": 1
+    }
+}

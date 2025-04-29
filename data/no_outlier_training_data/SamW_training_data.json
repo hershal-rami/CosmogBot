@@ -1,0 +1,189 @@
+{
+    "7": {
+        "POKEMON_0": "Aegislash-Blade",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                140,
+                80,
+                110,
+                50,
+                60
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Haze",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tyranitar-Mega",
+            "Meloetta"
+        ],
+        "Better": 0
+    },
+    "9": {
+        "POKEMON_0": "Iron Treads",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                92,
+                140,
+                72,
+                70,
+                106
+            ],
+            "TYPE": [
+                "Ground",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                2,
+                0,
+                1.0,
+                1.0,
+                2,
+                0.0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.25,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Kartana",
+            "Dipplin",
+            "Golbat"
+        ],
+        "Better": 1
+    },
+    "15": {
+        "POKEMON_0": "Tapu Lele",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                85,
+                115,
+                90,
+                115,
+                95
+            ],
+            "TYPE": [
+                "Psychic",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.25,
+                2,
+                1,
+                1,
+                0.5,
+                1.0,
+                1,
+                2,
+                0,
+                1.0,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Primarina",
+            "Golisopod",
+            "Buzzwole",
+            "Entei"
+        ],
+        "Better": 1
+    },
+    "17": {
+        "POKEMON_0": "Slowbro-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                105,
+                150,
+                130,
+                80,
+                30
+            ],
+            "TYPE": [
+                "Ground",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Drifblim",
+            "Aurorus",
+            "Scolipede",
+            "Magmar"
+        ],
+        "Better": 0
+    }
+}

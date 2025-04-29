@@ -1,0 +1,97 @@
+{
+    "0": {
+        "POKEMON_0": "Palafin",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                40,
+                72,
+                83,
+                62,
+                100
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Defog",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gardevoir-Mega",
+            "Mismagius"
+        ],
+        "Better": 0
+    },
+    "1": {
+        "POKEMON_0": "Articuno-Galar",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                85,
+                65,
+                125,
+                120,
+                95
+            ],
+            "TYPE": [
+                "Steel",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                2,
+                0.25,
+                1.0,
+                1.0,
+                0,
+                0,
+                0.5,
+                0.5,
+                0.25,
+                1.0,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Audino",
+            "Enamorus",
+            "Incineroar",
+            "Grapploct",
+            "Volcarona"
+        ],
+        "Better": 1
+    }
+}

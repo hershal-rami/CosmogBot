@@ -1,0 +1,47 @@
+{
+    "5": {
+        "POKEMON_0": "Dipplin",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                40,
+                110,
+                135,
+                80,
+                40
+            ],
+            "TYPE": [
+                "Dark",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                2,
+                0.5,
+                1,
+                4
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Magneton",
+            "Heracross-Mega",
+            "Aerodactyl-Mega",
+            "Huntail"
+        ],
+        "Better": 1
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "4": {
+        "POKEMON_0": "Mantine",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                10,
+                100,
+                80,
+                140,
+                70
+            ],
+            "TYPE": [
+                "Dark",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                1,
+                0,
+                1,
+                0,
+                1.0,
+                2,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Defog",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Metagross",
+            "Jynx",
+            "Venusaur-Mega",
+            "Zygarde-10%",
+            "Blaziken"
+        ],
+        "Better": 0
+    }
+}

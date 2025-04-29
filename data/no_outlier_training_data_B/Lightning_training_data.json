@@ -1,0 +1,95 @@
+{
+    "3": {
+        "POKEMON_0": "Absol-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                150,
+                60,
+                85,
+                90,
+                115
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Wish",
+                "Baton Pass",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Swalot",
+            "Magneton",
+            "Emboar"
+        ],
+        "Better": 1
+    },
+    "4": {
+        "POKEMON_0": "Orbeetle",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                15,
+                110,
+                80,
+                150,
+                90
+            ],
+            "TYPE": [
+                "Bug",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                4,
+                0.5,
+                0.5,
+                0.25,
+                2,
+                0.5,
+                2,
+                0.25,
+                4,
+                1,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Basculegion-F",
+            "Lanturn",
+            "Great Tusk",
+            "Leavanny"
+        ],
+        "Better": 0
+    }
+}

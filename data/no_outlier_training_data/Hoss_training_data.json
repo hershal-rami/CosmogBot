@@ -1,0 +1,93 @@
+{
+    "0": {
+        "POKEMON_0": "Breloom",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                130,
+                80,
+                40,
+                80,
+                70
+            ],
+            "TYPE": [
+                "Electric",
+                "Fighting"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1.0,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                0.5,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Overqwil",
+            "Eiscue-Noice"
+        ],
+        "Better": 1
+    },
+    "2": {
+        "POKEMON_0": "Unfezant",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                115,
+                60,
+                65,
+                75,
+                93
+            ],
+            "TYPE": [
+                "Ground",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                1.0,
+                4,
+                0.5,
+                0.5,
+                0,
+                1,
+                1,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "U-turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Raichu",
+            "Carnivine",
+            "Grapploct",
+            "Wo-Chien",
+            "Mr. Rime"
+        ],
+        "Better": 1
+    }
+}

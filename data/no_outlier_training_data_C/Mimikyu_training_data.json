@@ -1,0 +1,189 @@
+{
+    "1": {
+        "POKEMON_0": "Mimikyu",
+        "POKEMON_1": {
+            "STATS": [
+                55,
+                90,
+                100,
+                50,
+                85,
+                96
+            ],
+            "TYPE": [
+                "Ground",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                0.5,
+                0.5,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Maractus",
+            "Braviary",
+            "Eelektross",
+            "Bisharp"
+        ],
+        "Better": 1
+    },
+    "4": {
+        "POKEMON_0": "Whimsicott",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                67,
+                55,
+                107,
+                75,
+                116
+            ],
+            "TYPE": [
+                "Water",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                0,
+                0.5,
+                1.0,
+                1
+            ],
+            "UTILITY": [
+                "U-turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Calyrex",
+            "Skarmory",
+            "Lycanroc",
+            "Poliwrath"
+        ],
+        "Better": 1
+    },
+    "8": {
+        "POKEMON_0": "Zeraora",
+        "POKEMON_1": {
+            "STATS": [
+                88,
+                92,
+                95,
+                102,
+                80,
+                143
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Magmar",
+            "Ninjask",
+            "Tauros-Paldea-Blaze",
+            "Charizard-Mega-Y",
+            "Mudsdale"
+        ],
+        "Better": 1
+    },
+    "11": {
+        "POKEMON_0": "Falinks",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                70,
+                100,
+                100,
+                60,
+                75
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Wish",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Blastoise-Mega",
+            "Bellibolt"
+        ],
+        "Better": 0
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "1": {
+        "POKEMON_0": "Ludicolo",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                40,
+                100,
+                90,
+                100,
+                70
+            ],
+            "TYPE": [
+                "Flying",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                1.0,
+                0.25,
+                4,
+                0.5,
+                2,
+                0.0,
+                2,
+                1,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Aggron-Mega",
+            "Celebi",
+            "Iron Thorns"
+        ],
+        "Better": 0
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "2": {
+        "POKEMON_0": "Mr. Mime-Galar",
+        "POKEMON_1": {
+            "STATS": [
+                50,
+                65,
+                65,
+                50,
+                90,
+                140
+            ],
+            "TYPE": [
+                "Ice",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                4,
+                1,
+                1,
+                1,
+                0,
+                2,
+                2,
+                0.5,
+                1,
+                0.5,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Rapid Spin",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Roserade",
+            "Golurk",
+            "Silvally-Rock"
+        ],
+        "Better": 0
+    }
+}

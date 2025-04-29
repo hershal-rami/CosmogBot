@@ -1,0 +1,189 @@
+{
+    "4": {
+        "POKEMON_0": "Darkrai",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                90,
+                90,
+                135,
+                130,
+                85
+            ],
+            "TYPE": [
+                "Fire",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                1,
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Aurorus",
+            "Bronzong",
+            "Celebi"
+        ],
+        "Better": 0
+    },
+    "5": {
+        "POKEMON_0": "Arboliva",
+        "POKEMON_1": {
+            "STATS": [
+                78,
+                69,
+                120,
+                125,
+                79,
+                39
+            ],
+            "TYPE": [
+                "Electric",
+                "Normal"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Moltres-Galar",
+            "Gastrodon",
+            "Gengar",
+            "Manaphy",
+            "Chansey"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Darmanitan-Galar",
+        "POKEMON_1": {
+            "STATS": [
+                105,
+                140,
+                55,
+                10,
+                75,
+                95
+            ],
+            "TYPE": [
+                "Ice",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                0.5,
+                0.5,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                2,
+                1,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gouging Fire",
+            "Arbok",
+            "Heracross-Mega",
+            "Shiftry",
+            "Gastrodon"
+        ],
+        "Better": 1
+    },
+    "11": {
+        "POKEMON_0": "Ogerpon-Wellspring",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                120,
+                84,
+                30,
+                126,
+                110
+            ],
+            "TYPE": [
+                "Grass",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                2,
+                0.5,
+                2,
+                0,
+                4,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Chandelure",
+            "Dudunsparce-Three-Segment"
+        ],
+        "Better": 1
+    }
+}

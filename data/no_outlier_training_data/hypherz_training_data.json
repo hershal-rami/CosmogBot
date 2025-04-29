@@ -1,0 +1,95 @@
+{
+    "2": {
+        "STARTING_TEAM": [
+            "Terapagos",
+            "Gourgeist",
+            "Politoed"
+        ],
+        "POKEMON_0": "Klang",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                50,
+                125,
+                70,
+                85,
+                50
+            ],
+            "TYPE": [
+                "Steel",
+                "Normal"
+            ],
+            "UTILITY": [
+                "Wish"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                4,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ]
+        },
+        "Better": 1
+    },
+    "5": {
+        "STARTING_TEAM": [
+            "Cyclizar",
+            "Silvally-Fairy",
+            "Flapple"
+        ],
+        "POKEMON_0": "Ampharos",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                75,
+                55,
+                115,
+                90,
+                85
+            ],
+            "TYPE": [
+                "Electric",
+                "Steel"
+            ],
+            "UTILITY": [
+                "Reflect",
+                "Light Screen"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0,
+                4,
+                0.25,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5
+            ]
+        },
+        "Better": 1
+    }
+}

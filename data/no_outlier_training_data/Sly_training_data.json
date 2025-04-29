@@ -1,0 +1,192 @@
+{
+    "0": {
+        "POKEMON_0": "Absol-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                150,
+                40,
+                115,
+                80,
+                115
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Slither Wing",
+            "Lapras",
+            "Polteageist",
+            "Abomasnow"
+        ],
+        "Better": 0
+    },
+    "1": {
+        "POKEMON_0": "Altaria",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                70,
+                90,
+                70,
+                105,
+                80
+            ],
+            "TYPE": [
+                "Dragon",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                1.0,
+                0.25,
+                4,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Haze",
+                "Reflect",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Kingambit",
+            "Sableye-Mega",
+            "Huntail"
+        ],
+        "Better": 0
+    },
+    "4": {
+        "POKEMON_0": "Scizor",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                130,
+                100,
+                55,
+                80,
+                65
+            ],
+            "TYPE": [
+                "Ghost",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.0,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                0,
+                0.0,
+                2,
+                0.5,
+                0.5,
+                0.25,
+                0.5,
+                2,
+                0.5,
+                2,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Dodrio",
+            "Sceptile"
+        ],
+        "Better": 1
+    },
+    "11": {
+        "POKEMON_0": "Urshifu-Rapid-Strike",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                130,
+                100,
+                33,
+                90,
+                97
+            ],
+            "TYPE": [
+                "Steel",
+                "Water"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                1.0,
+                0.5,
+                2,
+                1.0,
+                0.25,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Wish",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Blastoise",
+            "Steelix-Mega",
+            "Sinistcha",
+            "Oranguru"
+        ],
+        "Better": 1
+    }
+}

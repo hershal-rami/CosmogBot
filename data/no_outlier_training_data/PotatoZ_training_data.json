@@ -1,0 +1,140 @@
+{
+    "13": {
+        "POKEMON_0": "Pidgeot-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                83,
+                130,
+                80,
+                135,
+                30,
+                121
+            ],
+            "TYPE": [
+                "Normal",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Coalossal",
+            "Primarina",
+            "Fearow"
+        ],
+        "Better": 1
+    },
+    "15": {
+        "POKEMON_0": "Vigoroth",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                80,
+                80,
+                55,
+                35,
+                110
+            ],
+            "TYPE": [
+                "Ice",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Shuckle",
+            "Nidoqueen",
+            "Persian",
+            "Maushold"
+        ],
+        "Better": 1
+    },
+    "26": {
+        "POKEMON_0": "Aerodactyl-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                135,
+                45,
+                110,
+                95,
+                150
+            ],
+            "TYPE": [
+                "Rock",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                1.0,
+                1.0,
+                0.5,
+                1.0,
+                2,
+                2,
+                1.0,
+                1.0,
+                1.0,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Lilligant-Hisui",
+            "Sigilyph"
+        ],
+        "Better": 0
+    }
+}

@@ -1,0 +1,141 @@
+{
+    "4": {
+        "POKEMON_0": "Iron Treads",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                112,
+                100,
+                92,
+                70,
+                106
+            ],
+            "TYPE": [
+                "Ground",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                2,
+                0,
+                1.0,
+                1.0,
+                2,
+                0.0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.25,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Sticky Webs",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Unfezant",
+            "Tauros"
+        ],
+        "Better": 1
+    },
+    "8": {
+        "POKEMON_0": "Honchkrow",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                125,
+                52,
+                155,
+                2,
+                71
+            ],
+            "TYPE": [
+                "Ground",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                1.0,
+                4,
+                0.5,
+                0.5,
+                0,
+                1,
+                1,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Audino-Mega",
+            "Meowscarada",
+            "Weezing",
+            "Thundurus"
+        ],
+        "Better": 0
+    },
+    "9": {
+        "POKEMON_0": "Indeedee-F",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                55,
+                65,
+                65,
+                135,
+                85
+            ],
+            "TYPE": [
+                "Flying",
+                "Normal"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Seaking",
+            "Golem-Alola"
+        ],
+        "Better": 0
+    }
+}

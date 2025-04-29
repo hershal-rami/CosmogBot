@@ -1,0 +1,52 @@
+{
+    "3": {
+        "STARTING_TEAM": [
+            "Chandelure",
+            "Samurott",
+            "Klawf",
+            "Polteageist",
+            "Zangoose"
+        ],
+        "POKEMON_0": "Toucannon",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                120,
+                115,
+                35,
+                75,
+                60
+            ],
+            "TYPE": [
+                "Fire",
+                "Flying"
+            ],
+            "UTILITY": [
+                "Tailwind",
+                "Spikes",
+                "Will-o-Wisp"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                2,
+                0.25,
+                1.0,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.25,
+                4,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ]
+        },
+        "Better": 1
+    }
+}

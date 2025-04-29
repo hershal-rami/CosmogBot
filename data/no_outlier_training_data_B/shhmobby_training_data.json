@@ -1,0 +1,49 @@
+{
+    "3": {
+        "POKEMON_0": "Basculegion-F",
+        "POKEMON_1": {
+            "STATS": [
+                120,
+                122,
+                65,
+                70,
+                75,
+                78
+            ],
+            "TYPE": [
+                "Fairy",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.0,
+                1.0,
+                1,
+                1,
+                1,
+                0.25,
+                1,
+                2,
+                0,
+                1.0,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Camerupt",
+            "Silvally-Poison",
+            "Rhyperior",
+            "Great Tusk"
+        ],
+        "Better": 0
+    }
+}

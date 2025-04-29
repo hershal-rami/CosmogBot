@@ -1,0 +1,50 @@
+{
+    "1": {
+        "STARTING_TEAM": [
+            "Qwilfish-Hisui",
+            "Oinkologne-F"
+        ],
+        "POKEMON_0": "Cloyster",
+        "POKEMON_1": {
+            "STATS": [
+                50,
+                95,
+                180,
+                85,
+                45,
+                70
+            ],
+            "TYPE": [
+                "Water",
+                "Ice"
+            ],
+            "UTILITY": [
+                "Reflect",
+                "Light Screen",
+                "Sticky Webs",
+                "Will-o-Wisp"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                2,
+                2,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1.0,
+                1
+            ]
+        },
+        "Better": 1
+    }
+}

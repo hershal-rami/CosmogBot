@@ -1,0 +1,46 @@
+{
+    "1": {
+        "POKEMON_0": "Blacephalon",
+        "POKEMON_1": {
+            "STATS": [
+                53,
+                127,
+                53,
+                151,
+                79,
+                107
+            ],
+            "TYPE": [
+                "Fire",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.25,
+                1.0,
+                0.5,
+                0.25,
+                1.0,
+                1,
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                0.5,
+                1.0
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Pawmot",
+            "Claydol",
+            "Hawlucha"
+        ],
+        "Better": 0
+    }
+}

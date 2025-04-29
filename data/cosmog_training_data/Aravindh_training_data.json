@@ -1,0 +1,52 @@
+{
+    "0": {
+        "POKEMON_0": "Gourgeist",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                90,
+                122,
+                28,
+                105,
+                84
+            ],
+            "TYPE": [
+                "Fairy",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0.5,
+                4,
+                0.5,
+                2,
+                1,
+                1.0,
+                1,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Will-o-Wisp",
+                "Wish",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Manaphy",
+            "Amoonguss",
+            "Zangoose",
+            "Diancie",
+            "Iron Thorns"
+        ],
+        "Better": 0
+    }
+}

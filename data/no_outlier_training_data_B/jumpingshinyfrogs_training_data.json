@@ -1,0 +1,95 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Cherrim-Sunshine",
+            "Alakazam",
+            "Toxapex"
+        ],
+        "POKEMON_0": "Thundurus",
+        "POKEMON_1": {
+            "STATS": [
+                79,
+                115,
+                70,
+                175,
+                30,
+                111
+            ],
+            "TYPE": [
+                "Normal",
+                "Flying"
+            ],
+            "UTILITY": [
+                "Defog",
+                "Toxic Spikes"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "4": {
+        "POKEMON_0": "Terapagos-Terastal",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                125,
+                80,
+                105,
+                110,
+                85
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Escavalier",
+            "Iron Crown",
+            "Aegislash"
+        ],
+        "Better": 1
+    }
+}

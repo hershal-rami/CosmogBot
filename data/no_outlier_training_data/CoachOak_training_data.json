@@ -1,0 +1,335 @@
+{
+    "3": {
+        "POKEMON_0": "Uxie",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                105,
+                130,
+                45,
+                130,
+                95
+            ],
+            "TYPE": [
+                "Psychic",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Defog",
+                "Wish",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Ribombee",
+            "Cinderace",
+            "Ludicolo",
+            "Malamar",
+            "Houndoom"
+        ],
+        "Better": 1
+    },
+    "4": {
+        "POKEMON_0": "Samurott",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                60,
+                85,
+                148,
+                70,
+                70
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Stealth Rock"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Heracross-Mega",
+            "Azelf",
+            "Stunfisk",
+            "Darmanitan-Galar-Zen",
+            "Electrode"
+        ],
+        "Better": 1
+    },
+    "5": {
+        "POKEMON_0": "Slowbro",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                75,
+                70,
+                100,
+                120,
+                30
+            ],
+            "TYPE": [
+                "Water",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                2
+            ],
+            "UTILITY": [
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Silvally-Water",
+            "Hoopa",
+            "Banette"
+        ],
+        "Better": 1
+    },
+    "8": {
+        "POKEMON_0": "Krookodile",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                67,
+                80,
+                65,
+                120,
+                92
+            ],
+            "TYPE": [
+                "Ground",
+                "Electric"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0.0,
+                2,
+                2,
+                1,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Lunatone",
+            "Typhlosion",
+            "Oricorio"
+        ],
+        "Better": 0
+    },
+    "9": {
+        "POKEMON_0": "Silvally-Electric",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                75,
+                95,
+                115,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Electric",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Rapid Spin"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Raichu-Alola",
+            "Iron Thorns",
+            "Incineroar",
+            "Pawmot",
+            "Raikou"
+        ],
+        "Better": 0
+    },
+    "15": {
+        "POKEMON_0": "Arcanine-Hisui",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                115,
+                80,
+                95,
+                80,
+                90
+            ],
+            "TYPE": [
+                "Fire",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                1.0,
+                0.5,
+                0.25,
+                1.0,
+                1,
+                2,
+                1.0,
+                2,
+                1,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Crawdaunt",
+            "Meowstic",
+            "Zapdos-Galar",
+            "Electabuzz"
+        ],
+        "Better": 0
+    },
+    "18": {
+        "POKEMON_0": "Jolteon",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                65,
+                60,
+                90,
+                95,
+                150
+            ],
+            "TYPE": [
+                "Electric",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                0,
+                0.5,
+                2,
+                0.5,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Rapid Spin"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Houndstone",
+            "Azelf",
+            "Glimmora",
+            "Moltres-Galar",
+            "Tyranitar-Mega"
+        ],
+        "Better": 0
+    }
+}

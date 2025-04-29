@@ -1,0 +1,96 @@
+{
+    "0": {
+        "POKEMON_0": "Cramorant-Gulping",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                85,
+                5,
+                135,
+                95,
+                85
+            ],
+            "TYPE": [
+                "Bug",
+                "Water"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                2,
+                1.0,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Chien-Pao",
+            "Meowscarada",
+            "Grafaiai",
+            "Beartic",
+            "Slither Wing"
+        ],
+        "Better": 0
+    },
+    "1": {
+        "POKEMON_0": "Sinistcha",
+        "POKEMON_1": {
+            "STATS": [
+                71,
+                60,
+                66,
+                121,
+                120,
+                70
+            ],
+            "TYPE": [
+                "Normal",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Defog",
+                "Tailwind",
+                "Follow Me",
+                "Rage Powder"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Sharpedo",
+            "Coalossal"
+        ],
+        "Better": 1
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "0": {
+        "POKEMON_0": "Iron Leaves",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                150,
+                68,
+                70,
+                108,
+                104
+            ],
+            "TYPE": [
+                "Grass",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Sliggoo-Hisui",
+            "Iron Boulder",
+            "Gliscor",
+            "Exeggutor"
+        ],
+        "Better": 1
+    }
+}

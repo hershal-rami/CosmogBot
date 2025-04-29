@@ -1,0 +1,47 @@
+{
+    "3": {
+        "STARTING_TEAM": [
+            "Lycanroc-Dusk",
+            "Golem-Alola",
+            "Dragonite",
+            "Thundurus-Therian"
+        ],
+        "POKEMON_0": "Silvally-Rock",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                95,
+                45,
+                145,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Steel",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ]
+        },
+        "Better": 1
+    }
+}

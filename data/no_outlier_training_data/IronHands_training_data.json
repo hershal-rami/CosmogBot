@@ -1,0 +1,46 @@
+{
+    "0": {
+        "POKEMON_0": "Persian-Alola",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                80,
+                60,
+                75,
+                65,
+                95
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Ursaring",
+            "Arcanine",
+            "Sandslash-Alola"
+        ],
+        "Better": 1
+    }
+}

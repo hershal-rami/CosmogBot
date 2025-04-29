@@ -1,0 +1,50 @@
+{
+    "2": {
+        "STARTING_TEAM": [
+            "Mimikyu",
+            "Keldeo-Resolute",
+            "Galvantula"
+        ],
+        "POKEMON_0": "Feraligatr",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                125,
+                100,
+                59,
+                83,
+                78
+            ],
+            "TYPE": [
+                "Water",
+                "Fighting"
+            ],
+            "UTILITY": [
+                "Sticky Webs",
+                "Clear Smog",
+                "Reflect"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                0.5,
+                2
+            ]
+        },
+        "Better": 0
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "0": {
+        "POKEMON_0": "Ninetales-Alola",
+        "POKEMON_1": {
+            "STATS": [
+                73,
+                87,
+                55,
+                81,
+                100,
+                109
+            ],
+            "TYPE": [
+                "Dragon",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                0,
+                0.5,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Baton Pass"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Camerupt",
+            "Sliggoo-Hisui",
+            "Sharpedo"
+        ],
+        "Better": 1
+    }
+}

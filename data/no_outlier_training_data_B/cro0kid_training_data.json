@@ -1,0 +1,48 @@
+{
+    "4": {
+        "POKEMON_0": "Kangaskhan-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                105,
+                165,
+                100,
+                20,
+                100,
+                100
+            ],
+            "TYPE": [
+                "Electric",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Raging Bolt",
+            "Scizor-Mega",
+            "Tatsugiri",
+            "Thundurus",
+            "Camerupt"
+        ],
+        "Better": 0
+    }
+}

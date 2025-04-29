@@ -1,0 +1,50 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Diancie-Mega",
+            "Heatmor",
+            "Bastiodon",
+            "Ferrothorn",
+            "Registeel"
+        ],
+        "POKEMON_0": "Iron Hands",
+        "POKEMON_1": {
+            "STATS": [
+                154,
+                90,
+                108,
+                100,
+                68,
+                50
+            ],
+            "TYPE": [
+                "Ice",
+                "Electric"
+            ],
+            "UTILITY": [
+                "Defog"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                0.5,
+                1,
+                1,
+                1.0,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1.0,
+                1
+            ]
+        },
+        "Better": 1
+    }
+}

@@ -1,0 +1,232 @@
+{
+    "0": {
+        "POKEMON_0": "Pelipper",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                50,
+                150,
+                45,
+                70,
+                65
+            ],
+            "TYPE": [
+                "Water",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                4,
+                1.0,
+                1.0,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Silvally-Fighting",
+            "Whimsicott",
+            "Necrozma",
+            "Corviknight"
+        ],
+        "Better": 1
+    },
+    "1": {
+        "POKEMON_0": "Drapion",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                70,
+                130,
+                60,
+                75,
+                95
+            ],
+            "TYPE": [
+                "Water",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Glimmora",
+            "Pidgeot"
+        ],
+        "Better": 1
+    },
+    "2": {
+        "POKEMON_0": "Mantine",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                10,
+                70,
+                80,
+                140,
+                100
+            ],
+            "TYPE": [
+                "Ghost",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.0,
+                0.5,
+                0,
+                1,
+                1,
+                0.25,
+                2,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gardevoir",
+            "Kleavor",
+            "Araquanid",
+            "Kyurem"
+        ],
+        "Better": 1
+    },
+    "3": {
+        "POKEMON_0": "Slowbro",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                75,
+                130,
+                100,
+                60,
+                30
+            ],
+            "TYPE": [
+                "Steel",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                1.0,
+                0,
+                2,
+                0.5,
+                0.25,
+                1.0,
+                0.5,
+                2,
+                0.5,
+                2,
+                0.5,
+                1.0
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Sceptile-Mega",
+            "Slurpuff",
+            "Torkoal",
+            "Roaring Moon"
+        ],
+        "Better": 1
+    },
+    "4": {
+        "POKEMON_0": "Glastrier",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                145,
+                130,
+                95,
+                80,
+                30
+            ],
+            "TYPE": [
+                "Poison",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Venusaur",
+            "Primeape",
+            "Blissey"
+        ],
+        "Better": 1
+    }
+}

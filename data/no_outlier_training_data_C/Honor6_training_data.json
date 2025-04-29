@@ -1,0 +1,191 @@
+{
+    "1": {
+        "POKEMON_0": "Beheeyem",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                55,
+                75,
+                145,
+                95,
+                40
+            ],
+            "TYPE": [
+                "Psychic",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.0,
+                0.5,
+                1,
+                1,
+                0.5,
+                1.0,
+                1,
+                4,
+                1,
+                4,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Reflect",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Clawitzer",
+            "Maushold-Four",
+            "Unfezant"
+        ],
+        "Better": 1
+    },
+    "3": {
+        "POKEMON_0": "Charizard-Mega-Y",
+        "POKEMON_1": {
+            "STATS": [
+                78,
+                104,
+                38,
+                159,
+                115,
+                140
+            ],
+            "TYPE": [
+                "Fire",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                2,
+                0.25,
+                1.0,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.25,
+                4,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Gardevoir-Mega",
+            "Carnivine",
+            "Deoxys-Speed",
+            "Florges"
+        ],
+        "Better": 1
+    },
+    "6": {
+        "POKEMON_0": "Gallade",
+        "POKEMON_1": {
+            "STATS": [
+                68,
+                125,
+                35,
+                65,
+                145,
+                80
+            ],
+            "TYPE": [
+                "Psychic",
+                "Ice"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                2,
+                2,
+                1,
+                2,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Silvally-Dark",
+            "Celesteela",
+            "Tapu Lele",
+            "Venusaur-Mega",
+            "Silvally-Psychic"
+        ],
+        "Better": 0
+    },
+    "7": {
+        "POKEMON_0": "Garbodor",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                135,
+                82,
+                60,
+                82,
+                35
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Toxic Spikes",
+                "Haze",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tropius",
+            "Feraligatr",
+            "Electivire",
+            "Buzzwole"
+        ],
+        "Better": 1
+    }
+}

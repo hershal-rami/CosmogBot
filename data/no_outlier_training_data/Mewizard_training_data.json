@@ -1,0 +1,282 @@
+{
+    "7": {
+        "POKEMON_0": "Dhelmise",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                131,
+                130,
+                86,
+                60,
+                40
+            ],
+            "TYPE": [
+                "Bug",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                4,
+                0.5,
+                0.5,
+                0.25,
+                2,
+                0.5,
+                2,
+                0.25,
+                4,
+                1,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Drifblim",
+            "Gourgeist-Large",
+            "Politoed"
+        ],
+        "Better": 1
+    },
+    "10": {
+        "POKEMON_0": "Froslass",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                50,
+                100,
+                80,
+                70,
+                110
+            ],
+            "TYPE": [
+                "Ice",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                2,
+                1,
+                2,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Will-o-Wisp",
+                "Reflect",
+                "Light Screen",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Pinsir-Mega",
+            "Basculin-White-Striped",
+            "Ogerpon-Hearthflame"
+        ],
+        "Better": 1
+    },
+    "18": {
+        "POKEMON_0": "Unfezant",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                85,
+                110,
+                65,
+                55,
+                93
+            ],
+            "TYPE": [
+                "Fighting",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                2,
+                2,
+                0.25,
+                1.0,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Tauros-Paldea-Aqua",
+            "Kangaskhan"
+        ],
+        "Better": 0
+    },
+    "29": {
+        "POKEMON_0": "Golurk",
+        "POKEMON_1": {
+            "STATS": [
+                89,
+                124,
+                100,
+                35,
+                80,
+                55
+            ],
+            "TYPE": [
+                "Ground",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0,
+                0.25,
+                1,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Mimikyu-Busted",
+            "Appletun",
+            "Araquanid"
+        ],
+        "Better": 1
+    },
+    "41": {
+        "POKEMON_0": "Bisharp",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                125,
+                150,
+                60,
+                20,
+                70
+            ],
+            "TYPE": [
+                "Flying",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                2,
+                0.25,
+                1.0,
+                1.0,
+                0,
+                0,
+                0.5,
+                0.5,
+                0.25,
+                1.0,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Keldeo",
+            "Comfey",
+            "Gouging Fire",
+            "Lopunny"
+        ],
+        "Better": 0
+    },
+    "42": {
+        "POKEMON_0": "Runerigus",
+        "POKEMON_1": {
+            "STATS": [
+                58,
+                95,
+                165,
+                30,
+                105,
+                30
+            ],
+            "TYPE": [
+                "Bug",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.0,
+                0.5,
+                0.5,
+                2,
+                1,
+                0.5,
+                2,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Haze",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Rotom-Frost",
+            "Exeggutor",
+            "Lumineon",
+            "Kingdra"
+        ],
+        "Better": 0
+    }
+}

@@ -1,0 +1,290 @@
+{
+    "0": {
+        "POKEMON_0": "Espeon",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                35,
+                60,
+                160,
+                95,
+                110
+            ],
+            "TYPE": [
+                "Flying",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Baton Pass",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Audino-Mega",
+            "Toxtricity-Low-Key",
+            "Silvally-Flying"
+        ],
+        "Better": 1
+    },
+    "1": {
+        "POKEMON_0": "Sawk",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                125,
+                75,
+                -10,
+                75,
+                125
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Probopass",
+            "Drifblim",
+            "Jolteon",
+            "Froslass"
+        ],
+        "Better": 1
+    },
+    "2": {
+        "POKEMON_0": "Mesprit",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                75,
+                105,
+                135,
+                105,
+                80
+            ],
+            "TYPE": [
+                "Psychic",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Baton Pass",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Ogerpon",
+            "Terapagos",
+            "Gholdengo",
+            "Stakataka",
+            "Dusknoir"
+        ],
+        "Better": 1
+    },
+    "3": {
+        "POKEMON_0": "Decidueye",
+        "POKEMON_1": {
+            "STATS": [
+                78,
+                57,
+                125,
+                100,
+                100,
+                70
+            ],
+            "TYPE": [
+                "Ground",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0,
+                0.25,
+                1,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Haze",
+                "Light Screen",
+                "U-turn",
+                "Baton Pass",
+                "Sticky Webs",
+                "Tailwind",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Darmanitan-Galar-Zen",
+            "Toxtricity"
+        ],
+        "Better": 1
+    },
+    "4": {
+        "POKEMON_0": "Empoleon",
+        "POKEMON_1": {
+            "STATS": [
+                84,
+                86,
+                118,
+                111,
+                71,
+                60
+            ],
+            "TYPE": [
+                "Water",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                1.0,
+                0.5,
+                2,
+                1.0,
+                0.25,
+                2,
+                0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5
+            ],
+            "UTILITY": [
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gallade",
+            "Iron Boulder"
+        ],
+        "Better": 1
+    },
+    "5": {
+        "POKEMON_0": "Uxie",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                75,
+                110,
+                95,
+                130,
+                95
+            ],
+            "TYPE": [
+                "Psychic",
+                "Poison"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5,
+                2,
+                1,
+                1.0,
+                1.0,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1.0
+            ],
+            "UTILITY": [
+                "Light Screen",
+                "Baton Pass",
+                "Will-o-Wisp",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Weezing-Galar",
+            "Tyrantrum",
+            "Oinkologne"
+        ],
+        "Better": 0
+    }
+}

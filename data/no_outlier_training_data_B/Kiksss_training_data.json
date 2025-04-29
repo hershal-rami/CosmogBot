@@ -1,0 +1,48 @@
+{
+    "2": {
+        "POKEMON_0": "Persian-Alola",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                60,
+                60,
+                105,
+                35,
+                115
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Meowstic-F",
+            "Eldegoss"
+        ],
+        "Better": 1
+    }
+}

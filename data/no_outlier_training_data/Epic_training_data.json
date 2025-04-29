@@ -1,0 +1,49 @@
+{
+    "0": {
+        "POKEMON_0": "Ampharos",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                75,
+                105,
+                115,
+                90,
+                35
+            ],
+            "TYPE": [
+                "Electric",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Porygon-Z",
+            "Infernape",
+            "Heatmor",
+            "Diancie"
+        ],
+        "Better": 1
+    }
+}

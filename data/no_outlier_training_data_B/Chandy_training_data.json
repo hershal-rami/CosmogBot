@@ -1,0 +1,49 @@
+{
+    "2": {
+        "POKEMON_0": "Tapu Fini",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                125,
+                65,
+                95,
+                130,
+                85
+            ],
+            "TYPE": [
+                "Ground",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                0.5,
+                0.5,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Defog",
+                "Haze",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Cloyster",
+            "Cherrim-Sunshine"
+        ],
+        "Better": 1
+    }
+}

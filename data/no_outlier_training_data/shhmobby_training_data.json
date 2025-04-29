@@ -1,0 +1,45 @@
+{
+    "1": {
+        "POKEMON_0": "Haxorus",
+        "POKEMON_1": {
+            "STATS": [
+                76,
+                117,
+                90,
+                90,
+                70,
+                97
+            ],
+            "TYPE": [
+                "Dragon",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Ampharos-Mega",
+            "Darmanitan"
+        ],
+        "Better": 0
+    }
+}

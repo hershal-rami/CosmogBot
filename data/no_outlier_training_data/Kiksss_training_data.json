@@ -1,0 +1,48 @@
+{
+    "3": {
+        "POKEMON_0": "Komala",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                145,
+                65,
+                45,
+                95,
+                65
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Sharpedo",
+            "Tauros-Paldea-Combat"
+        ],
+        "Better": 0
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "3": {
+        "POKEMON_0": "Manectric-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                75,
+                40,
+                135,
+                120,
+                135
+            ],
+            "TYPE": [
+                "Electric",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Alcremie",
+            "Cherrim-Sunshine",
+            "Masquerain",
+            "Rhydon",
+            "Rillaboom"
+        ],
+        "Better": 0
+    },
+    "7": {
+        "POKEMON_0": "Corviknight",
+        "POKEMON_1": {
+            "STATS": [
+                98,
+                47,
+                105,
+                93,
+                85,
+                67
+            ],
+            "TYPE": [
+                "Bug",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                4,
+                1,
+                1,
+                0.25,
+                0.5,
+                1.0,
+                0,
+                1.0,
+                1.0,
+                0.5,
+                0.5,
+                1.0,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "U-turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Slowbro-Mega",
+            "Indeedee",
+            "Oricorio-Pom-Pom",
+            "Slowking-Galar"
+        ],
+        "Better": 1
+    }
+}

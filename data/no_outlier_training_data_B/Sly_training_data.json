@@ -1,0 +1,95 @@
+{
+    "3": {
+        "POKEMON_0": "Heatran",
+        "POKEMON_1": {
+            "STATS": [
+                91,
+                90,
+                106,
+                130,
+                76,
+                107
+            ],
+            "TYPE": [
+                "Fire",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                1.0,
+                2,
+                1,
+                0.25,
+                0.25,
+                2,
+                0,
+                4,
+                0.5,
+                0.5,
+                0.25,
+                1.0,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.25
+            ],
+            "UTILITY": [
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Mesprit",
+            "Minior",
+            "Snorlax",
+            "Hydreigon"
+        ],
+        "Better": 0
+    },
+    "4": {
+        "POKEMON_0": "Scizor",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                130,
+                100,
+                55,
+                80,
+                65
+            ],
+            "TYPE": [
+                "Ghost",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.0,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                0,
+                0.0,
+                2,
+                0.5,
+                0.5,
+                0.25,
+                0.5,
+                2,
+                0.5,
+                2,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Dodrio",
+            "Sceptile"
+        ],
+        "Better": 1
+    }
+}

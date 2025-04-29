@@ -1,0 +1,206 @@
+{
+    "0": {
+        "Better": 1
+    },
+    "1": {
+        "Better": 1
+    },
+    "2": {
+        "STARTING_TEAM": [
+            "Oinkologne-F",
+            "Landorus",
+            "Raichu-Alola",
+            "Appletun"
+        ],
+        "POKEMON_0": "Tapu Fini",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                75,
+                115,
+                125,
+                130,
+                55
+            ],
+            "TYPE": [
+                "Water",
+                "Fairy"
+            ],
+            "UTILITY": [
+                "Haze"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                0,
+                0.5,
+                1.0,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "3": {
+        "STARTING_TEAM": [
+            "Wailord",
+            "Inteleon",
+            "Indeedee-F",
+            "Falinks",
+            "Volcanion"
+        ],
+        "POKEMON_0": "Lurantis",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                105,
+                60,
+                80,
+                120,
+                45
+            ],
+            "TYPE": [
+                "Grass",
+                null
+            ],
+            "UTILITY": [
+                "Spikes"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "4": {
+        "STARTING_TEAM": [
+            "Bombirdier",
+            "Sinistcha-Masterpiece"
+        ],
+        "POKEMON_0": "Ninjask",
+        "POKEMON_1": {
+            "STATS": [
+                61,
+                70,
+                45,
+                70,
+                50,
+                160
+            ],
+            "TYPE": [
+                "Bug",
+                "Rock"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                1.0,
+                2,
+                1,
+                1.0,
+                1,
+                1.0,
+                0.5,
+                1.0,
+                1.0,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "5": {
+        "STARTING_TEAM": [
+            "Virizion",
+            "Drednaw"
+        ],
+        "POKEMON_0": "Avalugg-Hisui",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                127,
+                184,
+                34,
+                66,
+                8
+            ],
+            "TYPE": [
+                "Ice",
+                "Water"
+            ],
+            "UTILITY": [
+                "Rapid Spin"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                2,
+                2,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1.0,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "6": {
+        "Better": 1
+    },
+    "7": {
+        "Better": 1
+    },
+    "8": {
+        "Better": 1
+    },
+    "9": {
+        "Better": 1
+    },
+    "10": {
+        "Better": 1
+    }
+}

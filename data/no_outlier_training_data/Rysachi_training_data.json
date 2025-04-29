@@ -1,0 +1,46 @@
+{
+    "0": {
+        "STARTING_TEAM": [
+            "Exploud",
+            "Claydol",
+            "Enamorus-Therian"
+        ],
+        "POKEMON_0": "Politoed",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                105,
+                45,
+                90,
+                100,
+                70
+            ],
+            "TYPE": [
+                "Water",
+                "Normal"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                1
+            ]
+        },
+        "Better": 0
+    }
+}

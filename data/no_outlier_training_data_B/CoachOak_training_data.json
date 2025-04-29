@@ -1,0 +1,139 @@
+{
+    "4": {
+        "POKEMON_0": "Samurott",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                60,
+                85,
+                148,
+                70,
+                70
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Stealth Rock"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Heracross-Mega",
+            "Azelf",
+            "Stunfisk",
+            "Darmanitan-Galar-Zen",
+            "Electrode"
+        ],
+        "Better": 1
+    },
+    "6": {
+        "POKEMON_0": "Flygon",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                100,
+                80,
+                80,
+                110,
+                70
+            ],
+            "TYPE": [
+                "Ground",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                2,
+                0,
+                2,
+                2,
+                0,
+                0.25,
+                1,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Glalie-Mega",
+            "Raging Bolt"
+        ],
+        "Better": 0
+    },
+    "7": {
+        "POKEMON_0": "Electabuzz",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                53,
+                57,
+                125,
+                85,
+                105
+            ],
+            "TYPE": [
+                "Dragon",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Altaria",
+            "Articuno",
+            "Oricorio-Pom-Pom"
+        ],
+        "Better": 0
+    }
+}

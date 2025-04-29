@@ -1299,7 +1299,7 @@ def json_pkmn_characteristics():
                             type_effective = np.array(WEAKNESS[row[0]]) * np.array(RESISTANCE[row[0]]) * np.array(WEAKNESS[row[1]]) * np.array(RESISTANCE[row[1]])
 
                         #try to look for utility in the pokemon's moveset
-                        utility_moves = ["Stealth Rock", "Defog", "Rapid Spin", "Spikes", "Toxic Spikes", "Sticky Webs", "Wish", "Haze", "Clear Smog", "Will-o-Wisp", "Tailwind", "Reflect", "Light Screen"]
+                        utility_moves = ["Stealth Rock", "Defog", "Rapid Spin", "Spikes", "Toxic Spikes", "Sticky Webs", "Wish", "Haze", "Clear Smog", "Will-o-Wisp", "Tailwind", "Reflect", "Light Screen", "U-turn", "Baton Pass", "Follow Me", "Rage Powder", "Helping Hand"]
                         
                         utility_score_temp = 0
                         mon = remove_non_alpha(row[8].strip().lower())

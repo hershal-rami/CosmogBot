@@ -1,0 +1,332 @@
+{
+    "2": {
+        "POKEMON_0": "Wo-Chien",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                85,
+                80,
+                115,
+                135,
+                70
+            ],
+            "TYPE": [
+                "Fighting",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                4,
+                2,
+                1.0,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tangrowth",
+            "Regieleki",
+            "Lurantis",
+            "Lickilicky",
+            "Honchkrow"
+        ],
+        "Better": 1
+    },
+    "10": {
+        "POKEMON_0": "Silvally-Ground",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                95,
+                125,
+                65,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Fairy",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Garchomp-Mega",
+            "Dipplin",
+            "Slowking"
+        ],
+        "Better": 1
+    },
+    "12": {
+        "POKEMON_0": "Solrock",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                115,
+                85,
+                35,
+                65,
+                70
+            ],
+            "TYPE": [
+                "Rock",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.25,
+                1.0,
+                0.5,
+                1.0,
+                2,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Baton Pass"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Brambleghast",
+            "Noctowl",
+            "Tapu Lele",
+            "Necrozma",
+            "Feraligatr"
+        ],
+        "Better": 1
+    },
+    "19": {
+        "POKEMON_0": "Polteageist",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                65,
+                65,
+                134,
+                154,
+                30
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Light Screen",
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tangrowth",
+            "Ninetales-Alola"
+        ],
+        "Better": 0
+    },
+    "27": {
+        "POKEMON_0": "Hitmonlee",
+        "POKEMON_1": {
+            "STATS": [
+                50,
+                120,
+                53,
+                15,
+                110,
+                107
+            ],
+            "TYPE": [
+                "Fairy",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Rapid Spin"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Swanna",
+            "Jellicent",
+            "Guzzlord",
+            "Duraludon",
+            "Silvally-Fighting"
+        ],
+        "Better": 1
+    },
+    "28": {
+        "POKEMON_0": "Indeedee-F",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                55,
+                65,
+                135,
+                105,
+                45
+            ],
+            "TYPE": [
+                "Fairy",
+                "Normal"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Lycanroc-Midnight",
+            "Zebstrika",
+            "Metagross"
+        ],
+        "Better": 1
+    },
+    "32": {
+        "POKEMON_0": "Iron Moth",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                70,
+                60,
+                140,
+                110,
+                110
+            ],
+            "TYPE": [
+                "Fire",
+                "Poison"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                1,
+                0.25,
+                0.5,
+                0.5,
+                0.5,
+                4,
+                1,
+                2,
+                0.25,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                0.25
+            ],
+            "UTILITY": [
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Sharpedo-Mega",
+            "Arcanine-Hisui",
+            "Thundurus-Therian",
+            "Moltres"
+        ],
+        "Better": 0
+    }
+}

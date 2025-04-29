@@ -1,0 +1,193 @@
+{
+    "5": {
+        "POKEMON_0": "Arboliva",
+        "POKEMON_1": {
+            "STATS": [
+                78,
+                69,
+                120,
+                125,
+                79,
+                39
+            ],
+            "TYPE": [
+                "Electric",
+                "Normal"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Moltres-Galar",
+            "Gastrodon",
+            "Gengar",
+            "Manaphy",
+            "Chansey"
+        ],
+        "Better": 1
+    },
+    "6": {
+        "POKEMON_0": "Silvally-Psychic",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                65,
+                95,
+                125,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Rock",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Tailwind",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gliscor",
+            "Scovillain",
+            "Muk-Alola"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Darmanitan-Galar",
+        "POKEMON_1": {
+            "STATS": [
+                105,
+                140,
+                55,
+                10,
+                75,
+                95
+            ],
+            "TYPE": [
+                "Ice",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                0.5,
+                0.5,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                2,
+                1,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gouging Fire",
+            "Arbok",
+            "Heracross-Mega",
+            "Shiftry",
+            "Gastrodon"
+        ],
+        "Better": 1
+    },
+    "12": {
+        "POKEMON_0": "Dusknoir",
+        "POKEMON_1": {
+            "STATS": [
+                45,
+                130,
+                135,
+                35,
+                135,
+                45
+            ],
+            "TYPE": [
+                "Ghost",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Klefki",
+            "Miltank",
+            "Jumpluff",
+            "Oricorio-Pom-Pom",
+            "Mr. Mime"
+        ],
+        "Better": 1
+    }
+}
