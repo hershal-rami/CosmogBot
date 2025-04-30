@@ -1,0 +1,95 @@
+{
+    "4": {
+        "STARTING_TEAM": [
+            "Farigiraf",
+            "Empoleon",
+            "Hydrapple"
+        ],
+        "POKEMON_0": "Basculegion",
+        "POKEMON_1": {
+            "STATS": [
+                120,
+                112,
+                65,
+                100,
+                75,
+                58
+            ],
+            "TYPE": [
+                "Water",
+                "Ghost"
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Tailwind"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                1
+            ]
+        },
+        "Better": 1
+    },
+    "8": {
+        "STARTING_TEAM": [
+            "Tapu Koko",
+            "Jynx",
+            "Komala",
+            "Whiscash",
+            "Tauros-Paldea-Blaze"
+        ],
+        "POKEMON_0": "Absol-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                180,
+                60,
+                115,
+                30,
+                115
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ]
+        },
+        "Better": 1
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "0": {
+        "POKEMON_0": "Minior-Meteor",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                60,
+                100,
+                60,
+                130,
+                30
+            ],
+            "TYPE": [
+                "Poison",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.25,
+                2,
+                0.25,
+                0.5,
+                0,
+                1,
+                2,
+                0.25,
+                2,
+                1,
+                1,
+                1,
+                1,
+                0.5
+            ],
+            "UTILITY": [
+                "Defog",
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Sawk",
+            "Tapu Fini",
+            "Iron Leaves"
+        ],
+        "Better": 0
+    },
+    "17": {
+        "POKEMON_0": "Cradily",
+        "POKEMON_1": {
+            "STATS": [
+                86,
+                81,
+                57,
+                121,
+                107,
+                43
+            ],
+            "TYPE": [
+                "Fighting",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                4,
+                2,
+                1.0,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Masquerain",
+            "Metagross"
+        ],
+        "Better": 0
+    }
+}

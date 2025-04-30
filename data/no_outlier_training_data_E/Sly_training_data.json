@@ -1,0 +1,94 @@
+{
+    "0": {
+        "POKEMON_0": "Absol-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                150,
+                40,
+                115,
+                80,
+                115
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Slither Wing",
+            "Lapras",
+            "Polteageist",
+            "Abomasnow"
+        ],
+        "Better": 0
+    },
+    "9": {
+        "POKEMON_0": "Thundurus",
+        "POKEMON_1": {
+            "STATS": [
+                79,
+                115,
+                70,
+                125,
+                80,
+                111
+            ],
+            "TYPE": [
+                "Electric",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0,
+                4,
+                0.25,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5
+            ],
+            "UTILITY": [
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Toxicroak",
+            "Eldegoss"
+        ],
+        "Better": 0
+    }
+}

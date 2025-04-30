@@ -1,0 +1,47 @@
+{
+    "9": {
+        "POKEMON_0": "Indeedee-F",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                55,
+                65,
+                65,
+                135,
+                85
+            ],
+            "TYPE": [
+                "Flying",
+                "Normal"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Seaking",
+            "Golem-Alola"
+        ],
+        "Better": 0
+    }
+}

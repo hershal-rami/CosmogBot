@@ -1,0 +1,1365 @@
+{
+    "3": {
+        "POKEMON_0": "Toxapex",
+        "POKEMON_1": {
+            "STATS": [
+                50,
+                63,
+                152,
+                53,
+                172,
+                5
+            ],
+            "TYPE": [
+                "Poison",
+                "Water"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                1.0,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Bisharp",
+            "Alomomola"
+        ],
+        "Better": 1
+    },
+    "7": {
+        "POKEMON_0": "Ogerpon-Hearthflame",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                150,
+                84,
+                60,
+                66,
+                110
+            ],
+            "TYPE": [
+                "Grass",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0.5,
+                4,
+                0.5,
+                2,
+                1,
+                1.0,
+                1,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Overqwil",
+            "Meloetta-Pirouette",
+            "Dragapult",
+            "Dewgong"
+        ],
+        "Better": 1
+    },
+    "14": {
+        "POKEMON_0": "Basculegion-F",
+        "POKEMON_1": {
+            "STATS": [
+                120,
+                92,
+                65,
+                50,
+                125,
+                78
+            ],
+            "TYPE": [
+                "Dragon",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                2,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Iron Crown",
+            "Dhelmise"
+        ],
+        "Better": 1
+    },
+    "17": {
+        "POKEMON_0": "Orthworm",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                85,
+                145,
+                60,
+                25,
+                95
+            ],
+            "TYPE": [
+                "Steel",
+                "Ground"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                2,
+                0,
+                1.0,
+                1.0,
+                2,
+                0.0,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                0.25,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Duraludon",
+            "Abomasnow-Mega",
+            "Indeedee-F",
+            "Rabsca"
+        ],
+        "Better": 0
+    },
+    "20": {
+        "POKEMON_0": "Victini",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                100,
+                100,
+                70,
+                130,
+                100
+            ],
+            "TYPE": [
+                "Psychic",
+                "Fighting"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                2,
+                1.0,
+                1.0,
+                0.5,
+                2,
+                1,
+                1.0,
+                1,
+                4
+            ],
+            "UTILITY": [
+                "Light Screen",
+                "U-turn",
+                "Baton Pass",
+                "Wish",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Cobalion",
+            "Klawf",
+            "Heatran"
+        ],
+        "Better": 1
+    },
+    "22": {
+        "POKEMON_0": "Kecleon",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                90,
+                70,
+                60,
+                150,
+                10
+            ],
+            "TYPE": [
+                "Flying",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Garbodor",
+            "Feraligatr"
+        ],
+        "Better": 0
+    },
+    "28": {
+        "POKEMON_0": "Silvally-Water",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                125,
+                65,
+                95,
+                95,
+                95
+            ],
+            "TYPE": [
+                "Poison",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5
+            ],
+            "UTILITY": [
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Tauros-Paldea-Combat",
+            "Deoxys-Defense",
+            "Gardevoir-Mega"
+        ],
+        "Better": 0
+    },
+    "31": {
+        "POKEMON_0": "Baxcalibur",
+        "POKEMON_1": {
+            "STATS": [
+                115,
+                145,
+                92,
+                125,
+                36,
+                87
+            ],
+            "TYPE": [
+                "Dragon",
+                "Ground"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                1.0,
+                0.0,
+                1.0,
+                4,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                1,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Indeedee",
+            "Throh",
+            "Type: Null"
+        ],
+        "Better": 0
+    },
+    "33": {
+        "POKEMON_0": "Iron Boulder",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                80,
+                80,
+                68,
+                108,
+                164
+            ],
+            "TYPE": [
+                "Rock",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1.0,
+                0.5,
+                2,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                2,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Gallade-Mega",
+            "Espeon",
+            "Noivern",
+            "Gengar",
+            "Malamar"
+        ],
+        "Better": 0
+    },
+    "36": {
+        "POKEMON_0": "Falinks",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                60,
+                140,
+                70,
+                60,
+                75
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Clear Smog",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gourgeist-Large",
+            "Aromatisse",
+            "Necrozma",
+            "Whimsicott",
+            "Tropius"
+        ],
+        "Better": 1
+    },
+    "38": {
+        "POKEMON_0": "Leavanny",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                123,
+                80,
+                70,
+                80,
+                72
+            ],
+            "TYPE": [
+                "Normal",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Defog",
+                "Rapid Spin",
+                "Will-o-Wisp",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Aerodactyl-Mega",
+            "Venomoth",
+            "Metagross",
+            "Tyranitar",
+            "Bouffalant"
+        ],
+        "Better": 1
+    },
+    "43": {
+        "POKEMON_0": "Arbok",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                95,
+                69,
+                65,
+                79,
+                80
+            ],
+            "TYPE": [
+                "Poison",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5
+            ],
+            "UTILITY": [
+                "Toxic Spikes",
+                "Haze",
+                "Sticky Webs",
+                "Clear Smog",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gyarados",
+            "Gallade"
+        ],
+        "Better": 1
+    },
+    "46": {
+        "POKEMON_0": "Pawmot",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                115,
+                70,
+                70,
+                60,
+                105
+            ],
+            "TYPE": [
+                "Steel",
+                "Fighting"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                2,
+                0,
+                2,
+                1.0,
+                1.0,
+                0.25,
+                0.25,
+                1,
+                0.5,
+                0.5,
+                0.5,
+                1.0
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Dondozo",
+            "Aromatisse",
+            "Decidueye-Hisui"
+        ],
+        "Better": 0
+    },
+    "47": {
+        "POKEMON_0": "Golisopod",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                125,
+                170,
+                60,
+                60,
+                40
+            ],
+            "TYPE": [
+                "Bug",
+                "Water"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                2,
+                1.0,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Bouffalant",
+            "Ninetales",
+            "Rotom-Heat"
+        ],
+        "Better": 1
+    },
+    "51": {
+        "POKEMON_0": "Flapple",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                110,
+                80,
+                45,
+                60,
+                120
+            ],
+            "TYPE": [
+                "Ghost",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0,
+                0.5,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                2,
+                2,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Rotom-Fan",
+            "Ursaluna-Bloodmoon",
+            "Audino-Mega",
+            "Chi-Yu",
+            "Carracosta"
+        ],
+        "Better": 0
+    },
+    "54": {
+        "POKEMON_0": "Oranguru",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                60,
+                50,
+                90,
+                140,
+                60
+            ],
+            "TYPE": [
+                "Normal",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1.0,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                0,
+                1,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Avalugg-Hisui",
+            "Ribombee",
+            "Thundurus",
+            "Rabsca",
+            "Tentacruel"
+        ],
+        "Better": 1
+    },
+    "57": {
+        "POKEMON_0": "Pecharunt",
+        "POKEMON_1": {
+            "STATS": [
+                88,
+                88,
+                160,
+                38,
+                88,
+                138
+            ],
+            "TYPE": [
+                "Poison",
+                "Rock"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                1,
+                1.0,
+                1,
+                1.0,
+                0.25,
+                4,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0.5
+            ],
+            "UTILITY": [
+                "Tailwind",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Jellicent",
+            "Diancie-Mega",
+            "Overqwil"
+        ],
+        "Better": 0
+    },
+    "60": {
+        "POKEMON_0": "Maractus",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                56,
+                67,
+                106,
+                97,
+                60
+            ],
+            "TYPE": [
+                "Grass",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0.5,
+                4,
+                0.5,
+                2,
+                1,
+                1.0,
+                1,
+                1,
+                0,
+                0.5,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Defog",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Landorus-Therian",
+            "Cherrim",
+            "Cradily",
+            "Silvally-Ground"
+        ],
+        "Better": 1
+    },
+    "63": {
+        "POKEMON_0": "Swampert-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                100,
+                120,
+                110,
+                125,
+                110,
+                70
+            ],
+            "TYPE": [
+                "Fire",
+                "Ground"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                4,
+                0,
+                1.0,
+                1.0,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                1.0,
+                1,
+                1,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Omastar",
+            "Crabominable",
+            "Maushold",
+            "Dragapult"
+        ],
+        "Better": 1
+    },
+    "68": {
+        "POKEMON_0": "Buzzwole",
+        "POKEMON_1": {
+            "STATS": [
+                107,
+                139,
+                139,
+                23,
+                83,
+                79
+            ],
+            "TYPE": [
+                "Flying",
+                "Fighting"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                2,
+                2,
+                0.25,
+                1.0,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Tailwind",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Pinsir-Mega",
+            "Ninjask",
+            "Tauros-Paldea-Aqua",
+            "Braviary",
+            "Sliggoo-Hisui"
+        ],
+        "Better": 1
+    },
+    "72": {
+        "POKEMON_0": "Skarmory",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                80,
+                160,
+                40,
+                50,
+                70
+            ],
+            "TYPE": [
+                "Dragon",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                1.0,
+                0.25,
+                4,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Defog",
+                "Spikes",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Swampert-Mega",
+            "Aegislash",
+            "Lycanroc-Dusk",
+            "Regieleki",
+            "Mimikyu"
+        ],
+        "Better": 0
+    },
+    "75": {
+        "POKEMON_0": "Bewear",
+        "POKEMON_1": {
+            "STATS": [
+                120,
+                125,
+                80,
+                55,
+                60,
+                60
+            ],
+            "TYPE": [
+                "Fairy",
+                "Fighting"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                2,
+                0.25,
+                0.5,
+                1,
+                0,
+                0.25,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Simisear",
+            "Dipplin",
+            "Thievul"
+        ],
+        "Better": 1
+    },
+    "76": {
+        "POKEMON_0": "Tyrantrum",
+        "POKEMON_1": {
+            "STATS": [
+                82,
+                101,
+                119,
+                69,
+                79,
+                71
+            ],
+            "TYPE": [
+                "Rock",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.25,
+                1.0,
+                0.5,
+                1.0,
+                2,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Toxtricity",
+            "Kilowattrel"
+        ],
+        "Better": 1
+    },
+    "82": {
+        "POKEMON_0": "Dusknoir",
+        "POKEMON_1": {
+            "STATS": [
+                45,
+                60,
+                135,
+                65,
+                175,
+                45
+            ],
+            "TYPE": [
+                "Ghost",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0.5,
+                1,
+                1,
+                0,
+                1.0,
+                1,
+                1.0,
+                1,
+                1.0,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Will-o-Wisp",
+                "Spikes",
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Palafin",
+            "Qwilfish-Hisui"
+        ],
+        "Better": 1
+    },
+    "83": {
+        "POKEMON_0": "Volcarona",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                60,
+                35,
+                165,
+                105,
+                100
+            ],
+            "TYPE": [
+                "Normal",
+                "Fire"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                2,
+                0,
+                1,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Defog",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Infernape",
+            "Cofagrigus",
+            "Hitmonchan",
+            "Turtonator"
+        ],
+        "Better": 0
+    },
+    "85": {
+        "POKEMON_0": "Lycanroc-Midnight",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                85,
+                105,
+                55,
+                75,
+                82
+            ],
+            "TYPE": [
+                "Rock",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Defog",
+                "Wish"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Garbodor",
+            "Escavalier",
+            "Simipour",
+            "Cofagrigus",
+            "Nidoqueen"
+        ],
+        "Better": 0
+    },
+    "88": {
+        "POKEMON_0": "Dhelmise",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                101,
+                100,
+                86,
+                120,
+                40
+            ],
+            "TYPE": [
+                "Water",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.25,
+                1.0,
+                1.0,
+                1.0,
+                1,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Rapid Spin",
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Zeraora",
+            "Magmar"
+        ],
+        "Better": 1
+    },
+    "92": {
+        "POKEMON_0": "Scizor",
+        "POKEMON_1": {
+            "STATS": [
+                70,
+                130,
+                70,
+                55,
+                110,
+                65
+            ],
+            "TYPE": [
+                "Dark",
+                "Steel"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                1,
+                0.5,
+                0.5,
+                4,
+                0,
+                2,
+                0.5,
+                0.0,
+                1.0,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                1.0
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Stealth Rock",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Turtonator",
+            "Eiscue",
+            "Florges",
+            "Armaldo",
+            "Shiftry"
+        ],
+        "Better": 0
+    },
+    "95": {
+        "POKEMON_0": "Munkidori",
+        "POKEMON_1": {
+            "STATS": [
+                88,
+                75,
+                36,
+                160,
+                90,
+                106
+            ],
+            "TYPE": [
+                "Poison",
+                "Fighting"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                4,
+                0.25,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                1.0
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Slowbro",
+            "Omastar"
+        ],
+        "Better": 1
+    }
+}

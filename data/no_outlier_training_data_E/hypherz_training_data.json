@@ -1,0 +1,50 @@
+{
+    "3": {
+        "STARTING_TEAM": [
+            "Ninetales-Alola",
+            "Gouging Fire",
+            "Persian-Alola",
+            "Ceruledge",
+            "Ting-Lu"
+        ],
+        "POKEMON_0": "Lycanroc",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                85,
+                65,
+                55,
+                65,
+                142
+            ],
+            "TYPE": [
+                "Dark",
+                null
+            ],
+            "UTILITY": [
+                "Haze"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ]
+        },
+        "Better": 0
+    }
+}

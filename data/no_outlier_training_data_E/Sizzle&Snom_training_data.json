@@ -1,0 +1,98 @@
+{
+    "1": {
+        "POKEMON_0": "Sawk",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                125,
+                75,
+                -10,
+                75,
+                125
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Probopass",
+            "Drifblim",
+            "Jolteon",
+            "Froslass"
+        ],
+        "Better": 1
+    },
+    "5": {
+        "POKEMON_0": "Uxie",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                75,
+                110,
+                95,
+                130,
+                95
+            ],
+            "TYPE": [
+                "Psychic",
+                "Poison"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5,
+                2,
+                1,
+                1.0,
+                1.0,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1.0
+            ],
+            "UTILITY": [
+                "Light Screen",
+                "Baton Pass",
+                "Will-o-Wisp",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Weezing-Galar",
+            "Tyrantrum",
+            "Oinkologne"
+        ],
+        "Better": 0
+    }
+}

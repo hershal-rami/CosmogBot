@@ -1,0 +1,95 @@
+{
+    "0": {
+        "POKEMON_0": "Landorus-Therian",
+        "POKEMON_1": {
+            "STATS": [
+                89,
+                145,
+                70,
+                105,
+                80,
+                111
+            ],
+            "TYPE": [
+                "Steel",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                2,
+                0.25,
+                1.0,
+                1.0,
+                0,
+                0,
+                0.5,
+                0.5,
+                0.25,
+                1.0,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": [
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Lokix",
+            "Heliolisk",
+            "Bellibolt"
+        ],
+        "Better": 1
+    },
+    "3": {
+        "POKEMON_0": "Eiscue-Noice",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                80,
+                70,
+                115,
+                0,
+                130
+            ],
+            "TYPE": [
+                "Ice",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1
+            ],
+            "UTILITY": [
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Crobat",
+            "Nidoqueen",
+            "Incineroar",
+            "Empoleon"
+        ],
+        "Better": 1
+    }
+}

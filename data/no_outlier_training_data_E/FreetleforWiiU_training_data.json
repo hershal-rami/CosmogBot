@@ -1,0 +1,51 @@
+{
+    "0": {
+        "POKEMON_0": "Ambipom",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                80,
+                86,
+                60,
+                66,
+                115
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Baton Pass",
+                "Rapid Spin",
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Dudunsparce-Three-Segment",
+            "Cacturne",
+            "Electrode",
+            "Dragalge"
+        ],
+        "Better": 0
+    }
+}

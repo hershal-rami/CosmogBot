@@ -1,0 +1,49 @@
+{
+    "10": {
+        "POKEMON_0": "Walking Wake",
+        "POKEMON_1": {
+            "STATS": [
+                99,
+                113,
+                61,
+                125,
+                83,
+                109
+            ],
+            "TYPE": [
+                "Dark",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                2,
+                0.5,
+                1,
+                4
+            ],
+            "UTILITY": [
+                "Haze"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Silvally-Ghost",
+            "Lopunny-Mega",
+            "Tsareena",
+            "Sinistcha-Masterpiece"
+        ],
+        "Better": 0
+    }
+}

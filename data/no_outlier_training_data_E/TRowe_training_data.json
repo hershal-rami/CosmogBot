@@ -1,0 +1,189 @@
+{
+    "0": {
+        "POKEMON_0": "Mandibuzz",
+        "POKEMON_1": {
+            "STATS": [
+                110,
+                105,
+                65,
+                55,
+                95,
+                80
+            ],
+            "TYPE": [
+                "Dark",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                1,
+                0,
+                1,
+                0,
+                1.0,
+                2,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Defog",
+                "Tailwind",
+                "U-turn",
+                "Toxic Spikes",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Sliggoo",
+            "Feraligatr"
+        ],
+        "Better": 0
+    },
+    "5": {
+        "POKEMON_0": "Tornadus",
+        "POKEMON_1": {
+            "STATS": [
+                79,
+                85,
+                70,
+                155,
+                80,
+                111
+            ],
+            "TYPE": [
+                "Flying",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "U-turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Cherrim",
+            "Stunfisk-Galar"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Gardevoir",
+        "POKEMON_1": {
+            "STATS": [
+                68,
+                35,
+                95,
+                125,
+                115,
+                80
+            ],
+            "TYPE": [
+                "Psychic",
+                "Fairy"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.25,
+                2,
+                1,
+                1,
+                0.5,
+                1.0,
+                1,
+                2,
+                0,
+                1.0,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Spectrier",
+            "Falinks"
+        ],
+        "Better": 1
+    },
+    "15": {
+        "POKEMON_0": "Sandslash",
+        "POKEMON_1": {
+            "STATS": [
+                75,
+                70,
+                110,
+                75,
+                55,
+                65
+            ],
+            "TYPE": [
+                "Ground",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                2,
+                0,
+                2,
+                2,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Turtonator",
+            "Inteleon",
+            "Cresselia",
+            "Tauros-Paldea-Aqua"
+        ],
+        "Better": 1
+    }
+}

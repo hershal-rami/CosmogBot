@@ -1,0 +1,99 @@
+{
+    "5": {
+        "POKEMON_0": "Qwilfish-Hisui",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                95,
+                85,
+                55,
+                55,
+                85
+            ],
+            "TYPE": [
+                "Grass",
+                "Poison"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.25,
+                2,
+                0.5,
+                1.0,
+                1.0,
+                2,
+                2,
+                1.0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5
+            ],
+            "UTILITY": [
+                "Spikes",
+                "Defog",
+                "Tailwind",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Type: Null",
+            "Florges",
+            "Chandelure",
+            "Hitmonchan",
+            "Politoed"
+        ],
+        "Better": 1
+    },
+    "11": {
+        "POKEMON_0": "Falinks",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                70,
+                100,
+                100,
+                60,
+                75
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Wish",
+                "Will-o-Wisp"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Blastoise-Mega",
+            "Bellibolt"
+        ],
+        "Better": 0
+    }
+}

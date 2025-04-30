@@ -1,0 +1,50 @@
+{
+    "2": {
+        "POKEMON_0": "Slowbro-Mega",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                75,
+                180,
+                160,
+                50,
+                30
+            ],
+            "TYPE": [
+                "Water",
+                "Bug"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                2,
+                1.0,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Malamar",
+            "Landorus",
+            "Ludicolo",
+            "Garchomp",
+            "Arcanine-Hisui"
+        ],
+        "Better": 0
+    }
+}

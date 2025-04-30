@@ -906,6 +906,444 @@ def from_json_to_numpy_B(data_folder = "./data/no_outlier_training_data/"):
 
 
 
+def from_json_to_numpy_E(data_folder = "./data/no_outlier_training_data/"):
+
+    """
+    Features Included
+    difference between num phys attackers and spatkers
+    difference between num phys defenders and spdefenders
+    speed tiers
+    rocks
+    removal
+    pivot
+    other utility moves
+    weakness score
+    resistaqnce score
+    unresisted score
+    repeated types
+    """
+
+    featureset_name = "E"
+
+    pkmn = {}
+
+    data_0 = []
+    data_1 = []
+    labels = []
+    combined = []
+    with_anno_label = []
+
+    with open("./data/Pokemon_Feature_Data.json", "r") as file:
+        pkmn = json.load(file)
+
+    onlyfiles = [join(data_folder, f) for f in listdir("./data/cosmog_training_data/") if isfile(join("./data/cosmog_training_data/", f)) and "No_Name_Provided" not in f and "doubles" not in f]
+
+    anno_i = 0
+    for file in onlyfiles:
+
+        json_f = {}
+        with open(file, "r") as f:
+            json_f = json.load(f)
+            print(file)
+
+
+            atk = 0
+            defen = 0
+            spatk = 0
+            spdef = 0
+            spe = []
+            weak = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            num_weak = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            res =  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            types = {}
+            utility = []
+
+            for ex in json_f:
+
+                for mon in json_f[ex]["STARTING_TEAM"]:
+
+                    if pkmn[mon]["STATS"][1] > pkmn[mon]["STATS"][3] *1.3:
+                        atk += 1
+                    elif pkmn[mon]["STATS"][1] * 1.3 < pkmn[mon]["STATS"][3]:
+                        spatk += 1
+                    else:
+                        if pkmn[mon]["STATS"][1] >= pkmn[mon]["STATS"][3]:
+                            atk += 1
+                        else:
+                            spatk += 1
+
+                    if pkmn[mon]["STATS"][2] > pkmn[mon]["STATS"][4] *1.3:
+                        defen += 1
+                    elif pkmn[mon]["STATS"][2] * 1.3 < pkmn[mon]["STATS"][4]:
+                        spdef += 1
+                    else:
+                        if pkmn[mon]["STATS"][2] >= pkmn[mon]["STATS"][4]:
+                            defen += 1
+                        else:
+                            spdef += 1
+
+                    spe.append(pkmn[mon]["STATS"][5])
+
+                    for w in range(len(pkmn[mon]["TYPE_EFFECTIVE"])):
+                        if pkmn[mon]["TYPE_EFFECTIVE"][w] > 1:
+                            weak[w] += pkmn[mon]["TYPE_EFFECTIVE"][w]
+                            num_weak[w] += 1
+                    
+                    for r in range(len(pkmn[mon]["TYPE_EFFECTIVE"])):
+                        if pkmn[mon]["TYPE_EFFECTIVE"][r] < 1:
+                            res[r] += 1
+                    
+                    for t in range(len(pkmn[mon]["TYPE"])):
+                        if types.get(pkmn[mon]["TYPE"][t]):
+                            types[pkmn[mon]["TYPE"][t]] += 1
+                        else:
+                            types[pkmn[mon]["TYPE"][t]] = 1
+
+                    for move in pkmn[mon]["UTILITY"]:
+                        if move not in utility and move in utility_moves:
+                            utility.append(move)
+
+                total_weak = 0
+                for i in range(len(weak)):
+                    temp = weak[i] * (1/(2 * (res[i] + 1/2)))
+
+                    if temp <= 0:
+                        temp = 0
+                    total_weak += temp
+
+                total_unres = 0
+                for i in range(len(weak)):
+                    temp = num_weak[i] - res[i]
+
+                    if temp <= 1:
+                        temp = 0
+                    total_unres += temp
+
+                total_repeat = 0
+                for i in types:
+                    if types[i] >= 3 and i != None and i != "None":
+                        total_repeat += types[i] - 2
+                    
+                total_res = 0
+                for i in range(len(weak)):
+
+                    if res[i] < 2:
+                        total_res += 1
+
+                new_utility = []
+
+                new_mon = json_f[ex]["POKEMON_0"]
+
+                for move in pkmn[new_mon]["UTILITY"]:
+                    if move not in utility and move in utility_moves:
+                        new_utility.append(move)
+
+                if pkmn[new_mon]["STATS"][1] > pkmn[new_mon]["STATS"][3] *1.3:
+                    atk += 1
+                elif pkmn[new_mon]["STATS"][1] * 1.3 < pkmn[new_mon]["STATS"][3]:
+                    spatk += 1
+                else:
+                    if pkmn[new_mon]["STATS"][1] >= pkmn[new_mon]["STATS"][3]:
+                        atk += 1
+                    else:
+                        spatk += 1
+                if pkmn[new_mon]["STATS"][2] > pkmn[new_mon]["STATS"][4] *1.3:
+                    defen += 1
+                elif pkmn[new_mon]["STATS"][2] * 1.3 < pkmn[new_mon]["STATS"][4]:
+                    spdef += 1
+                else:
+                    if pkmn[new_mon]["STATS"][2] >= pkmn[new_mon]["STATS"][4]:
+                        defen += 1
+                    else:
+                        spdef += 1
+
+
+                spe.append(pkmn[new_mon]["STATS"][5])
+
+                for w in range(len(pkmn[new_mon]["TYPE_EFFECTIVE"])):
+                    if pkmn[new_mon]["TYPE_EFFECTIVE"][w] > 1:
+                        weak[w] += pkmn[new_mon]["TYPE_EFFECTIVE"][w]
+
+                for t in range(len(pkmn[new_mon]["TYPE"])):
+                        if types.get(pkmn[new_mon]["TYPE"][t]):
+                            types[pkmn[new_mon]["TYPE"][t]] += 1
+                        else:
+                            types[pkmn[new_mon]["TYPE"][t]] = 1
+
+                for r in range(len(pkmn[new_mon]["TYPE_EFFECTIVE"])):
+                    if pkmn[new_mon]["TYPE_EFFECTIVE"][r] < 1:
+                        res[r] += 1
+
+                total_weak = 0
+                for i in range(len(weak)):
+                    temp = weak[i] * (1/(2 * (res[i] + 1/2)))
+
+                    if temp <= 0:
+                        temp = 0
+                    total_weak += temp
+
+                total_unres = 0
+                for i in range(len(weak)):
+                    temp = num_weak[i] - res[i]
+
+                    if temp <= 1:
+                        temp = 0
+                    total_unres += temp
+
+                total_repeat = 0
+                for i in types:
+                    if types[i] >= 3 and i != None and i != "None":
+                        total_repeat += types[i] - 2
+                    
+                total_res = 0
+                for i in range(len(weak)):
+
+                    if res[i] < 2:
+                        total_res += 1
+
+                
+                atk_sp_diff = abs(atk - spatk)
+                def_sp_diff = abs(defen - spdef)
+                less_30 = 0
+                less_60 = 0
+                less_90 = 0
+                less_120 = 0
+                plus_120 = 0
+
+                for spe_stat in spe:
+
+                    if spe_stat < 30:
+                        less_30 += 1
+                    elif spe_stat < 60:
+                        less_60 += 1
+                    elif spe_stat < 90:
+                        less_90 += 1
+                    elif spe_stat < 120:
+                        less_120 += 1
+                    else:
+                        plus_120 += 1
+
+
+                rocks = 0
+                removal = 0
+                pivot = 0
+                everything_else = 0
+                for move in utility:
+                    if move == "Stealth Rock" and rocks == 0:
+                        rocks += 1
+                    elif (move == "Defog" or move == "Rapid Spin") and removal == 0:
+                        removal += 1
+                    elif (move == "Baton Pass" or move == "U-Turn") and removal == 0:
+                        pivot += 1
+                    else:
+                        everything_else += 1
+                
+                for move in new_utility:
+                    if move == "Stealth Rock" and rocks == 0:
+                        rocks += 1
+                    elif (move == "Defog" or move == "Rapid Spin") and removal == 0:
+                        removal += 1
+                    elif (move == "Baton Pass" or move == "U-Turn") and removal == 0:
+                        pivot += 1
+                    else:
+                        everything_else += 1
+
+                stats_0 = [atk_sp_diff, def_sp_diff, less_30, less_60, less_90, less_120, plus_120, rocks, removal, pivot, everything_else, total_weak, total_res, total_unres, total_repeat]
+
+                stats_1 = []
+
+
+                if pkmn[new_mon]["STATS"][1] > pkmn[new_mon]["STATS"][3] *1.3:
+                    atk -= 1
+                elif pkmn[new_mon]["STATS"][1] * 1.3 < pkmn[new_mon]["STATS"][3]:
+                    spatk -= 1
+                else:
+                    if pkmn[new_mon]["STATS"][1] >= pkmn[new_mon]["STATS"][3]:
+                        atk -= 1
+                    else:
+                        spatk -= 1
+
+                if pkmn[new_mon]["STATS"][2] > pkmn[new_mon]["STATS"][4] *1.3:
+                    defen -= 1
+                elif pkmn[new_mon]["STATS"][2] * 1.3 < pkmn[new_mon]["STATS"][4]:
+                    spdef -= 1
+                else:
+                    if pkmn[new_mon]["STATS"][2] >= pkmn[new_mon]["STATS"][4]:
+                        defen += 1
+                    else:
+                        spdef += 1
+
+                spe.remove(pkmn[new_mon]["STATS"][5])
+
+                for w in range(len(pkmn[new_mon]["TYPE_EFFECTIVE"])):
+                    if pkmn[new_mon]["TYPE_EFFECTIVE"][w] > 1:
+                        weak[w] -= pkmn[new_mon]["TYPE_EFFECTIVE"][w]
+                        num_weak[w] -= 1
+
+                for t in range(len(pkmn[new_mon]["TYPE"])):
+                        if types.get(pkmn[new_mon]["TYPE"][t]):
+                            types[pkmn[new_mon]["TYPE"][t]] -= 1
+                
+                for r in range(len(pkmn[new_mon]["TYPE_EFFECTIVE"])):
+                    if pkmn[new_mon]["TYPE_EFFECTIVE"][r] < 1:
+                        res[r] -= 1
+
+                stats2 = json_f[ex]["POKEMON_1"]["STATS"]
+                type_effective2 = json_f[ex]["POKEMON_1"]["TYPE_EFFECTIVENESS"]
+                type2 = json_f[ex]["POKEMON_1"]["TYPE"]
+                utility2 = json_f[ex]["POKEMON_1"]["UTILITY"]
+
+                if stats2[1] > stats2[3] *1.3:
+                    atk += 1
+                elif stats2[1] * 1.3 < stats2[3]:
+                    spatk += 1
+                else:
+                    if stats2[1] >= stats2[3]:
+                        atk += 1
+                    else:
+                        spatk += 1
+
+                if stats2[2] > stats2[4] *1.3:
+                    defen += 1
+                elif stats2[2] * 1.3 < stats2[4]:
+                    spdef += 1
+                else:
+                    if stats2[2] >= stats2[4]:
+                        defen += 1
+                    else:
+                        spdef += 1
+                spe.append(stats2[5])
+
+                for w in range(len(type_effective2)):
+                    if type_effective2[w] > 1:
+                        weak[w] += type_effective2[w]
+                        num_weak[w] += 1
+
+                for t in type2:
+                    if types.get(t):
+                        types[t] += 1
+                    else:
+                        types[t] = 1
+                
+                for r in range(len(type_effective2)):
+                    if type_effective2[r] < 1:
+                        res[r] += 1
+
+                total_weak = 0
+                for i in range(len(weak)):
+                    temp = weak[i] * (1/(2 * (res[i] + 1/2)))
+
+                    if temp <= 0:
+                        temp = 0
+                    total_weak += temp
+
+                total_unres = 0
+                for i in range(len(weak)):
+                    temp = num_weak[i] - res[i]
+
+                    if temp <= 1:
+                        temp = 0
+                    total_unres += temp
+
+                total_repeat = 0
+                for i in types:
+                    if types[i] >= 3 and i != None and i != "None":
+                        total_repeat += types[i] - 2
+                    
+                total_res = 0
+                for i in range(len(weak)):
+
+                    if res[i] < 2:
+                        total_res += 1
+
+                rocks = 0
+                removal = 0
+                everything_else = 0
+                pivot = 0
+
+                for move in utility:
+                    if move == "Stealth Rock" and rocks == 0:
+                        rocks += 1
+                    elif (move == "Defog" or move == "Rapid Spin") and removal == 0:
+                        removal += 1
+                    elif (move == "Baton Pass" or move == "U-Turn") and removal == 0:
+                        pivot += 1
+                    else:
+                        everything_else += 1
+                
+                for move in utility2:
+                    if move == "Stealth Rock" and rocks == 0:
+                        rocks += 1
+                    elif (move == "Defog" or move == "Rapid Spin") and removal == 0:
+                        removal += 1
+                    elif (move == "Baton Pass" or move == "U-Turn") and removal == 0:
+                        pivot += 1
+                    else:
+                        everything_else += 1
+
+                atk_sp_diff = abs(atk - spatk)
+                def_sp_diff = abs(defen - spdef)
+                less_30 = 0
+                less_60 = 0
+                less_90 = 0
+                less_120 = 0
+                plus_120 = 0
+
+                for spe_stat in spe:
+
+                    if spe_stat < 30:
+                        less_30 += 1
+                    elif spe_stat < 60:
+                        less_60 += 1
+                    elif spe_stat < 90:
+                        less_90 += 1
+                    elif spe_stat < 120:
+                        less_120 += 1
+                    else:
+                        plus_120 += 1
+
+                stats_1 = [atk_sp_diff, def_sp_diff, less_30, less_60, less_90, less_120, plus_120, rocks, removal, pivot, everything_else, total_weak, total_res, total_unres, total_repeat]
+                #print(stats_0)
+                #print(stats_1)
+                #print(json_f[ex]["Better"])
+                #print("------------------------------------------------------------------------")
+                
+                if json_f[ex]["Better"] == 0:
+                    if random.random() < 0.5:
+                        data_0.append(stats_0)
+                        data_1.append(stats_1)
+                        combined.append(stats_0 + stats_1)
+                        with_anno_label.append(stats_0 + stats_1 + [anno_i])
+                        labels.append(0)
+                    else:
+                        data_0.append(stats_1)
+                        data_1.append(stats_0)
+                        combined.append(stats_1 + stats_0)
+                        with_anno_label.append(stats_1 + stats_0 + [anno_i])
+                        labels.append(1)
+                else:
+                    if random.random() < 0.5:
+                        data_0.append(stats_0)
+                        data_1.append(stats_1)
+                        combined.append(stats_0 + stats_1)
+                        with_anno_label.append(stats_0 + stats_1 + [anno_i])
+                        labels.append(1)
+                    else:
+                        data_0.append(stats_1)
+                        data_1.append(stats_0)
+                        combined.append(stats_1 + stats_0)
+                        with_anno_label.append(stats_1 + stats_0 + [anno_i])
+                        labels.append(0)
+
+                anno_i += 1
+
+    np.save("./data/training_processed/" + featureset_name + "_pkmn0_data.npy",np.array(data_0))
+    np.save("./data/training_processed/" + featureset_name + "_pkmn1_data.npy",np.array(data_1))
+    np.save("./data/training_processed/" + featureset_name + "_combined_data.npy",np.array(combined))
+    np.save("./data/training_processed/" + featureset_name + "_combined_annotator_data.npy",np.array(with_anno_label))
+    np.save("./data/training_processed/" + featureset_name + "_labels_data.npy",np.array(labels))
+
+
 def from_json_to_numpy_C(data_folder = "./data/no_outlier_training_data/"):
 
     """
@@ -3081,16 +3519,12 @@ class MLP_3(nn.Module):
 def grid_search():
 
     ## Training
-    epochs=[1000,2000,3000]
-    featureset_list = ["A", "B", "C"]
-    model_list = [1,2,3]
-    lr = [1e-4, 1e-3]
+    epochs=[3000, 4000]
+    featureset_list = [ "B", "D", "E"]
+    model_list = [3]
+    lr = [1e-4]
 
     np.random.seed(42)
-
-
-
-    
 
     test_acc = {}
     ii = 0
@@ -3227,21 +3661,7 @@ from sqlalchemy import event
 from sqlalchemy import text
 db = SQLAlchemy(app)
 
-def calc_features_one_mon(input_team, input_mon, featureset_name = "B"):
-    """
-    Features Included
-    difference between num phys attackers and spatkers
-    difference between num phys defenders and spdefenders
-    speed tiers
-    rocks
-    removal
-    pivot
-    other utility moves
-    weakness score
-    resistaqnce score
-    unresisted score
-    repeated types
-    """
+def calc_features_one_mon(input_team, input_mon, featureset_name = "E"):
 
     pkmn = {}
 
@@ -3479,8 +3899,8 @@ def calc_features_one_mon(input_team, input_mon, featureset_name = "B"):
 
     total_repeat = 0
     for i in types:
-        if types[i] >= 2 and i != None and i != "None":
-            total_repeat += types[i] - 1
+        if types[i] >= 3 and i != None and i != "None":
+            total_repeat += types[i] - 2
         
     total_res = 0
     for i in range(len(weak)):
@@ -3547,7 +3967,7 @@ def get_ranking(model, input_team = [], pokemon_list = [], f = "B"):
         ###### UPDATE THIS SO THAT QUERY ONLY GETS MON IN MON LIST
         result = connection.execute( text(f"""SELECT type1,type2,HP,ATK,DEF,SPATK,SPDEF,SPE, pkmn_name from PKMN_Stats""") )
         for row in result:
-            if pokemon_list[row[-1]]:
+            if pokemon_list.get(row[-1]):
                 features = calc_features_one_mon(input_team, row, f)
                 score = model(torch.from_numpy(np.array(features).astype(np.float32))).item()
                 scores.append(score)
@@ -3555,11 +3975,6 @@ def get_ranking(model, input_team = [], pokemon_list = [], f = "B"):
 
     sort_i = np.argsort(np.array(scores))
     sorted_mons = np.array(names)[sort_i]
-
-    print(np.array(scores)[sort_i][0])
-    print(np.array(names)[sort_i][0])
-    print(np.array(scores)[sort_i][-1])
-    print(np.array(names)[sort_i][-1])
 
     return sorted_mons
 
@@ -3574,7 +3989,7 @@ def get_ranking_linear(model, input_team = [], pokemon_list = [], f = "B"):
         ###### UPDATE THIS SO THAT QUERY ONLY GETS MON IN MON LIST
         result = connection.execute( text(f"""SELECT type1,type2,HP,ATK,DEF,SPATK,SPDEF,SPE, pkmn_name from PKMN_Stats""") )
         for row in result:
-            if pokemon_list[row[-1]]:
+            if pokemon_list.get(row[-1]):
                 features = calc_features_one_mon(input_team, row, f)
                 difference_features = np.array(features[0:13]) - np.array(features[13:])
                 weights = np.array([-0.5,-0.5,-2.5,-2,-1.5,-1,-1, -0.3, 3, -0.2, -20, 10 , 7])
@@ -3626,6 +4041,118 @@ def test_ranking(input_team = [], model_name = "model.cpt", model_shape = 30, f=
         print(i)
     return ranked[0:10]
 
+
+
+def test_LCOI(input_team = [], model_name = "model.cpt", model_shape = 30, f= "B", dumb="True"):
+
+    model =  MLP_3(model_shape)
+    model.load_state_dict(torch.load("./data/" + model_name, weights_only=True))
+    model.eval()
+
+    pokemon_list = {}
+    with app.app_context():
+        connection = db.session.connection()
+        result = connection.execute( text(f"""SELECT type1,type2,HP,ATK,DEF,SPATK,SPDEF,SPE, pkmn_name from PKMN_Stats""") )
+        for row in result:
+            include = True
+            if row[8] in BANNED:
+                include = False
+
+            if row[8] in input_team:
+                include = False
+
+            if int(row[2]) + int(row[3]) + int(row[4]) + int(row[5]) + int(row[6]) + int(row[7]) < 440:
+                include = False
+
+
+            pokemon_list[row[-1]] = include                
+
+
+    cv1_p = pd.read_csv("./data/cv1_probs.csv", index_col=0)
+    prob = []
+    names = []
+    pokemon_dict = {}
+    for mon in pokemon_list:
+        if pokemon_list[mon]:
+            p = 1
+            for mon2 in input_team:
+                p *= cv1_p[mon][mon2]
+            names.append(mon)
+            prob.append(p)
+            pokemon_dict[mon] = True
+
+
+    sort_i = np.argsort(np.array(prob))
+    sort_names_NB = np.array(names)[sort_i][::-1]
+            
+    if dumb:
+        ranked = get_ranking_linear(model, input_team, pokemon_list, f)
+    else:
+        ranked = get_ranking(model, input_team, pokemon_list, f)[::-1]
+
+    ranked_combine = {}
+    names_combined = []
+
+    ii=0
+    for name in range(len(sort_names_NB)):
+        ranked_combine[sort_names_NB[ii]] = ii * 2
+        names_combined.append(sort_names_NB[ii])
+        ii+=1
+
+    for name in ranked_combine:
+        rank = np.where(ranked == name)
+        ranked_combine[name] += rank[0]
+
+    sorted_dict = dict(sorted(ranked_combine.items(), key=lambda item: item[1]))
+
+    return list(sorted_dict.keys())
+
+
+
+def test_NB(input_team = [], model_name = "model.cpt", model_shape = 30, f= "B", dumb="True"):
+
+    model =  MLP_3(model_shape)
+    model.load_state_dict(torch.load("./data/" + model_name, weights_only=True))
+    model.eval()
+
+    pokemon_list = {}
+    with app.app_context():
+        connection = db.session.connection()
+        result = connection.execute( text(f"""SELECT type1,type2,HP,ATK,DEF,SPATK,SPDEF,SPE, pkmn_name from PKMN_Stats""") )
+        for row in result:
+            include = True
+            if row[8] in BANNED:
+                include = False
+
+            if row[8] in input_team:
+                include = False
+
+            if int(row[2]) + int(row[3]) + int(row[4]) + int(row[5]) + int(row[6]) + int(row[7]) < 440:
+                include = False
+
+
+            pokemon_list[row[-1]] = include                
+
+
+    cv1_p = pd.read_csv("./data/cv1_probs.csv", index_col=0)
+    prob = []
+    names = []
+    pokemon_dict = {}
+    for mon in pokemon_list:
+        if pokemon_list[mon]:
+            p = 1
+            for mon2 in input_team:
+                p *= cv1_p[mon][mon2]
+            names.append(mon)
+            prob.append(p)
+            pokemon_dict[mon] = True
+
+
+    sort_i = np.argsort(np.array(prob))
+    sort_names_NB = np.array(names)[sort_i][::-1]
+
+    return sort_names_NB
+
 def five_fold_impute():
 
     cv1 = {}
@@ -3669,25 +4196,58 @@ def five_fold_impute():
             if include:
                 pokemon_list.append(row[-1])   
 
+    total_rank_NB = 0
+    num_NB = 0
+    total_rank_E = 0
+    num_E = 0
+    total_rank_Casey = 0
+    num_Casey = 0
     for team in cv1:
 
         true = team[1]
 
         prob = []
         names = []
+        pokemon_dict = {}
         for mon in pokemon_list:
             p = 1
             for mon2 in team[0]:
                 p *= cv1_p[mon][mon2]
             names.append(mon)
             prob.append(p)
+            pokemon_dict[mon] = True
+
 
         sort_i = np.argsort(np.array(prob))
-        sort_names = np.array(names)[sort_i]
+        sort_names = np.array(names)[sort_i][::-1]
+        rank = np.where(sort_names == true)[0] + 1
+        if len(rank) != 0:
+            total_rank_NB += rank[0]
+            num_NB += 1
 
-        print("********************")
-        print(np.array(prob)[sort_i][0:10])
-        print(np.array(prob)[sort_i][-10:])
+        
+        model =  MLP_3(30)
+        model.load_state_dict(torch.load("./data/" + "model_E.cpt", weights_only=True))
+        model.eval()
+        sort_names = get_ranking(model,team[0],pokemon_dict,f="E")
+        rank = np.where(sort_names == true)[0] + 1
+        if len(rank) != 0:
+            total_rank_E += rank[0]
+            num_E += 1
+
+
+        model =  MLP_3(30)
+        model.load_state_dict(torch.load("./data/" + "model_E.cpt", weights_only=True))
+        model.eval()
+        sort_names = get_ranking_linear(model,team[0],pokemon_dict,f="D")
+        rank = np.where(sort_names == true)[0] + 1
+        if len(rank) != 0:
+            total_rank_Casey += rank[0]
+            num_Casey += 1
+    print("Average Rank of Missing=", total_rank_NB / num_NB)
+    print("Average Rank of Missing=", total_rank_E / num_E)
+    print("Average Rank of Missing=", total_rank_Casey / num_Casey)
+        #print(rank)
 
     
 
@@ -3718,8 +4278,12 @@ if __name__ == "__main__":
     #handle_bad_data_ENN("D") 
     #from_json_to_numpy_D()
     #proof_of_concept("D")
+    #from_json_to_numpy_E("./data/cosmog_training_data/")
+    #handle_bad_data_ENN("E") 
+    #from_json_to_numpy_E()
+    #proof_of_concept("E")
     #grid_search()
-    #train_model(fname = "model.cpt", featureset = "B")
+    #train_model(fname = "model_E.cpt", featureset = "E")
     #test_ranking(["Goodra"], model_name = "model_simple.cpt", model_shape = 30)
     #train_model(fname = "model_simple.cpt", featureset = "D")
     #team = ["Goodra", "Gliscor"]
@@ -3727,12 +4291,39 @@ if __name__ == "__main__":
     #    best = test_ranking(team, model_name = "model_simple.cpt", model_shape = 22, f="D",dumb=True)
     #    team.append(str(best[0]))
     #print(team)
-    #five_fold_impute()
+    
     #test_ranking(["Gliscor", "Salamence", "Hydreigon"],model_name = "model.cpt", model_shape = 30, f="B",dumb=False)
-    team = ["Goodra", "Gliscor"]
+    #team = ["Goodra", "Gliscor"]
+    #for i in range(7):
+    #    best = test_ranking(team, model_name = "model.cpt", model_shape = 30, f="B",dumb=False)
+    #    team.append(str(best[0]))
+    #print(team)
+    #test_ranking(["Gliscor", "Salamence", "Hydreigon"],model_name = "model_E.cpt", model_shape = 30, f="E",dumb=False)
+    #team = []
+    #for i in range(9):
+    #    best = test_ranking(team, model_name = "model_E.cpt", model_shape = 30, f="E",dumb=False)
+    #    team.append(str(best[0]))
+    #print(team)
+
+    team = ["Venusaur", "Torkoal"]
     for i in range(7):
-        best = test_ranking(team, model_name = "model.cpt", model_shape = 30, f="B",dumb=False)
+        best = test_ranking(team, model_name = "model_E.cpt", model_shape = 30, f="E",dumb=False)
         team.append(str(best[0]))
     print(team)
 
+    #five_fold_impute()
+    team = []
+    test_LCOI(team, model_name = "model_E.cpt", model_shape = 30, f="E",dumb=False)
+    team = ["Venusaur", "Torkoal"]
+    for i in range(7):
+        best = test_LCOI(team, model_name = "model_E.cpt", model_shape = 30, f="E",dumb=False)
+        team.append(str(best[0]))
+    print(team)
+
+    test_NB(team, model_name = "model_E.cpt", model_shape = 30, f="E",dumb=False)
+    team = ["Venusaur", "Torkoal"]
+    for i in range(7):
+        best = test_NB(team, model_name = "model_E.cpt", model_shape = 30, f="E",dumb=False)
+        team.append(str(best[0]))
+    print(team)
     pass

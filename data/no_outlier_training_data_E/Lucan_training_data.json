@@ -1,0 +1,229 @@
+{
+    "7": {
+        "POKEMON_0": "Kecleon",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                120,
+                70,
+                60,
+                90,
+                40
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Urshifu-Rapid-Strike",
+            "Stunfisk",
+            "Seadra",
+            "Barraskewda"
+        ],
+        "Better": 0
+    },
+    "10": {
+        "POKEMON_0": "Tyrantrum",
+        "POKEMON_1": {
+            "STATS": [
+                82,
+                121,
+                119,
+                39,
+                89,
+                71
+            ],
+            "TYPE": [
+                "Grass",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.25,
+                0.25,
+                0.25,
+                4,
+                1,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Tailwind"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Gourgeist-Large",
+            "Rampardos",
+            "Hatterene"
+        ],
+        "Better": 0
+    },
+    "13": {
+        "POKEMON_0": "Fearow",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                70,
+                65,
+                61,
+                61,
+                120
+            ],
+            "TYPE": [
+                "Normal",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                2,
+                0.5,
+                2,
+                1.0,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Klawf",
+            "Mew"
+        ],
+        "Better": 0
+    },
+    "16": {
+        "POKEMON_0": "Meowstic-F",
+        "POKEMON_1": {
+            "STATS": [
+                74,
+                28,
+                76,
+                103,
+                81,
+                104
+            ],
+            "TYPE": [
+                "Psychic",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0.5,
+                2,
+                0.5,
+                2,
+                0.5,
+                4,
+                1,
+                2,
+                1,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Reflect",
+                "Baton Pass"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Iron Moth",
+            "Turtonator",
+            "Silvally-Ice"
+        ],
+        "Better": 0
+    },
+    "19": {
+        "POKEMON_0": "Hatterene",
+        "POKEMON_1": {
+            "STATS": [
+                57,
+                90,
+                95,
+                166,
+                103,
+                -1
+            ],
+            "TYPE": [
+                "Psychic",
+                "Fire"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                2,
+                1,
+                0.5,
+                1.0,
+                2,
+                2,
+                1,
+                2,
+                0.5,
+                1.0
+            ],
+            "UTILITY": [
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Rhydon",
+            "Zoroark-Hisui",
+            "Oranguru"
+        ],
+        "Better": 0
+    }
+}

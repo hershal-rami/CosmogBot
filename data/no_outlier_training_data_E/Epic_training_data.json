@@ -1,0 +1,48 @@
+{
+    "2": {
+        "POKEMON_0": "Typhlosion-Hisui",
+        "POKEMON_1": {
+            "STATS": [
+                73,
+                84,
+                108,
+                89,
+                85,
+                95
+            ],
+            "TYPE": [
+                "Bug",
+                "Ghost"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.0,
+                0.5,
+                0.5,
+                2,
+                1,
+                0.5,
+                2,
+                2,
+                1,
+                2,
+                1,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Hitmonchan",
+            "Thundurus-Therian",
+            "Armarouge",
+            "Jynx",
+            "Drifblim"
+        ],
+        "Better": 1
+    }
+}

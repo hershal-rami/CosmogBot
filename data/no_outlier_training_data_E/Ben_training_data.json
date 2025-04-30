@@ -1,0 +1,49 @@
+{
+    "2": {
+        "POKEMON_0": "Hoopa-Unbound",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                160,
+                60,
+                170,
+                130,
+                80
+            ],
+            "TYPE": [
+                "Psychic",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1.0,
+                1,
+                1,
+                1,
+                0.0,
+                4,
+                1,
+                1.0,
+                1,
+                1.0,
+                1,
+                4
+            ],
+            "UTILITY": [
+                "Toxic Spikes",
+                "Light Screen"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Hariyama",
+            "Klawf",
+            "Golurk"
+        ],
+        "Better": 0
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "2": {
+        "STARTING_TEAM": [
+            "Gothitelle",
+            "Simisear",
+            "Bisharp",
+            "Lunatone"
+        ],
+        "POKEMON_0": "Mamoswine",
+        "POKEMON_1": {
+            "STATS": [
+                110,
+                130,
+                60,
+                70,
+                80,
+                80
+            ],
+            "TYPE": [
+                "Ice",
+                "Electric"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                0.5,
+                1,
+                1,
+                1.0,
+                1,
+                2,
+                0.5,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1.0,
+                1
+            ]
+        },
+        "Better": 1
+    }
+}

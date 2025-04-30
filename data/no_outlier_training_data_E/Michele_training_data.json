@@ -1,0 +1,278 @@
+{
+    "6": {
+        "POKEMON_0": "Farigiraf",
+        "POKEMON_1": {
+            "STATS": [
+                120,
+                140,
+                70,
+                110,
+                20,
+                60
+            ],
+            "TYPE": [
+                "Normal",
+                "Psychic"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1.0,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                0,
+                1,
+                2,
+                1,
+                2
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Cinderace",
+            "Heliolisk",
+            "Ninetales-Alola"
+        ],
+        "Better": 0
+    },
+    "13": {
+        "POKEMON_0": "Falinks",
+        "POKEMON_1": {
+            "STATS": [
+                65,
+                80,
+                100,
+                70,
+                60,
+                95
+            ],
+            "TYPE": [
+                "Fighting",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Stealth Rock",
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Cresselia",
+            "Basculin-Blue-Striped"
+        ],
+        "Better": 1
+    },
+    "14": {
+        "POKEMON_0": "Dipplin",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                130,
+                60,
+                95,
+                80,
+                40
+            ],
+            "TYPE": [
+                "Grass",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.25,
+                0.25,
+                0.25,
+                4,
+                1,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Reflect",
+                "Stealth Rock"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Goodra-Hisui",
+            "Incineroar",
+            "Amoonguss"
+        ],
+        "Better": 1
+    },
+    "17": {
+        "POKEMON_0": "Goodra-Hisui",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                100,
+                130,
+                110,
+                120,
+                60
+            ],
+            "TYPE": [
+                "Ice",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1.0,
+                0.5,
+                0.5,
+                0.5,
+                1.0,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                2,
+                1,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "U-Turn"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Meloetta",
+            "Primarina",
+            "Bouffalant",
+            "Tatsugiri"
+        ],
+        "Better": 0
+    },
+    "20": {
+        "POKEMON_0": "Ogerpon",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                120,
+                84,
+                60,
+                96,
+                110
+            ],
+            "TYPE": [
+                "Grass",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                1,
+                2,
+                0.5,
+                2,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Sticky Webs"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Bewear",
+            "Octillery",
+            "Exeggutor-Alola"
+        ],
+        "Better": 1
+    },
+    "24": {
+        "POKEMON_0": "Gigalith",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                105,
+                130,
+                60,
+                110,
+                25
+            ],
+            "TYPE": [
+                "Rock",
+                "Ice"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                1.0,
+                2,
+                1,
+                2,
+                0.5,
+                4,
+                0.5,
+                2,
+                0.5,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                4,
+                1
+            ],
+            "UTILITY": [
+                "Stealth Rock"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Baxcalibur",
+            "Melmetal"
+        ],
+        "Better": 0
+    }
+}

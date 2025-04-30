@@ -1,0 +1,91 @@
+{
+    "4": {
+        "POKEMON_0": "Terapagos-Terastal",
+        "POKEMON_1": {
+            "STATS": [
+                95,
+                125,
+                80,
+                105,
+                110,
+                85
+            ],
+            "TYPE": [
+                "Normal",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Escavalier",
+            "Iron Crown",
+            "Aegislash"
+        ],
+        "Better": 1
+    },
+    "6": {
+        "POKEMON_0": "Aegislash-Blade",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                140,
+                50,
+                140,
+                20,
+                90
+            ],
+            "TYPE": [
+                "Steel",
+                "Grass"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                4,
+                0.5,
+                0.5,
+                0.25,
+                1.0,
+                2,
+                0,
+                1.0,
+                1.0,
+                0.5,
+                1.0,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                0.5
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Sableye-Mega",
+            "Slaking"
+        ],
+        "Better": 0
+    }
+}

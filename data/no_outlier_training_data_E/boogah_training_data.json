@@ -1,0 +1,94 @@
+{
+    "2": {
+        "STARTING_TEAM": [
+            "Mimikyu",
+            "Keldeo-Resolute",
+            "Galvantula"
+        ],
+        "POKEMON_0": "Feraligatr",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                125,
+                100,
+                59,
+                83,
+                78
+            ],
+            "TYPE": [
+                "Water",
+                "Fighting"
+            ],
+            "UTILITY": [
+                "Sticky Webs",
+                "Clear Smog",
+                "Reflect"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                2,
+                2,
+                0.5,
+                0.5,
+                1,
+                1,
+                0.5,
+                0.5,
+                2
+            ]
+        },
+        "Better": 0
+    },
+    "4": {
+        "STARTING_TEAM": [
+            "Latias",
+            "Seviper",
+            "Cinccino"
+        ],
+        "POKEMON_0": "Iron Crown",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                32,
+                100,
+                122,
+                148,
+                98
+            ],
+            "TYPE": [
+                "Steel",
+                "Electric"
+            ],
+            "UTILITY": [],
+            "TYPE_EFFECTIVENESS": [
+                0.5,
+                2,
+                1,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                0,
+                4,
+                0.25,
+                0.5,
+                0.5,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.25,
+                0.5
+            ]
+        },
+        "Better": 0
+    }
+}

@@ -1,0 +1,140 @@
+{
+    "3": {
+        "POKEMON_0": "Skuntank",
+        "POKEMON_1": {
+            "STATS": [
+                103,
+                63,
+                67,
+                71,
+                61,
+                114
+            ],
+            "TYPE": [
+                "Ghost",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                0,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0.5,
+                1,
+                1,
+                0,
+                1.0,
+                1,
+                1.0,
+                1,
+                1.0,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Toxic Spikes",
+                "Haze",
+                "Clear Smog",
+                "Reflect"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Chimecho",
+            "Sylveon"
+        ],
+        "Better": 0
+    },
+    "5": {
+        "POKEMON_0": "Dipplin",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                40,
+                110,
+                135,
+                80,
+                40
+            ],
+            "TYPE": [
+                "Dark",
+                "Dragon"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                2,
+                0.5,
+                1,
+                4
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Magneton",
+            "Heracross-Mega",
+            "Aerodactyl-Mega",
+            "Huntail"
+        ],
+        "Better": 1
+    },
+    "9": {
+        "POKEMON_0": "Florges",
+        "POKEMON_1": {
+            "STATS": [
+                78,
+                35,
+                98,
+                112,
+                154,
+                75
+            ],
+            "TYPE": [
+                "Bug",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                1,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1
+            ],
+            "UTILITY": [
+                "Toxic Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Fearow",
+            "Mesprit"
+        ],
+        "Better": 0
+    }
+}

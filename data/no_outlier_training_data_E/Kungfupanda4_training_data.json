@@ -1,0 +1,47 @@
+{
+    "0": {
+        "POKEMON_0": "Pelipper",
+        "POKEMON_1": {
+            "STATS": [
+                60,
+                50,
+                150,
+                45,
+                70,
+                65
+            ],
+            "TYPE": [
+                "Water",
+                "Flying"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                4,
+                1.0,
+                1.0,
+                0.5,
+                1,
+                0,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Silvally-Fighting",
+            "Whimsicott",
+            "Necrozma",
+            "Corviknight"
+        ],
+        "Better": 1
+    }
+}

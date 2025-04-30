@@ -1,0 +1,236 @@
+{
+    "4": {
+        "POKEMON_0": "Shiftry",
+        "POKEMON_1": {
+            "STATS": [
+                90,
+                70,
+                90,
+                90,
+                60,
+                80
+            ],
+            "TYPE": [
+                "Grass",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                2,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                2,
+                0.5,
+                2,
+                0,
+                4,
+                1,
+                0.5,
+                1,
+                0.5,
+                1,
+                2
+            ],
+            "UTILITY": [
+                "Rapid Spin"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Mandibuzz",
+            "Cacturne"
+        ],
+        "Better": 1
+    },
+    "6": {
+        "POKEMON_0": "Phione",
+        "POKEMON_1": {
+            "STATS": [
+                80,
+                80,
+                50,
+                110,
+                80,
+                80
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Defog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Ursaluna",
+            "Cradily",
+            "Terrakion",
+            "Arbok",
+            "Girafarig"
+        ],
+        "Better": 1
+    },
+    "11": {
+        "POKEMON_0": "Clawitzer",
+        "POKEMON_1": {
+            "STATS": [
+                71,
+                123,
+                88,
+                120,
+                89,
+                9
+            ],
+            "TYPE": [
+                "Water",
+                null
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                2,
+                2,
+                0.5,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                1
+            ],
+            "UTILITY": []
+        },
+        "STARTING_TEAM": [
+            "Zapdos",
+            "Gliscor",
+            "Tapu Fini",
+            "Dubwool"
+        ],
+        "Better": 1
+    },
+    "14": {
+        "POKEMON_0": "Roaring Moon",
+        "POKEMON_1": {
+            "STATS": [
+                105,
+                139,
+                71,
+                15,
+                141,
+                119
+            ],
+            "TYPE": [
+                "Dragon",
+                "Dark"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                2,
+                2,
+                1,
+                1,
+                1,
+                0,
+                2,
+                1,
+                0.5,
+                2,
+                0.5,
+                1,
+                4
+            ],
+            "UTILITY": [
+                "U-turn",
+                "Spikes",
+                "Clear Smog"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Polteageist",
+            "Kangaskhan"
+        ],
+        "Better": 1
+    },
+    "18": {
+        "POKEMON_0": "Slither Wing",
+        "POKEMON_1": {
+            "STATS": [
+                85,
+                105,
+                79,
+                115,
+                105,
+                81
+            ],
+            "TYPE": [
+                "Fairy",
+                "Fighting"
+            ],
+            "TYPE_EFFECTIVENESS": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.5,
+                2,
+                1,
+                2,
+                2,
+                0.25,
+                0.5,
+                1,
+                0,
+                0.25,
+                2,
+                2
+            ],
+            "UTILITY": [
+                "Spikes"
+            ]
+        },
+        "STARTING_TEAM": [
+            "Jellicent",
+            "Hydrapple",
+            "Primeape",
+            "Hoopa",
+            "Zygarde"
+        ],
+        "Better": 0
+    }
+}
